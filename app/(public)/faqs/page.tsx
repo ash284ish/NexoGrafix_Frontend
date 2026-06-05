@@ -160,12 +160,16 @@ export default function FAQPagePremium() {
   const faqs = useMemo(() => (content?.faqs?.length ? content.faqs : defaultFaqs), [content]);
 
   const [activeCat, setActiveCat] = useState<Cat>("All");
+
+  // Adjust activeCat when cats change during render
+  const [prevCats, setPrevCats] = useState(cats);
+  if (cats !== prevCats) {
+    setPrevCats(cats);
+    if (!cats.includes(activeCat)) setActiveCat("All");
+  }
+
   const [query, setQuery] = useState("");
   const [openId, setOpenId] = useState<string | null>(faqs[0]?.id ?? null);
-
-  useEffect(() => {
-    if (!cats.includes(activeCat)) setActiveCat("All");
-  }, [cats, activeCat]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -176,14 +180,17 @@ export default function FAQPagePremium() {
     });
   }, [activeCat, query, faqs]);
 
-  useEffect(() => {
+  // Adjust openId when filtered list changes during render
+  const [prevFiltered, setPrevFiltered] = useState(filtered);
+  if (filtered !== prevFiltered) {
+    setPrevFiltered(filtered);
     if (filtered.length === 0) {
       setOpenId(null);
-      return;
+    } else {
+      const stillExists = openId ? filtered.some((x) => x.id === openId) : false;
+      if (!stillExists) setOpenId(filtered[0].id);
     }
-    const stillExists = openId ? filtered.some((x) => x.id === openId) : false;
-    if (!stillExists) setOpenId(filtered[0].id);
-  }, [filtered, openId]);
+  }
 
   const heroBadge = content?.hero?.badge || "Help Center";
   const heroTitle = content?.hero?.title || "Clear answers. Faster decisions.";

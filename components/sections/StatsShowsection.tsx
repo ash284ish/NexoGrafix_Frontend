@@ -41,6 +41,16 @@ type ServiceItem = {
   bullets?: string[];
 };
 
+type RawStatItem = {
+  id: string;
+  icon: string;
+  value: number;
+  suffix?: string;
+  label: string;
+  hint: string;
+  highlight?: boolean;
+};
+
 type PageData = {
   hero: {
     eyebrow: string;
@@ -57,7 +67,7 @@ type PageData = {
     eyebrow: string;
     heading: string;
     subheading: string;
-    stats: StatItem[];
+    stats: RawStatItem[];
   };
   services_carousel: {
     eyebrow: string;
@@ -109,15 +119,15 @@ export default function StatsShowSectionPage() {
       .catch(console.error);
   }, []);
 
-  if (!data) return null;
-  function mapTrustStats(raw: any[]): StatItem[] {
-    return raw.map((s) => {
+  const trustStats = useMemo(() => {
+    if (!data) return [];
+    return data.trust_metrics.stats.map((s) => {
       const key = (s.icon || "").toLowerCase().trim();
 
       const icon =
-        (defaultIcons as any)[key] ||
+        (defaultIcons as Record<string, React.ReactNode>)[key] ||
         ICON_MAP[key] ||
-        FiCheckCircle;
+        <FiCheckCircle />;
 
       return {
         id: s.id,
@@ -129,11 +139,9 @@ export default function StatsShowSectionPage() {
         highlight: s.highlight,
       };
     });
-  }
-  const trustStats = useMemo(() => {
-    if (!data) return [];
-    return mapTrustStats(data.trust_metrics.stats);
   }, [data]);
+
+  if (!data) return null;
 
   return (
     <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">

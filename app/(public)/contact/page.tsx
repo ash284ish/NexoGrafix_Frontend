@@ -176,8 +176,8 @@ export default function ContactPage() {
 
   const whatsappPhone =
     content?.company?.whatsapp ||
-    (companyInfo as any).whatsapp ||
-    (companyInfo as any).textNumber ||
+    companyInfo.whatsapp ||
+    companyInfo.textNumber ||
     primaryPhone;
 
   const whatsappText =

@@ -62,7 +62,7 @@ const slideSwap: Variants = {
 };
 
 function isCarousel(p: Props): p is CarouselProps {
-  return (p as any)?.slides?.length > 0;
+  return "slides" in p && Array.isArray(p.slides) && p.slides.length > 0;
 }
 
 export default function ServiceShowcaseSection(props: Props) {
@@ -84,12 +84,16 @@ export default function ServiceShowcaseSection(props: Props) {
   const [activeIndex, setActiveIndex] = useState(() =>
     Math.min(Math.max(startIndex, 0), Math.max(slides.length - 1, 0))
   );
+
+  // Sync activeIndex with props changes during render
+  const [prevMeta, setPrevMeta] = useState({ startIndex, length: slides.length });
+  if (startIndex !== prevMeta.startIndex || slides.length !== prevMeta.length) {
+    setPrevMeta({ startIndex, length: slides.length });
+    setActiveIndex(Math.min(Math.max(startIndex, 0), Math.max(slides.length - 1, 0)));
+  }
+
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    setActiveIndex(Math.min(Math.max(startIndex, 0), Math.max(slides.length - 1, 0)));
-  }, [startIndex, slides.length]);
 
   const goNext = () => setActiveIndex((i) => (slides.length ? (i + 1) % slides.length : 0));
   const goPrev = () => setActiveIndex((i) => (slides.length ? (i - 1 + slides.length) % slides.length : 0));
@@ -109,15 +113,14 @@ export default function ServiceShowcaseSection(props: Props) {
     };
   }, [autoRotateMs, paused, slides.length]);
 
-  const base = slides[activeIndex] || ({} as Slide);
-
   const s: Slide = useMemo(() => {
+    const base = slides[activeIndex] || ({} as Slide);
     const reverseByIndex = activeIndex % 2 === 1;
     return {
       ...base,
       reverse: base.reverse ?? reverseByIndex,
     };
-  }, [base, activeIndex]);
+  }, [slides, activeIndex]);
 
   const imgSrcRaw = (s.image?.src ?? "").trim();
   const imgAltRaw = (s.image?.alt ?? "").trim();

@@ -152,15 +152,15 @@ function toStatItems(raw?: ContentJSON["trust_metrics"]): StatItem[] {
         const iconKey = (s.iconKey || "").toLowerCase().trim();
         const icon =
             // prefer ProofStatsSection default icons keys (projects/qa/partners)
-            (defaultIcons as any)[iconKey] ||
+            (defaultIcons as Record<string, React.ReactNode>)[iconKey] ||
             // fallback to known icons
-            (iconMap[iconKey] as any) ||
+            (iconMap[iconKey] as React.ComponentType<{ className?: string }>) ||
             // final fallback
             defaultIcons.projects;
 
         return {
             id: s.id,
-            icon,
+            icon: typeof icon === "function" ? React.createElement(icon) : icon,
             value: s.value,
             suffix: s.suffix,
             label: s.label,
@@ -442,12 +442,14 @@ export default function AccessibilityServicesPage() {
     const cta = data.contact_cta ?? {};
 
     const pills = hero.pills ?? [];
-    const proofStats: StatItem[] = useMemo(() => toStatItems(trust), [trust]);
-    const safeColumns = ([1, 2, 3, 4] as const).includes(trust.columns as any)
-        ? (trust.columns as 1 | 2 | 3 | 4)
-        : 3;
+    const proofStats: StatItem[] = useMemo(() => toStatItems(data.trust_metrics), [data.trust_metrics]);
+    const safeColumns = useMemo(() => {
+        const cols = data.trust_metrics?.columns;
+        if (cols === 1 || cols === 2 || cols === 3 || cols === 4) return cols;
+        return 3;
+    }, [data.trust_metrics?.columns]);
 
-    const services: ServiceItem[] = useMemo(() => toServiceItems(carousel), [carousel]);
+    const services: ServiceItem[] = useMemo(() => toServiceItems(data.services_carousel), [data.services_carousel]);
 
     return (
         <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">

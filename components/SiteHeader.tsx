@@ -229,35 +229,34 @@ export default function SiteHeader() {
 
   const h = data ?? FALLBACK;
 
-  const Icon = useMemo(() => {
-    const map: Record<string, ReactNode> = {
-      FaFacebookF: <FaFacebookF size={16} />,
-      FaTwitter: <FaTwitter size={16} />,
-      FaLinkedinIn: <FaLinkedinIn size={16} />,
-      FaGoogle: <FaGoogle size={16} />,
+  const iconMap: Record<string, ReactNode> = {
+    FaFacebookF: <FaFacebookF size={16} />,
+    FaTwitter: <FaTwitter size={16} />,
+    FaLinkedinIn: <FaLinkedinIn size={16} />,
+    FaGoogle: <FaGoogle size={16} />,
 
-      FiHome: <FiHome />,
-      FiLayers: <FiLayers />,
-      FiBox: <FiBox />,
-      FiBookOpen: <FiBookOpen />,
-      FiUser: <FiUser />,
-      FiMail: <FiMail />,
-      FiCpu: <FiCpu />,
-      FiBook: <FiBook />,
-      FiEdit3: <FiEdit3 />,
-      FiHeadphones: <FiHeadphones />,
-      FiZap: <FiZap />,
-      FiFileText: <FiFileText />,
-      FiPenTool: <FiPenTool />,
-      FiHelpCircle: <FiHelpCircle />,
-      FiMessageSquare: <FiMessageSquare />,
-      FiSmartphone: <FiSmartphone />,
-      FiCode: <FiCode />,
-      FiArrowRight: <FiArrowRight />,
-      FiGlobeIcon: <FiGlobeIcon />,
-    };
-    return (key?: string) => (key && map[key] ? map[key] : <FiFileText />);
-  }, []);
+    FiHome: <FiHome />,
+    FiLayers: <FiLayers />,
+    FiBox: <FiBox />,
+    FiBookOpen: <FiBookOpen />,
+    FiUser: <FiUser />,
+    FiMail: <FiMail />,
+    FiCpu: <FiCpu />,
+    FiBook: <FiBook />,
+    FiEdit3: <FiEdit3 />,
+    FiHeadphones: <FiHeadphones />,
+    FiZap: <FiZap />,
+    FiFileText: <FiFileText />,
+    FiPenTool: <FiPenTool />,
+    FiHelpCircle: <FiHelpCircle />,
+    FiMessageSquare: <FiMessageSquare />,
+    FiSmartphone: <FiSmartphone />,
+    FiCode: <FiCode />,
+    FiArrowRight: <FiArrowRight />,
+    FiGlobeIcon: <FiGlobeIcon />,
+  };
+
+  const renderIcon = (key?: string) => (key && iconMap[key] ? iconMap[key] : <FiFileText />);
 
   const SOLUTION_CATEGORIES = useMemo(() => h?.nav?.solutions?.categories ?? [], [h]);
 
@@ -345,7 +344,7 @@ export default function SiteHeader() {
                 href={s.href}
                 style={idx === h.topbar.socials.length - 1 ? iconLinkStyleNoBorder : iconLinkStyle}
               >
-                {Icon(s.icon)}
+                {renderIcon(s.icon)}
               </a>
             ))}
           </div>
@@ -371,14 +370,14 @@ export default function SiteHeader() {
           <nav className="nx-desktop-nav">
             <div className={`nx-menu ${homeActive ? "nx-menu-active" : ""}`}>
               <span className="nx-menu-title">
-                <span className="nx-menu-icon">{Icon(h.nav.home.icon)}</span>
+                <span className="nx-menu-icon">{renderIcon(h.nav.home.icon)}</span>
                 <span>{h.nav.home.label}</span>
                 <FiChevronDown className="nx-chevron" />
               </span>
               <div className="nx-dropdown">
                 {h.nav.home.items.map((it) => (
                   <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                    {Icon(it.icon)}
+                    {renderIcon(it.icon)}
                     {it.title}
                   </Link>
                 ))}
@@ -387,7 +386,7 @@ export default function SiteHeader() {
 
             <div className={`nx-menu ${solutionsActive ? "nx-menu-active" : ""}`} onMouseEnter={openSolutions} onMouseLeave={scheduleCloseSolutions}>
               <span className="nx-menu-title">
-                <span className="nx-menu-icon">{Icon(h.nav.solutions.icon)}</span>
+                <span className="nx-menu-icon">{renderIcon(h.nav.solutions.icon)}</span>
                 <span>{h.nav.solutions.label}</span>
                 <FiChevronDown className="nx-chevron" />
               </span>
@@ -406,7 +405,7 @@ export default function SiteHeader() {
                           onFocus={() => setActiveSolutionKey(cat.key)}
                         >
                           <span className="nx-mega-cat-left">
-                            {Icon(cat.icon)}
+                            {renderIcon(cat.icon)}
                             <span className="nx-mega-cat-title">{cat.title}</span>
                           </span>
                           <FiArrowRight className="nx-mega-arrow" />
@@ -419,7 +418,7 @@ export default function SiteHeader() {
                     <div className="nx-mega-grid">
                       {activeSolution?.items?.map((it) => (
                         <Link key={it.href} href={it.href} className={`nx-dd-item nx-mega-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                          {Icon(it.icon)}
+                          {renderIcon(it.icon)}
                           <span>{it.title}</span>
                         </Link>
                       ))}
@@ -431,14 +430,14 @@ export default function SiteHeader() {
 
             <div className={`nx-menu ${productsActive ? "nx-menu-active" : ""}`}>
               <span className="nx-menu-title">
-                <span className="nx-menu-icon">{Icon(h.nav.products.icon)}</span>
+                <span className="nx-menu-icon">{renderIcon(h.nav.products.icon)}</span>
                 <span>{h.nav.products.label}</span>
                 <FiChevronDown className="nx-chevron" />
               </span>
               <div className="nx-dropdown">
                 {h.nav.products.items.map((it) => (
                   <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                    {Icon(it.icon)}
+                    {renderIcon(it.icon)}
                     {it.title}
                   </Link>
                 ))}
@@ -447,14 +446,14 @@ export default function SiteHeader() {
 
             <div className={`nx-menu ${resourcesActive ? "nx-menu-active" : ""}`}>
               <span className="nx-menu-title">
-                <span className="nx-menu-icon">{Icon(h.nav.resources.icon)}</span>
+                <span className="nx-menu-icon">{renderIcon(h.nav.resources.icon)}</span>
                 <span>{h.nav.resources.label}</span>
                 <FiChevronDown className="nx-chevron" />
               </span>
               <div className="nx-dropdown">
                 {h.nav.resources.items.map((it) => (
                   <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                    {Icon(it.icon)}
+                    {renderIcon(it.icon)}
                     {it.title}
                   </Link>
                 ))}
@@ -503,7 +502,7 @@ export default function SiteHeader() {
             <div className="nx-mobile-links">
               <button className={`nx-acc-btn ${homeActive ? "nx-menu-active" : ""}`} onClick={() => toggleGroup("home")} type="button">
                 <span className="nx-acc-left">
-                  {Icon(h.nav.home.icon)} {h.nav.home.label}
+                  {renderIcon(h.nav.home.icon)} {h.nav.home.label}
                 </span>
                 <FiChevronDown className={`nx-acc-chevron ${openGroup === "home" ? "open" : ""}`} />
               </button>
@@ -511,7 +510,7 @@ export default function SiteHeader() {
                 <div className="nx-acc-panel">
                   {h.nav.home.items.map((it) => (
                     <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                      {Icon(it.icon)} {it.title}
+                      {renderIcon(it.icon)} {it.title}
                     </Link>
                   ))}
                 </div>
@@ -519,7 +518,7 @@ export default function SiteHeader() {
 
               <button className={`nx-acc-btn ${solutionsActive ? "nx-menu-active" : ""}`} onClick={() => toggleGroup("solutions")} type="button">
                 <span className="nx-acc-left">
-                  {Icon(h.nav.solutions.icon)} {h.nav.solutions.label}
+                  {renderIcon(h.nav.solutions.icon)} {h.nav.solutions.label}
                 </span>
                 <FiChevronDown className={`nx-acc-chevron ${openGroup === "solutions" ? "open" : ""}`} />
               </button>
@@ -532,7 +531,7 @@ export default function SiteHeader() {
                       <div key={cat.key}>
                         <button type="button" className="nx-m-item nx-m-item-btn" onClick={() => setMobileSolutionOpenKey((prev) => (prev === cat.key ? null : cat.key))}>
                           <span className="nx-m-left">
-                            {Icon(cat.icon)} {cat.title}
+                            {renderIcon(cat.icon)} {cat.title}
                           </span>
                           <FiChevronDown className={`nx-m-arrow ${isOpen ? "open" : ""}`} />
                         </button>
@@ -541,7 +540,7 @@ export default function SiteHeader() {
                           <div className="nx-m-subpanel">
                             {cat.items.map((it) => (
                               <Link key={it.href} href={it.href} className={`nx-m-subitem ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                                {Icon(it.icon)} {it.title}
+                                {renderIcon(it.icon)} {it.title}
                               </Link>
                             ))}
                           </div>
@@ -554,7 +553,7 @@ export default function SiteHeader() {
 
               <button className={`nx-acc-btn ${productsActive ? "nx-menu-active" : ""}`} onClick={() => toggleGroup("products")} type="button">
                 <span className="nx-acc-left">
-                  {Icon(h.nav.products.icon)} {h.nav.products.label}
+                  {renderIcon(h.nav.products.icon)} {h.nav.products.label}
                 </span>
                 <FiChevronDown className={`nx-acc-chevron ${openGroup === "products" ? "open" : ""}`} />
               </button>
@@ -562,7 +561,7 @@ export default function SiteHeader() {
                 <div className="nx-acc-panel">
                   {h.nav.products.items.map((it) => (
                     <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                      {Icon(it.icon)} {it.title}
+                      {renderIcon(it.icon)} {it.title}
                     </Link>
                   ))}
                 </div>
@@ -570,7 +569,7 @@ export default function SiteHeader() {
 
               <button className={`nx-acc-btn ${resourcesActive ? "nx-menu-active" : ""}`} onClick={() => toggleGroup("resources")} type="button">
                 <span className="nx-acc-left">
-                  {Icon(h.nav.resources.icon)} {h.nav.resources.label}
+                  {renderIcon(h.nav.resources.icon)} {h.nav.resources.label}
                 </span>
                 <FiChevronDown className={`nx-acc-chevron ${openGroup === "resources" ? "open" : ""}`} />
               </button>
@@ -578,7 +577,7 @@ export default function SiteHeader() {
                 <div className="nx-acc-panel">
                   {h.nav.resources.items.map((it) => (
                     <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                      {Icon(it.icon)} {it.title}
+                      {renderIcon(it.icon)} {it.title}
                     </Link>
                   ))}
                 </div>

@@ -239,7 +239,7 @@ export default function ContactRequestsPage() {
     window.setTimeout(() => setToast(null), ttl);
   };
 
-  const fetchData = async () => {
+  const fetchData = React.useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch(`${API_BASE}/api/v1/contact-requests`, { cache: "no-store" });
@@ -251,11 +251,11 @@ export default function ContactRequestsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   const filtered = useMemo(() => {
     if (statusFilter === "all") return rows;
@@ -387,8 +387,6 @@ export default function ContactRequestsPage() {
     }
   };
 
-  const DT = DataTable as unknown as React.ComponentType<any>;
-
   return (
     <div className="p-6">
       <ToastTopRight toast={toast} onClose={() => setToast(null)} />
@@ -399,7 +397,7 @@ export default function ContactRequestsPage() {
         right={<div className="text-sm font-semibold text-slate-500">{loading ? "Loading..." : `${rows.length} total`}</div>}
       />
 
-      <DT
+      <DataTable<ContactRow>
         data={filtered}
         rowKey={(r: ContactRow) => r.id}
         columns={columns}
@@ -424,7 +422,7 @@ export default function ContactRequestsPage() {
             key: "status",
             label: "Status",
             value: statusFilter,
-            onChange: setStatusFilter,
+            onChange: (v) => setStatusFilter(v as ContactStatus | "all"),
             options: [
               { label: "All", value: "all" },
               { label: "New", value: "new" },
@@ -433,9 +431,6 @@ export default function ContactRequestsPage() {
             ],
           },
         ]}
-        metaRight={
-          <div className="text-sm font-semibold text-slate-500">{loading ? "Loading..." : `${rows.length} total`}</div>
-        }
       />
 
       <Modal

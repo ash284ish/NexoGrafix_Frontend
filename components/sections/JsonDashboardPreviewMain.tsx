@@ -47,20 +47,23 @@ type Page =
 
 type IconType = React.ComponentType<{ className?: string }>;
 
-type DashboardPreviewJson = Record<string, any>;
+type DashboardPreviewJson = Record<string, unknown>;
 
-function pick<T>(obj: any, path: string, fallback: T): T {
-    if (!obj) return fallback;
+function pick<T>(obj: unknown, path: string, fallback: T): T {
+    if (!obj || typeof obj !== "object") return fallback;
     const parts = path.split(".").filter(Boolean);
-    let cur: any = obj;
+    let cur: unknown = obj;
     for (const p of parts) {
-        if (cur && typeof cur === "object" && p in cur) cur = cur[p];
-        else return fallback;
+        if (cur && typeof cur === "object" && p in (cur as Record<string, unknown>)) {
+            cur = (cur as Record<string, unknown>)[p];
+        } else {
+            return fallback;
+        }
     }
     return (cur as T) ?? fallback;
 }
 
-function asArray<T>(v: any, fallback: T[]): T[] {
+function asArray<T>(v: unknown, fallback: T[]): T[] {
     return Array.isArray(v) ? (v as T[]) : fallback;
 }
 
@@ -934,20 +937,26 @@ export function ExtractedImagesPage({ cms }: { cms: DashboardPreviewJson | null 
     );
 
     const [activePage, setActivePage] = React.useState(pages[0]?.id || "p1");
+
+    // Adjust activePage when pages change
+    const [prevPages, setPrevPages] = React.useState(pages);
+    if (pages !== prevPages) {
+        setPrevPages(pages);
+        if (!pages.some((p) => p.id === activePage)) {
+            setActivePage(pages[0]?.id || "p1");
+        }
+    }
+
     const [selected, setSelected] = React.useState<Record<string, boolean>>(() => {
         const init: Record<string, boolean> = {};
         images.forEach((im, i) => (init[im.id] = i < 4));
         return init;
     });
 
-    useEffect(() => {
-        setActivePage((prev) => {
-            const exists = pages.some((p) => p.id === prev);
-            return exists ? prev : pages[0]?.id || "p1";
-        });
-    }, [pages]);
-
-    useEffect(() => {
+    // Sync selected state with images prop changes
+    const [prevImages, setPrevImages] = React.useState(images);
+    if (images !== prevImages) {
+        setPrevImages(images);
         setSelected((prev) => {
             const next: Record<string, boolean> = {};
             images.forEach((im, i) => {
@@ -955,7 +964,7 @@ export function ExtractedImagesPage({ cms }: { cms: DashboardPreviewJson | null 
             });
             return next;
         });
-    }, [images]);
+    }
 
     const selectedCount = Object.values(selected).filter(Boolean).length;
 

@@ -96,14 +96,22 @@ function getApiBase() {
   return (envBase || "http://localhost:8000").replace(/\/+$/, "");
 }
 
-function mapTrustStats(raw: any[]): StatItem[] {
+function mapTrustStats(raw: Array<{
+  id: string;
+  icon: string;
+  value: number;
+  suffix?: string;
+  label: string;
+  hint: string;
+  highlight?: boolean;
+}>): StatItem[] {
   return raw.map((s) => {
     const key = (s.icon || "").toLowerCase().trim();
 
     const icon =
-      (defaultIcons as any)[key] ||
+      (defaultIcons as Record<string, React.ReactNode>)[key] ||
       ICON_MAP[key] ||
-      FiCheckCircle;
+      <FiCheckCircle />;
 
     return {
       id: s.id,

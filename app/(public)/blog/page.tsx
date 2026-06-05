@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
@@ -117,20 +118,22 @@ function BlogCover({
   const [err, setErr] = useState(false);
   const safeSrc = !src || err ? fallbackSrc || "/images/blog_fallback.jpg" : src;
 
-  useEffect(() => {
+  const [prevSrc, setPrevSrc] = useState(src);
+  if (src !== prevSrc) {
+    setPrevSrc(src);
     setErr(false);
-  }, [src]);
+  }
 
   return (
     <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-[rgba(24,24,27,0.12)] bg-white">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
 
-      {/* Next/Image removed. Using img tag as requested */}
-      <img
+      <Image
         src={safeSrc}
         alt={alt}
-        loading={priority ? "eager" : "lazy"}
-        className={cx("absolute inset-0 h-full w-full object-contain transition-transform duration-500", "group-hover:scale-[1.03]")}
+        fill
+        priority={!!priority}
+        className={cx("object-contain transition-transform duration-500", "group-hover:scale-[1.03]")}
         onError={() => setErr(true)}
       />
     </div>
@@ -468,7 +471,7 @@ export default function BlogPage() {
               <select
                 value={sort}
                 onChange={(e) => {
-                  setSort(e.target.value as any);
+                  setSort(e.target.value as "newest" | "oldest" | "title");
                   setPage(1);
                 }}
                 className="w-full cursor-pointer appearance-none rounded-md border border-[rgba(24,24,27,0.12)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"

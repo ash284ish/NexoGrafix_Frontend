@@ -47,26 +47,28 @@ type Page =
 
 type IconType = React.ComponentType<{ className?: string }>;
 
-type DashboardPreviewJson = Record<string, any>;
+type DashboardPreviewJson = Record<string, unknown>;
 
-function pick<T>(obj: any, path: string, fallback: T): T {
-    if (!obj) return fallback;
+function pick<T>(obj: unknown, path: string, fallback: T): T {
+    if (!obj || typeof obj !== "object") return fallback;
     const parts = path.split(".").filter(Boolean);
-    let cur: any = obj;
+    let cur: unknown = obj;
     for (const p of parts) {
-        if (cur && typeof cur === "object" && p in cur) cur = cur[p];
-        else return fallback;
+        if (cur && typeof cur === "object" && p in (cur as Record<string, unknown>)) {
+            cur = (cur as Record<string, unknown>)[p];
+        } else {
+            return fallback;
+        }
     }
     return (cur as T) ?? fallback;
 }
 
-function asArray<T>(v: any, fallback: T[]): T[] {
+function asArray<T>(v: unknown, fallback: T[]): T[] {
     return Array.isArray(v) ? (v as T[]) : fallback;
 }
 
 export default function DashboardRemoteStyle() {
     const [page, setPage] = useState<Page>("dashboard");
-    const [settingsOpen, setSettingsOpen] = useState(true);
     const [altFlowOpen, setAltFlowOpen] = useState(true);
     const [onboardingStep, setOnboardingStep] = useState<number | null>(0);
 
@@ -115,9 +117,9 @@ export default function DashboardRemoteStyle() {
                 const data = (await res.json()) as DashboardPreviewJson;
                 if (!mounted) return;
                 setCms(data);
-            } catch (e: any) {
+            } catch (e: unknown) {
                 if (!mounted) return;
-                setCmsError(String(e?.message || "Failed to load content"));
+                setCmsError(String(e instanceof Error ? e.message : "Failed to load content"));
             } finally {
                 if (!mounted) return;
                 setCmsLoading(false);
@@ -133,8 +135,6 @@ export default function DashboardRemoteStyle() {
             <Sidebar
                 page={page}
                 setPage={goToPage}
-                settingsOpen={settingsOpen}
-                setSettingsOpen={setSettingsOpen}
                 altFlowOpen={altFlowOpen}
                 setAltFlowOpen={setAltFlowOpen}
             />
@@ -223,28 +223,14 @@ function renderPage(page: Page, setPage: (p: Page) => void, cms: DashboardPrevie
             );
     }
 }
-
-function SimpleSection({ title, subtitle }: { title: string; subtitle: string }) {
-    return (
-        <div className="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
-            <div className="text-2xl font-semibold text-slate-900">{title}</div>
-            <div className="mt-1 text-sm text-slate-600">{subtitle}</div>
-        </div>
-    );
-}
-
 function Sidebar({
     page,
     setPage,
-    settingsOpen,
-    setSettingsOpen,
     altFlowOpen,
     setAltFlowOpen,
 }: {
     page: Page;
     setPage: (p: Page) => void;
-    settingsOpen: boolean;
-    setSettingsOpen: (v: boolean) => void;
     altFlowOpen: boolean;
     setAltFlowOpen: (v: boolean) => void;
 }) {
@@ -514,7 +500,7 @@ function PayrollPage({ onUploadClick, cms }: { onUploadClick: () => void; cms: D
         "this month through automated accessibility workflows"
     );
 
-    const iconMap: Record<string, any> = {
+    const iconMap: Record<string, IconType> = {
         FolderOpen,
         CheckCircle,
         Upload,
@@ -934,20 +920,26 @@ export function ExtractedImagesPage({ cms }: { cms: DashboardPreviewJson | null 
     );
 
     const [activePage, setActivePage] = React.useState(pages[0]?.id || "p1");
+
+    // Adjust activePage when pages change
+    const [prevPages, setPrevPages] = React.useState(pages);
+    if (pages !== prevPages) {
+        setPrevPages(pages);
+        if (!pages.some((p) => p.id === activePage)) {
+            setActivePage(pages[0]?.id || "p1");
+        }
+    }
+
     const [selected, setSelected] = React.useState<Record<string, boolean>>(() => {
         const init: Record<string, boolean> = {};
         images.forEach((im, i) => (init[im.id] = i < 4));
         return init;
     });
 
-    useEffect(() => {
-        setActivePage((prev) => {
-            const exists = pages.some((p) => p.id === prev);
-            return exists ? prev : pages[0]?.id || "p1";
-        });
-    }, [pages]);
-
-    useEffect(() => {
+    // Sync selected state with images prop changes
+    const [prevImages, setPrevImages] = React.useState(images);
+    if (images !== prevImages) {
+        setPrevImages(images);
         setSelected((prev) => {
             const next: Record<string, boolean> = {};
             images.forEach((im, i) => {
@@ -955,7 +947,7 @@ export function ExtractedImagesPage({ cms }: { cms: DashboardPreviewJson | null 
             });
             return next;
         });
-    }, [images]);
+    }
 
     const selectedCount = Object.values(selected).filter(Boolean).length;
 
@@ -1813,16 +1805,3 @@ function ProjectsPage({ cms }: { cms: DashboardPreviewJson | null }) {
     );
 }
 
-function Timeline({ label, value, active = false }: { label: string; value: string; active?: boolean }) {
-    return (
-        <div className="flex flex-col items-center text-xs">
-            <div className={`mb-1 h-2 w-2 rounded-full ${active ? "bg-green-500" : "bg-slate-300"}`} />
-            <div className="font-medium text-slate-700">{value}</div>
-            <div className="text-slate-400">{label}</div>
-        </div>
-    );
-}
-
-function Line({ active = false }: { active?: boolean }) {
-    return <div className={`h-[2px] w-24 ${active ? "bg-green-500" : "bg-slate-300"}`} />;
-}

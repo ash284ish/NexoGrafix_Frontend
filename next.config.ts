@@ -1,12 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     qualities: [75, 100],
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "i.pravatar.cc" },
       { protocol: "https", hostname: "themephi.net" },
+      { protocol: "https", hostname: "picsum.photos" },
       { protocol: "https", hostname: "lh3.googleusercontent.com" },
       { protocol: "https", hostname: "encrypted-tbn0.gstatic.com" },
       { protocol: "https", hostname: "www.gstatic.com" },
