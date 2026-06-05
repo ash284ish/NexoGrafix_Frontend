@@ -55,9 +55,9 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[#FFF7ED]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-24 top-10 h-[360px] w-[360px] rounded-full bg-orange-200/50 blur-3xl" />
-        <div className="absolute -right-28 top-24 h-[420px] w-[420px] rounded-full bg-orange-300/35 blur-3xl" />
-        <div className="absolute left-[35%] top-[60%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-white/40 blur-3xl" />
+        <div className="absolute -left-24 top-10 h-90 w-90 rounded-full bg-orange-200/50 blur-3xl" />
+        <div className="absolute -right-28 top-24 h-105 w-105 rounded-full bg-orange-300/35 blur-3xl" />
+        <div className="absolute left-[35%] top-[60%] h-130 w-130 -translate-x-1/2 rounded-full bg-white/40 blur-3xl" />
 
         <motion.div
           className="absolute left-[52%] top-10 hidden lg:flex"
@@ -194,9 +194,9 @@ export default function HeroSection() {
           <motion.div
             variants={float1}
             animate="animate"
-            className="relative mx-auto w-full max-w-[900px] lg:max-w-[1080px]"
+            className="relative mx-auto w-full max-w-225 lg:max-w-270"
           >
-            <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[520px] overflow-visible">
+            <div className="relative w-full h-80 sm:h-105 lg:h-130 overflow-visible">
               <Image
                 src="/images/home_assets.png"
                 alt="Nexografix preview"

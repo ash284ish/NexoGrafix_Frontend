@@ -16,7 +16,7 @@ export default function StatCard({ title, value, icon }: StatCardProps) {
       transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
       className="relative rounded-md bg-white px-5 py-4 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.35)]"
     >
-      <span className="absolute left-0 top-0 h-full w-[3px] bg-[#ff7a1a]" />
+      <span className="absolute left-0 top-0 h-full w-0.75 bg-[#ff7a1a]" />
 
       <div className="flex items-center justify-between">
         <div>

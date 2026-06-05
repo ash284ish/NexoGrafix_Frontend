@@ -69,7 +69,7 @@ export default function ContactRequestLineCard({
                 <span className="mt-1 h-10 w-1 rounded-full bg-[#ff7a1a]" />
             </div>
 
-            <div className="mt-4 h-[220px] w-full">
+            <div className="mt-4 h-55 w-full">
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={data} margin={{ top: 18, right: 10, left: 10, bottom: 6 }}>
                         <defs>

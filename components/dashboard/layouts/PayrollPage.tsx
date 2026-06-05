@@ -77,7 +77,7 @@ export default function PayrollPage({ onUploadClick }: Props) {
                         </div>
 
                         <div className="mt-6 rounded-md bg-slate-50 p-4">
-                            <svg viewBox="0 0 500 160" className="h-[180px] w-full">
+                            <svg viewBox="0 0 500 160" className="h-45 w-full">
                                 {[0, 1, 2, 3].map((i) => (
                                     <line
                                         key={i}

@@ -30,7 +30,7 @@ function PrimaryCTA({
         <Link
             href={href}
             className={cx(
-                "inline-flex items-center justify-center gap-2 bg-[var(--color-brand)] px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transform transition-transform duration-150 ease-out hover:-translate-y-1 hover:bg-[var(--color-brand-dark)]",
+                "inline-flex items-center justify-center gap-2 bg-(--color-brand) px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transform transition-transform duration-150 ease-out hover:-translate-y-1 hover:bg-(--color-brand-dark)",
                 R_CARD_INNER
             )}
         >
@@ -64,9 +64,9 @@ export default function ContactCTASection({
             <div className={cx("border border-black/10 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.08)]", R_CARD)}>
                 <div className="grid gap-8 p-7 sm:p-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
                     <div>
-                        <div className="text-[12px] font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)]">{eyebrow}</div>
-                        <h3 className="mt-2 text-2xl font-extrabold text-[var(--color-text-main)] sm:text-3xl">{heading}</h3>
-                        <p className="mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-base">{subheading}</p>
+                        <div className="text-[12px] font-extrabold tracking-[0.14em] text-(--color-brand-dark)">{eyebrow}</div>
+                        <h3 className="mt-2 text-2xl font-extrabold text-(--color-text-main) sm:text-3xl">{heading}</h3>
+                        <p className="mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-(--color-text-muted) sm:text-base">{subheading}</p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
                             <PrimaryCTA href={primaryCta.href} iconRight={<FiArrowRight />}>
@@ -77,7 +77,7 @@ export default function ContactCTASection({
                                 <Link
                                     href={secondaryCta.href}
                                     className={cx(
-                                        "inline-flex items-center justify-center gap-2 border border-black/10 bg-white px-6 py-3 text-sm font-extrabold text-[var(--color-text-main)] shadow-sm transition hover:bg-black/5",
+                                        "inline-flex items-center justify-center gap-2 border border-black/10 bg-white px-6 py-3 text-sm font-extrabold text-(--color-text-main) shadow-sm transition hover:bg-black/5",
                                         R_CARD_INNER
                                     )}
                                 >
@@ -87,7 +87,7 @@ export default function ContactCTASection({
                             ) : null}
                         </div>
 
-                        <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-muted)]">
+                        <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-(--color-text-muted)">
                             <span className={cx("inline-flex h-9 w-9 items-center justify-center border border-black/10 bg-white shadow-sm", "rounded-md")}>
                                 <FiMail className="opacity-70" />
                             </span>
@@ -96,11 +96,11 @@ export default function ContactCTASection({
                     </div>
 
                     <div className={cx("border border-black/10 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)]", R_CARD)}>
-                        <div className="text-sm font-extrabold text-[var(--color-text-main)]">What to include</div>
+                        <div className="text-sm font-extrabold text-(--color-text-main)">What to include</div>
                         <div className="mt-4 space-y-3">
                             {bullets.map((t) => (
-                                <div key={t} className="flex items-start gap-2 text-sm font-semibold text-[var(--color-text-muted)]">
-                                    <FiCheckCircle className="mt-0.5 shrink-0 text-[var(--color-brand-dark)]" />
+                                <div key={t} className="flex items-start gap-2 text-sm font-semibold text-(--color-text-muted)">
+                                    <FiCheckCircle className="mt-0.5 shrink-0 text-(--color-brand-dark)" />
                                     <span>{t}</span>
                                 </div>
                             ))}

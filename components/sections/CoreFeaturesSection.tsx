@@ -98,7 +98,7 @@ export default function CoreFeaturesSection() {
                                 <h3 className="mt-5 text-lg font-bold text-slate-900">{f.title}</h3>
                                 <p className="mt-3 text-sm leading-relaxed text-slate-600">{f.desc}</p>
 
-                                <div className="pointer-events-none absolute inset-x-6 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-orange-300/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                <div className="pointer-events-none absolute inset-x-6 bottom-0 h-0.5 bg-linear-to-r from-transparent via-orange-300/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                             </motion.div>
                         );
                     })}

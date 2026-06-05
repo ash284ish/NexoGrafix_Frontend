@@ -112,7 +112,7 @@ export default function AppointmentModal() {
             exit="exit"
             variants={overlayV}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="fixed inset-0 z-[80]"
+            className="fixed inset-0 z-80"
             aria-modal="true"
             role="dialog"
           >

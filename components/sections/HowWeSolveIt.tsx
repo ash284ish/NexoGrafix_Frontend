@@ -140,8 +140,8 @@ export default function HowWeSolveIt() {
   return (
     <section className="relative overflow-hidden bg-white py-16 sm:py-20">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-44 left-1/2 h-[520px] w-[980px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08),transparent_62%)] blur-2xl" />
-        <div className="absolute -bottom-56 right-[-220px] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.07),transparent_66%)] blur-2xl" />
+        <div className="absolute -top-44 left-1/2 h-130 w-245 -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08),transparent_62%)] blur-2xl" />
+        <div className="absolute -bottom-56 -right-55 h-130 w-130 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.07),transparent_66%)] blur-2xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
@@ -171,10 +171,10 @@ export default function HowWeSolveIt() {
                     variants={popIn}
                     className="flex items-center justify-between"
                   >
-                    <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm">
                       {leftPill}
                     </div>
-                    <div className="rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-2 text-[11px] font-extrabold text-[var(--color-brand-dark)]">
+                    <div className="rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-2 text-[11px] font-extrabold text-(--color-brand-dark)">
                       {leftBadgeRight}
                     </div>
                   </motion.div>
@@ -183,7 +183,7 @@ export default function HowWeSolveIt() {
                     variants={popIn}
                     className="mt-5 overflow-hidden rounded-md border border-black/10 bg-white"
                   >
-                    <div className="relative aspect-[16/10] w-full">
+                    <div className="relative aspect-16/10 w-full">
                       {leftImageSrc ? (
                         <img
                           src={leftImageSrc}
@@ -209,7 +209,7 @@ export default function HowWeSolveIt() {
                         <div className="text-[11px] font-extrabold tracking-[0.14em] text-black/50">
                           {s.label}
                         </div>
-                        <div className="mt-1 text-sm font-extrabold text-[var(--color-text-main)]">
+                        <div className="mt-1 text-sm font-extrabold text-(--color-text-main)">
                           {s.value}
                         </div>
                       </div>
@@ -228,21 +228,21 @@ export default function HowWeSolveIt() {
           >
             <motion.div
               variants={popIn}
-              className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm"
+              className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm"
             >
               {rightPill}
             </motion.div>
 
             <motion.h2
               variants={popIn}
-              className="mt-6 text-4xl font-extrabold leading-tight text-[var(--color-text-main)] sm:text-5xl"
+              className="mt-6 text-4xl font-extrabold leading-tight text-(--color-text-main) sm:text-5xl"
             >
               {rightTitle}
             </motion.h2>
 
             <motion.p
               variants={popIn}
-              className="mt-4 text-base font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-lg"
+              className="mt-4 text-base font-semibold leading-relaxed text-(--color-text-muted) sm:text-lg"
             >
               {rightSubtitle}
             </motion.p>
@@ -259,21 +259,21 @@ export default function HowWeSolveIt() {
                   <motion.div
                     key={card.title}
                     variants={popIn}
-                    className="group relative flex min-h-[180px] flex-col overflow-hidden rounded-md border border-black/10 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
+                    className="group relative flex min-h-45 flex-col overflow-hidden rounded-md border border-black/10 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
                   >
                     <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-md border border-black/10 bg-white">
-                      <IconComp className="h-6 w-6 text-[var(--color-brand-dark)]" />
+                      <IconComp className="h-6 w-6 text-(--color-brand-dark)" />
                     </div>
 
-                    <div className="relative mt-4 text-sm font-extrabold text-[var(--color-text-main)]">
+                    <div className="relative mt-4 text-sm font-extrabold text-(--color-text-main)">
                       {card.title}
                     </div>
-                    <div className="relative mt-2 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">
+                    <div className="relative mt-2 text-sm font-semibold leading-relaxed text-(--color-text-muted)">
                       {card.desc}
                     </div>
 
                     <div className="relative mt-auto pt-5">
-                      <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-1 text-[11px] font-extrabold text-[var(--color-brand-dark)]">
+                      <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-1 text-[11px] font-extrabold text-(--color-brand-dark)">
                         {chipText}
                       </span>
                     </div>
@@ -284,7 +284,7 @@ export default function HowWeSolveIt() {
 
             <motion.div
               variants={popIn}
-              className="mt-9 max-w-2xl rounded-md border border-black/10 bg-white p-6 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)] shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
+              className="mt-9 max-w-2xl rounded-md border border-black/10 bg-white p-6 text-sm font-semibold leading-relaxed text-(--color-text-muted) shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
             >
               {footerNote}
             </motion.div>

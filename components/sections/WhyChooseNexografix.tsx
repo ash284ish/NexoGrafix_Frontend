@@ -74,8 +74,8 @@ export default function WhyChooseNexografix() {
   return (
     <section className="relative bg-white py-14 sm:py-16">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-32 top-10 h-[360px] w-[360px] rounded-full bg-orange-100/60 blur-3xl" />
-        <div className="absolute -right-32 bottom-10 h-[380px] w-[380px] rounded-full bg-orange-200/35 blur-3xl" />
+        <div className="absolute -left-32 top-10 h-90 w-90 rounded-full bg-orange-100/60 blur-3xl" />
+        <div className="absolute -right-32 bottom-10 h-95 w-95 rounded-full bg-orange-200/35 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-24">
@@ -119,7 +119,7 @@ export default function WhyChooseNexografix() {
               >
                 <div className="flex h-full flex-col">
                   <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-orange-200/50 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <div className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-orange-300/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-0.5 bg-linear-to-r from-transparent via-orange-300/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                   <div className="pointer-events-none absolute right-5 top-5 select-none text-5xl font-extrabold tracking-tight text-orange-100/90">
                     {it.no}
@@ -137,7 +137,7 @@ export default function WhyChooseNexografix() {
                     <div className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900">
                       <span className="relative">
                         <span className="transition-colors group-hover:text-orange-700">Learn More</span>
-                        <span className="absolute -bottom-1 left-0 h-[2px] w-full bg-orange-300/70 opacity-70 transition group-hover:bg-orange-500/80" />
+                        <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-orange-300/70 opacity-70 transition group-hover:bg-orange-500/80" />
                       </span>
                       <ArrowRight className="h-4 w-4 text-slate-500 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-orange-700" />
                     </div>

@@ -53,7 +53,7 @@ export default function Sidebar({
   setAltFlowOpen,
 }: SidebarProps) {
   return (
-    <aside className="flex w-[200px] shrink-0 flex-col bg-gradient-to-b from-[#0B1A2E] to-[#081425] px-4 py-5 text-white">
+    <aside className="flex w-50 shrink-0 flex-col bg-linear-to-b from-[#0B1A2E] to-[#081425] px-4 py-5 text-white">
       {/* Logo */}
       <div className="mb-6 flex items-center gap-2 px-1">
         <img src="/images/logo.png" alt="Arohio" className="h-10 w-auto" />

@@ -105,15 +105,15 @@ export default function WhatProblemsWeSolve() {
                     transition={{ duration: 0.55, ease: "easeOut" }}
                     className="max-w-3xl"
                 >
-                    <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm">
                         {c?.pill ?? "WHAT PROBLEMS WE SOLVE"}
                     </div>
 
-                    <h2 className="mt-6 text-4xl font-extrabold leading-tight text-[var(--color-text-main)] sm:text-5xl">
+                    <h2 className="mt-6 text-4xl font-extrabold leading-tight text-(--color-text-main) sm:text-5xl">
                         {c?.title ?? "Execution breaks when scale, quality, and speed collide."}
                     </h2>
 
-                    <p className="mt-5 text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+                    <p className="mt-5 text-base leading-relaxed text-(--color-text-muted) sm:text-lg">
                         {c?.subtitle ??
                             "Content-driven organizations struggle to deliver consistently as volume increases, timelines tighten, and quality expectations rise. AI adoption adds speed—yet can introduce operational risk without control."}
                     </p>
@@ -128,7 +128,7 @@ export default function WhatProblemsWeSolve() {
                             whileInView="show"
                             viewport={{ once: true, amount: 0.25 }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 + idx * 0.05 }}
-                            className="group relative flex min-h-[330px] flex-col overflow-hidden rounded-md border border-black/10 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-200 hover:-translate-y-1 hover:border-orange-200/60 hover:shadow-[0_26px_80px_rgba(15,23,42,0.10)]"
+                            className="group relative flex min-h-82.5 flex-col overflow-hidden rounded-md border border-black/10 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-200 hover:-translate-y-1 hover:border-orange-200/60 hover:shadow-[0_26px_80px_rgba(15,23,42,0.10)]"
                         >
                             <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                                 <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-orange-200/25 blur-3xl" />
@@ -141,13 +141,13 @@ export default function WhatProblemsWeSolve() {
 
                             <div className="relative">
                                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-black/10 bg-white shadow-[0_10px_28px_rgba(15,23,42,0.08)] transition-transform duration-200 group-hover:-translate-y-0.5">
-                                    <it.Icon className="h-6 w-6 text-[var(--color-brand-dark)]" />
+                                    <it.Icon className="h-6 w-6 text-(--color-brand-dark)" />
                                 </div>
 
-                                <h3 className="mt-5 text-lg font-extrabold leading-snug text-[var(--color-text-main)]">{it.title}</h3>
+                                <h3 className="mt-5 text-lg font-extrabold leading-snug text-(--color-text-main)">{it.title}</h3>
 
                                 <p
-                                    className="mt-2 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]"
+                                    className="mt-2 text-sm font-semibold leading-relaxed text-(--color-text-muted)"
                                     style={{
                                         display: "-webkit-box",
                                         WebkitLineClamp: 4,
@@ -160,7 +160,7 @@ export default function WhatProblemsWeSolve() {
                             </div>
 
                             <div className="relative mt-auto pt-6">
-                                <span className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-extrabold text-[var(--color-brand-dark)] shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-colors duration-200 group-hover:border-orange-200/70 group-hover:bg-orange-50/60">
+                                <span className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-extrabold text-(--color-brand-dark) shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-colors duration-200 group-hover:border-orange-200/70 group-hover:bg-orange-50/60">
                                     {it.chip}
                                 </span>
                             </div>
@@ -174,7 +174,7 @@ export default function WhatProblemsWeSolve() {
                     whileInView="show"
                     viewport={{ once: true, amount: 0.25 }}
                     transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
-                    className="mt-10 max-w-3xl rounded-md border border-black/10 bg-white p-6 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)] shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
+                    className="mt-10 max-w-3xl rounded-md border border-black/10 bg-white p-6 text-sm font-semibold leading-relaxed text-(--color-text-muted) shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
                 >
                     {c?.footerNote ??
                         "Nexografix brings structure, clarity, and delivery discipline to complex content and assessment operations—combining AI systems with enterprise-grade execution standards."}

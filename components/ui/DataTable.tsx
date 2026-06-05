@@ -201,7 +201,7 @@ export default function DataTable<T>({
     >
       <div className="flex flex-col gap-3 border-b border-black/10 p-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-1 items-center gap-3">
-          <div className="relative w-full max-w-[420px]">
+          <div className="relative w-full max-w-105">
             <input
               value={q}
               onChange={(e) => onSearch(e.target.value)}
@@ -242,7 +242,7 @@ export default function DataTable<T>({
       </div>
 
       <div className="w-full overflow-x-auto">
-        <table className="min-w-[860px] w-full">
+        <table className="min-w-215 w-full">
           <thead>
             <tr className="text-left">
               {columns.map((c) => (

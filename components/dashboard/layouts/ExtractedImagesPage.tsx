@@ -165,7 +165,7 @@ export default function ExtractedImagesPage() {
                       : "ring-slate-200 hover:ring-slate-300",
                   ].join(" ")}
                 >
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                  <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-100">
                     <img
                       src={im.src}
                       alt={im.title}
@@ -195,7 +195,7 @@ export default function ExtractedImagesPage() {
                     >
                       <span
                         className={[
-                          "h-4 w-4 rounded-[4px] ring-1 ring-inset",
+                          "h-4 w-4 rounded-sm ring-1 ring-inset",
                           checked
                             ? "bg-white/25 ring-white/40"
                             : "bg-white ring-slate-300",

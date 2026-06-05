@@ -71,7 +71,7 @@ function PrimaryCTA({ href, label }: { href: string; label: string }) {
         <Link
             href={href}
             className={cx(
-                "inline-flex items-center justify-center gap-2 bg-[var(--color-brand)] px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transform transition-transform duration-150 ease-out hover:-translate-y-1 hover:bg-[var(--color-brand-dark)]",
+                "inline-flex items-center justify-center gap-2 bg-(--color-brand) px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transform transition-transform duration-150 ease-out hover:-translate-y-1 hover:bg-(--color-brand-dark)",
                 R_CARD_INNER
             )}
         >
@@ -85,7 +85,7 @@ function Pill({ children }: { children: React.ReactNode }) {
     return (
         <span
             className={cx(
-                "inline-flex items-center gap-2 border border-black/10 bg-white px-3 py-2 text-xs font-extrabold text-[var(--color-text-main)] shadow-sm",
+                "inline-flex items-center gap-2 border border-black/10 bg-white px-3 py-2 text-xs font-extrabold text-(--color-text-main) shadow-sm",
                 R_CARD_INNER
             )}
         >
@@ -100,7 +100,7 @@ function MiniChip({ icon, text }: { icon: React.ReactNode; text: string }) {
             <span className="inline-flex h-9 w-9 items-center justify-center border border-black/10 bg-white rounded-md">
                 {icon}
             </span>
-            <span className="text-sm font-semibold text-[var(--color-text-muted)]">{text}</span>
+            <span className="text-sm font-semibold text-(--color-text-muted)">{text}</span>
         </div>
     );
 }
@@ -143,18 +143,18 @@ export default function ServiceHeroSection({
                     <motion.div
                         variants={popIn}
                         className={cx(
-                            "inline-flex items-center gap-2 border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm",
+                            "inline-flex items-center gap-2 border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm",
                             R_CARD_INNER
                         )}
                     >
                         {eyebrow}
                     </motion.div>
 
-                    <motion.h1 variants={popIn} className="mt-5 text-4xl font-extrabold leading-tight text-[var(--color-text-main)] sm:text-5xl">
+                    <motion.h1 variants={popIn} className="mt-5 text-4xl font-extrabold leading-tight text-(--color-text-main) sm:text-5xl">
                         {title}
                     </motion.h1>
 
-                    <motion.p variants={fadeUp} className="mt-4 text-base font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+                    <motion.p variants={fadeUp} className="mt-4 text-base font-semibold leading-relaxed text-(--color-text-muted) sm:text-lg">
                         {subtitle}
                     </motion.p>
 
@@ -172,7 +172,7 @@ export default function ServiceHeroSection({
                                 <span
                                     key={t}
                                     className={cx(
-                                        "border border-black/10 bg-white px-3 py-2 text-xs font-extrabold text-[var(--color-text-main)] shadow-sm",
+                                        "border border-black/10 bg-white px-3 py-2 text-xs font-extrabold text-(--color-text-main) shadow-sm",
                                         R_CARD_INNER
                                     )}
                                 >
@@ -191,7 +191,7 @@ export default function ServiceHeroSection({
                     ) : null}
 
                     {pricingText ? (
-                        <motion.div variants={fadeUp} className="mt-4 text-sm font-extrabold text-[var(--color-brand-dark)]">
+                        <motion.div variants={fadeUp} className="mt-4 text-sm font-extrabold text-(--color-brand-dark)">
                             {pricingText}
                         </motion.div>
                     ) : null}
@@ -203,7 +203,7 @@ export default function ServiceHeroSection({
                                 <Link
                                     href={secondaryCta.href}
                                     className={cx(
-                                        "inline-flex items-center justify-center gap-2 border border-black/10 bg-white px-6 py-3 text-sm font-extrabold text-[var(--color-text-main)] shadow-sm transition hover:bg-black/5",
+                                        "inline-flex items-center justify-center gap-2 border border-black/10 bg-white px-6 py-3 text-sm font-extrabold text-(--color-text-main) shadow-sm transition hover:bg-black/5",
                                         R_CARD_INNER
                                     )}
                                 >
@@ -214,7 +214,7 @@ export default function ServiceHeroSection({
                         </motion.div>
                     ) : null}
 
-                    <motion.div variants={fadeUp} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-muted)]">
+                    <motion.div variants={fadeUp} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-(--color-text-muted)">
                         <span className="inline-flex h-9 w-9 items-center justify-center border border-black/10 bg-white shadow-sm rounded-md">
                             {noteIcon}
                         </span>

@@ -23,7 +23,7 @@ export default function DashboardPreviewCode() {
                 </div>
 
                 <div className="overflow-hidden rounded-md border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.18)]">
-                    <div className="h-[720px]">
+                    <div className="h-180">
                         <DashboardRemoteStyle />
                     </div>
                 </div>

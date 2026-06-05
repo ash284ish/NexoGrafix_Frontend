@@ -93,7 +93,7 @@ function Modal({
         )}
       >
         <div
-          className="w-full max-w-[640px] overflow-hidden rounded-md border border-black/10 bg-white shadow-[0_22px_70px_-30px_rgba(0,0,0,0.45)]"
+          className="w-full max-w-160 overflow-hidden rounded-md border border-black/10 bg-white shadow-[0_22px_70px_-30px_rgba(0,0,0,0.45)]"
           onMouseDown={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-between border-b border-black/10 px-5 py-4">

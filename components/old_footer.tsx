@@ -6,7 +6,7 @@ export default function SiteFooter() {
     <footer
       className="
     nx-footer
-    bg-gradient-to-b
+    bg-linear-to-b
     from-[#FFF8F1]
     via-[#FFEEDD]
     to-[#FFD9B3]

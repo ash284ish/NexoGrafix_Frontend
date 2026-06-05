@@ -119,216 +119,216 @@ export default function DashboardSidebar() {
 
   const nav = useMemo<NavNode[]>(
     () => [
-      { type: "link", label: "Dashboard", href: "/dashboard", icon: <FiGrid className="h-[18px] w-[18px]" /> },
+      { type: "link", label: "Dashboard", href: "/dashboard", icon: <FiGrid className="h-4.5 w-4.5" /> },
       {
         type: "link",
         label: "Newsletter Subscribers",
         href: "/newsletter-users",
-        icon: <FiMail className="h-[18px] w-[18px]" />,
+        icon: <FiMail className="h-4.5 w-4.5" />,
         badge: newsletterBadge,
       },
       {
         type: "link",
         label: "Contact Submissions",
         href: "/contact-users",
-        icon: <FiMessageSquare className="h-[18px] w-[18px]" />,
+        icon: <FiMessageSquare className="h-4.5 w-4.5" />,
         badge: contactBadge,
       },
       {
         type: "link",
         label: "Feedback",
         href: "/feedback-page",
-        icon: <FiMessageCircle className="h-[18px] w-[18px]" />,
+        icon: <FiMessageCircle className="h-4.5 w-4.5" />,
       },
       {
         type: "group",
         label: "Pages (CMS)",
-        icon: <FiFolder className="h-[18px] w-[18px]" />,
+        icon: <FiFolder className="h-4.5 w-4.5" />,
         children: [
-          { type: "link", label: "Home", href: "/crm/home", icon: <FiHome className="h-[18px] w-[18px]" /> },
+          { type: "link", label: "Home", href: "/crm/home", icon: <FiHome className="h-4.5 w-4.5" /> },
           {
             type: "link",
             label: "ArohioPreview",
             href: "/crm/dashboard-preview",
-            icon: <FiLayers className="h-[18px] w-[18px]" />,
+            icon: <FiLayers className="h-4.5 w-4.5" />,
           },
-          { type: "link", label: "About Us", href: "/crm/about", icon: <FiInfo className="h-[18px] w-[18px]" /> },
+          { type: "link", label: "About Us", href: "/crm/about", icon: <FiInfo className="h-4.5 w-4.5" /> },
           {
             type: "link",
             label: "Contact Us",
             href: "/crm/contact-us",
-            icon: <FiPhoneCall className="h-[18px] w-[18px]" />,
+            icon: <FiPhoneCall className="h-4.5 w-4.5" />,
           },
-          { type: "link", label: "Feedback", href: "/crm/feedback", icon: <FiMessageSquare className="h-[18px] w-[18px]" /> },
-          { type: "link", label: "FAQs", href: "/crm/faqs", icon: <FiHelpCircle className="h-[18px] w-[18px]" /> },
-          { type: "link", label: "Blog", href: "/crm/blog", icon: <FiFileText className="h-[18px] w-[18px]" /> },
-          { type: "link", label: "Blog Details", href: "/crm/blog-details", icon: <FiFileText className="h-[18px] w-[18px]" /> },
+          { type: "link", label: "Feedback", href: "/crm/feedback", icon: <FiMessageSquare className="h-4.5 w-4.5" /> },
+          { type: "link", label: "FAQs", href: "/crm/faqs", icon: <FiHelpCircle className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Blog", href: "/crm/blog", icon: <FiFileText className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Blog Details", href: "/crm/blog-details", icon: <FiFileText className="h-4.5 w-4.5" /> },
         ],
       },
 
       {
         type: "group",
         label: "Layout (CMS)",
-        icon: <FiLayout className="h-[18px] w-[18px]" />,
+        icon: <FiLayout className="h-4.5 w-4.5" />,
         children: [
-          { type: "link", label: "Header", href: "/crm/header", icon: <FiLayout className="h-[18px] w-[18px]" /> },
-          { type: "link", label: "Footer", href: "/crm/footer", icon: <FiSidebar className="h-[18px] w-[18px]" /> },
+          { type: "link", label: "Header", href: "/crm/header", icon: <FiLayout className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Footer", href: "/crm/footer", icon: <FiSidebar className="h-4.5 w-4.5" /> },
         ],
       },
 
       {
         type: "group",
         label: "Legal (CMS)",
-        icon: <FiShield className="h-[18px] w-[18px]" />,
+        icon: <FiShield className="h-4.5 w-4.5" />,
         children: [
-          { type: "link", label: "Terms & Conditions", href: "/crm/terms", icon: <FiFileText className="h-[18px] w-[18px]" /> },
+          { type: "link", label: "Terms & Conditions", href: "/crm/terms", icon: <FiFileText className="h-4.5 w-4.5" /> },
           {
             type: "link",
             label: "Privacy Policy",
             href: "/crm/privacy-policy",
-            icon: <FiFileText className="h-[18px] w-[18px]" />,
+            icon: <FiFileText className="h-4.5 w-4.5" />,
           },
-          { type: "link", label: "Refund Policy", href: "/crm/refund-policy", icon: <FiFileText className="h-[18px] w-[18px]" /> },
+          { type: "link", label: "Refund Policy", href: "/crm/refund-policy", icon: <FiFileText className="h-4.5 w-4.5" /> },
         ],
       },
 
       {
         type: "group",
         label: "products",
-        icon: <FiLayers className="h-[18px] w-[18px]" />,
-        children: [{ type: "link", label: "Arohio", href: "/crm/arohio", icon: <FiLayers className="h-[18px] w-[18px]" /> }],
+        icon: <FiLayers className="h-4.5 w-4.5" />,
+        children: [{ type: "link", label: "Arohio", href: "/crm/arohio", icon: <FiLayers className="h-4.5 w-4.5" /> }],
       },
 
       {
         type: "group",
         label: "Solutions (CMS)",
-        icon: <FiLayers className="h-[18px] w-[18px]" />,
+        icon: <FiLayers className="h-4.5 w-4.5" />,
         children: [
           {
             type: "link",
             label: "Publishing & Digitization",
             href: "/crm/publishingneww",
-            icon: <FiBookOpen className="h-[18px] w-[18px]" />,
+            icon: <FiBookOpen className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Accessibility & Compliance",
             href: "/crm/accessibility",
-            icon: <FiHelpCircle className="h-[18px] w-[18px]" />,
+            icon: <FiHelpCircle className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "IT & Digital Platforms",
             href: "/crm/it",
-            icon: <FiCode className="h-[18px] w-[18px]" />,
+            icon: <FiCode className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Data Labeling & Annotation",
             href: "/crm/data-labeling",
-            icon: <FiLayers className="h-[18px] w-[18px]" />,
+            icon: <FiLayers className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Localization & Media Accessibility",
             href: "/crm/localization",
-            icon: <FiHeadphones className="h-[18px] w-[18px]" />,
+            icon: <FiHeadphones className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Content, eLearning & EdTech",
             href: "/crm/elearning",
-            icon: <FiBookOpen className="h-[18px] w-[18px]" />,
+            icon: <FiBookOpen className="h-4.5 w-4.5" />,
           },
         ],
       },
       {
         type: "group",
         label: "Image Uploader",
-        icon: <FiImage className="h-[18px] w-[18px]" />,
+        icon: <FiImage className="h-4.5 w-4.5" />,
         children: [
           {
             type: "link",
             label: "Publishing & Digitization",
             href: "/crm/image-uploader/publishing",
-            icon: <FiUploadCloud className="h-[18px] w-[18px]" />,
+            icon: <FiUploadCloud className="h-4.5 w-4.5" />,
           },
 
           {
             type: "link",
             label: "Accessibility & Compliance",
             href: "/crm/image-uploader/accessibility",
-            icon: <FiEye className="h-[18px] w-[18px]" />,
+            icon: <FiEye className="h-4.5 w-4.5" />,
           },
 
           {
             type: "link",
             label: "IT & Digital Platforms",
             href: "/crm/image-uploader/it-digital",
-            icon: <FiCode className="h-[18px] w-[18px]" />,
+            icon: <FiCode className="h-4.5 w-4.5" />,
           },
 
           {
             type: "link",
             label: "Data Labeling & Annotation",
             href: "/crm/image-uploader/data-labelling",
-            icon: <FiDatabase className="h-[18px] w-[18px]" />,
+            icon: <FiDatabase className="h-4.5 w-4.5" />,
           },
 
           {
             type: "link",
             label: "Localization & Media Accessibility",
             href: "/crm/image-uploader/localization-media-accessibility",
-            icon: <FiGlobe className="h-[18px] w-[18px]" />,
+            icon: <FiGlobe className="h-4.5 w-4.5" />,
           },
 
           {
             type: "link",
             label: "Content, eLearning & EdTech",
             href: "/crm/image-uploader/content-edtech",
-            icon: <FiBookOpen className="h-[18px] w-[18px]" />,
+            icon: <FiBookOpen className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Home Page",
             href: "/crm/image-uploader/home",
-            icon: <FiHome className="h-[18px] w-[18px]" />,
+            icon: <FiHome className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "About Us",
             href: "/crm/image-uploader/about-us",
-            icon: <FiInfo className="h-[18px] w-[18px]" />,
+            icon: <FiInfo className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Feedback",
             href: "/crm/image-uploader/feedback",
-            icon: <FiMessageSquare className="h-[18px] w-[18px]" />,
+            icon: <FiMessageSquare className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Blogs",
             href: "/crm/image-uploader/blogs",
-            icon: <FiBookOpen className="h-[18px] w-[18px]" />,
+            icon: <FiBookOpen className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Blog Detail Feedback",
             href: "/crm/image-uploader/blog-detail",
-            icon: <FiFileText className="h-[18px] w-[18px]" />,
+            icon: <FiFileText className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Arohio",
             href: "/crm/image-uploader/arohio",
-            icon: <FiActivity className="h-[18px] w-[18px]" />,
+            icon: <FiActivity className="h-4.5 w-4.5" />,
           },
           {
             type: "link",
             label: "Footer – Certifications",
             href: "/crm/image-uploader/footer-certifications",
-            icon: <FiShield className="h-[18px] w-[18px]" />,
+            icon: <FiShield className="h-4.5 w-4.5" />,
           },
         ],
       },
@@ -420,7 +420,7 @@ export default function DashboardSidebar() {
   }
 
   return (
-    <aside className="relative hidden h-screen w-[220px] shrink-0 bg-white/55 backdrop-blur lg:flex lg:flex-col">
+    <aside className="relative hidden h-screen w-55 shrink-0 bg-white/55 backdrop-blur lg:flex lg:flex-col">
       <div className="px-4 pt-8 pb-4 shrink-0">
         <Link href="/dashboard" className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-sm bg-[#ff7a1a] text-white font-black">N</span>
@@ -429,7 +429,7 @@ export default function DashboardSidebar() {
       </div>
 
       <div className="px-2 pt-6 flex-1 min-h-0 overflow-y-auto overflow-x-auto">
-        <nav className="space-y-1 min-w-[220px]">{nav.map((n) => renderNode(n, 0))}</nav>
+        <nav className="space-y-1 min-w-55">{nav.map((n) => renderNode(n, 0))}</nav>
       </div>
     </aside>
   );

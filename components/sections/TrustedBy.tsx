@@ -66,8 +66,8 @@ export default function OurClientsMarquee() {
                     onMouseEnter={() => setPaused(true)}
                     onMouseLeave={() => setPaused(false)}
                 >
-                    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-14 bg-gradient-to-r from-white to-transparent" />
-                    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-14 bg-gradient-to-l from-white to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-14 bg-linear-to-r from-white to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-14 bg-linear-to-l from-white to-transparent" />
 
                     <motion.div
                         className="flex w-max items-stretch gap-6 pr-6 py-2"
@@ -85,7 +85,7 @@ export default function OurClientsMarquee() {
                                 <div
                                     key={`${item.name}-${idx}`}
                                     className="
-                                        group relative flex h-[104px] w-[260px] shrink-0 items-center gap-4
+                                        group relative flex h-26 w-65 shrink-0 items-center gap-4
                                         rounded-md border border-slate-200 bg-white px-6
                                         shadow-[0_14px_40px_rgba(15,23,42,0.02)]
                                         transition-all duration-200
@@ -107,12 +107,12 @@ export default function OurClientsMarquee() {
 
                                     <div className="min-w-0">
                                         <div
-                                            className={`truncate text-base font-extrabold ${isBlur ? "text-slate-500 blur-[4px] opacity-70 select-none" : "text-slate-900"
+                                            className={`truncate text-base font-extrabold ${isBlur ? "text-slate-500 blur-xs opacity-70 select-none" : "text-slate-900"
                                                 }`}
                                         >
                                             {item.name}
                                         </div>
-                                        <div className={`truncate text-sm font-semibold ${isBlur ? "text-slate-500 blur-[4px] opacity-70 select-none" : "text-slate-500"}`}>
+                                        <div className={`truncate text-sm font-semibold ${isBlur ? "text-slate-500 blur-xs opacity-70 select-none" : "text-slate-500"}`}>
                                             {item.domain}
                                         </div>
                                     </div>

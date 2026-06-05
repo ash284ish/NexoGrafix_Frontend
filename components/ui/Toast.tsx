@@ -25,7 +25,7 @@ export default function ToastTopRight({
               window.setTimeout(onClose, duration);
             }
           }}
-          className="fixed right-5 top-5 z-[9999] w-[min(420px,calc(100vw-2.5rem))]"
+          className="fixed right-5 top-5 z-9999 w-[min(420px,calc(100vw-2.5rem))]"
         >
           <div
             className={`flex items-start justify-between gap-3 rounded-md border px-4 py-3 text-sm font-semibold shadow-[0_18px_60px_rgba(15,23,42,0.18)] backdrop-blur ${

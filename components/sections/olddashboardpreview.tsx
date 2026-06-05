@@ -195,7 +195,7 @@ function Sidebar({
 }) {
 
     return (
-        <aside className="flex w-[200px] shrink-0 flex-col bg-gradient-to-b from-[#0B1A2E] to-[#081425] px-4 py-5 text-white">
+        <aside className="flex w-50 shrink-0 flex-col bg-linear-to-b from-[#0B1A2E] to-[#081425] px-4 py-5 text-white">
             <div className="mb-6 flex items-center gap-2 px-1">
                 <img
                     src="/images/logo.png"
@@ -524,7 +524,7 @@ function PayrollPage({ onUploadClick }: { onUploadClick: () => void }) {
                         </div>
 
                         <div className="mt-6 rounded-md bg-slate-50 p-4">
-                            <svg viewBox="0 0 500 160" className="h-[180px] w-full">
+                            <svg viewBox="0 0 500 160" className="h-45 w-full">
                                 {/* grid */}
                                 {[0, 1, 2, 3].map((i) => (
                                     <line
@@ -1042,7 +1042,7 @@ export function ExtractedImagesPage() {
                                         checked ? "ring-teal-200" : "ring-slate-200 hover:ring-slate-300",
                                     ].join(" ")}
                                 >
-                                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                                    <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-100">
                                         <img
                                             src={im.src}
                                             alt={im.title}
@@ -1070,7 +1070,7 @@ export function ExtractedImagesPage() {
                                         >
                                             <span
                                                 className={[
-                                                    "h-4 w-4 rounded-[4px] ring-1 ring-inset",
+                                                    "h-4 w-4 rounded-sm ring-1 ring-inset",
                                                     checked ? "bg-white/25 ring-white/40" : "bg-white ring-slate-300",
                                                 ].join(" ")}
                                             />
@@ -1189,7 +1189,7 @@ export function AltTextEditorPage() {
                 {/* Preview */}
                 <div className="col-span-12 lg:col-span-4">
                     <div className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-slate-200">
-                        <div className="aspect-[16/10] w-full bg-slate-100">
+                        <div className="aspect-16/10 w-full bg-slate-100">
                             <img
                                 src="https://picsum.photos/seed/alt_editor/900/600"
                                 alt="Preview"
@@ -1724,7 +1724,7 @@ function ProjectsPage() {
 
             {/* Search + Actions */}
             <div className="flex flex-wrap items-center gap-3">
-                <div className="relative flex-1 min-w-[260px]">
+                <div className="relative flex-1 min-w-65">
                     <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                     <input
                         placeholder="Search projects or files..."
@@ -1907,5 +1907,5 @@ function Timeline({
 }
 
 function Line({ active = false }: { active?: boolean }) {
-    return <div className={`h-[2px] w-24 ${active ? "bg-green-500" : "bg-slate-300"}`} />;
+    return <div className={`h-0.5 w-24 ${active ? "bg-green-500" : "bg-slate-300"}`} />;
 }

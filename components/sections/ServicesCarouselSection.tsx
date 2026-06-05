@@ -76,7 +76,7 @@ function MiniChip({ icon, text }: { icon: React.ReactNode; text: string }) {
       <span className={cx("inline-flex h-9 w-9 items-center justify-center border border-black/10 bg-white", "rounded-md")}>
         {icon}
       </span>
-      <span className="text-sm font-semibold text-[var(--color-text-muted)]">{text}</span>
+      <span className="text-sm font-semibold text-(--color-text-muted)">{text}</span>
     </div>
   );
 }
@@ -159,9 +159,9 @@ export default function ServicesCarouselSection({
     <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
       <div className="mb-5 flex items-end justify-between gap-4">
         <div>
-          <div className="text-[12px] font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)]">{eyebrow}</div>
-          <h2 className="mt-2 text-2xl font-extrabold text-[var(--color-text-main)] sm:text-3xl">{heading}</h2>
-          <p className="mt-2 max-w-2xl text-sm font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-base">{subheading}</p>
+          <div className="text-[12px] font-extrabold tracking-[0.14em] text-(--color-brand-dark)">{eyebrow}</div>
+          <h2 className="mt-2 text-2xl font-extrabold text-(--color-text-main) sm:text-3xl">{heading}</h2>
+          <p className="mt-2 max-w-2xl text-sm font-semibold leading-relaxed text-(--color-text-muted) sm:text-base">{subheading}</p>
         </div>
 
         <div className="hidden items-center gap-2 sm:flex">
@@ -194,7 +194,7 @@ export default function ServicesCarouselSection({
             initial={{ width: 0 }}
             animate={{ width: `${progressPct}%` }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="h-1 bg-[var(--color-brand)]"
+            className="h-1 bg-(--color-brand)"
           />
         </div>
 
@@ -225,18 +225,18 @@ export default function ServicesCarouselSection({
                 >
                   <div className="flex items-start gap-3">
                     <div className={cx("mt-0.5 inline-flex h-12 w-12 items-center justify-center border border-black/10 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)]", R_CARD_INNER)}>
-                      <Icon className="h-5 w-5 text-[var(--color-brand-dark)]" />
+                      <Icon className="h-5 w-5 text-(--color-brand-dark)" />
                     </div>
 
                     <div className="min-w-0">
-                      <div className="text-[12px] font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)]">
+                      <div className="text-[12px] font-extrabold tracking-[0.14em] text-(--color-brand-dark)">
                         {String(active + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
                       </div>
-                      <h3 className="mt-1 text-2xl font-extrabold leading-tight text-[var(--color-text-main)] sm:text-3xl">{item.title}</h3>
+                      <h3 className="mt-1 text-2xl font-extrabold leading-tight text-(--color-text-main) sm:text-3xl">{item.title}</h3>
                     </div>
                   </div>
 
-                  <p className="mt-4 max-w-2xl whitespace-pre-line text-base font-semibold leading-relaxed text-[var(--color-text-muted)]">
+                  <p className="mt-4 max-w-2xl whitespace-pre-line text-base font-semibold leading-relaxed text-(--color-text-muted)">
                     {item.desc}
                   </p>
 
@@ -244,8 +244,8 @@ export default function ServicesCarouselSection({
                     <div className="mt-6 grid gap-3 sm:grid-cols-2">
                       {item.bullets.slice(0, 4).map((b) => (
                         <div key={b} className={cx("flex items-start gap-2 border border-black/10 bg-white px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.06)]", R_CARD_INNER)}>
-                          <FiCheckCircle className="mt-0.5 shrink-0 text-[var(--color-brand-dark)]" />
-                          <span className="text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">{b}</span>
+                          <FiCheckCircle className="mt-0.5 shrink-0 text-(--color-brand-dark)" />
+                          <span className="text-sm font-semibold leading-relaxed text-(--color-text-muted)">{b}</span>
                         </div>
                       ))}
                     </div>
@@ -256,7 +256,7 @@ export default function ServicesCarouselSection({
                       {chips.slice(0, 2).map((c, idx) => (
                         <MiniChip
                           key={idx}
-                          icon={c.icon ?? <FiShield className="text-[var(--color-brand-dark)]" />}
+                          icon={c.icon ?? <FiShield className="text-(--color-brand-dark)" />}
                           text={c.text}
                         />
                       ))}
@@ -296,7 +296,7 @@ export default function ServicesCarouselSection({
                   onClick={() => setActive(i)}
                   className={cx(
                     "h-2.5 w-2.5 border border-black/15 transition",
-                    isActive ? "bg-[var(--color-brand)]" : "bg-black/10 hover:bg-black/20",
+                    isActive ? "bg-(--color-brand)" : "bg-black/10 hover:bg-black/20",
                     "rounded-full"
                   )}
                   aria-label={`Go to ${s.title}`}
@@ -314,7 +314,7 @@ export default function ServicesCarouselSection({
                   onClick={() => setActive(i)}
                   className={cx(
                     "shrink-0 border border-black/10 bg-white px-3 py-2 text-xs font-extrabold shadow-sm transition",
-                    i === active ? "text-[var(--color-brand-dark)]" : "text-[var(--color-text-muted)] hover:bg-black/5",
+                    i === active ? "text-(--color-brand-dark)" : "text-(--color-text-muted) hover:bg-black/5",
                     R_CARD_INNER
                   )}
                 >

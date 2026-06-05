@@ -84,7 +84,7 @@ export function RecentActivityFeed({
                   )}
                 >
                   <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <div className="absolute -left-24 top-0 h-full w-64 rotate-12 bg-gradient-to-r from-[#ff7a1a]/0 via-[#ff7a1a]/10 to-[#ff7a1a]/0" />
+                    <div className="absolute -left-24 top-0 h-full w-64 rotate-12 bg-linear-to-r from-[#ff7a1a]/0 via-[#ff7a1a]/10 to-[#ff7a1a]/0" />
                   </div>
 
                   <div className="relative flex items-start gap-3">

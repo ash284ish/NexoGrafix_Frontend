@@ -48,10 +48,10 @@ export default function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-[radial-gradient(1200px_720px_at_12%_-10%,rgba(255,237,213,0.60),transparent_60%),radial-gradient(980px_560px_at_92%_18%,rgba(254,215,170,0.42),transparent_58%),linear-gradient(180deg,#FFFEFD_0%,#FFFDF8_55%,#FFFEFD_100%)]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-44 left-[-240px] h-[560px] w-[560px] rounded-full bg-orange-200/14 blur-3xl" />
-        <div className="absolute top-[140px] right-[-260px] h-[640px] w-[640px] rounded-full bg-orange-300/10 blur-3xl" />
-        <div className="absolute bottom-[-280px] left-[14%] h-[560px] w-[560px] rounded-full bg-orange-200/12 blur-3xl" />
-        <div className="absolute bottom-[160px] right-[10%] h-[320px] w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
+        <div className="absolute -top-44 -left-60 h-140 w-140 rounded-full bg-orange-200/14 blur-3xl" />
+        <div className="absolute top-35 -right-65 h-160 w-160 rounded-full bg-orange-300/10 blur-3xl" />
+        <div className="absolute -bottom-70 left-[14%] h-140 w-140 rounded-full bg-orange-200/12 blur-3xl" />
+        <div className="absolute bottom-40 right-[10%] h-80 w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
         <motion.div
           animate={{ y: [0, -10, 0], x: [0, 7, 0] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
@@ -434,7 +434,7 @@ export default function SiteFooter() {
                 ))}
               </div>
 
-              <div className="mt-6 h-px w-full bg-gradient-to-r from-transparent via-orange-200/70 to-transparent" />
+              <div className="mt-6 h-px w-full bg-linear-to-r from-transparent via-orange-200/70 to-transparent" />
 
               <div className="mt-6 text-xs font-extrabold tracking-[0.18em] text-slate-900">CONTACT</div>
 
@@ -486,7 +486,7 @@ export default function SiteFooter() {
                 </a>
               </div>
 
-              <div className="mt-6 h-px w-full bg-gradient-to-r from-transparent via-orange-200/70 to-transparent" />
+              <div className="mt-6 h-px w-full bg-linear-to-r from-transparent via-orange-200/70 to-transparent" />
 
               <div className="mt-4 flex flex-col items-start justify-between gap-3 text-sm font-semibold text-slate-600">
                 <div>© {new Date().getFullYear()} Nexografix. All rights reserved.</div>
@@ -494,17 +494,17 @@ export default function SiteFooter() {
                 <div className="flex flex-wrap items-center gap-3">
                   <Link className="group relative font-extrabold text-orange-500 transition-colors hover:text-orange-800" href="/privacy">
                     Privacy Policy
-                    <span className="pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                    <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-linear-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
                   </Link>
                   <span className="text-orange-200">|</span>
                   <Link className="group relative font-extrabold text-orange-500 transition-colors hover:text-orange-800" href="/terms">
                     Terms of Service
-                    <span className="pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                    <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-linear-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
                   </Link>
                   <span className="text-orange-200">|</span>
                   <Link className="group relative font-extrabold text-orange-500 transition-colors hover:text-orange-800" href="/refund">
                     Refund Policy
-                    <span className="pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                    <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-linear-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
                   </Link>
                 </div>
               </div>
@@ -513,7 +513,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="hidden md:block">
-          <div className="mt-10 h-px w-full bg-gradient-to-r from-transparent via-orange-200/70 to-transparent" />
+          <div className="mt-10 h-px w-full bg-linear-to-r from-transparent via-orange-200/70 to-transparent" />
           <motion.div
             variants={wrap}
             initial="hidden"
@@ -526,17 +526,17 @@ export default function SiteFooter() {
             <motion.div variants={fade} className="flex flex-wrap items-center gap-3">
               <Link className="group relative font-extrabold text-orange-500 transition-colors hover:text-orange-800" href="/privacy">
                 Privacy Policy
-                <span className="pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-linear-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </Link>
               <span className="text-orange-200">|</span>
               <Link className="group relative font-extrabold text-orange-500 transition-colors hover:text-orange-800" href="/terms">
                 Terms of Service
-                <span className="pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-linear-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </Link>
               <span className="text-orange-200">|</span>
               <Link className="group relative font-extrabold text-orange-500 transition-colors hover:text-orange-800" href="/refund">
                 Refund Policy
-                <span className="pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                <span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-linear-to-r from-orange-600 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </Link>
             </motion.div>
           </motion.div>

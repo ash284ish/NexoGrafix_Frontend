@@ -81,8 +81,8 @@ export default function LoginPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#fbf7f2]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-20 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#ff7a1a]/15 blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 h-[420px] w-[420px] rounded-full bg-[#ffb37a]/20 blur-3xl" />
+        <div className="absolute -top-20 left-1/2 h-105 w-105 -translate-x-1/2 rounded-full bg-[#ff7a1a]/15 blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 h-105 w-105 rounded-full bg-[#ffb37a]/20 blur-3xl" />
         <div className="absolute top-24 right-10 h-16 w-16 rounded-full bg-[#ff7a1a]/25 blur-xl" />
       </div>
 
@@ -117,7 +117,7 @@ export default function LoginPage() {
             variants={fadeUp}
             className="relative rounded-md border border-black/10 bg-white/80 p-6 shadow-[0_18px_50px_-20px_rgba(0,0,0,0.35)] backdrop-blur"
           >
-            <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#ff7a1a] via-[#ff9b4a] to-[#ffd0a8]" />
+            <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-linear-to-r from-[#ff7a1a] via-[#ff9b4a] to-[#ffd0a8]" />
 
             <form onSubmit={onSubmit} className="mt-3 space-y-4">
               <div>

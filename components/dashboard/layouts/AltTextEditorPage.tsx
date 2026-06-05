@@ -56,7 +56,7 @@ export default function AltTextEditorPage() {
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 lg:col-span-4">
           <div className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-slate-200">
-            <div className="aspect-[16/10] w-full bg-slate-100">
+            <div className="aspect-16/10 w-full bg-slate-100">
               <img
                 src="https://picsum.photos/seed/alt_editor/900/600"
                 alt="Preview"

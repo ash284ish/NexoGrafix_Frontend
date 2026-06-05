@@ -83,7 +83,7 @@ export default function WhoWeAreSectionHeroStyle() {
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[44%] bg-white/55 sm:block" />
 
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-50/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-orange-50/20 to-transparent" />
         <motion.div
           animate={floatA}
           className="absolute -left-24 -top-28 h-80 w-80 rounded-full bg-orange-200/35 blur-3xl"
@@ -188,7 +188,7 @@ export default function WhoWeAreSectionHeroStyle() {
                   </span>
                 </div>
 
-                <div className="relative mx-auto aspect-[16/10] w-full overflow-hidden rounded-lg bg-slate-900">
+                <div className="relative mx-auto aspect-16/10 w-full overflow-hidden rounded-lg bg-slate-900">
                   <img
                     src={c?.preview?.image?.src}
                     alt={c?.preview?.image?.alt}
@@ -200,7 +200,7 @@ export default function WhoWeAreSectionHeroStyle() {
                   <motion.div
                     animate={{ y: [0, -8, 0] }}
                     transition={{ duration: 4.8, repeat: Infinity }}
-                    className="absolute -left-2 bottom-6 hidden w-[210px] rounded-md border border-orange-200 bg-white shadow-lg sm:block"
+                    className="absolute -left-2 bottom-6 hidden w-52.5 rounded-md border border-orange-200 bg-white shadow-lg sm:block"
                   >
                     <div className="h-10 bg-orange-600" />
                     <div className="p-4">

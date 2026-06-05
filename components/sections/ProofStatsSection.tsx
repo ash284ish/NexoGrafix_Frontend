@@ -110,7 +110,7 @@ function StatCard({
             <div className="relative flex items-start gap-3">
                 <div
                     className={cx(
-                        "inline-flex items-center justify-center text-[var(--color-brand-dark)]",
+                        "inline-flex items-center justify-center text-(--color-brand-dark)",
                         "[&_svg]:h-6 [&_svg]:w-6"
                     )}
                 >
@@ -119,18 +119,18 @@ function StatCard({
 
 
                 <div className="min-w-0">
-                    <div className="text-[12px] font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)]">
+                    <div className="text-[12px] font-extrabold tracking-[0.14em] text-(--color-brand-dark)">
                         {label.toUpperCase()}
                     </div>
 
                     <div className="mt-2 flex items-end gap-2">
-                        <div className={cx("text-4xl font-extrabold leading-none text-[var(--color-text-main)]", highlight && "text-[var(--color-brand-dark)]")}>
+                        <div className={cx("text-4xl font-extrabold leading-none text-(--color-text-main)", highlight && "text-(--color-brand-dark)")}>
                             {reduced ? value : num}
                             {suffix ? <span className="text-2xl font-extrabold">{suffix}</span> : null}
                         </div>
                     </div>
 
-                    <div className="mt-2 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">{hint}</div>
+                    <div className="mt-2 text-sm font-semibold leading-relaxed text-(--color-text-muted)">{hint}</div>
                 </div>
             </div>
         </motion.div>
@@ -157,13 +157,13 @@ export default function ProofStatsSection({
     return (
         <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
             <div className={cx("mb-6", centered && "text-center")}>
-                <div className="text-[12px] font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)]">{eyebrow}</div>
-                <h2 className="mt-2 text-2xl font-extrabold text-[var(--color-text-main)] sm:text-3xl">{heading}</h2>
+                <div className="text-[12px] font-extrabold tracking-[0.14em] text-(--color-brand-dark)">{eyebrow}</div>
+                <h2 className="mt-2 text-2xl font-extrabold text-(--color-text-main) sm:text-3xl">{heading}</h2>
 
                 {subheading ? (
                     <p
                         className={cx(
-                            "mt-2 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-base",
+                            "mt-2 text-sm font-semibold leading-relaxed text-(--color-text-muted) sm:text-base",
                             centered ? "mx-auto max-w-3xl" : "max-w-3xl"
                         )}
                     >
@@ -196,7 +196,7 @@ export default function ProofStatsSection({
 }
 
 export const defaultIcons = {
-    projects: <FiTrendingUp className="text-[var(--color-brand-dark)]" />,
-    qa: <FiStar className="text-[var(--color-brand-dark)]" />,
-    partners: <FiUsers className="text-[var(--color-brand-dark)]" />,
+    projects: <FiTrendingUp className="text-(--color-brand-dark)" />,
+    qa: <FiStar className="text-(--color-brand-dark)" />,
+    partners: <FiUsers className="text-(--color-brand-dark)" />,
 };

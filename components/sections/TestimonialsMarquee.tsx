@@ -48,7 +48,7 @@ function Stars({ rating }: { rating: number }) {
 
 function Card({ t }: { t: TestimonialItem }) {
     return (
-        <div className="w-[340px] sm:w-[380px] rounded-md border border-slate-200 bg-white p-6">
+        <div className="w-85 sm:w-95 rounded-md border border-slate-200 bg-white p-6">
             <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
                     <div className="h-11 w-11 overflow-hidden rounded-full ring-1 ring-slate-200">
@@ -171,8 +171,8 @@ export default function TestimonialsMarquee() {
     return (
         <section className="relative overflow-hidden bg-[#FFF7ED] py-16 sm:py-20">
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -left-24 top-10 h-[320px] w-[320px] rounded-full bg-orange-200/45 blur-3xl" />
-                <div className="absolute -right-28 bottom-12 h-[360px] w-[360px] rounded-full bg-orange-300/30 blur-3xl" />
+                <div className="absolute -left-24 top-10 h-80 w-[320px] rounded-full bg-orange-200/45 blur-3xl" />
+                <div className="absolute -right-28 bottom-12 h-90 w-90 rounded-full bg-orange-300/30 blur-3xl" />
             </div>
 
             <div className="relative mx-auto px-4 sm:px-6 lg:px-8">

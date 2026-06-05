@@ -362,7 +362,7 @@ function EditModal({
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[80]">
+    <div className="fixed inset-0 z-80">
       <div
         className="absolute inset-0 cursor-pointer bg-slate-950/40 backdrop-blur-sm"
         onClick={onClose}
@@ -802,8 +802,8 @@ export default function FooterAdminPage() {
             <div className="animate-pulse space-y-3">
               <div className="h-4 w-48 rounded bg-slate-200" />
               <div className="h-7 w-96 rounded bg-slate-200" />
-              <div className="h-4 w-[520px] rounded bg-slate-200" />
-              <div className="h-4 w-[420px] rounded bg-slate-200" />
+              <div className="h-4 w-130 rounded bg-slate-200" />
+              <div className="h-4 w-105 rounded bg-slate-200" />
             </div>
           </div>
         ) : null}

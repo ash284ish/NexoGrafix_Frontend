@@ -137,8 +137,8 @@ export default function ServiceShowcaseSection(props: Props) {
       onBlurCapture={() => pauseOnHover && setPaused(false)}
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-44 left-1/2 h-[520px] w-[980px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,120,60,0.08),transparent_65%)] blur-3xl" />
-        <div className="absolute -bottom-56 right-[-220px] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,160,120,0.06),transparent_70%)] blur-3xl" />
+        <div className="absolute -top-44 left-1/2 h-130 w-245 -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,120,60,0.08),transparent_65%)] blur-3xl" />
+        <div className="absolute -bottom-56 -right-55 h-130 w-130 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,160,120,0.06),transparent_70%)] blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
@@ -152,7 +152,7 @@ export default function ServiceShowcaseSection(props: Props) {
           >
             <motion.div
               variants={popIn}
-              className="mx-auto inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm"
+              className="mx-auto inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm"
             >
               {heading.toUpperCase()}
             </motion.div>
@@ -160,7 +160,7 @@ export default function ServiceShowcaseSection(props: Props) {
             {!!subheading && (
               <motion.p
                 variants={popIn}
-                className="mx-auto mt-4 text-base font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-lg"
+                className="mx-auto mt-4 text-base font-semibold leading-relaxed text-(--color-text-muted) sm:text-lg"
               >
                 {subheading}
               </motion.p>
@@ -177,7 +177,7 @@ export default function ServiceShowcaseSection(props: Props) {
             onClick={goPrev}
             className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/10 bg-white p-3 shadow-[0_12px_30px_rgba(15,23,42,0.10)] transition hover:shadow-[0_18px_48px_rgba(15,23,42,0.16)] cursor-pointer"
           >
-            <FiChevronLeft className="h-5 w-5 text-[var(--color-text-main)]" />
+            <FiChevronLeft className="h-5 w-5 text-(--color-text-main)" />
           </button>
 
           <button
@@ -186,7 +186,7 @@ export default function ServiceShowcaseSection(props: Props) {
             onClick={goNext}
             className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/10 bg-white p-3 shadow-[0_12px_30px_rgba(15,23,42,0.10)] transition hover:shadow-[0_18px_48px_rgba(15,23,42,0.16)] cursor-pointer"
           >
-            <FiChevronRight className="h-5 w-5 text-[var(--color-text-main)]" />
+            <FiChevronRight className="h-5 w-5 text-(--color-text-main)" />
           </button>
 
           <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-black/10 bg-white/90 px-3 py-2 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur">
@@ -197,7 +197,7 @@ export default function ServiceShowcaseSection(props: Props) {
                 aria-label={`Go to item ${i + 1}`}
                 onClick={() => setActiveIndex(i)}
                 className={`h-2.5 w-2.5 rounded-full transition cursor-pointer ${
-                  i === activeIndex ? "bg-[var(--color-text-main)]" : "bg-black/20 hover:bg-black/35"
+                  i === activeIndex ? "bg-(--color-text-main)" : "bg-black/20 hover:bg-black/35"
                 }`}
               />
             ))}
@@ -226,16 +226,16 @@ export default function ServiceShowcaseSection(props: Props) {
                   <div className="relative p-5 sm:p-6">
                     <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.35 }}>
                       <motion.div variants={popIn} className="flex items-center justify-between">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm">
                           {s.eyebrow ?? "FEATURE SNAPSHOT"}
                         </div>
-                        <div className="rounded-full border border-black/10 bg-white px-3 py-2 text-[11px] font-extrabold text-[var(--color-text-main)]">
+                        <div className="rounded-full border border-black/10 bg-white px-3 py-2 text-[11px] font-extrabold text-(--color-text-main)">
                           {s.badgeRight ?? "Visual Preview"}
                         </div>
                       </motion.div>
 
                       <motion.div variants={popIn} className="mt-5 overflow-hidden rounded-md border border-black/10 bg-white">
-                        <div className="relative aspect-[16/10] w-full">
+                        <div className="relative aspect-16/10 w-full">
                           <img
                             src={imgSrc}
                             alt={imgAlt}
@@ -255,7 +255,7 @@ export default function ServiceShowcaseSection(props: Props) {
                               className="rounded-md border border-black/10 bg-white px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.06)]"
                             >
                               <div className="text-[11px] font-extrabold tracking-[0.14em] text-black/50">{st.label}</div>
-                              <div className="mt-1 text-sm font-extrabold text-[var(--color-text-main)]">{st.value}</div>
+                              <div className="mt-1 text-sm font-extrabold text-(--color-text-main)">{st.value}</div>
                             </div>
                           ))}
                         </motion.div>
@@ -268,17 +268,17 @@ export default function ServiceShowcaseSection(props: Props) {
               <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
                 <motion.div
                   variants={popIn}
-                  className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm"
+                  className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm"
                 >
                   {s.eyebrow ?? "WHAT WE DELIVER"}
                 </motion.div>
 
-                <motion.h2 variants={popIn} className="mt-6 text-4xl font-extrabold leading-tight text-[var(--color-text-main)] sm:text-5xl">
+                <motion.h2 variants={popIn} className="mt-6 text-4xl font-extrabold leading-tight text-(--color-text-main) sm:text-5xl">
                   {s.title}
                 </motion.h2>
 
                 {!!s.subtitle && (
-                  <motion.p variants={popIn} className="mt-4 text-base font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+                  <motion.p variants={popIn} className="mt-4 text-base font-semibold leading-relaxed text-(--color-text-muted) sm:text-lg">
                     {s.subtitle}
                   </motion.p>
                 )}
@@ -288,17 +288,17 @@ export default function ServiceShowcaseSection(props: Props) {
                     <motion.div
                       key={cTitle}
                       variants={popIn}
-                      className="group relative flex min-h-[180px] flex-col overflow-hidden rounded-md border border-black/10 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_26px_80px_rgba(15,23,42,0.10)]"
+                      className="group relative flex min-h-45 flex-col overflow-hidden rounded-md border border-black/10 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.06)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_26px_80px_rgba(15,23,42,0.10)]"
                     >
                       <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-md border border-black/10 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
-                        {Icon ? <Icon className="h-6 w-6 text-[var(--color-brand-dark)]" /> : null}
+                        {Icon ? <Icon className="h-6 w-6 text-(--color-brand-dark)" /> : null}
                       </div>
 
-                      <div className="relative mt-4 text-sm font-extrabold text-[var(--color-text-main)]">{cTitle}</div>
-                      <div className="relative mt-2 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">{desc}</div>
+                      <div className="relative mt-4 text-sm font-extrabold text-(--color-text-main)">{cTitle}</div>
+                      <div className="relative mt-2 text-sm font-semibold leading-relaxed text-(--color-text-muted)">{desc}</div>
 
                       <div className="relative mt-auto pt-5">
-                        <span className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-extrabold text-[var(--color-text-main)]">
+                        <span className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-extrabold text-(--color-text-main)">
                           Enterprise-ready
                         </span>
                       </div>
@@ -310,14 +310,14 @@ export default function ServiceShowcaseSection(props: Props) {
                   <motion.div variants={popIn} className="mt-10 flex flex-wrap items-center gap-3">
                     <a
                       href={s.cta.href}
-                      className="inline-flex items-center justify-center rounded-md bg-[var(--color-brand-dark)] px-5 py-3 text-sm font-extrabold text-white hover:text-white shadow-[0_16px_40px_rgba(15,23,42,0.14)] transition hover:opacity-95"
+                      className="inline-flex items-center justify-center rounded-md bg-(--color-brand-dark) px-5 py-3 text-sm font-extrabold text-white hover:text-white shadow-[0_16px_40px_rgba(15,23,42,0.14)] transition hover:opacity-95"
                     >
                       {s.cta.label ?? "Explore"}
                     </a>
 
                     <a
                       href="/contact"
-                      className="inline-flex items-center justify-center rounded-md border border-black/10 bg-white px-5 py-3 text-sm font-extrabold text-[var(--color-text-main)] shadow-sm transition hover:shadow-[0_16px_40px_rgba(15,23,42,0.10)]"
+                      className="inline-flex items-center justify-center rounded-md border border-black/10 bg-white px-5 py-3 text-sm font-extrabold text-(--color-text-main) shadow-sm transition hover:shadow-[0_16px_40px_rgba(15,23,42,0.10)]"
                     >
                       Talk to us
                     </a>

@@ -66,7 +66,7 @@ export default function ServicesFeedbackDonutCard({ title = "Feedback by Service
       </div>
 
       <div className="mt-4 grid gap-4 md:grid-cols-2">
-        <div className="h-[220px] w-full">
+        <div className="h-55 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie

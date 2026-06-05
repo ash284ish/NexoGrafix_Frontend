@@ -21,8 +21,8 @@ export default function NotFound() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#fbf7f2]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-20 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#ff7a1a]/15 blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 h-[420px] w-[420px] rounded-full bg-[#ffb37a]/20 blur-3xl" />
+        <div className="absolute -top-20 left-1/2 h-105 w-105 -translate-x-1/2 rounded-full bg-[#ff7a1a]/15 blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 h-105 w-105 rounded-full bg-[#ffb37a]/20 blur-3xl" />
         <div className="absolute top-24 right-10 h-16 w-16 rounded-full bg-[#ff7a1a]/25 blur-xl" />
       </div>
 

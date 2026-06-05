@@ -59,7 +59,7 @@ function Modal({
         )}
       >
         <div
-          className="w-full max-w-[520px] overflow-hidden rounded-md border border-black/10 bg-white shadow-[0_22px_70px_-30px_rgba(0,0,0,0.45)]"
+          className="w-full max-w-130 overflow-hidden rounded-md border border-black/10 bg-white shadow-[0_22px_70px_-30px_rgba(0,0,0,0.45)]"
           onMouseDown={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-between border-b border-black/10 px-5 py-4">
@@ -399,7 +399,7 @@ export default function NewsletterUsersPage() {
       />
 
       <div className="w-full overflow-x-auto">
-        <div className="min-w-[900px]"> 
+        <div className="min-w-225"> 
           <DataTable
             data={filtered}
             rowKey={(r) => r.id}

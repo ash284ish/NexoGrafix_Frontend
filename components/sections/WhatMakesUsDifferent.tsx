@@ -120,8 +120,8 @@ export default function WhatMakesUsDifferent() {
   return (
     <section className="relative overflow-hidden bg-white py-16 sm:py-20">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-48 left-1/2 h-[520px] w-[980px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.07),transparent_62%)] blur-2xl" />
-        <div className="absolute -bottom-60 right-[-240px] h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.06),transparent_66%)] blur-2xl" />
+        <div className="absolute -top-48 left-1/2 h-130 w-245 -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.07),transparent_62%)] blur-2xl" />
+        <div className="absolute -bottom-60 -right-60 h-140 w-140 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.06),transparent_66%)] blur-2xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
@@ -129,16 +129,16 @@ export default function WhatMakesUsDifferent() {
           <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.28 }}>
             <motion.div
               variants={popIn}
-              className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm"
+              className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm"
             >
               {left?.pill ?? "WHAT MAKES US DIFFERENT"}
             </motion.div>
 
-            <motion.h2 variants={popIn} className="mt-6 text-4xl font-extrabold leading-tight text-[var(--color-text-main)] sm:text-5xl">
+            <motion.h2 variants={popIn} className="mt-6 text-4xl font-extrabold leading-tight text-(--color-text-main) sm:text-5xl">
               {left?.title ?? "Delivery standards enterprises can rely on."}
             </motion.h2>
 
-            <motion.p variants={popIn} className="mt-4 max-w-xl text-base font-semibold leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+            <motion.p variants={popIn} className="mt-4 max-w-xl text-base font-semibold leading-relaxed text-(--color-text-muted) sm:text-lg">
               {left?.subtitle ??
                 "Many teams can build. Fewer teams can deliver repeatedly with quality, visibility, and control. We reduce delivery risk while scaling output."}
             </motion.p>
@@ -154,19 +154,19 @@ export default function WhatMakesUsDifferent() {
                   >
                     <div className="relative flex items-start gap-4">
                       <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-black/10 bg-white">
-                        <Icon className="h-6 w-6 text-[var(--color-brand-dark)]" />
+                        <Icon className="h-6 w-6 text-(--color-brand-dark)" />
                       </div>
 
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-center gap-2">
-                          <div className="text-sm font-extrabold text-[var(--color-text-main)]">
+                          <div className="text-sm font-extrabold text-(--color-text-main)">
                             {p.title}
                           </div>
-                          <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-1 text-[11px] font-extrabold text-[var(--color-brand-dark)]">
+                          <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-1 text-[11px] font-extrabold text-(--color-brand-dark)">
                             {p.pill}
                           </span>
                         </div>
-                        <div className="mt-2 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">
+                        <div className="mt-2 text-sm font-semibold leading-relaxed text-(--color-text-muted)">
                           {p.desc}
                         </div>
                       </div>
@@ -178,7 +178,7 @@ export default function WhatMakesUsDifferent() {
 
             <motion.div
               variants={popIn}
-              className="mt-10 max-w-xl rounded-md border border-black/10 bg-white p-6 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)] shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
+              className="mt-10 max-w-xl rounded-md border border-black/10 bg-white p-6 text-sm font-semibold leading-relaxed text-(--color-text-muted) shadow-[0_14px_40px_rgba(15,23,42,0.06)]"
             >
               {left?.footerNote ??
                 "Outcome: fewer revisions, clearer timelines, safer AI adoption, and measurable delivery confidence."}
@@ -189,16 +189,16 @@ export default function WhatMakesUsDifferent() {
             <div className="relative overflow-hidden rounded-md border border-black/10 bg-white shadow-[0_22px_70px_rgba(15,23,42,0.10)]">
               <div className="relative p-6 sm:p-7">
                 <div className="flex items-center justify-between">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-extrabold tracking-[0.14em] text-[var(--color-brand-dark)] shadow-sm">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-extrabold tracking-[0.14em] text-(--color-brand-dark) shadow-sm">
                     {right?.pill ?? "DELIVERY PROOF"}
                   </div>
-                  <div className="rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-2 text-[11px] font-extrabold text-[var(--color-brand-dark)]">
+                  <div className="rounded-full border border-orange-200/70 bg-orange-50/60 px-3 py-2 text-[11px] font-extrabold text-(--color-brand-dark)">
                     {right?.badgeRight ?? "Visual Preview"}
                   </div>
                 </div>
 
                 <div className="mt-5 overflow-hidden rounded-md border border-black/10 bg-white">
-                  <div className="relative aspect-[16/10] w-full">
+                  <div className="relative aspect-16/10 w-full">
                     <img
                       src={imageSrc}
                       alt={imageAlt}
@@ -217,7 +217,7 @@ export default function WhatMakesUsDifferent() {
                       <div className="text-[11px] font-extrabold tracking-[0.14em] text-black/50">
                         {s.label}
                       </div>
-                      <div className="mt-1 text-sm font-extrabold text-[var(--color-text-main)]">
+                      <div className="mt-1 text-sm font-extrabold text-(--color-text-main)">
                         {s.value}
                       </div>
                     </div>
