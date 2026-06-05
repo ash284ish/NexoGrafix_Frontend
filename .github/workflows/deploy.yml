@@ -35,9 +35,7 @@ jobs:
       - name: Prepare Artifacts
         run: |
           mkdir -p deploy_dist
-          # Sync essential files for production run
           cp -r .next public package.json package-lock.json deploy_dist/
-          # Include config files if they exist (Next.js 16+ support)
           [ -f next.config.ts ] && cp next.config.ts deploy_dist/ || true
           [ -f next.config.js ] && cp next.config.js deploy_dist/ || true
           [ -f next.config.mjs ] && cp next.config.mjs deploy_dist/ || true
@@ -66,11 +64,14 @@ jobs:
       HOSTINGER_FRONTEND_SERVICE_NAME: ${{ secrets.HOSTINGER_FRONTEND_SERVICE_NAME }}
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: .
+          path: deploy_dist/
 
       - name: Install deployment tools
         run: |
@@ -78,12 +79,12 @@ jobs:
 
       - name: Network Diagnostic
         run: |
-            echo "Testing connectivity to $HOSTINGER_HOST on port $HOSTINGER_SSH_PORT..."
-            if nc -zv -w 10 "$HOSTINGER_HOST" "$HOSTINGER_SSH_PORT"; then
-              echo "Connectivity check passed."
-            else
-              echo "::warning::Network connectivity check failed to $HOSTINGER_HOST:$HOSTINGER_SSH_PORT. Attempting to proceed..."
-            fi
+          echo "Testing connectivity to $HOSTINGER_HOST on port $HOSTINGER_SSH_PORT..."
+          if nc -zv -w 10 "$HOSTINGER_HOST" "$HOSTINGER_SSH_PORT"; then
+            echo "Connectivity check passed."
+          else
+            echo "::warning::Network connectivity check failed to $HOSTINGER_HOST:$HOSTINGER_SSH_PORT. Attempting to proceed..."
+          fi
 
       - name: Configure SSH key
         run: |
@@ -104,12 +105,21 @@ jobs:
             "$HOSTINGER_USER@$HOSTINGER_HOST" \
             "sudo mkdir -p '$HOSTINGER_FRONTEND_APP_DIR' && sudo chown -R '$HOSTINGER_USER':'$HOSTINGER_USER' '$HOSTINGER_FRONTEND_APP_DIR'"
 
-      - name: Sync artifacts to Hostinger
+      - name: Sync full source to Hostinger
         run: |
-          # Sync only the build artifacts to keep the server clean
+          # Sync full repo source (excluding git metadata and node_modules)
           rsync -az --delete \
             -e "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p $HOSTINGER_SSH_PORT" \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='deploy_dist' \
             ./ \
+            "${HOSTINGER_USER}@${HOSTINGER_HOST}:${HOSTINGER_FRONTEND_APP_DIR}/"
+
+          # Overlay the pre-built .next and other build artifacts
+          rsync -az \
+            -e "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p $HOSTINGER_SSH_PORT" \
+            deploy_dist/ \
             "${HOSTINGER_USER}@${HOSTINGER_HOST}:${HOSTINGER_FRONTEND_APP_DIR}/"
 
       - name: Production Restart
@@ -119,14 +129,14 @@ jobs:
             "${HOSTINGER_USER}@${HOSTINGER_HOST}" "
             set -euo pipefail
             cd \"${HOSTINGER_FRONTEND_APP_DIR}\"
-            
+
             # Load Node.js environment
             export NVM_DIR=\"\$HOME/.nvm\"
             [ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\" || true
-            
-            # Install production dependencies only (much faster)
+
+            # Install production dependencies only
             npm install --production
-            
+
             mkdir -p public/uploads
 
             # Service management
