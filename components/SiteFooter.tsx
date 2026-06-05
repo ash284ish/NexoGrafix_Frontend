@@ -63,13 +63,13 @@ const FALLBACK: FooterJson = {
       ],
     },
     product: { label: "PRODUCT", items: [{ title: "Arohio.ai", href: "/arohio" }] },
-    resources: { label: "RESOURCES", items: [{ title: "Feedback", href: "/feedback" }, { title: "Blog", href: "/blog" }, { title: "FAQs", href: "/faqs" }] },
+    resources: { label: "RESOURCES", items: [{ title: "Case Studies", href: "/case-studies" }, { title: "Feedback", href: "/feedback" }, { title: "Blog", href: "/blog" }, { title: "FAQs", href: "/faqs" }] },
     solutions: {
       label: "SOLUTIONS",
       items: [
         { title: "Publishing & Digitization", href: "/publishing-digitization#overview" },
         { title: "Accessibility & Compliance", href: "/accessibility-compliance#overview" },
-        { title: "IT & Digital Platforms", href: "/digital-platforms#overview" },
+        { title: "IT & Digital Platforms", href: "/digital-platforms" },
         { title: "Data Labeling & Annotation", href: "/data-labeling#overview" },
         { title: "Localization & Media Accessibility", href: "/localization-media#overview" },
         { title: "Content, eLearning & EdTech", href: "/elearning-edtech#overview" },
@@ -265,7 +265,25 @@ export default function SiteFooter() {
     };
   }, []);
 
-  const f = data ?? FALLBACK;
+  const f = useMemo(() => {
+    const base = data ?? FALLBACK;
+    const homeItems = [...base.nav.home.items];
+    if (!homeItems.some((it) => it.href === "/case-studies")) {
+      homeItems.splice(1, 0, { title: "Case Studies", href: "/case-studies" });
+    }
+    const resItems = [...base.nav.resources.items];
+    if (!resItems.some((it) => it.href === "/case-studies")) {
+      resItems.unshift({ title: "Case Studies", href: "/case-studies" });
+    }
+    return {
+      ...base,
+      nav: {
+        ...base.nav,
+        home: { ...base.nav.home, items: homeItems },
+        resources: { ...base.nav.resources, items: resItems },
+      },
+    };
+  }, [data]);
 
   const Icon = useMemo(() => {
     const map: Record<string, React.ReactNode> = {
@@ -398,7 +416,7 @@ export default function SiteFooter() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-md bg-orange-600 px-4 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-orange-700 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0"
+                    className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-md bg-orange-600 px-4 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0"
                   >
                     {submitting ? "Saving..." : "Subscribe"} <FiArrowUpRight />
                   </button>
@@ -423,7 +441,7 @@ export default function SiteFooter() {
                 ) : null}
 
                 {secondaryCta ? (
-                  <Link href={secondaryCta.href} className="inline-flex items-center justify-center rounded-md bg-orange-600 px-4 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-orange-700">
+                  <Link href={secondaryCta.href} className="inline-flex items-center justify-center rounded-md bg-orange-600 px-4 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-gray-600">
                     {secondaryCta.label} <FiArrowUpRight className="ml-2" />
                   </Link>
                 ) : null}

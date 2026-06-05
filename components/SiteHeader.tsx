@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
+import { motion } from "framer-motion";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGoogle } from "react-icons/fa";
 import {
   FiHome,
@@ -64,7 +65,7 @@ type HeaderResponse = { header: HeaderData };
 const FALLBACK: HeaderData = {
   brand: { name: "Nexografix", href: "/" },
   topbar: {
-    text: "AI-enabled services for Publishing, Content, Assessments & Automation — Enterprise delivery standards.",
+    text: "Nexografix — PDF & Document Accessibility Compliance | WCAG · Section 508 · EPUB",
     socials: [
       { key: "facebook", label: "Facebook", href: "#", icon: "FaFacebookF" },
       { key: "twitter", label: "Twitter", href: "#", icon: "FaTwitter" },
@@ -79,6 +80,7 @@ const FALLBACK: HeaderData = {
       icon: "FiHome",
       items: [
         { title: "Homepage", href: "/", icon: "FiHome" },
+        { title: "Case Studies", href: "/case-studies", icon: "FiBox" },
         { title: "About Us", href: "/about", icon: "FiUser" },
         { title: "Contact Us", href: "/contact", icon: "FiMail" },
       ],
@@ -128,17 +130,17 @@ const FALLBACK: HeaderData = {
           key: "it",
           title: "IT & Digital Platforms",
           icon: "FiCpu",
-          href: "/solutions/it",
+          href: "/digital-platforms",
           items: [
-            { title: "Web Development", href: "/digital-platforms#web-development", icon: "FiCode" },
-            { title: "UI / UX Design", href: "/digital-platforms#ui-ux", icon: "FiPenTool" },
-            { title: "Mobile App Development", href: "/digital-platforms#mobile-development", icon: "FiSmartphone" },
-            { title: "E-commerce Development", href: "/digital-platforms#ecommerce", icon: "FiBox" },
-            { title: "Custom Software Development", href: "/digital-platforms#custom-software", icon: "FiZap" },
-            { title: "EdTech / LMS Development", href: "/digital-platforms#edtech-lms", icon: "FiBookOpen" },
-            { title: "AI & Automation", href: "/digital-platforms#ai-automation", icon: "FiZap" },
-            { title: "CMS / DAM / Content Systems", href: "/digital-platforms#cms-dam", icon: "FiLayers" },
-            { title: "API & Integrations", href: "/digital-platforms#integrations", icon: "FiCode" },
+            { title: "Web Development", href: "/digital-platforms/web-development", icon: "FiCode" },
+            { title: "UI / UX Design", href: "/digital-platforms/ui-ux", icon: "FiPenTool" },
+            { title: "Mobile App Development", href: "/digital-platforms/mobile-development", icon: "FiSmartphone" },
+            { title: "E-commerce Development", href: "/digital-platforms/ecommerce", icon: "FiBox" },
+            { title: "Custom Software Development", href: "/digital-platforms/custom-software", icon: "FiZap" },
+            { title: "EdTech / LMS Development", href: "/digital-platforms/edtech-lms", icon: "FiBookOpen" },
+            { title: "AI & Automation", href: "/digital-platforms/ai-automation", icon: "FiZap" },
+            { title: "CMS / DAM / Content Systems", href: "/digital-platforms/cms-dam", icon: "FiLayers" },
+            { title: "API & Integrations", href: "/digital-platforms/integrations", icon: "FiCode" },
           ],
         },
         {
@@ -193,6 +195,7 @@ const FALLBACK: HeaderData = {
       label: "Resources",
       icon: "FiBookOpen",
       items: [
+        { title: "Case Studies", href: "/case-studies", icon: "FiBox" },
         { title: "Feedback", href: "/feedback", icon: "FiMessageSquare" },
         { title: "Insights / Blog", href: "/blog", icon: "FiPenTool" },
         { title: "FAQs", href: "/faqs", icon: "FiHelpCircle" },
@@ -227,7 +230,25 @@ export default function SiteHeader() {
     };
   }, []);
 
-  const h = data ?? FALLBACK;
+  const h = useMemo(() => {
+    const base = data ?? FALLBACK;
+    const homeItems = [...base.nav.home.items];
+    if (!homeItems.some((it) => it.href === "/case-studies")) {
+      homeItems.splice(1, 0, { title: "Case Studies", href: "/case-studies", icon: "FiBox" });
+    }
+    const resItems = [...base.nav.resources.items];
+    if (!resItems.some((it) => it.href === "/case-studies")) {
+      resItems.unshift({ title: "Case Studies", href: "/case-studies", icon: "FiBox" });
+    }
+    return {
+      ...base,
+      nav: {
+        ...base.nav,
+        home: { ...base.nav.home, items: homeItems },
+        resources: { ...base.nav.resources, items: resItems },
+      },
+    };
+  }, [data]);
 
   const iconMap: Record<string, ReactNode> = {
     FaFacebookF: <FaFacebookF size={16} />,
@@ -356,14 +377,46 @@ export default function SiteHeader() {
           <Link
             href={h.brand.href}
             className="nx-logo"
-            style={{ display: "flex", alignItems: "center", gap: "10px" }}
+            style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "12px", 
+              transform: "translateY(-2px)",
+              transition: "transform 0.3s ease"
+            }}
           >
-            <img
-              src="/images/nexografix_logo.png"
-              alt="NG Logo"
-              style={{ height: "46px", width: "auto" }}
-            />
-            <span>{h.brand.name}</span>
+            <motion.div
+              initial={{ rotate: -10, scale: 0.8, opacity: 0 }}
+              animate={{ rotate: 0, scale: 1, opacity: 1 }}
+              whileHover={{ rotate: 5, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <img
+                src="/images/nexografix_logo.png"
+                alt="NG Logo"
+                style={{ 
+                  height: "52px", 
+                  width: "auto",
+                  filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.05))"
+                }}
+              />
+            </motion.div>
+            <motion.span 
+              initial={{ x: -10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              style={{ 
+                background: "linear-gradient(135deg, #0f172a 0%, #ea580c 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontWeight: "900",
+                fontSize: "26px",
+                letterSpacing: "-0.02em"
+              }}
+            >
+              {h.brand.name}
+            </motion.span>
           </Link>
 
 
@@ -482,17 +535,38 @@ export default function SiteHeader() {
         <div className="nx-mobile-overlay" onClick={() => setMobileOpen(false)}>
           <div className="nx-mobile-panel" onClick={(e) => e.stopPropagation()}>
             <div className="nx-mobile-panel-head">
-              <div
+              <Link
+                href="/"
                 className="nx-mobile-logo"
-                style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                style={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: "10px",
+                  transform: "translateY(-1px)" 
+                }}
+                onClick={() => setMobileOpen(false)}
               >
-                <img
+                <motion.img
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
                   src="/images/nexografix_logo.png"
                   alt="NG Logo"
-                  style={{ height: "42px", width: "auto" }}
+                  style={{ height: "48px", width: "auto" }}
                 />
-                <span>{h.brand.name}</span>
-              </div>
+                <motion.span
+                  initial={{ opacity: 0, x: -5 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  style={{ 
+                    fontWeight: "900", 
+                    fontSize: "22px",
+                    background: "linear-gradient(135deg, #0f172a 0%, #ea580c 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                  }}
+                >
+                  {h.brand.name}
+                </motion.span>
+              </Link>
 
               <button className="nx-mobile-close" onClick={() => setMobileOpen(false)} aria-label="Close" type="button">
                 <FiX />

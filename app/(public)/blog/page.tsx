@@ -125,8 +125,8 @@ function BlogCover({
   }
 
   return (
-    <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-[rgba(24,24,27,0.12)] bg-white">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
+    <div className="relative aspect-16/10 overflow-hidden rounded-md border border-[rgba(24,24,27,0.12)] bg-white">
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/15 via-transparent to-transparent" />
 
       <Image
         src={safeSrc}
@@ -294,24 +294,24 @@ export default function BlogPage() {
   return (
     <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-28 left-[-120px] h-[420px] w-[420px] rounded-full bg-orange-300/20 blur-3xl" />
-        <div className="absolute top-[140px] right-[-160px] h-[520px] w-[520px] rounded-full bg-orange-400/15 blur-3xl" />
-        <div className="absolute bottom-[-180px] left-[20%] h-[520px] w-[520px] rounded-full bg-orange-200/20 blur-3xl" />
+        <div className="absolute -top-28 -left-30 h-105 w-105 rounded-full bg-orange-300/20 blur-3xl" />
+        <div className="absolute top-35 -right-40 h-130 w-130 rounded-full bg-orange-400/15 blur-3xl" />
+        <div className="absolute -bottom-45 left-[20%] h-130 w-130 rounded-full bg-orange-200/20 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-6 py-16">
+      <div className="relative mx-auto max-w-7xl px-6 py-16">
         <motion.div initial="hidden" animate="show" variants={fadeUp} className="text-center">
           <div className="flex justify-center">
-            <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.26em] text-[var(--color-brand)] shadow-sm">
+            <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white px-4 py-2 text-xs font-extrabold tracking-[0.26em] text-(--color-brand) shadow-sm">
               {heroBadge}
             </span>
           </div>
 
-          <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold leading-[1.08] text-[var(--color-text-main)] sm:text-6xl">
+          <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold leading-[1.08] text-(--color-text-main) sm:text-6xl">
             {heroTitle}
           </h1>
 
-          <p className="mx-auto mt-4 max-w-2xl text-base font-semibold leading-relaxed text-[var(--color-text-main)]/70">
+          <p className="mx-auto mt-4 max-w-2xl text-base font-semibold leading-relaxed text-(--color-text-main)/70">
             {heroSubtitle}
           </p>
         </motion.div>
@@ -325,7 +325,7 @@ export default function BlogPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  className="rounded-md border border-[rgba(24,24,27,0.12)] bg-white p-8 text-sm font-semibold text-[var(--color-text-muted)] sm:col-span-2 lg:col-span-3"
+                  className="rounded-md border border-[rgba(24,24,27,0.12)] bg-white p-8 text-sm font-semibold text-(--color-text-muted) sm:col-span-2 lg:col-span-3"
                 >
                   Loading posts...
                 </motion.div>
@@ -353,19 +353,19 @@ export default function BlogPage() {
                     </div>
 
                     <div className="flex flex-1 flex-col px-6 pb-6">
-                      <div className="mt-1 flex min-h-[18px] flex-wrap items-center gap-x-2 gap-y-1 text-xs font-extrabold tracking-[0.10em]">
-                        <span className="text-[var(--color-brand)]">{post.category}</span>
-                        <span className="text-[var(--color-text-muted)]">•</span>
-                        <span className="text-[var(--color-text-muted)]">{formatDate(post.dateISO)}</span>
-                        <span className="text-[var(--color-text-muted)]">•</span>
-                        <span className="text-[var(--color-text-muted)]">{post.readTime}</span>
+                      <div className="mt-1 flex min-h-4.5 flex-wrap items-center gap-x-2 gap-y-1 text-xs font-extrabold tracking-widest">
+                        <span className="text-(--color-brand)">{post.category}</span>
+                        <span className="text-(--color-text-muted)">•</span>
+                        <span className="text-(--color-text-muted)">{formatDate(post.dateISO)}</span>
+                        <span className="text-(--color-text-muted)">•</span>
+                        <span className="text-(--color-text-muted)">{post.readTime}</span>
                       </div>
 
-                      <h3 className="mt-3 line-clamp-2 text-lg font-extrabold leading-snug text-[var(--color-text-main)]">
+                      <h3 className="mt-3 line-clamp-2 text-lg font-extrabold leading-snug text-(--color-text-main)">
                         {post.title}
                       </h3>
 
-                      <p className="mt-2 line-clamp-3 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">
+                      <p className="mt-2 line-clamp-3 text-sm font-semibold leading-relaxed text-(--color-text-muted)">
                         {post.excerpt}
                       </p>
 
@@ -375,7 +375,7 @@ export default function BlogPage() {
                             pathname: `/blog/${post.slug}`,
                             query: { blog_id: post.id },
                           }}
-                          className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border border-[rgba(249,115,22,0.22)] bg-orange-50/50 px-4 py-3 text-sm font-extrabold text-[var(--color-brand-dark)] transition hover:-translate-y-0.5 hover:bg-orange-100/60"
+                          className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border border-[rgba(249,115,22,0.22)] bg-orange-50/50 px-4 py-3 text-sm font-extrabold text-(--color-brand-dark) transition hover:-translate-y-0.5 hover:bg-orange-100/60"
                         >
                           {readLabel} <span aria-hidden>{readSuffix}</span>
                         </Link>
@@ -389,7 +389,7 @@ export default function BlogPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  className="rounded-md border border-[rgba(24,24,27,0.12)] bg-white p-8 text-sm font-semibold text-[var(--color-text-muted)] sm:col-span-2 lg:col-span-3"
+                  className="rounded-md border border-[rgba(24,24,27,0.12)] bg-white p-8 text-sm font-semibold text-(--color-text-muted) sm:col-span-2 lg:col-span-3"
                 >
                   {emptyText}
                 </motion.div>
@@ -404,7 +404,7 @@ export default function BlogPage() {
             className="rounded-md border border-[rgba(24,24,27,0.12)] bg-white p-6 shadow-[0_22px_70px_rgba(15,23,42,0.08)] lg:sticky lg:top-24"
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-sm font-extrabold text-[var(--color-text-main)]">
+              <div className="flex items-center gap-2 text-sm font-extrabold text-(--color-text-main)">
                 <FiSliders />
                 {sidebarTitle}
               </div>
@@ -416,14 +416,14 @@ export default function BlogPage() {
                   setSort(data?.filters?.default_sort ?? "newest");
                   setPage(1);
                 }}
-                className="cursor-pointer text-xs font-extrabold text-[var(--color-brand-dark)] hover:underline"
+                className="cursor-pointer text-xs font-extrabold text-(--color-brand-dark) hover:underline"
               >
                 {resetLabel}
               </button>
             </div>
 
             <div className="mt-4">
-              <label className="mb-2 flex items-center gap-2 text-xs font-extrabold tracking-[0.12em] text-[var(--color-text-muted)]">
+              <label className="mb-2 flex items-center gap-2 text-xs font-extrabold tracking-[0.12em] text-(--color-text-muted)">
                 <FiSearch />
                 {labelSearch}
               </label>
@@ -434,12 +434,12 @@ export default function BlogPage() {
                   setPage(1);
                 }}
                 placeholder={searchPlaceholder}
-                className="w-full rounded-md border border-[rgba(24,24,27,0.12)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                className="w-full rounded-md border border-[rgba(24,24,27,0.12)] bg-white px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
               />
             </div>
 
             <div className="mt-5">
-              <label className="mb-2 flex items-center gap-2 text-xs font-extrabold tracking-[0.12em] text-[var(--color-text-muted)]">
+              <label className="mb-2 flex items-center gap-2 text-xs font-extrabold tracking-[0.12em] text-(--color-text-muted)">
                 <FiTag />
                 {labelCategory}
               </label>
@@ -456,8 +456,8 @@ export default function BlogPage() {
                     className={cx(
                       "cursor-pointer rounded-md border px-3 py-2 text-xs font-extrabold transition",
                       (c || "").trim().toLowerCase() === (cat || "").trim().toLowerCase()
-                        ? "border-[rgba(249,115,22,0.30)] bg-orange-50/70 text-[var(--color-brand-dark)]"
-                        : "border-[rgba(24,24,27,0.12)] bg-white text-[var(--color-text-muted)] hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
+                        ? "border-[rgba(249,115,22,0.30)] bg-orange-50/70 text-(--color-brand-dark)"
+                        : "border-[rgba(24,24,27,0.12)] bg-white text-(--color-text-muted) hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
                     )}
                   >
                     {c}
@@ -467,14 +467,14 @@ export default function BlogPage() {
             </div>
 
             <div className="mt-5">
-              <label className="mb-2 text-xs font-extrabold tracking-[0.12em] text-[var(--color-text-muted)]">{labelSort}</label>
+              <label className="mb-2 text-xs font-extrabold tracking-[0.12em] text-(--color-text-muted)">{labelSort}</label>
               <select
                 value={sort}
                 onChange={(e) => {
                   setSort(e.target.value as "newest" | "oldest" | "title");
                   setPage(1);
                 }}
-                className="w-full cursor-pointer appearance-none rounded-md border border-[rgba(24,24,27,0.12)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                className="w-full cursor-pointer appearance-none rounded-md border border-[rgba(24,24,27,0.12)] bg-white px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
               >
                 {sortOptions.map((opt) => (
                   <option key={opt.value} value={opt.value}>
@@ -484,19 +484,19 @@ export default function BlogPage() {
               </select>
             </div>
 
-            <div className="mt-6 rounded-md border border-[rgba(24,24,27,0.10)] bg-white p-4 text-xs font-semibold text-[var(--color-text-muted)]">
+            <div className="mt-6 rounded-md border border-[rgba(24,24,27,0.10)] bg-white p-4 text-xs font-semibold text-(--color-text-muted)">
               Showing{" "}
-              <span className="font-extrabold text-[var(--color-text-main)]">{pageItems.length}</span> of{" "}
-              <span className="font-extrabold text-[var(--color-text-main)]">{filtered.length}</span> posts
+              <span className="font-extrabold text-(--color-text-main)">{pageItems.length}</span> of{" "}
+              <span className="font-extrabold text-(--color-text-main)">{filtered.length}</span> posts
             </div>
           </motion.aside>
         </div>
 
         {showPagination && (
           <div className="mt-10 flex items-center justify-between gap-4">
-            <div className="text-sm font-semibold text-[var(--color-text-muted)]">
-              {pageLabelPrefix} <span className="font-extrabold text-[var(--color-text-main)]">{page}</span>{" "}
-              {pageLabelMiddle} <span className="font-extrabold text-[var(--color-text-main)]">{totalPages}</span>
+            <div className="text-sm font-semibold text-(--color-text-muted)">
+              {pageLabelPrefix} <span className="font-extrabold text-(--color-text-main)">{page}</span>{" "}
+              {pageLabelMiddle} <span className="font-extrabold text-(--color-text-main)">{totalPages}</span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -507,8 +507,8 @@ export default function BlogPage() {
                 className={cx(
                   "inline-flex h-10 w-10 items-center justify-center rounded-md border transition",
                   page === 1
-                    ? "cursor-not-allowed border-[rgba(24,24,27,0.10)] bg-white text-[var(--color-text-muted)] opacity-60"
-                    : "border-[rgba(24,24,27,0.12)] bg-white text-[var(--color-text-main)] hover:-translate-y-0.5 hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
+                    ? "cursor-not-allowed border-[rgba(24,24,27,0.10)] bg-white text-(--color-text-muted) opacity-60"
+                    : "border-[rgba(24,24,27,0.12)] bg-white text-(--color-text-main) hover:-translate-y-0.5 hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
                 )}
                 aria-label="Previous page"
               >
@@ -521,10 +521,10 @@ export default function BlogPage() {
                   type="button"
                   onClick={() => setPage(n)}
                   className={cx(
-                    "h-10 min-w-[40px] rounded-md border px-3 text-sm font-extrabold transition",
+                    "h-10 min-w-10 rounded-md border px-3 text-sm font-extrabold transition",
                     n === page
-                      ? "border-[rgba(249,115,22,0.30)] bg-orange-50/70 text-[var(--color-brand-dark)]"
-                      : "border-[rgba(24,24,27,0.12)] bg-white text-[var(--color-text-main)] hover:-translate-y-0.5 hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
+                      ? "border-[rgba(249,115,22,0.30)] bg-orange-50/70 text-(--color-brand-dark)"
+                      : "border-[rgba(24,24,27,0.12)] bg-white text-(--color-text-main) hover:-translate-y-0.5 hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
                   )}
                 >
                   {n}
@@ -538,8 +538,8 @@ export default function BlogPage() {
                 className={cx(
                   "inline-flex h-10 w-10 items-center justify-center rounded-md border transition",
                   page === totalPages
-                    ? "cursor-not-allowed border-[rgba(24,24,27,0.10)] bg-white text-[var(--color-text-muted)] opacity-60"
-                    : "border-[rgba(24,24,27,0.12)] bg-white text-[var(--color-text-main)] hover:-translate-y-0.5 hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
+                    ? "cursor-not-allowed border-[rgba(24,24,27,0.10)] bg-white text-(--color-text-muted) opacity-60"
+                    : "border-[rgba(24,24,27,0.12)] bg-white text-(--color-text-main) hover:-translate-y-0.5 hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/40"
                 )}
                 aria-label="Next page"
               >

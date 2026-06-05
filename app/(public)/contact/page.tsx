@@ -322,26 +322,26 @@ export default function ContactPage() {
   };
 
   return (
-    <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-[var(--color-bg)]">
+    <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-(--color-bg)">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-36 left-1/2 h-[520px] w-[980px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.14),transparent_62%)] blur-2xl" />
-        <div className="absolute -bottom-40 right-[-220px] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.10),transparent_66%)] blur-2xl" />
-        <div className="absolute -bottom-44 left-[-220px] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08),transparent_66%)] blur-2xl" />
+        <div className="absolute -top-36 left-1/2 h-130 w-245 -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.14),transparent_62%)] blur-2xl" />
+        <div className="absolute -bottom-40 -right-55 h-130 w-130 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.10),transparent_66%)] blur-2xl" />
+        <div className="absolute -bottom-44 -left-55 h-130 w-130 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08),transparent_66%)] blur-2xl" />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-6 py-16">
+      <div className="relative mx-auto max-w-7xl px-6 py-16">
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.7 }} className="text-center">
           <motion.div variants={fadeUp} className="flex justify-center">
-            <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/70 px-4 py-2 text-xs font-extrabold tracking-[0.26em] text-[var(--color-brand)] shadow-sm backdrop-blur">
+            <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/70 px-4 py-2 text-xs font-extrabold tracking-[0.26em] text-(--color-brand) shadow-sm backdrop-blur">
               {heroBadge}
             </span>
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="mx-auto mt-5 max-w-4xl whitespace-pre-line text-4xl font-extrabold leading-[1.08] text-[var(--color-text-main)] sm:text-5xl">
+          <motion.h1 variants={fadeUp} className="mx-auto mt-5 max-w-4xl whitespace-pre-line text-4xl font-extrabold leading-[1.08] text-(--color-text-main) sm:text-5xl">
             {heroTitle}
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-text-muted)]">
+          <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-(--color-text-muted)">
             {heroSubtitle}
           </motion.p>
         </motion.div>
@@ -349,12 +349,12 @@ export default function ContactPage() {
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.35 }} variants={stagger} className="mt-12 grid gap-8 md:grid-cols-3">
           <motion.div variants={cardIn} whileHover={{ y: -5 }} transition={{ duration: 0.28, ease: "easeOut" }} className="group flex h-full flex-col rounded-md border border-[rgba(24,24,27,0.07)] bg-white/80 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur">
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-50 text-[var(--color-brand)] ring-1 ring-orange-200/50">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-50 text-(--color-brand) ring-1 ring-orange-200/50">
                 <FiMessageSquare size={22} />
               </div>
               <div className="flex-1">
-                <div className="text-xl font-extrabold text-[var(--color-text-main)]">{cardTextTitle}</div>
-                <div className="mt-1 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">{cardTextDesc}</div>
+                <div className="text-xl font-extrabold text-(--color-text-main)">{cardTextTitle}</div>
+                <div className="mt-1 text-sm font-semibold leading-relaxed text-(--color-text-muted)">{cardTextDesc}</div>
               </div>
             </div>
 
@@ -363,7 +363,7 @@ export default function ContactPage() {
                 href={whatsappHref}
                 target={whatsappHref.startsWith("http") ? "_blank" : undefined}
                 rel={whatsappHref.startsWith("http") ? "noreferrer" : undefined}
-                className="inline-flex w-full items-center justify-center rounded-lg bg-[var(--color-brand)] px-5 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(249,115,22,0.22)] transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-dark)] hover:text-white hover:shadow-[0_18px_44px_rgba(249,115,22,0.28)] active:translate-y-0"
+                className="inline-flex w-full items-center justify-center rounded-lg bg-(--color-brand) px-5 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(249,115,22,0.22)] transition hover:-translate-y-0.5 hover:bg-gray-600 hover:text-white hover:shadow-[0_18px_44px_rgba(249,115,22,0.28)] active:translate-y-0"
               >
                 {cardTextBtn}
               </a>
@@ -372,12 +372,12 @@ export default function ContactPage() {
 
           <motion.div variants={cardIn} whileHover={{ y: -5 }} transition={{ duration: 0.28, ease: "easeOut" }} className="group flex h-full flex-col rounded-md border border-[rgba(24,24,27,0.07)] bg-white/80 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur">
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-50 text-[var(--color-brand)] ring-1 ring-orange-200/50">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-50 text-(--color-brand) ring-1 ring-orange-200/50">
                 <FiPhoneCall size={22} />
               </div>
               <div className="flex-1">
-                <div className="text-xl font-extrabold text-[var(--color-text-main)]">{cardCallTitle}</div>
-                <div className="mt-1 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">{cardCallDesc}</div>
+                <div className="text-xl font-extrabold text-(--color-text-main)">{cardCallTitle}</div>
+                <div className="mt-1 text-sm font-semibold leading-relaxed text-(--color-text-muted)">{cardCallDesc}</div>
               </div>
             </div>
 
@@ -390,7 +390,7 @@ export default function ContactPage() {
                       href={p}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-extrabold text-[var(--color-text-main)] transition hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/60 hover:text-[var(--color-brand-dark)]"
+                      className="block rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-extrabold text-(--color-text-main) transition hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/60 hover:text-(--color-brand-dark)"
                     >
                       Schedule Meet
                     </a>
@@ -398,7 +398,7 @@ export default function ContactPage() {
 
                 </div>
               ) : (
-                <div className="rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-muted)]">
+                <div className="rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-muted)">
                   Phone details will be updated.
                 </div>
               )}
@@ -407,12 +407,12 @@ export default function ContactPage() {
 
           <motion.div variants={cardIn} whileHover={{ y: -5 }} transition={{ duration: 0.28, ease: "easeOut" }} className="group flex h-full flex-col rounded-md border border-[rgba(24,24,27,0.07)] bg-white/80 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)] backdrop-blur">
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-50 text-[var(--color-brand)] ring-1 ring-orange-200/50">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-50 text-(--color-brand) ring-1 ring-orange-200/50">
                 <FiMail size={22} />
               </div>
               <div className="flex-1">
-                <div className="text-xl font-extrabold text-[var(--color-text-main)]">{cardEmailTitle}</div>
-                <div className="mt-1 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">{cardEmailDesc}</div>
+                <div className="text-xl font-extrabold text-(--color-text-main)">{cardEmailTitle}</div>
+                <div className="mt-1 text-sm font-semibold leading-relaxed text-(--color-text-muted)">{cardEmailDesc}</div>
               </div>
             </div>
 
@@ -423,14 +423,14 @@ export default function ContactPage() {
                     <a
                       key={e}
                       href={`mailto:${e}`}
-                      className="block rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-extrabold text-[var(--color-text-main)] transition hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/60 hover:text-[var(--color-brand-dark)]"
+                      className="block rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-extrabold text-(--color-text-main) transition hover:border-[rgba(249,115,22,0.22)] hover:bg-orange-50/60 hover:text-(--color-brand-dark)"
                     >
                       {e}
                     </a>
                   ))}
                 </div>
               ) : (
-                <div className="rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-muted)]">
+                <div className="rounded-lg border border-[rgba(24,24,27,0.06)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-muted)">
                   Email details will be updated.
                 </div>
               )}
@@ -449,16 +449,16 @@ export default function ContactPage() {
             <div className="flex h-full flex-col overflow-hidden rounded-md border border-[rgba(24,24,27,0.07)] bg-white/70 shadow-[0_30px_95px_rgba(15,23,42,0.10)] backdrop-blur ring-1 ring-orange-200/40">
               <div className="flex items-center justify-between gap-4 border-b border-[rgba(24,24,27,0.06)] bg-[linear-gradient(180deg,rgba(249,115,22,0.10),rgba(255,255,255,0.0))] px-6 py-4">
                 <div>
-                  <div className="text-xs font-extrabold tracking-[0.22em] text-[var(--color-brand)]">{locBadge}</div>
-                  <div className="mt-1 text-lg font-extrabold text-[var(--color-text-main)]">{locTitle}</div>
-                  <div className="mt-1 text-sm font-semibold text-[var(--color-text-muted)]">{locSubtitle}</div>
+                  <div className="text-xs font-extrabold tracking-[0.22em] text-(--color-brand)">{locBadge}</div>
+                  <div className="mt-1 text-lg font-extrabold text-(--color-text-main)">{locTitle}</div>
+                  <div className="mt-1 text-sm font-semibold text-(--color-text-muted)">{locSubtitle}</div>
                 </div>
 
                 <a
                   href={mapsHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="shrink-0 rounded-lg border border-[rgba(249,115,22,0.22)] bg-white/70 px-4 py-2 text-sm font-extrabold text-[var(--color-brand-dark)] shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-50"
+                  className="shrink-0 rounded-lg border border-[rgba(249,115,22,0.22)] bg-white/70 px-4 py-2 text-sm font-extrabold text-(--color-brand-dark) shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-50"
                 >
                   {openMapsLabel}
                 </a>
@@ -473,9 +473,9 @@ export default function ContactPage() {
 
           <motion.div variants={formIn} className="h-full rounded-md border border-[rgba(24,24,27,0.07)] bg-white/80 p-8 shadow-[0_24px_76px_rgba(15,23,42,0.08)] backdrop-blur ring-1 ring-orange-200/35">
             <div className="mb-6">
-              <div className="text-xs font-extrabold tracking-[0.22em] text-[var(--color-brand)]">{formBadge}</div>
-              <h2 className="mt-3 text-3xl font-extrabold leading-tight text-[var(--color-text-main)]">{formTitle}</h2>
-              <p className="mt-2 text-sm font-semibold text-[var(--color-text-muted)]">{formSubtitle}</p>
+              <div className="text-xs font-extrabold tracking-[0.22em] text-(--color-brand)">{formBadge}</div>
+              <h2 className="mt-3 text-3xl font-extrabold leading-tight text-(--color-text-main)">{formTitle}</h2>
+              <p className="mt-2 text-sm font-semibold text-(--color-text-muted)">{formSubtitle}</p>
             </div>
 
             <form onSubmit={submit} className="grid gap-4">
@@ -485,14 +485,14 @@ export default function ContactPage() {
                   onChange={(e) => setField("first_name", e.target.value)}
                   type="text"
                   placeholder={phFirst}
-                  className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                  className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                 />
                 <input
                   value={form.last_name}
                   onChange={(e) => setField("last_name", e.target.value)}
                   type="text"
                   placeholder={phLast}
-                  className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                  className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                 />
               </div>
 
@@ -501,7 +501,7 @@ export default function ContactPage() {
                 onChange={(e) => setField("email", e.target.value)}
                 type="email"
                 placeholder={phEmail}
-                className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
               />
 
               <input
@@ -509,13 +509,13 @@ export default function ContactPage() {
                 onChange={(e) => setField("phone", e.target.value)}
                 type="tel"
                 placeholder={phPhone}
-                className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                className="w-full rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
               />
 
               <select
                 value={form.service}
                 onChange={(e) => setField("service", e.target.value)}
-                className="w-full appearance-none rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                className="w-full appearance-none rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
               >
                 <option value="" disabled>
                   {servicePlaceholder}
@@ -530,18 +530,18 @@ export default function ContactPage() {
                 onChange={(e) => setField("message", e.target.value)}
                 rows={5}
                 placeholder={phMessage}
-                className="w-full resize-none rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                className="w-full resize-none rounded-lg border border-[rgba(24,24,27,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
               />
 
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-2 inline-flex items-center justify-center rounded-lg bg-[var(--color-brand)] px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_36px_rgba(249,115,22,0.28)] transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-dark)] hover:shadow-[0_18px_46px_rgba(249,115,22,0.34)] disabled:cursor-not-allowed disabled:opacity-70"
+                className="mt-2 inline-flex items-center justify-center rounded-lg bg-(--color-brand) px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_36px_rgba(249,115,22,0.28)] transition hover:-translate-y-0.5 hover:bg-gray-600 hover:shadow-[0_18px_46px_rgba(249,115,22,0.34)] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {loading ? submitLoading : submitIdle}
               </button>
 
-              <div className="pt-3 text-xs font-semibold text-[var(--color-text-muted)]">{footerNote}</div>
+              <div className="pt-3 text-xs font-semibold text-(--color-text-muted)">{footerNote}</div>
             </form>
           </motion.div>
         </motion.div>

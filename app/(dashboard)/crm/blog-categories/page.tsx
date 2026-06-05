@@ -22,7 +22,7 @@ function Button({
 }) {
   const cls =
     tone === "orange"
-      ? "bg-orange-500 text-white hover:bg-orange-600"
+      ? "bg-orange-500 text-white hover:bg-gray-600"
       : tone === "red"
       ? "bg-red-600 text-white hover:bg-red-700"
       : "bg-white text-slate-900 hover:bg-slate-50";

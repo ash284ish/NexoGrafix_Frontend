@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import { motion, type Variants } from "framer-motion";
+import { useSearchParams } from "next/navigation";
 import {
   FiCode,
   FiLayers,
@@ -16,12 +17,17 @@ import {
   FiBarChart2,
   FiCheckCircle,
   FiFileText,
+  FiPenTool,
+  FiCpu,
+  FiGlobe,
 } from "react-icons/fi";
 
-import ProofStatsSection, { type StatItem } from "@/components/sections/ProofStatsSection";
+import ProofStatsSection, { defaultIcons, type StatItem } from "@/components/sections/ProofStatsSection";
 import ContactCTASection from "@/components/sections/ContactCTASection";
 import ServicesCarouselSection from "@/components/sections/ServicesCarouselSection";
 import ServiceHeroSection from "@/components/sections/ServiceHeroSection";
+
+import { itServices } from "@/data/itServices";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   code: FiCode,
@@ -37,6 +43,9 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   barchart2: FiBarChart2,
   checkcircle: FiCheckCircle,
   filetext: FiFileText,
+  pentool: FiPenTool,
+  cpu: FiCpu,
+  globe: FiGlobe,
 };
 
 type ServiceItem = {
@@ -98,8 +107,72 @@ function getApiBaseUrl() {
   return base.replace(/\/+$/, "");
 }
 
+/** Fallback Content */
+const FALLBACK_DATA: PageData = {
+  hero: {
+    eyebrow: "IT & DIGITAL PLATFORMS",
+    title: "Future-Ready Digital Infrastructure",
+    subtitle: "We build scalable, high-performance digital solutions that power modern enterprises, from custom web applications to AI-enabled automation workflows.",
+    hero_image: { 
+      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=80", 
+      alt: "Digital transformation and IT services" 
+    },
+    pills: ["Next.js", "AI Integration", "SaaS", "Cloud Native", "UI/UX", "Mobile"],
+    chips: [
+      { iconKey: "cpu", text: "Advanced Tech Stack" },
+      { iconKey: "shield", text: "Secure & Scalable" },
+    ],
+    badges: [
+      { iconKey: "checkcircle", text: "Clean Code" },
+      { iconKey: "zap", text: "Fast Delivery" },
+    ],
+    primary_cta: { href: "/contact", label: "Discuss Your Project" },
+    note_text: "Clean architecture. Clear milestones. Scalable results.",
+  },
+  trust_metrics: {
+    eyebrow: "TRUSTED BY ENTERPRISES",
+    heading: "Engineered for Reliability",
+    subheading: "Performance metrics that define our commitment to engineering excellence.",
+    stats: [
+      { id: "uptime", icon: defaultIcons.qa, value: 99.9, suffix: "%", label: "Uptime guarantee", hint: "Ensuring your digital platforms are always accessible." },
+      { id: "projects", icon: defaultIcons.projects, value: 500, suffix: "+", label: "Apps deployed", hint: "From startups to enterprise-grade SaaS platforms." },
+      { id: "security", icon: defaultIcons.partners, value: 100, suffix: "%", label: "Security compliance", hint: "Adhering to global security and data privacy standards." },
+    ],
+  },
+  services_carousel: {
+    eyebrow: "CAPABILITIES",
+    heading: "Comprehensive Digital Services",
+    subheading: "We handle the entire lifecycle of your digital product, from ideation and design to development and cloud deployment.",
+    auto_rotate_ms: 8000,
+    pause_on_hover: true,
+    show_tabs: true,
+    slides: itServices.map(s => ({
+      id: s.id,
+      title: s.title,
+      desc: s.desc,
+      iconKey: s.iconKey,
+      image: s.image,
+      bullets: s.bullets
+    })),
+  },
+  contact_cta: {
+    eyebrow: "GET IN TOUCH",
+    heading: "Have a digital project in mind?",
+    subheading: "Let's discuss how we can build a scalable, high-performance solution for your business. Our team of experts is ready to help.",
+    primary_cta: { href: "/contact", label: "Book a Consultation" },
+    bullets: [
+      "Technical architecture review",
+      "Stack recommendation",
+      "Scalability planning",
+      "Cost & timeline estimate",
+    ],
+    note_text: "We usually respond within 24 business hours.",
+  },
+};
+
 export default function ITDevelopmentPage() {
   const [data, setData] = useState<PageData | null>(null);
+  const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -113,21 +186,41 @@ export default function ITDevelopmentPage() {
       })
       .then((json) => setData(json as PageData))
       .catch((err) => {
-        if (err?.name !== "AbortError") console.error(err);
+        if (err?.name !== "AbortError") {
+          console.error("IT Page API Error:", err);
+          setData(FALLBACK_DATA);
+        }
       });
 
     return () => controller.abort();
   }, []);
 
+  // Fragment Handling: Sync carousel with URL hash
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (!hash || !data) return;
+
+      const idx = data.services_carousel.slides.findIndex((s) => s.id === hash);
+      if (idx !== -1) {
+        setStartIndex(idx);
+      }
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, [data]);
+
   const services = useMemo(() => {
-    if (!data) return [];
-    return data.services_carousel.slides.map((s) => ({
+    const sData = data?.services_carousel?.slides ?? FALLBACK_DATA.services_carousel.slides;
+    return sData.map((s) => ({
       ...s,
       Icon: ICON_MAP[s.iconKey] || FiCode,
     }));
   }, [data]);
 
-  if (!data) return null;
+  const pageData = data || FALLBACK_DATA;
 
   return (
     <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
@@ -140,36 +233,36 @@ export default function ITDevelopmentPage() {
 
       <div className="relative mx-auto max-w-[80rem] px-7 py-14 sm:px-8 sm:py-20">
         <ServiceHeroSection
-          eyebrow={data.hero.eyebrow}
-          title={data.hero.title}
-          subtitle={data.hero.subtitle}
-          heroImage={data.hero.hero_image}
-          pills={data.hero.pills}
-          chips={data.hero.chips.map((c) => ({
+          eyebrow={pageData.hero.eyebrow}
+          title={pageData.hero.title}
+          subtitle={pageData.hero.subtitle}
+          heroImage={pageData.hero.hero_image}
+          pills={pageData.hero.pills}
+          chips={pageData.hero.chips.map((c) => ({
             icon: React.createElement(ICON_MAP[c.iconKey] || FiShield, {
-              className: "text-[var(--color-brand-dark)]",
+              className: "text-(--color-brand-dark)",
             }),
             text: c.text,
           }))}
-          badges={data.hero.badges.map((b) =>
+          badges={pageData.hero.badges.map((b, idx) =>
             React.createElement(
               React.Fragment,
-              { key: `${b.iconKey}-${b.text}` },
+              { key: `${b.iconKey}-${idx}` },
               React.createElement(ICON_MAP[b.iconKey] || FiCheckCircle),
               " ",
               b.text
             )
           )}
-          primaryCta={data.hero.primary_cta}
-          noteText={data.hero.note_text}
+          primaryCta={pageData.hero.primary_cta}
+          noteText={pageData.hero.note_text}
         />
 
         <div className="mx-auto mt-16 max-w-7xl">
           <ProofStatsSection
-            eyebrow={data.trust_metrics.eyebrow}
-            heading={data.trust_metrics.heading}
-            subheading={data.trust_metrics.subheading}
-            stats={data.trust_metrics.stats}
+            eyebrow={pageData.trust_metrics.eyebrow}
+            heading={pageData.trust_metrics.heading}
+            subheading={pageData.trust_metrics.subheading}
+            stats={pageData.trust_metrics.stats}
             columns={3}
             centered
           />
@@ -178,23 +271,24 @@ export default function ITDevelopmentPage() {
         <div className="mx-auto mt-12 max-w-7xl">
           <ServicesCarouselSection
             slides={services}
-            eyebrow={data.services_carousel.eyebrow}
-            heading={data.services_carousel.heading}
-            subheading={data.services_carousel.subheading}
-            autoRotateMs={data.services_carousel.auto_rotate_ms}
-            pauseOnHover={data.services_carousel.pause_on_hover}
-            showTabs={data.services_carousel.show_tabs}
+            eyebrow={pageData.services_carousel.eyebrow}
+            heading={pageData.services_carousel.heading}
+            subheading={pageData.services_carousel.subheading}
+            autoRotateMs={pageData.services_carousel.auto_rotate_ms}
+            pauseOnHover={pageData.services_carousel.pause_on_hover}
+            showTabs={pageData.services_carousel.show_tabs}
+            startIndex={startIndex}
           />
         </div>
 
         <div className="mx-auto max-w-7xl">
           <ContactCTASection
-            eyebrow={data.contact_cta.eyebrow}
-            heading={data.contact_cta.heading}
-            subheading={data.contact_cta.subheading}
-            primaryCta={data.contact_cta.primary_cta}
-            bullets={data.contact_cta.bullets}
-            noteText={data.contact_cta.note_text}
+            eyebrow={pageData.contact_cta.eyebrow}
+            heading={pageData.contact_cta.heading}
+            subheading={pageData.contact_cta.subheading}
+            primaryCta={pageData.contact_cta.primary_cta}
+            bullets={pageData.contact_cta.bullets}
+            noteText={pageData.contact_cta.note_text}
           />
         </div>
       </div>

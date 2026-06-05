@@ -210,21 +210,21 @@ export default function AccessibilityServicesPage() {
   return (
     <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-64 left-[-280px] h-[720px] w-[720px] rounded-full bg-orange-300/14 blur-3xl" />
-        <div className="absolute top-[140px] right-[-320px] h-[760px] w-[760px] rounded-full bg-orange-400/10 blur-3xl" />
-        <div className="absolute bottom-[-320px] left-[20%] h-[720px] w-[720px] rounded-full bg-orange-200/10 blur-3xl" />
+        <div className="absolute -top-64 -left-70 h-180 w-180 rounded-full bg-orange-300/14 blur-3xl" />
+        <div className="absolute top-35 -right-80 h-190 w-190 rounded-full bg-orange-400/10 blur-3xl" />
+        <div className="absolute -bottom-80 left-[20%] h-180 w-180 rounded-full bg-orange-200/10 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.03)_100%)]" />
       </div>
 
-      <div className="relative mx-auto max-w-[80rem] px-7 py-14 sm:px-8 sm:py-20">
+      <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-8 sm:py-20">
         <ServiceHeroSection
           eyebrow="ACCESSIBILITY"
           title={pageTitle}
           subtitle={pageSubtitle}
           heroImage={{ src: heroImage, alt: pageTitle }}
           chips={[
-            { icon: <FiShield className="text-[var(--color-brand-dark)]" />, text: "Standards-led compliance delivery" },
-            { icon: <FiBarChart2 className="text-[var(--color-brand-dark)]" />, text: "Clear reporting & validation" },
+            { icon: <FiShield className="text-(--color-brand-dark)" />, text: "Standards-led compliance delivery" },
+            { icon: <FiBarChart2 className="text-(--color-brand-dark)" />, text: "Clear reporting & validation" },
           ]}
           pills={pills}
           badges={[

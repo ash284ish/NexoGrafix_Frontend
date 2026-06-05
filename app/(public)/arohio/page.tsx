@@ -142,7 +142,7 @@ function PrimaryCTA({ href, children, iconRight }: { href: string; children: Rea
     <Link
       href={href}
       className={cx(
-        "inline-flex items-center justify-center gap-2 bg-orange-500 px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(16,185,129,0.22)] transition hover:-translate-y-0.5 hover:bg-orange-600",
+        "inline-flex items-center justify-center gap-2 bg-orange-500 px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(16,185,129,0.22)] transition hover:-translate-y-0.5 hover:bg-gray-600",
         R_CARD_INNER
       )}
     >
@@ -235,7 +235,7 @@ function StatCard({ icon, value, suffix, label, hint, highlight }: { icon: IconK
       </div>
 
       <div className="relative flex items-start gap-3">
-        <div className={cx("inline-flex items-center justify-center text-[var(--color-brand-dark)]", "[&_svg]:h-6 [&_svg]:w-6")}>{iconNode(icon, "text-orange-600")}</div>
+        <div className={cx("inline-flex items-center justify-center text-(--color-brand-dark)", "[&_svg]:h-6 [&_svg]:w-6")}>{iconNode(icon, "text-orange-600")}</div>
 
         <div className="min-w-0">
           <div className="text-[12px] font-extrabold tracking-[0.14em] text-orange-600">{label.toUpperCase()}</div>
@@ -575,13 +575,13 @@ export default function ArohioMainFeaturePage() {
   return (
     <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-64 left-[-280px] h-[720px] w-[720px] rounded-full bg-orange-300/14 blur-3xl" />
-        <div className="absolute top-[140px] right-[-320px] h-[760px] w-[760px] rounded-full bg-orange-400/10 blur-3xl" />
-        <div className="absolute bottom-[-320px] left-[20%] h-[720px] w-[720px] rounded-full bg-orange-200/10 blur-3xl" />
+        <div className="absolute -top-64 -left-70 h-180 w-180 rounded-full bg-orange-300/14 blur-3xl" />
+        <div className="absolute top-35 -right-80 h-190 w-190 rounded-full bg-orange-400/10 blur-3xl" />
+        <div className="absolute -bottom-80 left-[20%] h-180 w-180 rounded-full bg-orange-200/10 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.03)_100%)]" />
       </div>
 
-      <div className="relative mx-auto max-w-[80rem] px-7 py-14 sm:px-8 sm:py-20">
+      <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-8 sm:py-20">
         {hero ? (
           <ServiceHeroSection
             eyebrow={hero.eyebrow}
@@ -605,7 +605,7 @@ export default function ArohioMainFeaturePage() {
         <DashboardPreviewCode />
       </section>
 
-      <div className="relative mx-auto max-w-[80rem] px-7 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-7 sm:px-8">
         {featureTools?.cards?.length ? (
           <div className="mx-auto mt-16 max-w-7xl">
             <FeatureToolsSection

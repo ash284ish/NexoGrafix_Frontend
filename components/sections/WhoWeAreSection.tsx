@@ -137,7 +137,7 @@ export default function WhoWeAreSectionHeroStyle() {
             <div className="mt-10 flex gap-4">
               <Link
                 href={c?.cta.primary.href ?? "/contact"}
-                className="rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white"
+                className="rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-gray-600"
               >
                 {c?.cta.primary.label}
               </Link>

@@ -18,7 +18,7 @@ export default function SiteFooter() {
           <div className="nx-footer-brand">
             <div className="nx-footer-logo">Nexografix</div>
             <div className="nx-footer-sub">
-              AI-enabled services for Publishing, Content, Assessments & Automation — enterprise delivery standards.
+              Nexografix — PDF & Document Accessibility Compliance | WCAG · Section 508 · EPUB
             </div>
 
             <div className="nx-footer-newsletter">

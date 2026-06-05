@@ -176,7 +176,7 @@ a:hover {
 }
 
 .btn-brand:hover {
-  background-color: var(--color-brand-dark);
+  background-color: #4b5563;
   transform: translateY(-1px);
 }
 
@@ -197,8 +197,9 @@ a:hover {
 }
 
 .demo-btn:hover {
-  background: #F97316;
+  background: #4b5563;
   color: #ffffff;
+  border-color: #4b5563;
 }
 
 /* =========================================================
@@ -534,8 +535,9 @@ a[data-cta="true"]:hover {
 }
 
 .nx-mobile-cta:hover {
-  background: #F97316;
+  background: #4b5563;
   color: #fff;
+  border-color: #4b5563;
 }
 
 /* =========================================================
@@ -1161,4 +1163,42 @@ html.nx-lock a {
 
 .nx-m-subitem svg {
   color: #111 !important;
+}
+
+/* Keep every solid orange action consistent across public and dashboard pages. */
+:is(button, a, [role="button"]):is(
+  .btn-brand,
+  .bg-brand,
+  [class~="bg-orange-400"],
+  [class~="bg-orange-500"],
+  [class~="bg-orange-600"],
+  [class~="bg-orange-700"],
+  [class~="bg-orange-800"],
+  [class~="bg-orange-900"],
+  [class~="bg-(--color-brand)"],
+  [class~="bg-[var(--color-brand)]"],
+  [class~="bg-[#F97316]"],
+  [class~="bg-[#f97316]"],
+  [class~="bg-[#ff7a1a]"]
+) {
+  color: #ffffff !important;
+}
+
+:is(button, a, [role="button"]):is(
+  .btn-brand,
+  .bg-brand,
+  [class~="bg-orange-400"],
+  [class~="bg-orange-500"],
+  [class~="bg-orange-600"],
+  [class~="bg-orange-700"],
+  [class~="bg-orange-800"],
+  [class~="bg-orange-900"],
+  [class~="bg-(--color-brand)"],
+  [class~="bg-[var(--color-brand)]"],
+  [class~="bg-[#F97316]"],
+  [class~="bg-[#f97316]"],
+  [class~="bg-[#ff7a1a]"]
+):hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }

@@ -104,7 +104,7 @@ function CardShell({ title, children }: { title: string; children: React.ReactNo
         "shadow-[0_18px_60px_rgba(15,23,42,0.08)]"
       )}
     >
-      <div className="text-base font-extrabold text-[var(--color-text-main)]">
+      <div className="text-base font-extrabold text-(--color-text-main)">
         {title}
       </div>
       <div className="mt-3 h-px w-full bg-black/10" />
@@ -130,7 +130,7 @@ function SmartHeroImage({
   const safeSrc = err ? fallbackSrc : src || fallbackSrc;
 
   return (
-    <div className="relative aspect-[16/8] w-full overflow-hidden">
+    <div className="relative aspect-16/8 w-full overflow-hidden">
       <Image
         src={safeSrc}
         alt={alt}

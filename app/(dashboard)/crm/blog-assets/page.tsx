@@ -186,7 +186,7 @@ export default function BlogAssetsPage() {
         right={
           <button
             onClick={openAdd}
-            className="inline-flex items-center gap-2 rounded-md bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600"
+            className="inline-flex items-center gap-2 rounded-md bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-gray-600"
           >
             <FiPlus />
             Add image
@@ -271,7 +271,7 @@ export default function BlogAssetsPage() {
             </button>
             <button
               onClick={save}
-              className="inline-flex items-center justify-center rounded-md bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600"
+              className="inline-flex items-center justify-center rounded-md bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-gray-600"
             >
               <FiSave />
               Save

@@ -30,7 +30,7 @@ function PrimaryCTA({
         <Link
             href={href}
             className={cx(
-                "inline-flex items-center justify-center gap-2 bg-(--color-brand) px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transform transition-transform duration-150 ease-out hover:-translate-y-1 hover:bg-(--color-brand-dark)",
+                "inline-flex items-center justify-center gap-2 bg-(--color-brand) px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transform transition duration-150 ease-out hover:-translate-y-1 hover:bg-black hover:text-white",
                 R_CARD_INNER
             )}
         >

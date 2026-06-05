@@ -64,6 +64,8 @@ export default function LatestBlogSection() {
         const data = await res.json();
         setPosts(data.items || []);
       } catch (err) {
+        // Ignore abort errors (e.g. React Strict Mode double-run in dev)
+        if ((err as any)?.name === "AbortError") return;
         console.error("Latest blog fetch failed", err);
       } finally {
         setLoading(false);
@@ -80,8 +82,8 @@ export default function LatestBlogSection() {
     <section className="relative bg-white py-16 sm:py-20">
       {/* subtle accents */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-28 top-10 h-[320px] w-[320px] rounded-full bg-orange-100/55 blur-3xl" />
-        <div className="absolute -right-32 bottom-10 h-[380px] w-[380px] rounded-full bg-orange-200/35 blur-3xl" />
+        <div className="absolute -left-28 top-10 h-80 w-[320px] rounded-full bg-orange-100/55 blur-3xl" />
+        <div className="absolute -right-32 bottom-10 h-95 w-95 rounded-full bg-orange-200/35 blur-3xl" />
       </div>
 
       <Container>
@@ -134,7 +136,7 @@ export default function LatestBlogSection() {
                   "
                   loading="lazy"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/25 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </div>
 
               {/* Content */}
@@ -162,7 +164,7 @@ export default function LatestBlogSection() {
                       <span className="transition-colors group-hover:text-orange-700">
                         Learn More
                       </span>
-                      <span className="absolute -bottom-1 left-0 h-[2px] w-full bg-orange-300/70 opacity-70 transition group-hover:bg-orange-500/80" />
+                      <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-orange-300/70 opacity-70 transition group-hover:bg-orange-500/80" />
                     </span>
                   </Link>
                 </div>
@@ -184,6 +186,7 @@ export default function LatestBlogSection() {
               transition-all duration-300
               hover:-translate-y-0.5
               hover:scale-[1.015]
+              hover:bg-gray-600
             "
           >
             View All Articles

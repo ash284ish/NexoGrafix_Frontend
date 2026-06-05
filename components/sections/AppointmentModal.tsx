@@ -99,7 +99,7 @@ export default function AppointmentModal() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center justify-center gap-2 rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-[0_16px_44px_rgba(234,88,12,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500/50"
+        className="inline-flex items-center justify-center gap-2 rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-gray-600 hover:shadow-[0_16px_44px_rgba(234,88,12,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500/50"
       >
         Make an Appointment <span aria-hidden>→</span>
       </button>
@@ -271,7 +271,7 @@ export default function AppointmentModal() {
                       <button
                         type="submit"
                         disabled={submitting}
-                        className="inline-flex items-center justify-center gap-2 rounded-md bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(234,88,12,0.20)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-orange-700 disabled:cursor-not-allowed disabled:opacity-70"
+                        className="inline-flex items-center justify-center gap-2 rounded-md bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(234,88,12,0.20)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-70"
                       >
                         {success ? "Submitted ✓" : submitting ? "Submitting..." : "Submit"}
                       </button>

@@ -185,7 +185,7 @@ export default function HeroSection() {
                         >
                             <Link
                                 href={c?.cta?.primary?.href ?? "/contact"}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-orange-600 px-7 py-3 text-sm font-semibold text-white sm:w-auto"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-orange-600 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-gray-600 sm:w-auto"
                             >
                                 {c?.cta?.primary?.label ?? "Book Demo"}
                             </Link>

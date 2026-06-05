@@ -84,7 +84,7 @@ export default function SiteFooter() {
               </div>
 
               <div className="mt-5 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
-                AI-enabled services for publishing, content, assessments & automation.
+                Nexografix — PDF & Document Accessibility Compliance | WCAG · Section 508 · EPUB
               </div>
 
               <p className="mt-3 max-w-xl text-sm font-semibold leading-relaxed text-slate-600">

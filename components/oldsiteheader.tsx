@@ -225,7 +225,7 @@ export default function SiteHeader() {
     <header>
       <div className="nx-topbar">
         <div className="nx-topbar-inner">
-          <span>AI-enabled services for Publishing, Content, Assessments & Automation — Enterprise delivery standards.</span>
+          <span>Nexografix — PDF & Document Accessibility Compliance | WCAG · Section 508 · EPUB</span>
 
           <div className="nx-topbar-icons">
             <a href="#" style={iconLinkStyle}>

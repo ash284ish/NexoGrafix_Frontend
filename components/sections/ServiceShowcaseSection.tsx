@@ -310,7 +310,7 @@ export default function ServiceShowcaseSection(props: Props) {
                   <motion.div variants={popIn} className="mt-10 flex flex-wrap items-center gap-3">
                     <a
                       href={s.cta.href}
-                      className="inline-flex items-center justify-center rounded-md bg-(--color-brand-dark) px-5 py-3 text-sm font-extrabold text-white hover:text-white shadow-[0_16px_40px_rgba(15,23,42,0.14)] transition hover:opacity-95"
+                      className="inline-flex items-center justify-center rounded-md bg-(--color-brand) px-5 py-3 text-sm font-extrabold text-white shadow-[0_16px_40px_rgba(15,23,42,0.14)] transition hover:bg-black hover:text-white"
                     >
                       {s.cta.label ?? "Explore"}
                     </a>

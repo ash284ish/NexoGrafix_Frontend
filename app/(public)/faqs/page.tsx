@@ -234,11 +234,11 @@ export default function FAQPagePremium() {
       ].join(" ")}
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-44 left-[-220px] h-[560px] w-[560px] rounded-full bg-orange-200/16 blur-3xl" />
-        <div className="absolute top-[120px] right-[-240px] h-[620px] w-[620px] rounded-full bg-orange-300/12 blur-3xl" />
-        <div className="absolute bottom-[-260px] left-[14%] h-[560px] w-[560px] rounded-full bg-orange-200/14 blur-3xl" />
-        <div className="absolute bottom-[140px] right-[8%] h-[320px] w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
-        <div className="absolute bottom-[520px] left-[62%] h-[260px] w-[260px] rounded-full bg-orange-200/10 blur-3xl" />
+        <div className="absolute -top-44 -left-55 h-140 w-140 rounded-full bg-orange-200/16 blur-3xl" />
+        <div className="absolute top-30 -right-60 h-155 w-155 rounded-full bg-orange-300/12 blur-3xl" />
+        <div className="absolute -bottom-65 left-[14%] h-140 w-140 rounded-full bg-orange-200/14 blur-3xl" />
+        <div className="absolute bottom-35 right-[8%] h-80 w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
+        <div className="absolute bottom-130 left-[62%] h-65 w-65 rounded-full bg-orange-200/10 blur-3xl" />
 
         <motion.div animate={{ y: [0, -10, 0], x: [0, 6, 0] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[6%] top-[12%] h-16 w-16 rounded-full border border-orange-300/30" />
         <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="absolute right-[12%] top-[18%] h-9 w-24 rounded-full bg-orange-200/14" />
@@ -258,7 +258,7 @@ export default function FAQPagePremium() {
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg">{heroSubtitle}</p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
-              <Link href={primaryCtaHref} className="cursor-pointer inline-flex items-center justify-center rounded-md bg-orange-600 px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_40px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-orange-700">
+              <Link href={primaryCtaHref} className="cursor-pointer inline-flex items-center justify-center rounded-md bg-orange-600 px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_40px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-gray-600">
                 {primaryCtaLabel}
               </Link>
 
@@ -356,7 +356,7 @@ export default function FAQPagePremium() {
           <p className="mt-2 text-sm text-slate-700">{bottomSubtitle}</p>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            <Link href={bottomPrimaryHref} className="cursor-pointer inline-flex items-center justify-center rounded-md bg-orange-600 px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_40px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-orange-700">
+            <Link href={bottomPrimaryHref} className="cursor-pointer inline-flex items-center justify-center rounded-md bg-orange-600 px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_40px_rgba(234,88,12,0.22)] ring-1 ring-orange-600/30 transition hover:-translate-y-0.5 hover:bg-gray-600">
               {bottomPrimaryLabel}
             </Link>
 

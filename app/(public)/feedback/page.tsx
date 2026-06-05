@@ -358,10 +358,10 @@ export default function FeedbackPage() {
       <Toaster position="top-right" />
 
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-44 left-[-240px] h-[560px] w-[560px] rounded-full bg-orange-200/16 blur-3xl" />
-        <div className="absolute top-[140px] right-[-260px] h-[640px] w-[640px] rounded-full bg-orange-300/12 blur-3xl" />
-        <div className="absolute bottom-[-260px] left-[12%] h-[560px] w-[560px] rounded-full bg-orange-200/14 blur-3xl" />
-        <div className="absolute bottom-[160px] right-[8%] h-[320px] w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
+        <div className="absolute -top-44 -left-60 h-140 w-140 rounded-full bg-orange-200/16 blur-3xl" />
+        <div className="absolute top-35 -right-65 h-160 w-160 rounded-full bg-orange-300/12 blur-3xl" />
+        <div className="absolute -bottom-65 left-[12%] h-140 w-140 rounded-full bg-orange-200/14 blur-3xl" />
+        <div className="absolute bottom-40 right-[8%] h-80 w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
 
         <motion.div
           animate={{ y: [0, -10, 0], x: [0, 6, 0] }}
@@ -380,7 +380,7 @@ export default function FeedbackPage() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-6 py-16">
+      <div className="relative mx-auto max-w-7xl px-6 py-16">
         <motion.div
           ref={headerRef}
           variants={listWrap}
@@ -389,7 +389,7 @@ export default function FeedbackPage() {
           className="text-center"
         >
           <motion.div variants={fadeUp} transition={{ duration: 0.9, ease: EASE }} className="flex justify-center">
-            <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/80 px-4 py-2 text-xs font-extrabold tracking-[0.22em] text-[var(--color-brand)] shadow-sm backdrop-blur">
+            <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/80 px-4 py-2 text-xs font-extrabold tracking-[0.22em] text-(--color-brand) shadow-sm backdrop-blur">
               {hero?.badge ?? "TESTIMONIALS"}
             </span>
           </motion.div>
@@ -397,7 +397,7 @@ export default function FeedbackPage() {
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.95, ease: EASE }}
-            className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold leading-[1.1] text-[var(--color-text-main)] sm:text-5xl"
+            className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold leading-[1.1] text-(--color-text-main) sm:text-5xl"
           >
             {hero?.title ?? "Trusted by delivery teams worldwide"}
           </motion.h1>
@@ -405,7 +405,7 @@ export default function FeedbackPage() {
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.95, ease: EASE }}
-            className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-[var(--color-text-muted)]"
+            className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-(--color-text-muted)"
           >
             {hero?.subtitle ?? "Real feedback from publishing, content, assessments, automation, and accessibility workflows."}
           </motion.p>
@@ -433,8 +433,8 @@ export default function FeedbackPage() {
                   className={[
                     "cursor-pointer rounded-full px-4 py-2 text-xs font-extrabold ring-1 transition",
                     active
-                      ? "bg-[var(--color-brand)] text-white ring-orange-600/30 shadow-[0_12px_30px_rgba(249,115,22,0.22)]"
-                      : "bg-white/75 text-[var(--color-text-main)] ring-orange-200/45 hover:bg-white",
+                      ? "bg-(--color-brand) text-white ring-orange-600/30 shadow-[0_12px_30px_rgba(249,115,22,0.22)]"
+                      : "bg-white/75 text-(--color-text-main) ring-orange-200/45 hover:bg-white",
                   ].join(" ")}
                 >
                   {f}
@@ -501,10 +501,10 @@ export default function FeedbackPage() {
                     )}
 
                     <div className="min-w-0">
-                      <div className="truncate text-sm font-extrabold text-[var(--color-text-main)]">
+                      <div className="truncate text-sm font-extrabold text-(--color-text-main)">
                         {t.firstName} {t.lastName}
                       </div>
-                      <div className="truncate text-xs font-semibold text-[var(--color-text-muted)]">{t.role}</div>
+                      <div className="truncate text-xs font-semibold text-(--color-text-muted)">{t.role}</div>
                     </div>
                   </div>
 
@@ -515,7 +515,7 @@ export default function FeedbackPage() {
                   <p className="relative mt-4 text-sm font-semibold leading-relaxed text-slate-700">{t.message}</p>
 
                   <div className="relative mt-auto pt-5">
-                    <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/75 px-3 py-1 text-xs font-extrabold text-[var(--color-brand-dark)]">
+                    <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/75 px-3 py-1 text-xs font-extrabold text-(--color-brand-dark)">
                       {t.service}
                     </span>
                   </div>
@@ -540,7 +540,7 @@ export default function FeedbackPage() {
                     "inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm font-extrabold transition",
                     safePage === 1
                       ? "cursor-not-allowed border-orange-100 bg-white/40 text-slate-300"
-                      : "cursor-pointer border-orange-200/50 bg-white/75 text-[var(--color-text-main)] hover:bg-white",
+                      : "cursor-pointer border-orange-200/50 bg-white/75 text-(--color-text-main) hover:bg-white",
                   ].join(" ")}
                   aria-label="Previous page"
                 >
@@ -558,10 +558,10 @@ export default function FeedbackPage() {
                       type="button"
                       onClick={() => setPage(p)}
                       className={[
-                        "min-w-[40px] rounded-md border px-3 py-2 text-sm font-extrabold transition",
+                        "min-w-10 rounded-md border px-3 py-2 text-sm font-extrabold transition",
                         safePage === p
-                          ? "cursor-pointer border-orange-200 bg-orange-50/90 text-[var(--color-brand-dark)]"
-                          : "cursor-pointer border-orange-200/50 bg-white/75 text-[var(--color-text-main)] hover:bg-white",
+                          ? "cursor-pointer border-orange-200 bg-orange-50/90 text-(--color-brand-dark)"
+                          : "cursor-pointer border-orange-200/50 bg-white/75 text-(--color-text-main) hover:bg-white",
                       ].join(" ")}
                     >
                       {p}
@@ -577,7 +577,7 @@ export default function FeedbackPage() {
                     "inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm font-extrabold transition",
                     safePage === totalPages
                       ? "cursor-not-allowed border-orange-100 bg-white/40 text-slate-300"
-                      : "cursor-pointer border-orange-200/50 bg-white/75 text-[var(--color-text-main)] hover:bg-white",
+                      : "cursor-pointer border-orange-200/50 bg-white/75 text-(--color-text-main) hover:bg-white",
                   ].join(" ")}
                   aria-label="Next page"
                 >
@@ -595,10 +595,10 @@ export default function FeedbackPage() {
             transition={{ duration: 0.95, ease: EASE }}
             className={`mt-10 rounded-md border border-orange-200/40 ${panelGlass} p-8 text-center shadow-[0_16px_70px_rgba(234,88,12,0.10)]`}
           >
-            <div className="text-sm font-extrabold text-[var(--color-text-main)]">
+            <div className="text-sm font-extrabold text-(--color-text-main)">
               {empty?.title ?? "No testimonials found"}
             </div>
-            <div className="mt-2 text-sm font-semibold text-[var(--color-text-muted)]">
+            <div className="mt-2 text-sm font-semibold text-(--color-text-muted)">
               {empty?.subtitle ?? (
                 <>
                   Try selecting another category or switch back to <span className="font-extrabold">All</span>.
@@ -629,15 +629,15 @@ export default function FeedbackPage() {
             ].join(" ")}
           >
             <motion.div variants={cardIn} transition={{ duration: 1.0, ease: EASE }} ref={statsRef}>
-              <div className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/75 px-4 py-2 text-xs font-extrabold tracking-[0.22em] text-[var(--color-brand-dark)] shadow-sm">
+              <div className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/75 px-4 py-2 text-xs font-extrabold tracking-[0.22em] text-(--color-brand-dark) shadow-sm">
                 {form?.badge ?? "SHARE FEEDBACK"}
               </div>
 
-              <h2 className="mt-4 text-3xl font-extrabold text-[var(--color-text-main)]">
+              <h2 className="mt-4 text-3xl font-extrabold text-(--color-text-main)">
                 {form?.title ?? "Help others make confident decisions"}
               </h2>
 
-              <p className="mt-3 text-sm font-semibold leading-relaxed text-[var(--color-text-muted)]">
+              <p className="mt-3 text-sm font-semibold leading-relaxed text-(--color-text-muted)">
                 {form?.subtitle ??
                   `If you’ve worked with ${companyInfo.name}, we’d appreciate your honest feedback. Your input helps teams evaluate quality, reliability, and delivery standards.`}
               </p>
@@ -653,8 +653,8 @@ export default function FeedbackPage() {
                   transition={{ duration: 0.95, ease: EASE }}
                   className={`rounded-md border border-orange-200/40 ${cardGlass} px-5 py-4 shadow-sm`}
                 >
-                  <div className="text-3xl font-extrabold text-[var(--color-text-main)]">{workflows}+</div>
-                  <div className="mt-1 text-xs font-bold tracking-wide text-[var(--color-text-muted)]">WORKFLOWS DELIVERED</div>
+                  <div className="text-3xl font-extrabold text-(--color-text-main)">{workflows}+</div>
+                  <div className="mt-1 text-xs font-bold tracking-wide text-(--color-text-muted)">WORKFLOWS DELIVERED</div>
                 </motion.div>
 
                 <motion.div
@@ -662,8 +662,8 @@ export default function FeedbackPage() {
                   transition={{ duration: 0.95, ease: EASE }}
                   className={`rounded-md border border-orange-200/40 ${cardGlass} px-5 py-4 shadow-sm`}
                 >
-                  <div className="text-3xl font-extrabold text-[var(--color-text-main)]">{teams}+</div>
-                  <div className="mt-1 text-xs font-bold tracking-wide text-[var(--color-text-muted)]">TEAMS SUPPORTED</div>
+                  <div className="text-3xl font-extrabold text-(--color-text-main)">{teams}+</div>
+                  <div className="mt-1 text-xs font-bold tracking-wide text-(--color-text-muted)">TEAMS SUPPORTED</div>
                 </motion.div>
 
                 <motion.div
@@ -671,8 +671,8 @@ export default function FeedbackPage() {
                   transition={{ duration: 0.95, ease: EASE }}
                   className={`rounded-md border border-orange-200/40 ${cardGlass} px-5 py-4 shadow-sm`}
                 >
-                  <div className="text-3xl font-extrabold text-[var(--color-text-main)]">{onTime}%</div>
-                  <div className="mt-1 text-xs font-bold tracking-wide text-[var(--color-text-muted)]">ON-TIME DELIVERY</div>
+                  <div className="text-3xl font-extrabold text-(--color-text-main)">{onTime}%</div>
+                  <div className="mt-1 text-xs font-bold tracking-wide text-(--color-text-muted)">ON-TIME DELIVERY</div>
                 </motion.div>
               </motion.div>
 
@@ -695,7 +695,7 @@ export default function FeedbackPage() {
                     key={s}
                     variants={cardIn}
                     transition={{ duration: 0.95, ease: EASE }}
-                    className={`rounded-md border border-orange-200/40 ${cardGlass} px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] shadow-sm`}
+                    className={`rounded-md border border-orange-200/40 ${cardGlass} px-4 py-3 text-sm font-semibold text-(--color-text-main) shadow-sm`}
                   >
                     {s}
                   </motion.div>
@@ -704,8 +704,8 @@ export default function FeedbackPage() {
             </motion.div>
 
             <motion.div variants={cardIn} transition={{ duration: 1.0, ease: EASE }}>
-              <div className="text-xs font-extrabold tracking-[0.22em] text-[var(--color-brand)]">FEEDBACK FORM</div>
-              <p className="mt-2 text-sm font-semibold text-[var(--color-text-muted)]">Quick to fill. Professional format.</p>
+              <div className="text-xs font-extrabold tracking-[0.22em] text-(--color-brand)">FEEDBACK FORM</div>
+              <p className="mt-2 text-sm font-semibold text-(--color-text-muted)">Quick to fill. Professional format.</p>
 
               <form id="feedback-form" className="mt-5 grid gap-4" onSubmit={onSubmit}>
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -714,7 +714,7 @@ export default function FeedbackPage() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder={form?.fields?.first_name_placeholder ?? "First name"}
-                    className="w-full rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                    className="w-full rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                     required
                   />
                   <input
@@ -722,7 +722,7 @@ export default function FeedbackPage() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder={form?.fields?.last_name_placeholder ?? "Last name"}
-                    className="w-full rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                    className="w-full rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                     required
                   />
                 </div>
@@ -740,7 +740,7 @@ export default function FeedbackPage() {
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     placeholder={form?.fields?.company_placeholder ?? "Company (optional)"}
-                    className="w-full rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                    className="w-full rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                   />
                 </div>
 
@@ -748,7 +748,7 @@ export default function FeedbackPage() {
                   <select
                     value={service}
                     onChange={(e) => setService(e.target.value as Service)}
-                    className="cursor-pointer w-full appearance-none rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                    className="cursor-pointer w-full appearance-none rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                     required
                   >
                     <option value="" disabled>
@@ -767,7 +767,7 @@ export default function FeedbackPage() {
                   <select
                     value={rating}
                     onChange={(e) => setRating(Number(e.target.value) as 1 | 2 | 3 | 4 | 5)}
-                    className="cursor-pointer w-full appearance-none rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                    className="cursor-pointer w-full appearance-none rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                     required
                   >
                     <option value="" disabled>
@@ -795,7 +795,7 @@ export default function FeedbackPage() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder={form?.fields?.message_placeholder ?? "Write your feedback..."}
-                  className="w-full resize-none rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400"
+                  className="w-full resize-none rounded-md border border-orange-200/55 bg-white/80 px-4 py-3 text-sm font-semibold text-(--color-text-main) outline-none transition focus:border-orange-400"
                   required
                 />
 
@@ -806,7 +806,7 @@ export default function FeedbackPage() {
                     onChange={(e) => setConsentPublish(e.target.checked)}
                     className="mt-0.5 cursor-pointer"
                   />
-                  <span className="text-xs font-semibold leading-relaxed text-[var(--color-text-muted)]">
+                  <span className="text-xs font-semibold leading-relaxed text-(--color-text-muted)">
                     {form?.fields?.consent_label ??
                       `You may allow us to publish this feedback on ${companyInfo.name}'s website (optional).`}
                   </span>
@@ -816,7 +816,7 @@ export default function FeedbackPage() {
                   type="submit"
                   disabled={submitting}
                   className={[
-                    "cursor-pointer mt-1 inline-flex items-center justify-center gap-2 rounded-md bg-[var(--color-brand)] px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(249,115,22,0.22)] transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-dark)] hover:shadow-[0_18px_44px_rgba(249,115,22,0.28)]",
+                    "cursor-pointer mt-1 inline-flex items-center justify-center gap-2 rounded-md bg-(--color-brand) px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_34px_rgba(249,115,22,0.22)] transition hover:-translate-y-0.5 hover:bg-gray-600 hover:shadow-[0_18px_44px_rgba(249,115,22,0.28)]",
                     submitting ? "opacity-70 pointer-events-none" : "",
                   ].join(" ")}
                 >
@@ -824,7 +824,7 @@ export default function FeedbackPage() {
                 </button>
 
                 {/* NOTE: no bottom success/error text anymore (toast handles it) */}
-                <div className="pt-1 text-center text-xs font-semibold text-[var(--color-text-muted)]">
+                <div className="pt-1 text-center text-xs font-semibold text-(--color-text-muted)">
                   {form?.fields?.thank_you_note ?? "Thank you — we appreciate your time."}
                 </div>
               </form>

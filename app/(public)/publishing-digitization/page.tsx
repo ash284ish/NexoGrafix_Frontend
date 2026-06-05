@@ -98,7 +98,7 @@ function Pill({ children }: { children: React.ReactNode }) {
     return (
         <span
             className={cx(
-                "inline-flex items-center gap-2 border border-black/10 bg-white px-3 py-2 text-xs font-extrabold text-[var(--color-text-main)] shadow-sm",
+                "inline-flex items-center gap-2 border border-black/10 bg-white px-3 py-2 text-xs font-extrabold text-(--color-text-main) shadow-sm",
                 R_CARD_INNER
             )}
         >
@@ -120,7 +120,7 @@ function PrimaryCTA({
         <Link
             href={href}
             className={cx(
-                "inline-flex items-center justify-center gap-2 bg-[var(--color-brand)] px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-dark)]",
+                "inline-flex items-center justify-center gap-2 bg-(--color-brand) px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_50px_rgba(249,115,22,0.22)] transition hover:-translate-y-0.5 hover:bg-gray-600",
                 R_CARD_INNER
             )}
         >
@@ -136,7 +136,7 @@ function MiniChip({ icon, text }: { icon: React.ReactNode; text: string }) {
             <span className={cx("inline-flex h-9 w-9 items-center justify-center border border-black/10 bg-white", "rounded-md")}>
                 {icon}
             </span>
-            <span className="text-sm font-semibold text-[var(--color-text-muted)]">{text}</span>
+            <span className="text-sm font-semibold text-(--color-text-muted)">{text}</span>
         </div>
     );
 }
@@ -454,15 +454,15 @@ export default function BookPublishingServicePage() {
         const chips = content?.hero?.chips;
         if (!chips?.length) {
             return [
-                { icon: <FiLayers className="text-[var(--color-brand-dark)]" />, text: "Clear workflow . QA checkpoints" },
-                { icon: <FiBarChart2 className="text-[var(--color-brand-dark)]" />, text: "Progress visibility & reporting" },
+                { icon: <FiLayers className="text-(--color-brand-dark)" />, text: "Clear workflow . QA checkpoints" },
+                { icon: <FiBarChart2 className="text-(--color-brand-dark)" />, text: "Progress visibility & reporting" },
             ];
         }
 
         return chips.map((c) => {
             const Icon = heroInlineIconMap[c.iconKey] ?? FiLayers;
             return {
-                icon: <Icon className="text-[var(--color-brand-dark)]" />,
+                icon: <Icon className="text-(--color-brand-dark)" />,
                 text: c.text,
             };
         });
@@ -545,13 +545,13 @@ export default function BookPublishingServicePage() {
     return (
         <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -top-64 left-[-280px] h-[720px] w-[720px] rounded-full bg-orange-300/14 blur-3xl" />
-                <div className="absolute top-[140px] right-[-320px] h-[760px] w-[760px] rounded-full bg-orange-400/10 blur-3xl" />
-                <div className="absolute bottom-[-320px] left-[20%] h-[720px] w-[720px] rounded-full bg-orange-200/10 blur-3xl" />
+                <div className="absolute -top-64 -left-70 h-180 w-180 rounded-full bg-orange-300/14 blur-3xl" />
+                <div className="absolute top-35 -right-80 h-190 w-190 rounded-full bg-orange-400/10 blur-3xl" />
+                <div className="absolute -bottom-80 left-[20%] h-180 w-180 rounded-full bg-orange-200/10 blur-3xl" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.03)_100%)]" />
             </div>
 
-            <div className="relative mx-auto max-w-[80rem] px-7 py-14 sm:px-8 sm:py-20">
+            <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-8 sm:py-20">
                 <ServiceHeroSection
                     eyebrow={heroEyebrow}
                     title={pageTitle}
