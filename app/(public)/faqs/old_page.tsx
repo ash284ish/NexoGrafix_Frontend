@@ -280,11 +280,11 @@ export default function FAQPagePremium() {
       ].join(" ")}
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-44 left-[-220px] h-[560px] w-[560px] rounded-full bg-orange-200/16 blur-3xl" />
-        <div className="absolute top-[120px] right-[-240px] h-[620px] w-[620px] rounded-full bg-orange-300/12 blur-3xl" />
-        <div className="absolute bottom-[-260px] left-[14%] h-[560px] w-[560px] rounded-full bg-orange-200/14 blur-3xl" />
-        <div className="absolute bottom-[140px] right-[8%] h-[320px] w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
-        <div className="absolute bottom-[520px] left-[62%] h-[260px] w-[260px] rounded-full bg-orange-200/10 blur-3xl" />
+        <div className="absolute -top-44 -left-55 h-140 w-140 rounded-full bg-orange-200/16 blur-3xl" />
+        <div className="absolute top-30 -right-60 h-155 w-155 rounded-full bg-orange-300/12 blur-3xl" />
+        <div className="absolute -bottom-65 left-[14%] h-140 w-140 rounded-full bg-orange-200/14 blur-3xl" />
+        <div className="absolute bottom-35 right-[8%] h-80 w-[320px] rounded-full bg-orange-300/10 blur-3xl" />
+        <div className="absolute bottom-130 left-[62%] h-65 w-65 rounded-full bg-orange-200/10 blur-3xl" />
 
         <motion.div
           animate={{ y: [0, -10, 0], x: [0, 6, 0] }}

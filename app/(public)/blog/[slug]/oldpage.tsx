@@ -160,7 +160,7 @@ export default function BlogDetailsPage() {
   }, []);
 
   const POSTS = payload?.posts ?? [];
-  const fallbackCover = payload?.assets?.fallback_cover || "/images/blog_fallback.jpg";
+  const fallbackCover = payload?.assets?.fallback_cover || "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80";
 
   const post = useMemo(() => POSTS.find((p) => p.slug === slug), [POSTS, slug]);
   if (payload && !post) notFound();

@@ -6,8 +6,6 @@ import {
   FiEdit3,
   FiX,
   FiTag,
-  FiCheckCircle,
-  FiXCircle,
 } from "react-icons/fi";
 import SectionHeader from "@/components/dashboard/assets/SectionHeader";
 import ToastTopRight from "@/components/ui/Toast";

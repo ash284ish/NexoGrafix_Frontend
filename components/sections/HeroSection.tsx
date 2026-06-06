@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Container from "../ui/Container";
 import { motion, type Variants } from "framer-motion";
@@ -191,7 +192,7 @@ export default function HeroSection() {
                             </Link>
 
                             <Link
-                                href={c?.cta?.secondary?.href ?? "/solutions"}
+                                href={c?.cta?.secondary?.href ?? "/services"}
                                 className="inline-flex w-full items-center justify-center gap-2 rounded-md border px-7 py-3 text-sm font-semibold sm:w-auto"
                             >
                                 {c?.cta?.secondary?.label ?? "Explore Solutions"}
@@ -215,11 +216,15 @@ export default function HeroSection() {
                         className="relative mx-auto w-full max-w-225 lg:max-w-270"
                     >
                         <div className="relative h-80 w-full sm:h-105 lg:h-130">
-                            <img
+                            <Image
                                 src={c?.heroImage?.src ?? "/images/home_assets.png"}
                                 alt={c?.heroImage?.alt ?? "Nexografix preview"}
+                                fill
                                 className="h-full w-full object-contain"
+                                priority
                                 loading="eager"
+                                unoptimized
+                                sizes="(max-width: 1024px) 100vw, 720px"
                             />
                         </div>
                     </motion.div>

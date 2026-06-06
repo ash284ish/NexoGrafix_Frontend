@@ -168,37 +168,45 @@ export default function BlogDetailsPage() {
 
     (async () => {
       try {
-        if (!blogId) throw new Error("blog_id missing");
-
-        const mapRes = await fetch(
-          `${API_BASE}/api/v1/content/blog-post-map`,
-          { cache: "no-store" }
-        );
-        if (!mapRes.ok) throw new Error("map fetch failed");
-
-        const mapJson = await mapRes.json();
-        const mapping = mapJson.mappings?.find(
-          (m: any) => String(m.blog_id) === String(blogId)
-        );
-        if (!mapping) throw new Error("mapping not found");
-
         const detailsRes = await fetch(
           `${API_BASE}/api/v1/content/blog-details`,
           { cache: "no-store" }
         );
         if (!detailsRes.ok) throw new Error("details fetch failed");
-
         const json = (await detailsRes.json()) as BlogDetailsPayload;
-        const matched = json.posts.find(
-          (p) => String(p.id) === String(mapping.post_id)
-        );
+
+        let matched: BlogPost | undefined;
+
+        if (blogId) {
+          const mapRes = await fetch(
+            `${API_BASE}/api/v1/content/blog-post-map`,
+            { cache: "no-store" }
+          );
+          if (mapRes.ok) {
+            const mapJson = await mapRes.json();
+            const mapping = mapJson.mappings?.find(
+              (m: any) => String(m.blog_id) === String(blogId)
+            );
+            if (mapping) {
+              matched = json.posts.find(
+                (p) => String(p.id) === String(mapping.post_id)
+              );
+            }
+          }
+        }
+
+        if (!matched && slug) {
+          matched = json.posts.find((p) => p.slug === slug);
+        }
+
         if (!matched) throw new Error("post not found");
 
         if (alive) {
           setPayload(json);
           setPost(matched);
         }
-      } catch {
+      } catch (e) {
+        console.error("Blog details load error:", e);
         if (alive) setLoadErr(true);
       }
     })();
@@ -210,7 +218,7 @@ export default function BlogDetailsPage() {
 
   const POSTS = payload?.posts ?? [];
   const fallbackCover =
-    payload?.assets?.fallback_cover || "/images/blog_fallback.jpg";
+    payload?.assets?.fallback_cover || "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80";
 
   const recentPosts = useMemo(
     () => POSTS.filter((p) => p.id !== post?.id).slice(0, 5),
@@ -559,7 +567,7 @@ export default function BlogDetailsPage() {
               </div>
             </CardShell>
 
-            {/* <CardShell title="Recent Posts">
+            <CardShell title="Recent Posts">
               <div className="space-y-2">
                 <AnimatePresence mode="popLayout">
                   {filteredRecent.map((r, i) => (
@@ -572,7 +580,10 @@ export default function BlogDetailsPage() {
                       exit={{ opacity: 0 }}
                     >
                       <Link
-                        href={`/blog/${r.slug}`}
+                        href={{
+                          pathname: `/blog/${r.slug}`,
+                          query: { blog_id: r.id },
+                        }}
                         className="block rounded-md border border-transparent px-2 py-2 text-sm font-semibold text-[var(--color-text-muted)] transition hover:border-black/10 hover:bg-black/5 hover:text-[var(--color-text-main)]"
                       >
                         <span className="mr-2 text-black/40">›</span>
@@ -582,7 +593,7 @@ export default function BlogDetailsPage() {
                   ))}
                 </AnimatePresence>
               </div>
-            </CardShell> */}
+            </CardShell>
           </motion.div>
         </motion.div>
       </div>

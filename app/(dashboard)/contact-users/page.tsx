@@ -5,7 +5,7 @@ import DataTable, { Pill, TableActions, type DataTableColumn } from "@/component
 import ToastTopRight, { type ToastState } from "@/components/ui/Toast";
 import SectionHeader from "@/components/dashboard/assets/SectionHeader";
 
-type ContactStatus = "new" | "in_progress" | "resolved";
+type ContactStatus = "new" | "in_progress" | "resolved" | "declined";
 
 type ContactRow = {
   id: string;
@@ -677,7 +677,7 @@ export default function ContactRequestsPage() {
                 { label: "New", value: "new" },
                 { label: "In Progress", value: "in_progress" },
                 { label: "Resolved", value: "resolved" },
-                // { label: "Declined", value: "declined" },
+                { label: "Declined", value: "declined" },
               ]}
             />
           </div>

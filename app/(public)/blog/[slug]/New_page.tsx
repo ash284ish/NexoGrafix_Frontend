@@ -210,7 +210,7 @@ export default function BlogDetailsPage() {
 
   const POSTS = payload?.posts ?? [];
   const fallbackCover =
-    payload?.assets?.fallback_cover || "/images/blog_fallback.jpg";
+    payload?.assets?.fallback_cover || "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80";
 
   const recentPosts = useMemo(
     () => POSTS.filter((p) => p.id !== post?.id).slice(0, 5),

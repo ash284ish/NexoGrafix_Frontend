@@ -116,7 +116,7 @@ function BlogCover({
   fallbackSrc?: string;
 }) {
   const [err, setErr] = useState(false);
-  const safeSrc = !src || err ? fallbackSrc || "/images/blog_fallback.jpg" : src;
+  const safeSrc = !src || err ? fallbackSrc || "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : src;
 
   const [prevSrc, setPrevSrc] = useState(src);
   if (src !== prevSrc) {

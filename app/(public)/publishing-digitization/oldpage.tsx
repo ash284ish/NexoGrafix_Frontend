@@ -86,7 +86,7 @@ function SmartImage({
         <div className={cx("relative w-full overflow-hidden", R_CARD_INNER, aspect)}>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(249,115,22,0.14),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(15,23,42,0.08),transparent_55%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,250,251,0.98))]" />
             <Image
-                src={err ? "/images/blog_fallback.jpg" : src}
+                src={err ? "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : src}
                 alt={alt}
                 fill
                 unoptimized

@@ -14,7 +14,7 @@ import {
 import StatCard from "@/components/dashboard/assets/StatCard";
 import SupportOverviewCard from "@/components/dashboard/assets/SupportOverviewCard";
 import ServicesFeedbackDonutCard from "@/components/dashboard/assets/ServicesFeedbackDonutCard";
-// import { ActivityAndActionsRow } from "@/components/dashboard/assets/RecentActivityFeed";
+import { ActivityAndActionsRow, demoActivities, demoActions } from "@/components/dashboard/assets/RecentActivityFeed";
 
 type Stats = {
   total_newsletters: number;
@@ -197,7 +197,7 @@ export default function DashboardPage() {
         <ServicesFeedbackDonutCard data={feedbackDataForChart} />
       </div>
 
-      {/* <ActivityAndActionsRow activities={dashboardData.activities} actions={dashboardData.actions} /> */}
+      <ActivityAndActionsRow activities={demoActivities} actions={demoActions} />
     </div>
   );
 }

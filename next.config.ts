@@ -7,7 +7,9 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 100],
     remotePatterns: [
+      { protocol: "https", hostname: "nexografix.com" },
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "source.unsplash.com" },
       { protocol: "https", hostname: "i.pravatar.cc" },
       { protocol: "https", hostname: "themephi.net" },
       { protocol: "https", hostname: "picsum.photos" },

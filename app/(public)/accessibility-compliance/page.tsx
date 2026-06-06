@@ -29,6 +29,7 @@ import ProofStatsSection, { defaultIcons, type StatItem } from "@/components/sec
 import ContactCTASection from "@/components/sections/ContactCTASection";
 import ServicesCarouselSection from "@/components/sections/ServicesCarouselSection";
 import ServiceHeroSection from "@/components/sections/ServiceHeroSection";
+import RemediationSamplesSection from "@/components/sections/RemediationSamplesSection";
 
 type ServiceItem = {
     id: string;
@@ -208,6 +209,7 @@ export default function AccessibilityServicesPage() {
                     { iconKey: "barchart2", text: "Clear reporting & validation" },
                 ],
                 badges: [
+                    { iconKey: "zap", text: "48–72 hour standard turnaround" },
                     { iconKey: "checkcircle", text: "WCAG-aligned outputs" },
                     { iconKey: "filetext", text: "PDF/UA + EPUB support" },
                     { iconKey: "zap", text: "Assistive-tech tested" },
@@ -380,6 +382,7 @@ export default function AccessibilityServicesPage() {
                 primary_cta: { href: "/contact", label: "Request a Quote" },
                 secondary_cta: { href: "/contact?free_check=1", label: "Get a free compliance check on one of your documents — no obligation" },
                 bullets: [
+                    "Guaranteed 48–72 hour turnaround",
                     "Content type (PDF / EPUB / Web / Office files)",
                     "Target standards (WCAG, PDF/UA, EPUB Accessibility, Section 508)",
                     "Estimated volume and schedule",
@@ -411,18 +414,18 @@ export default function AccessibilityServicesPage() {
                     ...prev,
                     ...json,
 
-                    hero: {
+                    hero: json.hero ? {
                         ...prev.hero,
                         ...json.hero,
-                        hero_image: json.hero?.hero_image?.src
+                        hero_image: json.hero.hero_image?.src
                             ? json.hero.hero_image
                             : prev.hero?.hero_image,
-                    },
+                    } : prev.hero,
 
-                    trust_metrics: { ...prev.trust_metrics, ...json.trust_metrics },
-                    services_carousel: { ...prev.services_carousel, ...json.services_carousel },
-                    contact_cta: { ...prev.contact_cta, ...json.contact_cta },
-                    meta: { ...prev.meta, ...json.meta },
+                    trust_metrics: json.trust_metrics ? { ...prev.trust_metrics, ...json.trust_metrics } : prev.trust_metrics,
+                    services_carousel: json.services_carousel ? { ...prev.services_carousel, ...json.services_carousel } : prev.services_carousel,
+                    contact_cta: json.contact_cta ? { ...prev.contact_cta, ...json.contact_cta } : prev.contact_cta,
+                    meta: json.meta ? { ...prev.meta, ...json.meta } : prev.meta,
                 }));
 
             } catch {
@@ -453,14 +456,34 @@ export default function AccessibilityServicesPage() {
 
     return (
         <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
+            <div className="relative bg-orange-600 px-4 py-3 text-white">
+                <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4">
+                    <div className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-100 opacity-75"></span>
+                            <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
+                        </span>
+                        <p className="text-xs font-black uppercase tracking-widest sm:text-sm">
+                            Regulatory Urgency
+                        </p>
+                    </div>
+                    <p className="text-xs font-extrabold sm:text-sm">
+                        ADA Title II enforcement expanded 2024. EU Accessibility Act deadline: June 2025. Is your content ready?
+                    </p>
+                    <Link href="/contact" className="hidden rounded-full bg-white px-3 py-1 text-[10px] font-black uppercase tracking-wider text-orange-600 transition hover:bg-orange-50 sm:block">
+                        Check Readiness
+                    </Link>
+                </div>
+            </div>
+
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -top-64 left-[-280px] h-[720px] w-[720px] rounded-full bg-orange-300/14 blur-3xl" />
-                <div className="absolute top-[140px] right-[-320px] h-[760px] w-[760px] rounded-full bg-orange-400/10 blur-3xl" />
-                <div className="absolute bottom-[-320px] left-[20%] h-[720px] w-[720px] rounded-full bg-orange-200/10 blur-3xl" />
+                <div className="absolute -top-64 -left-70 h-180 w-180 rounded-full bg-orange-300/14 blur-3xl" />
+                <div className="absolute top-35 -right-80 h-190 w-190 rounded-full bg-orange-400/10 blur-3xl" />
+                <div className="absolute -bottom-80 left-[20%] h-180 w-180 rounded-full bg-orange-200/10 blur-3xl" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.03)_100%)]" />
             </div>
 
-            <div className="relative mx-auto max-w-[80rem] px-7 py-14 sm:px-8 sm:py-20">
+            <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-8 sm:py-20">
                 <ServiceHeroSection
                     eyebrow={hero.eyebrow || "ACCESSIBILITY"}
                     title={hero.title || "Accessibility Services"}
@@ -473,27 +496,34 @@ export default function AccessibilityServicesPage() {
                             ? hero.hero_image
                             : fallback.hero!.hero_image!
                     }
-
+                    timelineItems={[
+                        { label: "Standard Turnaround", time: "48–72 Hours" },
+                        { label: "Rush Delivery", time: "Available" },
+                        { label: "Priority Support", time: "24/7 Active" },
+                    ]}
                     chips={[
                         {
-                            icon: <FiShield className="text-[var(--color-brand-dark)]" />,
+                            icon: <FiShield className="text-(--color-brand-dark)" />,
                             text: hero.chips?.[0]?.text || "Standards-led compliance delivery",
                         },
                         {
-                            icon: <FiBarChart2 className="text-[var(--color-brand-dark)]" />,
+                            icon: <FiBarChart2 className="text-(--color-brand-dark)" />,
                             text: hero.chips?.[1]?.text || "Clear reporting & validation",
                         },
                     ]}
                     pills={pills}
                     badges={[
                         <>
-                            <FiCheckCircle /> {hero.badges?.[0]?.text || "WCAG-aligned outputs"}
+                            ⚡ {hero.badges?.[0]?.text || "48–72 hour standard turnaround · Rush delivery available"}
                         </>,
                         <>
-                            <FiFileText /> {hero.badges?.[1]?.text || "PDF/UA + EPUB support"}
+                            <FiCheckCircle /> {hero.badges?.[1]?.text || "WCAG-aligned outputs"}
                         </>,
                         <>
-                            <FiZap /> {hero.badges?.[2]?.text || "Assistive-tech tested"}
+                            <FiFileText /> {hero.badges?.[2]?.text || "PDF/UA + EPUB support"}
+                        </>,
+                        <>
+                            <FiZap /> {hero.badges?.[3]?.text || "Assistive-tech tested"}
                         </>,
                     ]}
                     primaryCta={{
@@ -510,7 +540,7 @@ export default function AccessibilityServicesPage() {
                 />
 
                 <div className="mx-auto mt-8 max-w-7xl">
-                    <div className="rounded-2xl border border-orange-200/70 bg-gradient-to-r from-orange-50 to-amber-50 p-5 shadow-sm sm:p-6">
+                    <div className="rounded-2xl border border-orange-200/70 bg-linear-to-r from-orange-50 to-amber-50 p-5 shadow-sm sm:p-6">
                         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                             <div>
                                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-800/80">Pricing at a glance</p>
@@ -561,6 +591,32 @@ export default function AccessibilityServicesPage() {
                     />
                 </div>
 
+                <div className="mx-auto mt-16 max-w-7xl">
+                    <RemediationSamplesSection />
+                </div>
+
+                <div className="mx-auto mt-16 max-w-7xl">
+                    <div className="group relative overflow-hidden rounded-2xl border-2 border-orange-500/20 bg-white p-8 shadow-[0_20px_50px_rgba(234,88,12,0.08)] transition-all hover:border-orange-500/40 hover:shadow-[0_20px_60px_rgba(234,88,12,0.12)]">
+                        <div className="absolute top-0 right-0 -mt-6 -mr-6 h-32 w-32 rounded-full bg-orange-500/5 blur-3xl transition-all group-hover:bg-orange-500/10" />
+                        <div className="absolute bottom-0 left-0 -mb-6 -ml-6 h-32 w-32 rounded-full bg-orange-500/5 blur-3xl transition-all group-hover:bg-orange-500/10" />
+                        
+                        <div className="relative flex flex-col items-center gap-8 md:flex-row md:text-left text-center">
+                            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-orange-100 text-orange-600 shadow-inner group-hover:scale-105 transition-transform">
+                                <FiShield className="h-10 w-10" />
+                            </div>
+                            <div className="flex-1">
+                                <div className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-orange-700">
+                                    Zero Risk Guarantee
+                                </div>
+                                <h3 className="mt-3 text-2xl font-extrabold text-slate-900 md:text-3xl">Compliance Guarantee</h3>
+                                <p className="mt-3 text-base font-semibold leading-relaxed text-slate-600 md:text-lg">
+                                    If your document fails a third-party audit within <span className="text-slate-900 font-extrabold">90 days of delivery</span>, we will re-remediate it at <span className="text-orange-600 font-extrabold">zero cost</span>. Our commitment is to delivering 100% compliant, usable, and accessible content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="mx-auto max-w-7xl">
                     <ContactCTASection
                         eyebrow={cta.eyebrow || "NEXT STEP"}
@@ -581,6 +637,7 @@ export default function AccessibilityServicesPage() {
                         }}
                         bullets={
                             cta.bullets || [
+                                "Guaranteed 48–72 hour turnaround",
                                 "Content type (PDF / EPUB / Web / Office files)",
                                 "Target standards (WCAG, PDF/UA, EPUB Accessibility, Section 508)",
                                 "Estimated volume and schedule",

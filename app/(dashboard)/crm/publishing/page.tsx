@@ -8,7 +8,7 @@ import ToastTopRight from "@/components/ui/Toast";
 type PubSectionType =
   | "META"
   | "HERO"
-  | "PROOF_STATS"
+  | "TRUST_METRICS"
   | "SERVICES_CAROUSEL"
   | "CONTACT_CTA"
   | "UNKNOWN";
@@ -22,7 +22,7 @@ type PubSection = {
   order_index: number;
   is_enabled: boolean;
   meta?: { badge?: string; alignment?: "left" | "center" | "right" };
-  raw: unknown;
+  raw: any;
 };
 
 function cx(...c: Array<string | false | null | undefined>) {
@@ -158,20 +158,20 @@ function buildPublishingSections(json: Record<string, any>): PubSection[] {
     });
   }
 
-  if (json?.proof_stats) {
-    const p = json.proof_stats || {};
+  if (json?.trust_metrics || json?.proof_stats) {
+    const p = json.trust_metrics || json.proof_stats || {};
     const statsCount = Array.isArray(p?.stats) ? p.stats.length : 0;
     sections.push({
-      id: "proof_stats",
-      section_key: "proof_stats",
-      section_type: "PROOF_STATS",
-      title: toStr(p?.heading || p?.eyebrow || "Proof stats"),
+      id: "trust_metrics",
+      section_key: "trust_metrics",
+      section_type: "TRUST_METRICS",
+      title: toStr(p?.heading || p?.eyebrow || "Trust metrics"),
       subtitle: `${statsCount} stats • columns: ${toStr(p?.columns)} • centered: ${String(
         Boolean(p?.centered)
       )}`,
       order_index: 3,
       is_enabled: defaultEnabled,
-      meta: { badge: "PROOF", alignment: "left" },
+      meta: { badge: "TRUST", alignment: "left" },
       raw: p,
     });
   }
@@ -208,7 +208,7 @@ function buildPublishingSections(json: Record<string, any>): PubSection[] {
     });
   }
 
-  const knownKeys = new Set(["meta", "hero", "proof_stats", "services_carousel", "contact_cta"]);
+  const knownKeys = new Set(["meta", "hero", "trust_metrics", "proof_stats", "services_carousel", "contact_cta"]);
   Object.keys(json || {}).forEach((k) => {
     if (knownKeys.has(k)) return;
     const v = json?.[k];
@@ -371,7 +371,7 @@ function EditModal({
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-80">
+    <div className="fixed inset-0 z-50">
       <div
         className="absolute inset-0 cursor-pointer bg-slate-950/40 backdrop-blur-sm"
         onClick={onClose}
@@ -499,7 +499,7 @@ export default function PublishingDigitalAdminPage() {
     noteText: "",
   });
 
-  const [proofForm, setProofForm] = useState({
+  const [trustForm, setTrustForm] = useState({
     eyebrow: "",
     heading: "",
     subheading: "",
@@ -555,9 +555,9 @@ export default function PublishingDigitalAdminPage() {
       });
     }
 
-    if (activeSection.section_key === "proof_stats") {
+    if (activeSection.section_key === "trust_metrics" || activeSection.section_key === "proof_stats") {
       const p = activeSection.raw || {};
-      setProofForm({
+      setTrustForm({
         eyebrow: toStr(p?.eyebrow),
         heading: toStr(p?.heading),
         subheading: toStr(p?.subheading),
@@ -635,17 +635,19 @@ export default function PublishingDigitalAdminPage() {
         updated.hero.note_text = heroForm.noteText;
       }
 
-      if (activeSection.section_key === "proof_stats") {
-        const stats = parseJsonText(proofForm.statsJson);
-        if (!Array.isArray(stats)) throw new Error("Proof stats: stats JSON must be an array");
+      if (activeSection.section_key === "trust_metrics" || activeSection.section_key === "proof_stats") {
+        const stats = parseJsonText(trustForm.statsJson);
+        if (!Array.isArray(stats)) throw new Error("Trust metrics: stats JSON must be an array");
 
-        updated.proof_stats = updated.proof_stats || {};
-        updated.proof_stats.eyebrow = proofForm.eyebrow;
-        updated.proof_stats.heading = proofForm.heading;
-        updated.proof_stats.subheading = proofForm.subheading;
-        updated.proof_stats.columns = asNumber(proofForm.columns, 3);
-        updated.proof_stats.centered = Boolean(proofForm.centered);
-        updated.proof_stats.stats = stats;
+        updated.trust_metrics = updated.trust_metrics || updated.proof_stats || {};
+        updated.trust_metrics.eyebrow = trustForm.eyebrow;
+        updated.trust_metrics.heading = trustForm.heading;
+        updated.trust_metrics.subheading = trustForm.subheading;
+        updated.trust_metrics.columns = asNumber(trustForm.columns, 3);
+        updated.trust_metrics.centered = Boolean(trustForm.centered);
+        updated.trust_metrics.stats = stats;
+
+        if (updated.proof_stats) delete updated.proof_stats;
       }
 
       if (activeSection.section_key === "services_carousel") {
@@ -782,7 +784,7 @@ export default function PublishingDigitalAdminPage() {
                   <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-slate-500">
                     <span className="rounded-full bg-slate-100 px-2.5 py-1 font-semibold">Order: {s.order_index}</span>
                     <span className="rounded-full bg-slate-100 px-2.5 py-1 font-semibold">
-                      Route: /api/v1/content/publishing_digital
+                      Route: /api/v1/content/publishing-digital
                     </span>
                   </div>
                 </div>
@@ -927,42 +929,42 @@ export default function PublishingDigitalAdminPage() {
           </div>
         ) : null}
 
-        {activeSection?.section_key === "proof_stats" ? (
+        {activeSection?.section_key === "trust_metrics" || activeSection?.section_key === "proof_stats" ? (
           <div className="space-y-6">
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-              <TextField label="Section Key" value="proof_stats" onChange={() => null} disabled />
-              <TextField label="Type" value="PROOF_STATS" onChange={() => null} disabled />
+              <TextField label="Section Key" value="trust_metrics" onChange={() => null} disabled />
+              <TextField label="Type" value="TRUST_METRICS" onChange={() => null} disabled />
             </div>
 
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
               <TextField
                 label="Eyebrow"
-                value={proofForm.eyebrow}
-                onChange={(v) => setProofForm((p) => ({ ...p, eyebrow: v }))}
+                value={trustForm.eyebrow}
+                onChange={(v) => setTrustForm((p) => ({ ...p, eyebrow: v }))}
               />
               <NumberField
                 label="Columns"
-                value={proofForm.columns}
-                onChange={(v) => setProofForm((p) => ({ ...p, columns: v }))}
+                value={trustForm.columns}
+                onChange={(v) => setTrustForm((p) => ({ ...p, columns: v }))}
               />
             </div>
 
             <ToggleField
               label="Centered"
-              checked={proofForm.centered}
-              onChange={(v) => setProofForm((p) => ({ ...p, centered: v }))}
+              checked={trustForm.centered}
+              onChange={(v) => setTrustForm((p) => ({ ...p, centered: v }))}
             />
 
             <TextField
               label="Heading"
-              value={proofForm.heading}
-              onChange={(v) => setProofForm((p) => ({ ...p, heading: v }))}
+              value={trustForm.heading}
+              onChange={(v) => setTrustForm((p) => ({ ...p, heading: v }))}
             />
 
             <TextAreaField
               label="Subheading"
-              value={proofForm.subheading}
-              onChange={(v) => setProofForm((p) => ({ ...p, subheading: v }))}
+              value={trustForm.subheading}
+              onChange={(v) => setTrustForm((p) => ({ ...p, subheading: v }))}
               rows={3}
             />
 
@@ -972,8 +974,8 @@ export default function PublishingDigitalAdminPage() {
 
             <TextAreaField
               label="stats"
-              value={proofForm.statsJson}
-              onChange={(v) => setProofForm((p) => ({ ...p, statsJson: v }))}
+              value={trustForm.statsJson}
+              onChange={(v) => setTrustForm((p) => ({ ...p, statsJson: v }))}
               rows={12}
             />
           </div>
@@ -1099,7 +1101,7 @@ export default function PublishingDigitalAdminPage() {
         {activeSection?.section_type === "UNKNOWN" ? (
           <div className="space-y-4">
             <div className="rounded-md border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-              Ye section unknown structure ka hai. Abhi form mapping iske liye set nahi ki.
+              This section has an unknown structure. Form mapping is not yet configured for it.
             </div>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
               <TextField label="Section Key" value={activeSection.section_key} onChange={() => null} disabled />

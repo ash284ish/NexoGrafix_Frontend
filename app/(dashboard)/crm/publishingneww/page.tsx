@@ -5,7 +5,7 @@ import { FiAlertTriangle, FiEdit3, FiX, FiTag } from "react-icons/fi";
 import SectionHeader from "@/components/dashboard/assets/SectionHeader";
 import ToastTopRight from "@/components/ui/Toast";
 
-type DataLabSectionType =
+type PubSectionType =
   | "META"
   | "HERO"
   | "TRUST_METRICS"
@@ -13,10 +13,10 @@ type DataLabSectionType =
   | "CONTACT_CTA"
   | "UNKNOWN";
 
-type DataLabSection = {
+type PubSection = {
   id: string;
   section_key: string;
-  section_type: DataLabSectionType;
+  section_type: PubSectionType;
   title: string;
   subtitle: string;
   order_index: number;
@@ -121,8 +121,8 @@ function parseJsonText(text: string) {
   return JSON.parse(trimmed);
 }
 
-function buildDataLabellingSections(json: any): DataLabSection[] {
-  const sections: DataLabSection[] = [];
+function buildPubSections(json: any): PubSection[] {
+  const sections: PubSection[] = [];
 
   const meta = json?.meta || {};
   const status = String(json?.meta?.status || "").toLowerCase();
@@ -411,7 +411,7 @@ type ToastTone = "success" | "error";
 type ToastState = { open: boolean; tone: ToastTone; title: string; message?: string };
 
 export default function PublishingDigitalNew() {
-  const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
+  const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
 
 
   const endpoint = useMemo(
@@ -419,7 +419,7 @@ export default function PublishingDigitalNew() {
     [API_BASE]
   );
 
-  const [sections, setSections] = useState<DataLabSection[]>([]);
+  const [sections, setSections] = useState<PubSection[]>([]);
   const [rawPage, setRawPage] = useState<any>(null);
 
   const [loading, setLoading] = useState(true);
@@ -438,15 +438,15 @@ export default function PublishingDigitalNew() {
 
   function persistToast(next: { tone: ToastTone; title: string; message?: string }) {
     try {
-      sessionStorage.setItem("data_labelling_admin_toast", JSON.stringify(next));
+      sessionStorage.setItem("publishing_digital_admin_toast", JSON.stringify(next));
     } catch { }
   }
 
   useEffect(() => {
     try {
-      const raw = sessionStorage.getItem("data_labelling_admin_toast");
+      const raw = sessionStorage.getItem("publishing_digital_admin_toast");
       if (!raw) return;
-      sessionStorage.removeItem("data_labelling_admin_toast");
+      sessionStorage.removeItem("publishing_digital_admin_toast");
       const parsed = JSON.parse(raw) as { tone?: ToastTone; title?: string; message?: string };
       if (!parsed?.title) return;
       setToast({
@@ -467,17 +467,17 @@ export default function PublishingDigitalNew() {
         setErr(null);
 
         const res = await fetch(endpoint, { cache: "no-store" });
-        if (!res.ok) throw new Error(`Failed to load data labelling content (${res.status})`);
+        if (!res.ok) throw new Error(`Failed to load publishing content (${res.status})`);
 
         const json = await res.json();
-        const built = buildDataLabellingSections(json);
+        const built = buildPubSections(json);
 
         if (alive) {
           setRawPage(json);
           setSections(built);
         }
       } catch (e: any) {
-        if (alive) setErr(e?.message || "Failed to load data labelling content");
+        if (alive) setErr(e?.message || "Failed to load publishing content");
       } finally {
         if (alive) setLoading(false);
       }

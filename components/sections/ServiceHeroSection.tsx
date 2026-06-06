@@ -43,14 +43,21 @@ function SmartImage({
     const [err, setErr] = useState(false);
 
     return (
-        <div className={cx("relative w-full overflow-hidden bg-white", R_CARD_INNER, aspect)}>
+        <div className={cx("relative w-full overflow-hidden bg-slate-100", R_CARD_INNER, aspect)}>
+            {/* Shimmer Effect */}
+            {!loaded && !err && (
+                <div className="absolute inset-0">
+                    <div className="h-full w-full animate-pulse bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100" />
+                </div>
+            )}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(249,115,22,0.14),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(15,23,42,0.08),transparent_55%)]" />
             <Image
-                src={err ? "/images/blog_fallback.jpg" : src}
+                src={err ? "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : src}
                 alt={alt}
                 fill
                 unoptimized
-                priority={!!priority}
+                priority
+                loading="eager"
                 sizes="(max-width: 1024px) 100vw, 720px"
                 className={cx(
                     "object-contain transition-opacity duration-500",
@@ -119,6 +126,7 @@ export type ServiceHeroProps = {
     noteText?: string;
     noteIcon?: React.ReactNode;
     imageAspect?: string;
+    timelineItems?: Array<{ label: string; time: string }>;
 };
 
 export default function ServiceHeroSection({
@@ -135,6 +143,7 @@ export default function ServiceHeroSection({
     noteText = "Enterprise delivery standards",
     noteIcon = <FiCheckSquare className="opacity-70" />,
     imageAspect = "aspect-[16/9]",
+    timelineItems = [],
 }: ServiceHeroProps) {
     return (
         <motion.section variants={heroStagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }}>
@@ -157,6 +166,21 @@ export default function ServiceHeroSection({
                     <motion.p variants={fadeUp} className="mt-4 text-base font-semibold leading-relaxed text-(--color-text-muted) sm:text-lg">
                         {subtitle}
                     </motion.p>
+
+                    {timelineItems.length > 0 && (
+                        <motion.div variants={fadeUp} className="mt-8 grid gap-3 sm:grid-cols-3">
+                            {timelineItems.map((item, i) => (
+                                <div key={i} className="flex flex-col rounded-md border border-orange-200/50 bg-orange-50/30 p-4 shadow-sm">
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-orange-600/80">
+                                        {item.label}
+                                    </div>
+                                    <div className="mt-1 text-sm font-extrabold text-slate-900">
+                                        {item.time}
+                                    </div>
+                                </div>
+                            ))}
+                        </motion.div>
+                    )}
 
                     {chips.length ? (
                         <motion.div variants={fadeUp} className="mt-6 grid gap-3 sm:grid-cols-2">

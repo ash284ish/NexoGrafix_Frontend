@@ -42,14 +42,22 @@ function SmartImage({
   const [err, setErr] = useState(false);
 
   return (
-    <div className={cx("relative w-full overflow-hidden", R_CARD_INNER, aspect)}>
+    <div className={cx("relative w-full overflow-hidden bg-slate-100", R_CARD_INNER, aspect)}>
+      {/* Shimmer Effect */}
+      {!loaded && !err && (
+        <div className="absolute inset-0">
+          <div className="h-full w-full animate-pulse bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100" />
+        </div>
+      )}
+      
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(249,115,22,0.14),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(15,23,42,0.08),transparent_55%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,250,251,0.98))]" />
       <Image
-        src={err ? "/images/blog_fallback.jpg" : src}
+        src={err ? "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : src}
         alt={alt}
         fill
         unoptimized
-        priority={!!priority}
+        priority
+        loading="eager"
         sizes="(max-width: 1024px) 100vw, 720px"
         className={cx("object-contain transition-opacity duration-500", loaded ? "opacity-100" : "opacity-0")}
         onLoad={() => setLoaded(true)}
@@ -59,13 +67,6 @@ function SmartImage({
         }}
       />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(15,23,42,0.22),transparent_62%)]" />
-      {!loaded && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className={cx("border border-white/30 bg-black/20 px-3 py-2 text-[11px] font-extrabold tracking-[0.16em] text-white backdrop-blur", R_CARD_INNER)}>
-            LOADING
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -108,6 +109,8 @@ export default function ServicesCarouselSection({
   const [active, setActive] = useState(startIndex);
   const [hovered, setHovered] = useState(false);
   const timerRef = useRef<number | null>(null);
+
+  if (!slides || slides.length === 0) return null;
 
   const total = slides.length;
 

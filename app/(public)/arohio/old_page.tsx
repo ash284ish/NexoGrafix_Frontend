@@ -63,7 +63,7 @@ function SmartImage({
         <div className={cx("relative w-full overflow-hidden", R_CARD_INNER, aspect)}>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(16,185,129,0.14),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(15,23,42,0.08),transparent_55%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,250,251,0.98))]" />
             <Image
-                src={err ? "/images/blog_fallback.jpg" : src}
+                src={err ? "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : src}
                 alt={alt}
                 fill
                 unoptimized
@@ -229,7 +229,7 @@ function StatCard({
             <div className="relative flex items-start gap-3">
                 <div
                     className={cx(
-                        "inline-flex items-center justify-center text-[var(--color-brand-dark)]",
+                        "inline-flex items-center justify-center text-(--color-brand-dark)",
                         "[&_svg]:h-6 [&_svg]:w-6"
                     )}
                 >
@@ -599,13 +599,13 @@ export default function ArohioMainFeaturePage() {
     return (
         <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -top-64 left-[-280px] h-[720px] w-[720px] rounded-full bg-orange-300/14 blur-3xl" />
-                <div className="absolute top-[140px] right-[-320px] h-[760px] w-[760px] rounded-full bg-orange-400/10 blur-3xl" />
-                <div className="absolute bottom-[-320px] left-[20%] h-[720px] w-[720px] rounded-full bg-orange-200/10 blur-3xl" />
+                <div className="absolute -top-64 -left-70 h-180 w-180 rounded-full bg-orange-300/14 blur-3xl" />
+                <div className="absolute top-35 -right-80 h-190 w-190 rounded-full bg-orange-400/10 blur-3xl" />
+                <div className="absolute -bottom-80 left-[20%] h-180 w-180 rounded-full bg-orange-200/10 blur-3xl" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.03)_100%)]" />
             </div>
 
-            <div className="relative mx-auto max-w-[80rem] px-7 py-14 sm:px-8 sm:py-20">
+            <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-8 sm:py-20">
                 <ServiceHeroSection
                     eyebrow="AROHIO"
                     title="PDF Accessibility, Automation & Alt Text — All in One Place"

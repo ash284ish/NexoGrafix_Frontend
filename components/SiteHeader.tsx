@@ -94,7 +94,7 @@ const FALLBACK: HeaderData = {
           key: "publishing",
           title: "Publishing & Digitization",
           icon: "FiBook",
-          href: "/solutions/publishing",
+          href: "/publishing-digitization",
           items: [
             { title: "Document Digitization & Scanning", href: "/publishing-digitization#digitization", icon: "FiFileText" },
             { title: "Copyediting & Proofreading", href: "/publishing-digitization#editing", icon: "FiEdit3" },
@@ -112,7 +112,7 @@ const FALLBACK: HeaderData = {
           key: "accessibility",
           title: "Accessibility & Compliance",
           icon: "FiHelpCircle",
-          href: "/solutions/accessibility",
+          href: "/accessibility-compliance",
           items: [
             { title: "PDF Accessibility & Remediation", href: "/accessibility-compliance#pdf", icon: "FiFileText" },
             { title: "eBook Accessibility (EPUB)", href: "/accessibility-compliance#epub", icon: "FiBookOpen" },
@@ -147,7 +147,7 @@ const FALLBACK: HeaderData = {
           key: "labeling",
           title: "Data Labeling & Annotation",
           icon: "FiLayers",
-          href: "/solutions/data-labeling",
+          href: "/data-labeling",
           items: [
             { title: "Image Annotation", href: "/data-labeling#data-labeling/image", icon: "FiFileText" },
             { title: "Video Annotation", href: "/data-labeling#data-labeling/video", icon: "FiFileText" },
@@ -162,7 +162,7 @@ const FALLBACK: HeaderData = {
           key: "localization",
           title: "Localization & Media Accessibility",
           icon: "FiHeadphones",
-          href: "/solutions/localization",
+          href: "/localization-media",
           items: [
             { title: "Audio Description", href: "/localization-media#localization/audio-description", icon: "FiHeadphones" },
             { title: "Subtitles / Captions", href: "/localization-media#localization/captions", icon: "FiFileText" },
@@ -177,7 +177,7 @@ const FALLBACK: HeaderData = {
           key: "elearning",
           title: "Content, eLearning & EdTech",
           icon: "FiBookOpen",
-          href: "/solutions/elearning",
+          href: "/elearning-edtech",
           items: [
             { title: "Educational Content Development", href: "/elearning-edtech#elearning/educational-content", icon: "FiBook" },
             { title: "eLearning Content Development", href: "/elearning-edtech#elearning/elearning-content", icon: "FiBookOpen" },
@@ -202,6 +202,39 @@ const FALLBACK: HeaderData = {
       ],
     },
   },
+};
+
+function FiGlobeIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Zm0 0c2.5 0 4.5-4.5 4.5-10S14.5 2 12 2 7.5 6.5 7.5 12 9.5 22 12 22Zm-9-10h18M4.5 7h15M4.5 17h15"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+const iconLinkStyle = {
+  color: "#ffffff",
+  textDecoration: "none",
+  paddingRight: "12px",
+  marginLeft: "12px",
+  borderRight: "1px solid rgba(255,255,255,0.6)",
+  display: "flex",
+  alignItems: "center",
+};
+
+const iconLinkStyleNoBorder = {
+  color: "#ffffff",
+  textDecoration: "none",
+  paddingRight: "0px",
+  marginLeft: "12px",
+  borderRight: "0px",
+  display: "flex",
+  alignItems: "center",
 };
 
 export default function SiteHeader() {
@@ -250,7 +283,7 @@ export default function SiteHeader() {
     };
   }, [data]);
 
-  const iconMap: Record<string, ReactNode> = {
+  const iconMap: Record<string, ReactNode> = useMemo(() => ({
     FaFacebookF: <FaFacebookF size={16} />,
     FaTwitter: <FaTwitter size={16} />,
     FaLinkedinIn: <FaLinkedinIn size={16} />,
@@ -275,7 +308,7 @@ export default function SiteHeader() {
     FiCode: <FiCode />,
     FiArrowRight: <FiArrowRight />,
     FiGlobeIcon: <FiGlobeIcon />,
-  };
+  }), []);
 
   const renderIcon = (key?: string) => (key && iconMap[key] ? iconMap[key] : <FiFileText />);
 
@@ -321,9 +354,10 @@ export default function SiteHeader() {
   const isGroupActive = (prefixes: string[]) => prefixes.some((p) => isActive(p));
 
   const homeActive = isGroupActive(["/", "/about", "/contact"]);
-  const solutionsActive = isGroupActive(["/solutions"]);
-  const productsActive = isGroupActive(["/products"]);
-  const resourcesActive = isGroupActive(["/feedback", "/blog", "/faqs"]);
+  const solutionPaths = useMemo(() => SOLUTION_CATEGORIES.map(c => c.href).filter(Boolean) as string[], [SOLUTION_CATEGORIES]);
+  const solutionsActive = isGroupActive(["/solutions", ...solutionPaths]);
+  const productsActive = isGroupActive(["/products", "/arohio"]);
+  const resourcesActive = isGroupActive(["/feedback", "/blog", "/faqs", "/case-studies"]);
 
   const closeSolutionsTimer = useRef<number | null>(null);
 
@@ -359,15 +393,17 @@ export default function SiteHeader() {
           <span>{h.topbar.text}</span>
 
           <div className="nx-topbar-icons">
-            {h.topbar.socials.map((s, idx) => (
-              <a
-                key={s.key}
-                href={s.href}
-                style={idx === h.topbar.socials.length - 1 ? iconLinkStyleNoBorder : iconLinkStyle}
-              >
-                {renderIcon(s.icon)}
-              </a>
-            ))}
+            {h.topbar.socials
+              .filter((s) => s.href && s.href !== "#")
+              .map((s, idx, filtered) => (
+                <a
+                  key={s.key}
+                  href={s.href}
+                  style={idx === filtered.length - 1 ? iconLinkStyleNoBorder : iconLinkStyle}
+                >
+                  {renderIcon(s.icon)}
+                </a>
+              ))}
           </div>
         </div>
       </div>
@@ -449,20 +485,22 @@ export default function SiteHeader() {
                   <div className="nx-mega-left">
                     {SOLUTION_CATEGORIES.map((cat) => {
                       const isCatActive = cat.key === activeSolutionKey;
+                      const targetHref = cat.items?.[0]?.href || cat.href || "#";
                       return (
-                        <button
+                        <Link
                           key={cat.key}
-                          type="button"
+                          href={targetHref}
                           className={`nx-dd-item nx-mega-cat ${isCatActive ? "nx-active" : ""}`}
                           onMouseEnter={() => setActiveSolutionKey(cat.key)}
                           onFocus={() => setActiveSolutionKey(cat.key)}
+                          onClick={() => setSolutionsOpen(false)}
                         >
                           <span className="nx-mega-cat-left">
                             {renderIcon(cat.icon)}
                             <span className="nx-mega-cat-title">{cat.title}</span>
                           </span>
                           <FiArrowRight className="nx-mega-arrow" />
-                        </button>
+                        </Link>
                       );
                     })}
                   </div>
@@ -665,38 +703,5 @@ export default function SiteHeader() {
         </div>
       )}
     </header>
-  );
-}
-
-const iconLinkStyle = {
-  color: "#ffffff",
-  textDecoration: "none",
-  paddingRight: "12px",
-  marginLeft: "12px",
-  borderRight: "1px solid rgba(255,255,255,0.6)",
-  display: "flex",
-  alignItems: "center",
-};
-
-const iconLinkStyleNoBorder = {
-  color: "#ffffff",
-  textDecoration: "none",
-  paddingRight: "0px",
-  marginLeft: "12px",
-  borderRight: "0px",
-  display: "flex",
-  alignItems: "center",
-};
-
-function FiGlobeIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Zm0 0c2.5 0 4.5-4.5 4.5-10S14.5 2 12 2 7.5 6.5 7.5 12 9.5 22 12 22Zm-9-10h18M4.5 7h15M4.5 17h15"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-    </svg>
   );
 }

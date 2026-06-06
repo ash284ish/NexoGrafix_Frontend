@@ -119,37 +119,29 @@ export default function WhoWeAreSectionHeroStyle() {
 
             <p className="mt-5 max-w-xl text-slate-700">{c?.description}</p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              {tags.map((t) => (
-                <span
-                  key={t.label}
-                  className={
-                    t.variant === "accent"
-                      ? "rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700 ring-1 ring-orange-200"
-                      : "rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-900 ring-1 ring-slate-200"
-                  }
-                >
-                  {t.label}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-10 flex gap-4">
-              <Link
-                href={c?.cta.primary.href ?? "/contact"}
-                className="rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-gray-600"
-              >
-                {c?.cta.primary.label}
-              </Link>
-              <Link
-                href={c?.cta.secondary.href ?? "/solutions"}
-                className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-200"
-              >
-                {c?.cta.secondary.label}
-              </Link>
-            </div>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-600 italic">
+              Nexografix was established to redefine how global enterprises handle complex content and data challenges. 
+              From AI-enabled publishing and accessibility compliance to content digitization and data labeling, 
+              we blend human expertise with cutting-edge automation to ensure your information is accessible, 
+              searchable, and future-ready.
+            </p>
 
             <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {/* Manual Core Stats for Prominence */}
+              <div className="rounded-md border border-orange-200 bg-white p-5 shadow-[0_8px_30px_rgba(234,88,12,0.08)] transition-transform hover:-translate-y-1">
+                <div className="text-2xl font-black text-orange-600">2023</div>
+                <div className="mt-2 text-xs font-extrabold uppercase tracking-wider text-slate-500">Founded</div>
+              </div>
+              <div className="rounded-md border border-orange-200 bg-white p-5 shadow-[0_8px_30px_rgba(234,88,12,0.08)] transition-transform hover:-translate-y-1">
+                <div className="text-2xl font-black text-orange-600">120+</div>
+                <div className="mt-2 text-xs font-extrabold uppercase tracking-wider text-slate-500">Specialists</div>
+              </div>
+              <div className="rounded-md border border-orange-200 bg-white p-5 shadow-[0_8px_30px_rgba(234,88,12,0.08)] transition-transform hover:-translate-y-1">
+                <div className="text-lg font-black leading-tight text-orange-600">US, UK, EU, IN</div>
+                <div className="mt-2 text-xs font-extrabold uppercase tracking-wider text-slate-500">Global Delivery</div>
+              </div>
+
+              {/* Dynamic Stats from API */}
               {stats.map((s) => (
                 <div
                   key={s.title}
@@ -166,6 +158,36 @@ export default function WhoWeAreSectionHeroStyle() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              {tags.map((t) => (
+                <span
+                  key={t.label}
+                  className={
+                    t.variant === "accent"
+                      ? "rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700 ring-1 ring-orange-200"
+                      : "rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-900 ring-1 ring-slate-200"
+                  }
+                >
+                  {t.label}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-8 flex gap-4">
+              <Link
+                href={c?.cta.primary.href ?? "/contact"}
+                className="rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-gray-600"
+              >
+                {c?.cta.primary.label}
+              </Link>
+              <Link
+                href={c?.cta.secondary.href ?? "/services"}
+                className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-200"
+              >
+                {c?.cta.secondary.label}
+              </Link>
             </div>
           </motion.div>
 

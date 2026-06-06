@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { FiArrowLeft } from "react-icons/fi";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
 const BLOG_PATH = "/api/v1/content/blog";
 const BLOG_DETAILS_PATH = "/api/v1/content/blog-details";
 const BLOG_MAP_PATH = "/api/v1/content/blog-post-map";
@@ -51,7 +51,6 @@ export default function BlogCRMPage() {
   const blogMapEndpoint = useMemo(() => joinApiUrl(API_BASE, BLOG_MAP_PATH), []);
 
   const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const [showEditor, setShowEditor] = useState(false);
@@ -74,11 +73,6 @@ export default function BlogCRMPage() {
       .catch(() => setPosts([]))
       .finally(() => setLoading(false));
   }, [blogEndpoint]);
-
-  const detail = useMemo(() => {
-    if (!selectedSlug) return null;
-    return posts.find((p) => p.slug === selectedSlug) || null;
-  }, [selectedSlug, posts]);
 
   async function openEditBlog(post: BlogPost) {
     setLoading(true);
@@ -230,55 +224,40 @@ export default function BlogCRMPage() {
     setPendingMapping(null);
   }
 
-  if (selectedSlug && detail) {
-    return (
-      <div className="max-w-5xl mx-auto p-6">
-        <button
-          onClick={() => setSelectedSlug(null)}
-          className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-slate-700"
-        >
-          <FiArrowLeft /> Back to Blogs
-        </button>
-        <h1 className="mt-6 text-3xl font-extrabold">{detail.title}</h1>
-      </div>
-    );
-  }
-
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-3xl font-extrabold mb-6">Blogs</h1>
+      <h1 className="text-3xl font-extrabold mb-6">Blog Details Management</h1>
 
-      {loading && <div className="text-slate-500">Loading…</div>}
+      {loading && !showEditor && <div className="text-slate-500">Loading…</div>}
 
       <div className="grid md:grid-cols-3 gap-6">
         {posts.map((post) => (
           <div
             key={post.id}
-            className="rounded-md border hover:shadow cursor-pointer overflow-hidden"
-            onClick={() => setSelectedSlug(post.slug)}
+            className="rounded-md border hover:shadow cursor-pointer overflow-hidden flex flex-col"
+            onClick={() => openEditBlog(post)}
           >
             <div className="h-44 bg-slate-100 relative">
               <Image
-                src={post.cover || "/images/blog_fallback.jpg"}
+                src={post.cover || "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80"}
                 alt={post.title}
                 fill
                 className="object-contain"
               />
             </div>
 
-            <div className="p-4">
+            <div className="p-4 flex flex-1 flex-col">
               <h3 className="font-bold">{post.title}</h3>
-              <p className="mt-2 text-sm text-slate-600">{post.excerpt}</p>
+              <p className="mt-2 text-sm text-slate-600 line-clamp-2">{post.excerpt}</p>
 
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  openEditBlog(post);
-                }}
-                className="mt-3 w-full rounded-md bg-slate-900 px-3 py-2 text-xs font-semibold text-white"
-              >
-                Edit Blog Details
-              </button>
+              <div className="mt-auto pt-3">
+                <button
+                  type="button"
+                  className="w-full rounded-md bg-slate-900 px-3 py-2 text-xs font-semibold text-white"
+                >
+                  Edit Content
+                </button>
+              </div>
             </div>
           </div>
         ))}
@@ -289,7 +268,7 @@ export default function BlogCRMPage() {
           <div className="w-full max-w-4xl rounded-md bg-white max-h-[88vh] flex flex-col overflow-hidden">
             <div className="flex justify-between items-center p-4 border-b">
               <div className="text-xl font-bold truncate">
-                {detailsJson?.title || "Blog Details"}
+                {typeof detailsJson?.title === "string" ? detailsJson.title : "Blog Details"}
               </div>
               <button
                 onClick={closeEditor}

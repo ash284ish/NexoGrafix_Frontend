@@ -51,7 +51,7 @@ const FALLBACK: FooterJson = {
   },
   ctaButtons: [
     { key: "book", label: "Book an appointment", href: "/contact" },
-    { key: "explore", label: "Explore solutions", href: "/solutions" },
+    { key: "explore", label: "Explore solutions", href: "/services" },
   ],
   nav: {
     home: {
@@ -90,10 +90,10 @@ const FALLBACK: FooterJson = {
     },
   ],
   certifications: [
-    { key: "iso-9001", src: "https://www.google.com/s2/favicons?domain=iso.org&sz=128", alt: "ISO 9001 Certification" },
-    { key: "iso-27001", src: "https://www.google.com/s2/favicons?domain=iso.org&sz=128", alt: "ISO 27001 Certification" },
-    { key: "gdpr", src: "https://www.google.com/s2/favicons?domain=gdpr.eu&sz=128", alt: "GDPR Compliance" },
-    { key: "soc2", src: "https://www.google.com/s2/favicons?domain=aicpa.org&sz=128", alt: "SOC 2 Compliance" },
+    { key: "iso-9001", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/ISO_9001_Logo.svg/512px-ISO_9001_Logo.svg.png", alt: "ISO 9001 Certification" },
+    { key: "iso-27001", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/ISO_27001_Logo.svg/512px-ISO_27001_Logo.svg.png", alt: "ISO 27001 Certification" },
+    { key: "gdpr", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GDPR_logo.svg/512px-GDPR_logo.svg.png", alt: "GDPR Compliance" },
+    { key: "soc2", src: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/AICPA_SOC_logo.svg/512px-AICPA_SOC_logo.svg.png", alt: "SOC 2 Compliance" },
   ],
   legal: {
     copyrightText: "© {{year}} Nexografix. All rights reserved.",
@@ -187,23 +187,23 @@ function normalizeFooter(input: any): FooterJson {
       privacyHref: asText(newsletter?.privacy?.href, "") || asText(newsletter?.privacyHref, FALLBACK.newsletter.privacyHref),
       consentText: asText(newsletter?.consentText, "") || `I agree to the ${asText(newsletter?.privacy?.label, "Privacy Policy")}`,
     },
-    ctaButtons: cta.map((x: any, idx: number) => ({ key: asText(x?.key, idx === 0 ? "book" : "explore"), label: asText(x?.label, ""), href: asText(x?.href, "#") })).filter((x: any) => x.label && x.href),
+    ctaButtons: cta.map((x: any, idx: number) => ({ key: asText(x?.key, idx === 0 ? "book" : "explore"), label: asText(x?.label, ""), href: asText(x?.href, "#") })).filter((x: any) => x.label && x.href && x.href !== "#"),
     nav: {
       home: {
         label: asText(nav?.home?.label, FALLBACK.nav.home.label),
-        items: (Array.isArray(nav?.home?.items) ? nav.home.items : FALLBACK.nav.home.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href),
+        items: (Array.isArray(nav?.home?.items) ? nav.home.items : FALLBACK.nav.home.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
       },
       product: {
         label: asText(nav?.product?.label, FALLBACK.nav.product.label),
-        items: (Array.isArray(nav?.product?.items) ? nav.product.items : FALLBACK.nav.product.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href),
+        items: (Array.isArray(nav?.product?.items) ? nav.product.items : FALLBACK.nav.product.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
       },
       resources: {
         label: asText(nav?.resources?.label, FALLBACK.nav.resources.label),
-        items: (Array.isArray(nav?.resources?.items) ? nav.resources.items : FALLBACK.nav.resources.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href),
+        items: (Array.isArray(nav?.resources?.items) ? nav.resources.items : FALLBACK.nav.resources.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
       },
       solutions: {
         label: asText(nav?.solutions?.label, FALLBACK.nav.solutions.label),
-        items: (Array.isArray(nav?.solutions?.items) ? nav.solutions.items : FALLBACK.nav.solutions.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href),
+        items: (Array.isArray(nav?.solutions?.items) ? nav.solutions.items : FALLBACK.nav.solutions.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
       },
     },
     contact: { label: asText(contact?.label, FALLBACK.contact.label), email, phone, location },
@@ -215,7 +215,7 @@ function normalizeFooter(input: any): FooterJson {
         icon: (s?.icon === "FiLinkedin" || s?.icon === "FiInstagram" || s?.icon === "FiFacebook" ? s.icon : "WaIcon") as any,
         message: asText(s?.message, ""),
       }))
-      .filter((x: any) => x.key && x.label && x.href),
+      .filter((x: any) => x.key && x.label && x.href && x.href !== "#"),
     certifications: certificationsRaw
       .map((c: any, idx: number) => ({
         key: asText(c?.key, `cert_${idx}`),
@@ -223,10 +223,10 @@ function normalizeFooter(input: any): FooterJson {
         alt: asText(c?.alt, asText(c?.label, "Certification")),
         href: asText(c?.href, ""),
       }))
-      .filter((x: any) => x.key && x.src),
+      .filter((x: any) => x.key && x.src && x.href !== "#"),
     legal: {
       copyrightText,
-      links: legalLinks.filter((x: any) => x.title && x.href),
+      links: legalLinks.filter((x: any) => x.title && x.href && x.href !== "#"),
     },
   };
 
