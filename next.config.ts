@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ['nexografix.com', 'www.nexografix.com', '93.127.167.166'],
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -38,6 +39,15 @@ const nextConfig: NextConfig = {
             value: "max-age=31536000; includeSubDomains; preload",
           },
         ],
+      },
+    ];
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: "/uploads/:path*",
+        destination: `${process.env.NEXT_PUBLIC_API_BASE_URL || "https://nexografix.com"}/api/uploads/:path*`,
       },
     ];
   },

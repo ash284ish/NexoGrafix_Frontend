@@ -25,32 +25,30 @@ export function buildApiUrl(base: string, path: string) {
 export function resolveImageUrl(url: string | undefined | null): string {
   if (!url) return "";
 
-  const base = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
-  const normalizedBase = base.replace(/\/api\/?$/, ""); // strip /api if present
+  const base = process.env.NEXT_PUBLIC_API_BASE_URL || "https://nexografix.com";
+  const normalizedBase = base.replace(/\/+$/, "");
 
-  let resolved = url;
+  let resolved = url.trim();
+
+  // Already a full URL with /api/uploads/ — keep it as-is (nginx proxies /api/ to backend)
   if (resolved.includes("/api/uploads/")) {
-    resolved = resolved.replace("/api/uploads/", "/uploads/");
+    return resolved;
   }
 
-  // If it starts with production API uploads path, rewrite to local base uploads path
-  const productionPrefix = "https://nexografix.com/api/uploads/";
+  // Full URL with /uploads/ but missing /api/ prefix — add it so nginx can proxy
+  const productionPrefix = "https://nexografix.com/uploads/";
   if (resolved.startsWith(productionPrefix)) {
-    return resolved.replace(productionPrefix, `${normalizedBase}/uploads/`);
+    return resolved.replace(productionPrefix, `${normalizedBase}/api/uploads/`);
   }
 
-  // If it starts with production base uploads path
-  const productionPrefix2 = "https://nexografix.com/uploads/";
-  if (resolved.startsWith(productionPrefix2)) {
-    return resolved.replace(productionPrefix2, `${normalizedBase}/uploads/`);
-  }
-
-  // If it's a relative path starting with uploads/ or /uploads/
-  if (resolved.startsWith("uploads/")) {
-    return `${normalizedBase}/${resolved}`;
-  }
+  // Relative path starting with /uploads/ — prefix with base + /api
   if (resolved.startsWith("/uploads/")) {
-    return `${normalizedBase}${resolved}`;
+    return `${normalizedBase}/api${resolved}`;
+  }
+
+  // Relative path starting with uploads/ (no leading slash)
+  if (resolved.startsWith("uploads/")) {
+    return `${normalizedBase}/api/${resolved}`;
   }
 
   return resolved;
