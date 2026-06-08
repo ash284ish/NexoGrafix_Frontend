@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import React, { useEffect, useMemo, useState } from "react";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 type ClientItem = {
     name: string;
@@ -95,7 +96,7 @@ export default function OurClientsMarquee() {
                                 >
                                     <div className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-50 ring-1 ring-slate-200 transition group-hover:ring-orange-300">
                                         <img
-                                            src={item.imageUrl}
+                                            src={resolveImageUrl(item.imageUrl)}
                                             alt={item.name}
                                             loading="lazy"
                                             className={`h-9 w-9 object-contain transition ${isBlur

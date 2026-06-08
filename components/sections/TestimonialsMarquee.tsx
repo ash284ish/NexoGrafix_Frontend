@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 /* ===================== TYPES ===================== */
 
@@ -148,7 +149,7 @@ export default function TestimonialsMarquee() {
                                 rating: Number(t.rating) || 0,
                                 text: t.message || "",
                                 avatar:
-                                    t.avatar_url && t.avatar_url.trim() !== "" ? encodeURI(t.avatar_url) : "/avatar-placeholder.png",
+                                    t.avatar_url && t.avatar_url.trim() !== "" ? encodeURI(resolveImageUrl(t.avatar_url)) : "/avatar-placeholder.png",
                             };
                         }),
                     },

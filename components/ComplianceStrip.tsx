@@ -2,27 +2,32 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
 
 const complianceBadges = [
   {
     name: "ISO 9001:2015",
     label: "Quality Management",
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/ISO_9001_Logo.svg/512px-ISO_9001_Logo.svg.png",
+    src: "https://upload.wikimedia.org/wikipedia/commons/b/b3/ISO_9001_Logo.svg",
+    href: "https://www.iso.org/iso-9001-quality-management.html",
   },
   {
     name: "ISO 27001:2022",
     label: "Information Security",
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/ISO_27001_Logo.svg/512px-ISO_27001_Logo.svg.png",
+    src: "https://upload.wikimedia.org/wikipedia/commons/2/2b/ISO_27001_Logo.svg",
+    href: "https://www.iso.org/iso-iec-27001-information-security.html",
   },
   {
     name: "GDPR",
     label: "Data Protection",
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GDPR_logo.svg/512px-GDPR_logo.svg.png",
+    src: "https://upload.wikimedia.org/wikipedia/commons/e/e1/GDPR_logo.svg",
+    href: "https://gdpr-info.eu/",
   },
   {
     name: "SOC 2 Type II",
     label: "Security & Privacy",
-    src: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/AICPA_SOC_logo.svg/512px-AICPA_SOC_logo.svg.png",
+    src: "https://upload.wikimedia.org/wikipedia/en/5/5a/AICPA_SOC_logo.svg",
+    href: "https://www.aicpa.org/topic/audit-assurance/audit-and-assurance-service-organization-controls",
   },
 ];
 
@@ -61,21 +66,28 @@ export default function ComplianceStrip() {
             className="flex flex-wrap items-center justify-center gap-x-10 gap-y-12 md:gap-x-16 lg:justify-end"
           >
             {complianceBadges.map((badge, idx) => (
-              <motion.div 
+              <motion.a
                 key={badge.name}
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 + idx * 0.1, ease: EASE }}
-                className="group flex flex-col items-center gap-4 text-center transition-transform duration-300 hover:-translate-y-1"
+                className="group flex flex-col items-center gap-4 text-center transition-transform duration-300 hover:-translate-y-1 focus:outline-none"
               >
-                <div className="flex h-16 items-center justify-center">
+                <div className="relative flex h-20 items-center justify-center">
                   <img
                     src={badge.src}
                     alt={`${badge.name} - ${badge.label}`}
-                    className="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                    referrerPolicy="no-referrer"
+                    className="h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
+                  <div className="absolute -right-2 -top-2 rounded-full bg-white p-1 text-orange-600 opacity-0 shadow-sm ring-1 ring-orange-100 transition-opacity group-hover:opacity-100">
+                    <FiExternalLink size={12} />
+                  </div>
                 </div>
                 <div className="space-y-1">
                   <div className="text-[12px] font-extrabold uppercase tracking-widest text-slate-900 transition-colors group-hover:text-orange-600">
@@ -85,7 +97,7 @@ export default function ComplianceStrip() {
                     {badge.label}
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
         </div>

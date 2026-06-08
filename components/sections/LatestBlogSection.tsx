@@ -4,6 +4,7 @@ import Link from "next/link";
 import Container from "../ui/Container";
 import { motion, type Variants } from "framer-motion";
 import { useEffect, useState } from "react";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 type BlogPost = {
   id: string;
@@ -127,7 +128,7 @@ export default function LatestBlogSection() {
               {/* Image */}
               <div className="relative overflow-hidden">
                 <img
-                  src={p.cover}
+                  src={resolveImageUrl(p.cover)}
                   alt={p.title}
                   className="
                     h-56 w-full object-contain

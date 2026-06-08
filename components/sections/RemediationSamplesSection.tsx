@@ -19,7 +19,7 @@ export default function RemediationSamplesSection() {
                     Proof of Output Quality
                 </h2>
                 <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto font-medium">
-                    See how we transform "flat" non-accessible documents into fully tagged, 
+                    See how we transform &quot;flat&quot; non-accessible documents into fully tagged, 
                     standards-compliant assets with clear reading order and semantic structure.
                 </p>
             </div>
@@ -77,7 +77,7 @@ export default function RemediationSamplesSection() {
                                             <div className="h-4 w-full bg-slate-200" />
                                         </div>
                                         <div className="absolute inset-0 flex items-center justify-center bg-white/40 backdrop-blur-[1px]">
-                                            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Untagged "Flat" Content</span>
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Untagged &quot;Flat&quot; Content</span>
                                         </div>
                                     </div>
                                 </div>

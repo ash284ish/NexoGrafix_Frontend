@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { FiCheckCircle, FiChevronLeft, FiChevronRight, FiClock, FiShield } from "react-icons/fi";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 function cx(...classes: Array<string | false | undefined | null>) {
   return classes.filter(Boolean).join(" ");
@@ -52,7 +53,7 @@ function SmartImage({
       
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(249,115,22,0.14),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(15,23,42,0.08),transparent_55%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,250,251,0.98))]" />
       <Image
-        src={err ? "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : src}
+        src={err ? "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : resolveImageUrl(src)}
         alt={alt}
         fill
         unoptimized
@@ -110,11 +111,10 @@ export default function ServicesCarouselSection({
   const [hovered, setHovered] = useState(false);
   const timerRef = useRef<number | null>(null);
 
-  if (!slides || slides.length === 0) return null;
-
-  const total = slides.length;
+  const total = slides?.length || 0;
 
   const go = (next: number) => {
+    if (total === 0) return;
     const idx = (next + total) % total;
     setActive(idx);
   };
@@ -150,7 +150,10 @@ export default function ServicesCarouselSection({
     return () => window.removeEventListener("keydown", onKey);
   }, [active]);
 
-  const item = useMemo(() => slides[active], [slides, active]);
+  const item = useMemo(() => slides?.[active], [slides, active]);
+
+  if (!slides || slides.length === 0 || !item) return null;
+
   const reverse = active % 2 === 1;
   const Icon = item.Icon;
 

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, type TargetAndTransition } from "framer-motion";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 type AboutContent = {
   hero: {
@@ -212,7 +213,7 @@ export default function WhoWeAreSectionHeroStyle() {
 
                 <div className="relative mx-auto aspect-16/10 w-full overflow-hidden rounded-lg bg-slate-900">
                   <img
-                    src={c?.preview?.image?.src}
+                    src={resolveImageUrl(c?.preview?.image?.src)}
                     alt={c?.preview?.image?.alt}
                     className="h-full w-full object-contain bg-white"
                   />

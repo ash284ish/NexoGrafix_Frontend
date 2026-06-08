@@ -31,6 +31,118 @@ type FooterJson = {
   legal: { copyrightText: string; links: Array<{ title: string; href: string }> };
 };
 
+// ---------------------------------------------------------------------------
+// Inline SVG certification badges — no external image dependency
+// ---------------------------------------------------------------------------
+const CERT_BADGES: Record<string, React.ReactNode> = {
+  "iso-9001": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
+      <rect width="120" height="56" rx="7" fill="#1a1a2e" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#ea580c" strokeOpacity="0.55" strokeWidth="1.2" />
+      {/* shield icon */}
+      <path d="M14 14 L20 11 L26 14 L26 22 Q20 26 20 26 Q20 26 14 22 Z" fill="none" stroke="#ea580c" strokeWidth="1.2" strokeLinejoin="round" />
+      <path d="M17 18.5 L19.2 20.5 L23 16.5" stroke="#ea580c" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="60" y="20" textAnchor="middle" fill="#ea580c" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
+      <text x="60" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">9001:2015</text>
+      <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">QUALITY MANAGEMENT</text>
+    </svg>
+  ),
+  "iso-27001": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
+      <rect width="120" height="56" rx="7" fill="#0f172a" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#3b82f6" strokeOpacity="0.55" strokeWidth="1.2" />
+      {/* lock icon */}
+      <rect x="15" y="18" width="10" height="8" rx="1.5" fill="none" stroke="#3b82f6" strokeWidth="1.2" />
+      <path d="M17 18 L17 15.5 Q20 13 23 15.5 L23 18" fill="none" stroke="#3b82f6" strokeWidth="1.2" strokeLinecap="round" />
+      <circle cx="20" cy="22" r="1.2" fill="#3b82f6" />
+      <text x="62" y="20" textAnchor="middle" fill="#3b82f6" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
+      <text x="62" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">27001:2022</text>
+      <text x="62" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">INFORMATION SECURITY</text>
+    </svg>
+  ),
+  "gdpr": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
+      <rect width="120" height="56" rx="7" fill="#003399" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#fbbf24" strokeOpacity="0.5" strokeWidth="1.2" />
+      {/* EU circle of stars (12 stars) */}
+      {Array.from({ length: 12 }).map((_, i) => {
+        const angle = (i * 30 - 90) * (Math.PI / 180);
+        const cx = 20 + 9 * Math.cos(angle);
+        const cy = 28 + 9 * Math.sin(angle);
+        return <circle key={i} cx={cx} cy={cy} r="1.6" fill="#fbbf24" />;
+      })}
+      <text x="68" y="22" textAnchor="middle" fill="#fbbf24" fontSize="9" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="1.5">EU GDPR</text>
+      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="13" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">COMPLIANT</text>
+      <text x="68" y="49" textAnchor="middle" fill="#93c5fd" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">DATA PROTECTION</text>
+    </svg>
+  ),
+  "soc2": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
+      <rect width="120" height="56" rx="7" fill="#1c1917" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#10b981" strokeOpacity="0.55" strokeWidth="1.2" />
+      {/* checkmark circle */}
+      <circle cx="20" cy="28" r="9" fill="none" stroke="#10b981" strokeWidth="1.3" />
+      <path d="M16 28 L19 31 L24 24" stroke="#10b981" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="68" y="20" textAnchor="middle" fill="#10b981" fontSize="7.5" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2">AICPA · SOC</text>
+      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">SOC 2</text>
+      <text x="68" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">TYPE II · SECURITY</text>
+    </svg>
+  ),
+};
+
+// Mobile-size version (smaller SVGs)
+const CERT_BADGES_SM: Record<string, React.ReactNode> = {
+  "iso-9001": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
+      <rect width="120" height="56" rx="7" fill="#1a1a2e" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#ea580c" strokeOpacity="0.55" strokeWidth="1.2" />
+      <path d="M14 14 L20 11 L26 14 L26 22 Q20 26 20 26 Q20 26 14 22 Z" fill="none" stroke="#ea580c" strokeWidth="1.2" strokeLinejoin="round" />
+      <path d="M17 18.5 L19.2 20.5 L23 16.5" stroke="#ea580c" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="60" y="20" textAnchor="middle" fill="#ea580c" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
+      <text x="60" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">9001:2015</text>
+      <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">QUALITY MANAGEMENT</text>
+    </svg>
+  ),
+  "iso-27001": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
+      <rect width="120" height="56" rx="7" fill="#0f172a" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#3b82f6" strokeOpacity="0.55" strokeWidth="1.2" />
+      <rect x="15" y="18" width="10" height="8" rx="1.5" fill="none" stroke="#3b82f6" strokeWidth="1.2" />
+      <path d="M17 18 L17 15.5 Q20 13 23 15.5 L23 18" fill="none" stroke="#3b82f6" strokeWidth="1.2" strokeLinecap="round" />
+      <circle cx="20" cy="22" r="1.2" fill="#3b82f6" />
+      <text x="62" y="20" textAnchor="middle" fill="#3b82f6" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
+      <text x="62" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">27001:2022</text>
+      <text x="62" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">INFORMATION SECURITY</text>
+    </svg>
+  ),
+  "gdpr": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
+      <rect width="120" height="56" rx="7" fill="#003399" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#fbbf24" strokeOpacity="0.5" strokeWidth="1.2" />
+      {Array.from({ length: 12 }).map((_, i) => {
+        const angle = (i * 30 - 90) * (Math.PI / 180);
+        const cx = 20 + 9 * Math.cos(angle);
+        const cy = 28 + 9 * Math.sin(angle);
+        return <circle key={i} cx={cx} cy={cy} r="1.6" fill="#fbbf24" />;
+      })}
+      <text x="68" y="22" textAnchor="middle" fill="#fbbf24" fontSize="9" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="1.5">EU GDPR</text>
+      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="13" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">COMPLIANT</text>
+      <text x="68" y="49" textAnchor="middle" fill="#93c5fd" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">DATA PROTECTION</text>
+    </svg>
+  ),
+  "soc2": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
+      <rect width="120" height="56" rx="7" fill="#1c1917" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#10b981" strokeOpacity="0.55" strokeWidth="1.2" />
+      <circle cx="20" cy="28" r="9" fill="none" stroke="#10b981" strokeWidth="1.3" />
+      <path d="M16 28 L19 31 L24 24" stroke="#10b981" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="68" y="20" textAnchor="middle" fill="#10b981" fontSize="7.5" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2">AICPA · SOC</text>
+      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">SOC 2</text>
+      <text x="68" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">TYPE II · SECURITY</text>
+    </svg>
+  ),
+};
+
 const FALLBACK: FooterJson = {
   brand: {
     badgeText: "NEXOGRAFIX",
@@ -63,7 +175,15 @@ const FALLBACK: FooterJson = {
       ],
     },
     product: { label: "PRODUCT", items: [{ title: "Arohio.ai", href: "/arohio" }] },
-    resources: { label: "RESOURCES", items: [{ title: "Case Studies", href: "/case-studies" }, { title: "Feedback", href: "/feedback" }, { title: "Blog", href: "/blog" }, { title: "FAQs", href: "/faqs" }] },
+    resources: {
+      label: "RESOURCES",
+      items: [
+        { title: "Case Studies", href: "/case-studies" },
+        { title: "Feedback", href: "/feedback" },
+        { title: "Blog", href: "/blog" },
+        { title: "FAQs", href: "/faqs" },
+      ],
+    },
     solutions: {
       label: "SOLUTIONS",
       items: [
@@ -85,15 +205,16 @@ const FALLBACK: FooterJson = {
       key: "whatsapp",
       label: "WhatsApp",
       href: "https://wa.me/9661284439?text={{message}}",
-      message: "Hello Nexografix team, I’d like to know more about your AI-enabled publishing and automation services.",
+      message: "Hello Nexografix team, I'd like to know more about your AI-enabled publishing and automation services.",
       icon: "WaIcon",
     },
   ],
+  // src is intentionally empty — rendering uses CERT_BADGES inline SVGs keyed by `key`
   certifications: [
-    { key: "iso-9001", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/ISO_9001_Logo.svg/512px-ISO_9001_Logo.svg.png", alt: "ISO 9001 Certification" },
-    { key: "iso-27001", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/ISO_27001_Logo.svg/512px-ISO_27001_Logo.svg.png", alt: "ISO 27001 Certification" },
-    { key: "gdpr", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GDPR_logo.svg/512px-GDPR_logo.svg.png", alt: "GDPR Compliance" },
-    { key: "soc2", src: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/AICPA_SOC_logo.svg/512px-AICPA_SOC_logo.svg.png", alt: "SOC 2 Compliance" },
+    { key: "iso-9001",  src: "", alt: "ISO 9001 Certified",  href: "https://www.iso.org/iso-9001-quality-management.html" },
+    { key: "iso-27001", src: "", alt: "ISO 27001 Certified", href: "https://www.iso.org/isoiec-27001-information-security.html" },
+    { key: "gdpr",      src: "", alt: "GDPR Compliant",      href: "https://gdpr-info.eu/" },
+    { key: "soc2",      src: "", alt: "SOC 2 Type II",       href: "https://www.aicpa.org/topic/audit-assurance/audit-and-assurance-service-organization-controls" },
   ],
   legal: {
     copyrightText: "© {{year}} Nexografix. All rights reserved.",
@@ -141,7 +262,6 @@ function normalizeFooter(input: any): FooterJson {
           ? raw.certs
           : [];
 
-
   const legalObj = raw?.legal;
   const legalArr = Array.isArray(raw?.legal) ? raw.legal : null;
   const copyrightObj = raw?.copyright ?? {};
@@ -179,7 +299,9 @@ function normalizeFooter(input: any): FooterJson {
       headline: asText(brand?.headline, "") || asText(brand?.tagline, FALLBACK.brand.headline),
       subheadline: asText(brand?.subheadline, "") || asText(brand?.description, FALLBACK.brand.subheadline),
     },
-    highlights: highlights.map((x: any) => ({ key: asText(x?.key, ""), value: asText(x?.value, "") })).filter((x: any) => x.key && x.value),
+    highlights: highlights
+      .map((x: any) => ({ key: asText(x?.key, ""), value: asText(x?.value, "") }))
+      .filter((x: any) => x.key && x.value),
     newsletter: {
       title: asText(newsletter?.title, FALLBACK.newsletter.title),
       subtitle: asText(newsletter?.subtitle, "") || asText(newsletter?.description, FALLBACK.newsletter.subtitle),
@@ -187,23 +309,37 @@ function normalizeFooter(input: any): FooterJson {
       privacyHref: asText(newsletter?.privacy?.href, "") || asText(newsletter?.privacyHref, FALLBACK.newsletter.privacyHref),
       consentText: asText(newsletter?.consentText, "") || `I agree to the ${asText(newsletter?.privacy?.label, "Privacy Policy")}`,
     },
-    ctaButtons: cta.map((x: any, idx: number) => ({ key: asText(x?.key, idx === 0 ? "book" : "explore"), label: asText(x?.label, ""), href: asText(x?.href, "#") })).filter((x: any) => x.label && x.href && x.href !== "#"),
+    ctaButtons: cta
+      .map((x: any, idx: number) => ({
+        key: asText(x?.key, idx === 0 ? "book" : "explore"),
+        label: asText(x?.label, ""),
+        href: asText(x?.href, "#"),
+      }))
+      .filter((x: any) => x.label && x.href && x.href !== "#"),
     nav: {
       home: {
         label: asText(nav?.home?.label, FALLBACK.nav.home.label),
-        items: (Array.isArray(nav?.home?.items) ? nav.home.items : FALLBACK.nav.home.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
+        items: (Array.isArray(nav?.home?.items) ? nav.home.items : FALLBACK.nav.home.items)
+          .map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") }))
+          .filter((x: any) => x.title && x.href && x.href !== "#"),
       },
       product: {
         label: asText(nav?.product?.label, FALLBACK.nav.product.label),
-        items: (Array.isArray(nav?.product?.items) ? nav.product.items : FALLBACK.nav.product.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
+        items: (Array.isArray(nav?.product?.items) ? nav.product.items : FALLBACK.nav.product.items)
+          .map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") }))
+          .filter((x: any) => x.title && x.href && x.href !== "#"),
       },
       resources: {
         label: asText(nav?.resources?.label, FALLBACK.nav.resources.label),
-        items: (Array.isArray(nav?.resources?.items) ? nav.resources.items : FALLBACK.nav.resources.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
+        items: (Array.isArray(nav?.resources?.items) ? nav.resources.items : FALLBACK.nav.resources.items)
+          .map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") }))
+          .filter((x: any) => x.title && x.href && x.href !== "#"),
       },
       solutions: {
         label: asText(nav?.solutions?.label, FALLBACK.nav.solutions.label),
-        items: (Array.isArray(nav?.solutions?.items) ? nav.solutions.items : FALLBACK.nav.solutions.items).map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") })).filter((x: any) => x.title && x.href && x.href !== "#"),
+        items: (Array.isArray(nav?.solutions?.items) ? nav.solutions.items : FALLBACK.nav.solutions.items)
+          .map((x: any) => ({ title: asText(x?.title, ""), href: asText(x?.href, "#") }))
+          .filter((x: any) => x.title && x.href && x.href !== "#"),
       },
     },
     contact: { label: asText(contact?.label, FALLBACK.contact.label), email, phone, location },
@@ -223,7 +359,8 @@ function normalizeFooter(input: any): FooterJson {
         alt: asText(c?.alt, asText(c?.label, "Certification")),
         href: asText(c?.href, ""),
       }))
-      .filter((x: any) => x.key && x.src && x.href !== "#"),
+      // allow entries with empty src — they will render via CERT_BADGES
+      .filter((x: any) => x.key),
     legal: {
       copyrightText,
       links: legalLinks.filter((x: any) => x.title && x.href && x.href !== "#"),
@@ -235,6 +372,50 @@ function normalizeFooter(input: any): FooterJson {
   if (!normalized.certifications.length) normalized.certifications = FALLBACK.certifications;
 
   return normalized;
+}
+
+// ---------------------------------------------------------------------------
+// CertImage — renders inline SVG badge if available, falls back to <img>
+// ---------------------------------------------------------------------------
+function CertImage({ c, size }: { c: FooterJson["certifications"][number]; size: "sm" | "lg" }) {
+  const badges = size === "sm" ? CERT_BADGES_SM : CERT_BADGES;
+  const badge = badges[c.key];
+
+  if (badge) {
+    return (
+      <div className="opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]">
+        {badge}
+      </div>
+    );
+  }
+
+  // Fallback to <img> when a custom src is provided from the API
+  if (c.src) {
+    return (
+      <img
+        src={c.src}
+        alt={c.alt}
+        loading="lazy"
+        referrerPolicy="no-referrer"
+        className={
+          size === "lg"
+            ? "h-12 md:h-12 lg:h-14 opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]"
+            : "h-8 w-auto opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]"
+        }
+      />
+    );
+  }
+
+  // Last-resort text badge
+  return (
+    <div
+      className={`flex items-center justify-center rounded-md border border-slate-600/50 bg-slate-800 text-xs font-bold text-slate-400 ${
+        size === "lg" ? "h-12 w-28" : "h-8 w-20"
+      }`}
+    >
+      {c.alt}
+    </div>
+  );
 }
 
 export default function SiteFooter() {
@@ -333,14 +514,29 @@ export default function SiteFooter() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-14 sm:py-16">
+
+        {/* ------------------------------------------------------------------ */}
+        {/* DESKTOP LAYOUT                                                       */}
+        {/* ------------------------------------------------------------------ */}
         <div className="hidden md:block">
           <motion.div variants={wrap} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
             <motion.div variants={fade}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-orange-200/60 bg-white/80 px-4 py-2 text-[11px] font-extrabold tracking-[0.22em] text-orange-700 shadow-sm backdrop-blur">
-                {f.brand.badgeText}
-              </div>
+              <Link
+                href="/"
+                className="inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02]"
+              >
+                <img
+                  src="/images/nexografix_logo.png"
+                  alt="Nexografix Logo"
+                  className="h-12 w-auto"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="text-xl font-black tracking-tight text-slate-900">
+                  {f.brand.badgeText}
+                </span>
+              </Link>
 
-              <div className="mt-5 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">{f.brand.headline}</div>
+              <div className="mt-6 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">{f.brand.headline}</div>
 
               <p className="mt-3 max-w-xl text-sm font-semibold leading-relaxed text-slate-600">{f.brand.subheadline}</p>
 
@@ -449,6 +645,7 @@ export default function SiteFooter() {
             </motion.div>
           </motion.div>
 
+          {/* Nav grid */}
           <motion.div variants={wrap} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="mt-12 grid gap-10 rounded-md border border-orange-200/40 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,255,255,0.84))] p-7 shadow-[0_22px_80px_rgba(15,23,42,0.06)] backdrop-blur lg:grid-cols-4">
             <motion.div variants={fade}>
               <div className="text-xs font-extrabold tracking-[0.18em] text-slate-900">{f.nav.home.label}</div>
@@ -537,32 +734,46 @@ export default function SiteFooter() {
             </motion.div>
           </motion.div>
 
+          {/* Certifications — desktop */}
           <motion.div variants={wrap} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="mt-8">
             <motion.div variants={fade} className="flex flex-wrap items-center justify-center gap-10 md:gap-14 lg:gap-20">
-              {f.certifications.map((c, idx) => {
-                const imgEl = <img src={c.src} alt={c.alt} loading="lazy" className="h-12 md:h-12 lg:h-14 opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]" />;
-                return c.href ? (
-                  <a key={k(c.src, c.key, idx)} href={c.href} target="_blank" rel="noreferrer" aria-label={c.alt} className="inline-flex items-center justify-center">
-                    {imgEl}
+              {f.certifications.map((c, idx) =>
+                c.href ? (
+                  <a key={k(c.src || c.key, c.key, idx)} href={c.href} target="_blank" rel="noreferrer" aria-label={c.alt} className="inline-flex items-center justify-center">
+                    <CertImage c={c} size="lg" />
                   </a>
                 ) : (
-                  <div key={k(c.src, c.key, idx)} className="inline-flex items-center justify-center">
-                    {imgEl}
+                  <div key={k(c.src || c.key, c.key, idx)} className="inline-flex items-center justify-center">
+                    <CertImage c={c} size="lg" />
                   </div>
-                );
-              })}
+                )
+              )}
             </motion.div>
           </motion.div>
         </div>
 
+        {/* ------------------------------------------------------------------ */}
+        {/* MOBILE LAYOUT                                                        */}
+        {/* ------------------------------------------------------------------ */}
         <div className="md:hidden">
-          <motion.div variants={wrap} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="rounded-md border border-orange-200/40 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,255,255,0.84))] p-6 shadow-[0_22px_80px_rgba(15,23,42,0.06)] backdrop-blur">
+          <motion.div variants={wrap} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} className="rounded-md border border-orange-200/40 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,255,255,0.84))] p-6 shadow-[0_22px_80px_rgba(15,23,42,0.06)] backdrop-blur">
             <motion.div variants={fade}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-orange-200/60 bg-white/80 px-4 py-2 text-[11px] font-extrabold tracking-[0.22em] text-orange-700 shadow-sm backdrop-blur">
-                {f.brand.badgeText}
-              </div>
+              <Link
+                href="/"
+                className="inline-flex items-center gap-3"
+              >
+                <img
+                  src="/images/nexografix_logo.png"
+                  alt="Nexografix Logo"
+                  className="h-10 w-auto"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="text-lg font-black tracking-tight text-slate-900">
+                  {f.brand.badgeText}
+                </span>
+              </Link>
 
-              <div className="mt-4 text-xl font-extrabold tracking-tight text-slate-900">{f.brand.headline}</div>
+              <div className="mt-5 text-xl font-extrabold tracking-tight text-slate-900">{f.brand.headline}</div>
               <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-600">{f.brand.subheadline}</p>
 
               <div className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -607,19 +818,19 @@ export default function SiteFooter() {
                   ))}
               </div>
 
-              <div className="mt-6 flex items-center justify-center gap-4">
-                {f.certifications.map((c, idx) => {
-                  const imgEl = <img src={c.src} alt={c.alt} loading="lazy" className="h-8 w-auto opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]" />;
-                  return c.href ? (
-                    <a key={k(c.src, c.key, idx)} href={c.href} target="_blank" rel="noreferrer" aria-label={c.alt} className="inline-flex items-center justify-center">
-                      {imgEl}
+              {/* Certifications — mobile */}
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+                {f.certifications.map((c, idx) =>
+                  c.href ? (
+                    <a key={k(c.src || c.key, c.key, idx)} href={c.href} target="_blank" rel="noreferrer" aria-label={c.alt} className="inline-flex items-center justify-center">
+                      <CertImage c={c} size="sm" />
                     </a>
                   ) : (
-                    <div key={k(c.src, c.key, idx)} className="inline-flex items-center justify-center">
-                      {imgEl}
+                    <div key={k(c.src || c.key, c.key, idx)} className="inline-flex items-center justify-center">
+                      <CertImage c={c} size="sm" />
                     </div>
-                  );
-                })}
+                  )
+                )}
               </div>
 
               <div className="mt-6 h-px w-full bg-linear-to-r from-transparent via-orange-200/70 to-transparent" />
@@ -643,6 +854,9 @@ export default function SiteFooter() {
           </motion.div>
         </div>
 
+        {/* ------------------------------------------------------------------ */}
+        {/* BOTTOM BAR — desktop only                                           */}
+        {/* ------------------------------------------------------------------ */}
         <div className="hidden md:block">
           <div className="mt-10 h-px w-full bg-linear-to-r from-transparent via-orange-200/70 to-transparent" />
           <motion.div variants={wrap} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="mt-6 flex flex-col items-start justify-between gap-4 text-sm font-semibold text-slate-600 sm:flex-row sm:items-center">

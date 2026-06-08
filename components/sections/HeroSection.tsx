@@ -5,6 +5,7 @@ import Link from "next/link";
 import Container from "../ui/Container";
 import { motion, type Variants } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 type HomeContent = {
     hero: {
@@ -217,7 +218,7 @@ export default function HeroSection() {
                     >
                         <div className="relative h-80 w-full sm:h-105 lg:h-130">
                             <Image
-                                src={c?.heroImage?.src ?? "/images/home_assets.png"}
+                                src={resolveImageUrl(c?.heroImage?.src) || "/images/home_assets.png"}
                                 alt={c?.heroImage?.alt ?? "Nexografix preview"}
                                 fill
                                 className="h-full w-full object-contain"
