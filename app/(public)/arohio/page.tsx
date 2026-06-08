@@ -16,6 +16,7 @@ import {
   FiZap,
 } from "react-icons/fi";
 import DashboardPreviewCode from "@/components/sections/Dashboardpreviewcode";
+import { resolveImageUrl } from "@/lib/apiUrl";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
 
@@ -119,7 +120,7 @@ function SmartImage({
       
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(16,185,129,0.14),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(15,23,42,0.08),transparent_55%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,250,251,0.98))]" />
       <Image
-        src={err ? fallback : src}
+        src={err ? fallback : resolveImageUrl(src)}
         alt={alt}
         fill
         unoptimized
@@ -508,7 +509,7 @@ function ServiceHeroSection({
             ) : /\.(mp4|webm|ogg)(\?.*)?$/.test(heroImage.src) ? (
               <video
                 key={heroImage.src}
-                src={heroImage.src}
+                src={resolveImageUrl(heroImage.src)}
                 autoPlay
                 loop
                 muted

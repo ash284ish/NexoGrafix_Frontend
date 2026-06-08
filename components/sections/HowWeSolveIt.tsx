@@ -3,6 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import React, { useEffect, useMemo, useState } from "react";
 import { FiLayers, FiCpu, FiCheckCircle, FiActivity } from "react-icons/fi";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -73,7 +74,7 @@ export default function HowWeSolveIt() {
 
   const leftPill = c?.left?.pill ?? "DELIVERY MODEL";
   const leftBadgeRight = c?.left?.badgeRight ?? "Visual Preview";
-  const leftImageSrc = c?.left?.image?.src ?? "";
+  const leftImageSrc = resolveImageUrl(c?.left?.image?.src ?? "");
   const leftImageAlt = c?.left?.image?.alt ?? "Workflow preview";
 
   const stats = useMemo(

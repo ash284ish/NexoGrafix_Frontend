@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiFileText, FiCheckCircle, FiAlertCircle, FiEye, FiActivity } from "react-icons/fi";
 
-const EASE = [0.22, 1, 0.36, 1];
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function RemediationSamplesSection() {
     const [activeTab, setActiveTab] = useState<"remediation" | "report">("remediation");

@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import { FiArrowUpRight, FiMail, FiPhone, FiMapPin, FiLinkedin, FiInstagram, FiFacebook } from "react-icons/fi";
 import ToastTopRight from "@/components/ui/Toast";
+import { resolveImageUrl } from "@/lib/apiUrl";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
 
@@ -355,7 +356,7 @@ function normalizeFooter(input: any): FooterJson {
     certifications: certificationsRaw
       .map((c: any, idx: number) => ({
         key: asText(c?.key, `cert_${idx}`),
-        src: asText(c?.src, ""),
+        src: resolveImageUrl(asText(c?.src, "")),
         alt: asText(c?.alt, asText(c?.label, "Certification")),
         href: asText(c?.href, ""),
       }))

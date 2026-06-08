@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { FiAlertTriangle, FiImage } from "react-icons/fi";
 import SectionHeader from "@/components/dashboard/assets/SectionHeader";
 import ToastTopRight from "@/components/ui/Toast";
-import { buildApiUrl } from "@/lib/apiUrl";
+import { buildApiUrl, resolveImageUrl } from "@/lib/apiUrl";
 import EditableSectionCard from "@/components/cms/EditableSectionCard";
 import EditModal from "@/components/cms/EditModal";
 
@@ -244,7 +244,7 @@ export default function FooterCertificatesImageAdminPage() {
           <div className="space-y-4">
             {activeCert.src && (
               <img
-                src={activeCert.src}
+                src={resolveImageUrl(activeCert.src)}
                 alt={activeCert.alt}
                 className="h-20 rounded border"
               />

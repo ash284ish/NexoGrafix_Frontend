@@ -7,6 +7,7 @@ import { BsStarFill } from "react-icons/bs";
 import { BsFillChatQuoteFill } from "react-icons/bs";
 import { companyInfo } from "@/data/companyInfo";
 import toast, { Toaster } from "react-hot-toast";
+import { resolveImageUrl } from "@/lib/apiUrl";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
 
@@ -482,7 +483,7 @@ export default function FeedbackPage() {
                     {t.avatarUrl ? (
                       <>
                         <img
-                          src={encodeURI(t.avatarUrl)}
+                          src={encodeURI(resolveImageUrl(t.avatarUrl))}
                           alt={`${t.firstName} ${t.lastName}`}
                           className="h-10 w-10 rounded-full border border-orange-200/55 object-contain"
                           loading="lazy"

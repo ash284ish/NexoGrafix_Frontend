@@ -28,26 +28,31 @@ export function resolveImageUrl(url: string | undefined | null): string {
   const base = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
   const normalizedBase = base.replace(/\/api\/?$/, ""); // strip /api if present
 
+  let resolved = url;
+  if (resolved.includes("/api/uploads/")) {
+    resolved = resolved.replace("/api/uploads/", "/uploads/");
+  }
+
   // If it starts with production API uploads path, rewrite to local base uploads path
   const productionPrefix = "https://nexografix.com/api/uploads/";
-  if (url.startsWith(productionPrefix)) {
-    return url.replace(productionPrefix, `${normalizedBase}/uploads/`);
+  if (resolved.startsWith(productionPrefix)) {
+    return resolved.replace(productionPrefix, `${normalizedBase}/uploads/`);
   }
 
   // If it starts with production base uploads path
   const productionPrefix2 = "https://nexografix.com/uploads/";
-  if (url.startsWith(productionPrefix2)) {
-    return url.replace(productionPrefix2, `${normalizedBase}/uploads/`);
+  if (resolved.startsWith(productionPrefix2)) {
+    return resolved.replace(productionPrefix2, `${normalizedBase}/uploads/`);
   }
 
   // If it's a relative path starting with uploads/ or /uploads/
-  if (url.startsWith("uploads/")) {
-    return `${normalizedBase}/${url}`;
+  if (resolved.startsWith("uploads/")) {
+    return `${normalizedBase}/${resolved}`;
   }
-  if (url.startsWith("/uploads/")) {
-    return `${normalizedBase}${url}`;
+  if (resolved.startsWith("/uploads/")) {
+    return `${normalizedBase}${resolved}`;
   }
 
-  return url;
+  return resolved;
 }
 

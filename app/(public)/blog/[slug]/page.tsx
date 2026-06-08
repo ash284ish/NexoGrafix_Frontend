@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
+import { resolveImageUrl } from "@/lib/apiUrl";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { FiSearch, FiShare2, FiHeart, FiMessageCircle } from "react-icons/fi";
@@ -127,7 +128,7 @@ function SmartHeroImage({
   const [loaded, setLoaded] = useState(false);
   const [err, setErr] = useState(false);
 
-  const safeSrc = err ? fallbackSrc : src || fallbackSrc;
+  const safeSrc = err ? resolveImageUrl(fallbackSrc) : resolveImageUrl(src || fallbackSrc);
 
   return (
     <div className="relative aspect-16/8 w-full overflow-hidden">
@@ -271,8 +272,8 @@ export default function BlogDetailsPage() {
   const inputBase =
     "w-full rounded-md border border-black/10 bg-white/90 px-4 py-3 text-sm font-semibold text-[var(--color-text-main)] outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-200/50 placeholder:text-[var(--color-text-muted)]";
 
-  const img2 = post?.images?.[1];
-  const img3 = post?.images?.[2];
+  const img2 = resolveImageUrl(post?.images?.[1]);
+  const img3 = resolveImageUrl(post?.images?.[2]);
   return (
     <motion.section variants={pageWrap} initial="hidden" animate="show" className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-0">

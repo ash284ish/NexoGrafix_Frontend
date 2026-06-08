@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { resolveImageUrl } from "@/lib/apiUrl";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { FiArrowLeft, FiArrowRight, FiSearch, FiTag, FiSliders } from "react-icons/fi";
 
@@ -116,7 +117,7 @@ function BlogCover({
   fallbackSrc?: string;
 }) {
   const [err, setErr] = useState(false);
-  const safeSrc = !src || err ? fallbackSrc || "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : src;
+  const safeSrc = !src || err ? resolveImageUrl(fallbackSrc) || "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1000&q=80" : resolveImageUrl(src);
 
   const [prevSrc, setPrevSrc] = useState(src);
   if (src !== prevSrc) {

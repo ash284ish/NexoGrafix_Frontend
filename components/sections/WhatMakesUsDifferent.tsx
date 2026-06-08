@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import { FiShield, FiClock, FiCheckCircle, FiZap } from "react-icons/fi";
+import { resolveImageUrl } from "../../lib/apiUrl";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -112,9 +113,10 @@ export default function WhatMakesUsDifferent() {
     ];
   }, [right?.miniStats]);
 
-  const imageSrc =
+  const imageSrc = resolveImageUrl(
     right?.image?.src ??
-    "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80";
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80"
+  );
   const imageAlt = right?.image?.alt ?? "Delivery dashboard preview";
 
   return (
