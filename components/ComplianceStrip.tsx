@@ -8,7 +8,7 @@ const complianceBadges = [
   {
     name: "ISO 9001:2015",
     label: "Quality Management",
-    src: "https://upload.wikimedia.org/wikipedia/commons/b/b3/ISO_9001_Logo.svg",
+    src: "/images/iso_9001.png",
     href: "https://www.iso.org/iso-9001-quality-management.html",
   },
   {
