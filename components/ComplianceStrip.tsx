@@ -11,24 +11,6 @@ const complianceBadges = [
     src: "/images/iso_9001.png",
     href: "https://www.iso.org/iso-9001-quality-management.html",
   },
-  {
-    name: "ISO 27001:2022",
-    label: "Information Security",
-    src: "https://upload.wikimedia.org/wikipedia/commons/2/2b/ISO_27001_Logo.svg",
-    href: "https://www.iso.org/iso-iec-27001-information-security.html",
-  },
-  {
-    name: "GDPR",
-    label: "Data Protection",
-    src: "https://upload.wikimedia.org/wikipedia/commons/e/e1/GDPR_logo.svg",
-    href: "https://gdpr-info.eu/",
-  },
-  {
-    name: "SOC 2 Type II",
-    label: "Security & Privacy",
-    src: "https://upload.wikimedia.org/wikipedia/en/5/5a/AICPA_SOC_logo.svg",
-    href: "https://www.aicpa.org/topic/audit-assurance/audit-and-assurance-service-organization-controls",
-  },
 ];
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
@@ -51,10 +33,10 @@ export default function ComplianceStrip() {
             className="text-center lg:text-left"
           >
             <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">
-              Compliance & <span className="text-orange-600">Security</span>
+              Quality & <span className="text-orange-600">Compliance</span>
             </h2>
             <p className="mt-3 text-sm font-semibold leading-relaxed text-slate-600">
-              Adhering to global standards for quality management, data privacy, and enterprise-grade information security.
+              Adhering to global standards for quality management.
             </p>
           </motion.div>
 

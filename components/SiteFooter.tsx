@@ -48,47 +48,6 @@ const CERT_BADGES: Record<string, React.ReactNode> = {
       <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">QUALITY MANAGEMENT</text>
     </svg>
   ),
-  "iso-27001": (
-    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
-      <rect width="120" height="56" rx="7" fill="#0f172a" />
-      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#3b82f6" strokeOpacity="0.55" strokeWidth="1.2" />
-      {/* lock icon */}
-      <rect x="15" y="18" width="10" height="8" rx="1.5" fill="none" stroke="#3b82f6" strokeWidth="1.2" />
-      <path d="M17 18 L17 15.5 Q20 13 23 15.5 L23 18" fill="none" stroke="#3b82f6" strokeWidth="1.2" strokeLinecap="round" />
-      <circle cx="20" cy="22" r="1.2" fill="#3b82f6" />
-      <text x="62" y="20" textAnchor="middle" fill="#3b82f6" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
-      <text x="62" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">27001:2022</text>
-      <text x="62" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">INFORMATION SECURITY</text>
-    </svg>
-  ),
-  "gdpr": (
-    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
-      <rect width="120" height="56" rx="7" fill="#003399" />
-      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#fbbf24" strokeOpacity="0.5" strokeWidth="1.2" />
-      {/* EU circle of stars (12 stars) */}
-      {Array.from({ length: 12 }).map((_, i) => {
-        const angle = (i * 30 - 90) * (Math.PI / 180);
-        const cx = 20 + 9 * Math.cos(angle);
-        const cy = 28 + 9 * Math.sin(angle);
-        return <circle key={i} cx={cx} cy={cy} r="1.6" fill="#fbbf24" />;
-      })}
-      <text x="68" y="22" textAnchor="middle" fill="#fbbf24" fontSize="9" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="1.5">EU GDPR</text>
-      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="13" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">COMPLIANT</text>
-      <text x="68" y="49" textAnchor="middle" fill="#93c5fd" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">DATA PROTECTION</text>
-    </svg>
-  ),
-  "soc2": (
-    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
-      <rect width="120" height="56" rx="7" fill="#1c1917" />
-      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#10b981" strokeOpacity="0.55" strokeWidth="1.2" />
-      {/* checkmark circle */}
-      <circle cx="20" cy="28" r="9" fill="none" stroke="#10b981" strokeWidth="1.3" />
-      <path d="M16 28 L19 31 L24 24" stroke="#10b981" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="68" y="20" textAnchor="middle" fill="#10b981" fontSize="7.5" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2">AICPA · SOC</text>
-      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">SOC 2</text>
-      <text x="68" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">TYPE II · SECURITY</text>
-    </svg>
-  ),
 };
 
 // Mobile-size version (smaller SVGs)
@@ -102,44 +61,6 @@ const CERT_BADGES_SM: Record<string, React.ReactNode> = {
       <text x="60" y="20" textAnchor="middle" fill="#ea580c" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
       <text x="60" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">9001:2015</text>
       <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">QUALITY MANAGEMENT</text>
-    </svg>
-  ),
-  "iso-27001": (
-    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-      <rect width="120" height="56" rx="7" fill="#0f172a" />
-      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#3b82f6" strokeOpacity="0.55" strokeWidth="1.2" />
-      <rect x="15" y="18" width="10" height="8" rx="1.5" fill="none" stroke="#3b82f6" strokeWidth="1.2" />
-      <path d="M17 18 L17 15.5 Q20 13 23 15.5 L23 18" fill="none" stroke="#3b82f6" strokeWidth="1.2" strokeLinecap="round" />
-      <circle cx="20" cy="22" r="1.2" fill="#3b82f6" />
-      <text x="62" y="20" textAnchor="middle" fill="#3b82f6" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
-      <text x="62" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">27001:2022</text>
-      <text x="62" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">INFORMATION SECURITY</text>
-    </svg>
-  ),
-  "gdpr": (
-    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-      <rect width="120" height="56" rx="7" fill="#003399" />
-      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#fbbf24" strokeOpacity="0.5" strokeWidth="1.2" />
-      {Array.from({ length: 12 }).map((_, i) => {
-        const angle = (i * 30 - 90) * (Math.PI / 180);
-        const cx = 20 + 9 * Math.cos(angle);
-        const cy = 28 + 9 * Math.sin(angle);
-        return <circle key={i} cx={cx} cy={cy} r="1.6" fill="#fbbf24" />;
-      })}
-      <text x="68" y="22" textAnchor="middle" fill="#fbbf24" fontSize="9" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="1.5">EU GDPR</text>
-      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="13" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">COMPLIANT</text>
-      <text x="68" y="49" textAnchor="middle" fill="#93c5fd" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">DATA PROTECTION</text>
-    </svg>
-  ),
-  "soc2": (
-    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
-      <rect width="120" height="56" rx="7" fill="#1c1917" />
-      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#10b981" strokeOpacity="0.55" strokeWidth="1.2" />
-      <circle cx="20" cy="28" r="9" fill="none" stroke="#10b981" strokeWidth="1.3" />
-      <path d="M16 28 L19 31 L24 24" stroke="#10b981" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="68" y="20" textAnchor="middle" fill="#10b981" fontSize="7.5" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2">AICPA · SOC</text>
-      <text x="68" y="36" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="1">SOC 2</text>
-      <text x="68" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">TYPE II · SECURITY</text>
     </svg>
   ),
 };
@@ -213,9 +134,6 @@ const FALLBACK: FooterJson = {
   // src is intentionally empty — rendering uses CERT_BADGES inline SVGs keyed by `key`
   certifications: [
     { key: "iso-9001",  src: "", alt: "ISO 9001 Certified",  href: "https://www.iso.org/iso-9001-quality-management.html" },
-    { key: "iso-27001", src: "", alt: "ISO 27001 Certified", href: "https://www.iso.org/isoiec-27001-information-security.html" },
-    { key: "gdpr",      src: "", alt: "GDPR Compliant",      href: "https://gdpr-info.eu/" },
-    { key: "soc2",      src: "", alt: "SOC 2 Type II",       href: "https://www.aicpa.org/topic/audit-assurance/audit-and-assurance-service-organization-controls" },
   ],
   legal: {
     copyrightText: "© {{year}} Nexografix. All rights reserved.",
