@@ -28,7 +28,7 @@ export function resolveImageUrl(url: string | undefined | null): string {
   const base = process.env.NEXT_PUBLIC_API_BASE_URL || "https://nexografix.com";
   const normalizedBase = base.replace(/\/+$/, "");
 
-  let resolved = url.trim();
+  const resolved = url.trim();
 
   // Already a full URL with /api/uploads/ — keep it as-is (nginx proxies /api/ to backend)
   if (resolved.includes("/api/uploads/")) {

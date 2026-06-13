@@ -196,6 +196,7 @@ const FALLBACK: HeaderData = {
       icon: "FiBookOpen",
       items: [
         { title: "Case Studies", href: "/case-studies", icon: "FiBox" },
+        { title: "Work Samples", href: "/samples", icon: "FiLayers" },
         { title: "Feedback", href: "/feedback", icon: "FiMessageSquare" },
         { title: "Insights / Blog", href: "/blog", icon: "FiPenTool" },
         { title: "FAQs", href: "/faqs", icon: "FiHelpCircle" },
@@ -203,6 +204,7 @@ const FALLBACK: HeaderData = {
     },
   },
 };
+
 
 function FiGlobeIcon() {
   return (
@@ -273,6 +275,9 @@ export default function SiteHeader() {
     if (!resItems.some((it) => it.href === "/case-studies")) {
       resItems.unshift({ title: "Case Studies", href: "/case-studies", icon: "FiBox" });
     }
+    if (!resItems.some((it) => it.href === "/samples")) {
+      resItems.splice(1, 0, { title: "Work Samples", href: "/samples", icon: "FiLayers" });
+    }
     return {
       ...base,
       nav: {
@@ -282,6 +287,7 @@ export default function SiteHeader() {
       },
     };
   }, [data]);
+
 
   const iconMap: Record<string, ReactNode> = useMemo(() => ({
     FaFacebookF: <FaFacebookF size={16} />,

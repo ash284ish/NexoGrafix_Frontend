@@ -32,6 +32,8 @@ import {
   FiGlobe,
   FiDatabase,
   FiActivity,
+  FiBriefcase,
+  FiTag,
 } from "react-icons/fi";
 
 type Stats = {
@@ -66,6 +68,7 @@ export default function DashboardSidebar() {
 
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({
     "Pages (CMS)": false,
+    "Samples (CMS)": false,
     "Layout (CMS)": false,
     "Legal (CMS)": false,
     products: false,
@@ -165,6 +168,19 @@ export default function DashboardSidebar() {
           { type: "link", label: "Blog Details", href: "/crm/blog-details", icon: <FiFileText className="h-4.5 w-4.5" /> },
         ],
       },
+
+      {
+        type: "group",
+        label: "Samples (CMS)",
+        icon: <FiBriefcase className="h-4.5 w-4.5" />,
+        children: [
+          { type: "link", label: "Samples List", href: "/crm/samples", icon: <FiBriefcase className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Categories", href: "/crm/samples/categories", icon: <FiTag className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Industries", href: "/crm/samples/industries", icon: <FiGlobe className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Leads / Requests", href: "/crm/samples/leads", icon: <FiMail className="h-4.5 w-4.5" /> },
+        ],
+      },
+
 
       {
         type: "group",
