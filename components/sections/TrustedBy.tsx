@@ -80,8 +80,6 @@ export default function OurClientsMarquee() {
                         }}
                     >
                         {track.map((item, idx) => {
-                            const isBlur = item.blur === false;
-
                             return (
                                 <div
                                     key={`${item.name}-${idx}`}
@@ -99,21 +97,17 @@ export default function OurClientsMarquee() {
                                             src={resolveImageUrl(item.imageUrl)}
                                             alt={item.name}
                                             loading="lazy"
-                                            className={`h-9 w-9 object-contain transition ${isBlur
-                                                    ? "blur-[6px] opacity-70 grayscale"
-                                                    : "grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0"
-                                                }`}
+                                            className="h-9 w-9 object-contain transition blur-[6px] opacity-70 grayscale"
                                         />
                                     </div>
 
-                                    <div className="min-w-0">
+                                    <div className="min-w-0 blur-[3px] select-none">
                                         <div
-                                            className={`truncate text-base font-extrabold ${isBlur ? "text-slate-500 blur-xs opacity-70 select-none" : "text-slate-900"
-                                                }`}
+                                            className="truncate text-base font-extrabold text-slate-500 opacity-70"
                                         >
                                             {item.name}
                                         </div>
-                                        <div className={`truncate text-sm font-semibold ${isBlur ? "text-slate-500 blur-xs opacity-70 select-none" : "text-slate-500"}`}>
+                                        <div className="truncate text-sm font-semibold text-slate-500 opacity-70">
                                             {item.domain}
                                         </div>
                                     </div>

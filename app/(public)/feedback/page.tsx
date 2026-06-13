@@ -502,9 +502,11 @@ export default function FeedbackPage() {
                     )}
 
                     <div className="min-w-0">
-                      <div className="truncate text-sm font-extrabold text-(--color-text-main)">
-                        {t.firstName} {t.lastName}
-                      </div>
+                      {`${t.firstName || ""} ${t.lastName || ""}`.trim() && (
+                        <div className="truncate text-sm font-extrabold text-(--color-text-main)">
+                          {t.firstName} {t.lastName}
+                        </div>
+                      )}
                       <div className="truncate text-xs font-semibold text-(--color-text-muted)">{t.role}</div>
                     </div>
                   </div>
@@ -513,7 +515,7 @@ export default function FeedbackPage() {
                     <Stars rating={t.rating} />
                   </div>
 
-                  <p className="relative mt-4 text-sm font-semibold leading-relaxed text-slate-700">{t.message}</p>
+                  <p className="relative mt-4 text-sm font-semibold leading-relaxed text-slate-700 whitespace-pre-wrap">{t.message}</p>
 
                   <div className="relative mt-auto pt-5">
                     <span className="inline-flex items-center rounded-full border border-orange-200/70 bg-white/75 px-3 py-1 text-xs font-extrabold text-(--color-brand-dark)">
