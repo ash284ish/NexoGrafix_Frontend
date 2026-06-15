@@ -174,10 +174,7 @@ export default function DashboardSidebar() {
         label: "Samples (CMS)",
         icon: <FiBriefcase className="h-4.5 w-4.5" />,
         children: [
-          { type: "link", label: "Samples List", href: "/crm/samples", icon: <FiBriefcase className="h-4.5 w-4.5" /> },
-          { type: "link", label: "Categories", href: "/crm/samples/categories", icon: <FiTag className="h-4.5 w-4.5" /> },
-          { type: "link", label: "Industries", href: "/crm/samples/industries", icon: <FiGlobe className="h-4.5 w-4.5" /> },
-          { type: "link", label: "Leads / Requests", href: "/crm/samples/leads", icon: <FiMail className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Samples Page", href: "/crm/samples", icon: <FiBriefcase className="h-4.5 w-4.5" /> },
         ],
       },
 
