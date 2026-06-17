@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "title": "IT Services • Nexografix",
+    "route": "/it-services"
+  },
+  "hero": {
+    "eyebrow": "IT SERVICES",
+    "title": "IT Services",
+    "subtitle": "Scalable, secure, and product-grade technology services—from websites and mobile apps to custom platforms, EdTech systems, and AI automation.",
+    "hero_image": {
+      "src": "https://nexografix.com/api/uploads/testimonials/id.jpg",
+      "alt": "IT Services"
+    },
+    "chips": [
+      {
+        "iconKey": "shield",
+        "text": "Secure, scalable engineering"
+      },
+      {
+        "iconKey": "barchart2",
+        "text": "Performance-first delivery"
+      }
+    ],
+    "pills": [
+      "Web & Mobile",
+      "UI/UX",
+      "E-commerce",
+      "Custom Software",
+      "EdTech/LMS",
+      "AI & Automation",
+      "APIs & Integrations"
+    ],
+    "badges": [
+      {
+        "iconKey": "checkcircle",
+        "text": "Production-ready builds"
+      },
+      {
+        "iconKey": "filetext",
+        "text": "Clear scope & milestones"
+      },
+      {
+        "iconKey": "zap",
+        "text": "Automation-friendly systems"
+      }
+    ],
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "note_text": "Built for long-term scalability"
+  },
+  "trust_metrics": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Technology delivery you can depend on",
+    "subheading": "From design to deployment, we deliver stable systems with clean engineering practices, measurable performance, and predictable outcomes.",
+    "columns": 3,
+    "centered": true,
+    "stats": [
+      {
+        "id": "projects",
+        "iconKey": "projects",
+        "value": 5010,
+        "suffix": "+",
+        "label": "Projects shipped",
+        "hint": "Web, mobile, portals, and internal tools delivered with production-ready standards.",
+        "highlight": false
+      },
+      {
+        "id": "qa",
+        "iconKey": "qa",
+        "value": 99,
+        "suffix": "%",
+        "label": "Delivery reliability",
+        "hint": "Clean builds, structured QA, and stable releases—so your team can scale confidently.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "iconKey": "partners",
+        "value": 120,
+        "suffix": "+",
+        "label": "Teams supported",
+        "hint": "Publishers, EdTechs, SMEs, and growing product teams across multiple domains.",
+        "highlight": false
+      }
+    ]
+  },
+  "services_carousel": {
+    "eyebrow": "SERVICES",
+    "heading": "IT services & capabilities",
+    "subheading": "Browse our IT services through a guided carousel—each capability highlights what we build, how we deliver, and how it supports your growth.",
+    "auto_rotate_ms": 6500,
+    "pause_on_hover": true,
+    "show_tabs": true,
+    "slides": [
+      {
+        "id": "web-platforms",
+        "title": "Web Development & Digital Platforms",
+        "desc": "Web development services create responsive, accessible, high-performance websites and web applications that serve educational institutions, publishers, and EdTech platforms with scalable solutions meeting modern web standards, accessibility requirements, and user experience expectations. \n\n As educational delivery shifts to digital-first models and institutional web presence directly impacts enrollment, engagement, and learning outcomes, professional web development becomes critical infrastructure supporting organizational missions and competitive positioning. \n\n Primary stakeholders include universities requiring modern web presences, publishers building content delivery platforms, EdTech startups developing learning products, K-12 districts creating parent and student portals, and educational organizations needing custom web solutions. \n\n The service addresses fundamental challenges including outdated websites undermining credibility, inaccessible platforms excluding users with disabilities, poor performance frustrating mobile users, security vulnerabilities risking data breaches, and inflexible systems unable to evolve with organizational needs.",
+        "iconKey": "code",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/web.jpg",
+          "alt": "Web development and digital platforms"
+        },
+        "bullets": [
+          "Corporate & business websites",
+          "Publisher & EdTech portals",
+          "CMS (WordPress / Headless)",
+          "SEO, multilingual & performance focused"
+        ]
+      },
+      {
+        "id": "ui-ux",
+        "title": "UI / UX Design Services",
+        "desc": "UI/UX design services create intuitive, accessible, engaging user interfaces and experiences for educational applications, learning platforms, content delivery systems, and institutional digital products through research-informed design that balances usability, aesthetics, and educational effectiveness. \n\n As educational technology competes for attention in crowded markets and learning outcomes depend on student engagement, user experience quality directly impacts product adoption, learner success, and competitive differentiation. \n\n Core audiences include EdTech startups building new learning products, publishers redesigning digital platforms, universities improving student portals, assessment companies developing testing interfaces, and organizations requiring user-centered design for educational applications. \n\n This service resolves critical problems including confusing interfaces frustrating users, inaccessible designs excluding learners with disabilities, generic aesthetics failing to differentiate products, poor mobile experiences limiting access, and design decisions unsupported by user research or usability evidence.",
+        "iconKey": "layers",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/ui.jpg",
+          "alt": "UI UX design services"
+        },
+        "bullets": [
+          "UI design (web & mobile)",
+          "UX research & journey mapping",
+          "Figma wireframes & prototypes",
+          "Design systems & accessibility-first UI"
+        ]
+      },
+      {
+        "id": "mobile-apps",
+        "title": "Mobile App Development (Native & Hybrid)",
+        "desc": "Mobile app development services create native iOS and Android applications for educational purposes, including learning apps, student engagement tools, content delivery platforms, and institutional mobile experiences designed for touch interfaces, offline functionality, and on-the-go learning contexts. \n\n With mobile devices serving as primary computing platforms for many students and learning increasingly occurring outside traditional classroom settings, mobile applications enable anywhere, anytime learning while leveraging device capabilities including cameras, sensors, and notifications. \n\n Primary beneficiaries include EdTech companies building mobile learning products, publishers creating reading and study apps, universities developing student life applications, K-12 districts enabling parent communication, and educational organizations requiring mobile-first learner engagement. \n\n The service addresses critical gaps including desktop-only experiences excluding mobile users, responsive websites inadequate for mobile learning scenarios, inability to leverage native device features, lack of offline access limiting learning in connectivity-challenged environments, and poor mobile performance undermining engagement.",
+        "iconKey": "smartphone",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/mob.jpg",
+          "alt": "Mobile app development"
+        },
+        "bullets": [
+          "Native Android & iOS apps",
+          "Flutter / React Native hybrid apps",
+          "EdTech & learning apps",
+          "Performance + store optimization"
+        ]
+      },
+      {
+        "id": "ecommerce",
+        "title": "E-commerce Website & App Development",
+        "desc": "E-commerce development services create online stores, subscription platforms, marketplace systems, and transactional websites enabling educational publishers, institutions, and EdTech companies to sell digital content, physical products, courses, and subscriptions through secure, scalable, conversion-optimized commerce experiences. \n\n As educational content distribution shifts from traditional channels to direct digital sales and subscription models, robust e-commerce infrastructure becomes essential for revenue generation, customer acquisition, and business model innovation. \n\n Key stakeholders include educational publishers selling textbooks and digital content, course creators offering online programs, institutional bookstores managing student purchasing, EdTech platforms monetizing software, and training organizations selling certification programs. \n\n This service resolves critical business barriers including manual sales processes limiting scale, payment processing challenges, poor checkout experiences reducing conversion, inability to manage subscriptions and renewals, lack of integration with learning platforms, and security vulnerabilities risking payment data breaches.",
+        "iconKey": "shoppingcart",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/ecom.jpg",
+          "alt": "E-commerce development"
+        },
+        "bullets": [
+          "Custom e-commerce builds",
+          "Shopify / WooCommerce / Magento",
+          "Payments + shipping + tax automation",
+          "Mobile-first e-commerce apps"
+        ]
+      },
+      {
+        "id": "custom-software",
+        "title": "Custom Software Development",
+        "desc": "Custom software development services create tailored applications, platforms, and systems addressing unique organizational requirements, workflow automation, data management, and business processes that off-the-shelf solutions cannot adequately support in educational and publishing contexts. \n\n When commercial software lacks required functionality, integration capabilities, workflow alignment, or scalability, custom development provides competitive advantages through purpose-built solutions optimized for specific organizational needs and strategic objectives. \n\n Primary users include publishers requiring proprietary content management systems, educational institutions needing specialized administrative tools, assessment companies building unique testing platforms, EdTech innovators developing novel learning solutions, and organizations with complex workflows defying standard software capabilities. \n\n This service solves fundamental limitations including workflow mismatches reducing productivity, integration gaps creating data silos, scalability constraints preventing growth, vendor lock-in limiting flexibility, and competitive disadvantages from relying on identical tools as competitors.",
+        "iconKey": "settings",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/custom.jpg",
+          "alt": "Custom software development"
+        },
+        "bullets": [
+          "Custom web applications",
+          "Workflow & process automation",
+          "Content/manuscript tracking systems",
+          "Admin dashboards & API-driven platforms"
+        ]
+      },
+      {
+        "id": "edtech-lms",
+        "title": "EdTech & LMS Development",
+        "desc": "EdTech and Learning Management System development services create purpose-built educational platforms, online learning environments, student engagement tools, and instructional technology solutions supporting teaching, learning, assessment, and educational administration with scalability, accessibility, and pedagogical effectiveness. \n\n As educational institutions adopt digital learning at scale and EdTech companies compete in expanding markets, custom LMS development enables differentiated functionality, optimized user experiences, and unique pedagogical approaches unavailable in commercial platforms. \n\n Core stakeholders include universities requiring customized learning environments, EdTech startups building innovative educational products, corporate training departments needing tailored learning platforms, K-12 districts seeking integrated solutions, and educational organizations with specialized learning delivery requirements. \n\n This service addresses critical limitations including commercial LMS platforms lacking required features, poor user experiences reducing engagement, accessibility gaps excluding learners with disabilities, integration challenges creating workflow friction, and inability to implement proprietary pedagogical models or assessment methodologies.",
+        "iconKey": "bookopen",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/lms.jpg",
+          "alt": "EdTech and LMS development"
+        },
+        "bullets": [
+          "LMS & course platforms",
+          "Quiz/test/assessment engines",
+          "SCORM / xAPI integration",
+          "Student/teacher dashboards + analytics"
+        ]
+      },
+      {
+        "id": "ai-automation",
+        "title": "AI & Automation Solutions",
+        "desc": " AI and automation services apply machine learning, natural language processing, computer vision, and intelligent automation to educational challenges including content personalization, administrative efficiency, assessment innovation, accessibility enhancement, and data-driven insights transforming educational operations and learning experiences. \n\nAs artificial intelligence matures and educational institutions seek efficiency while improving outcomes, AI and automation enable capabilities previously requiring extensive human effort including adaptive learning, intelligent tutoring, automated feedback, content generation, and predictive analytics. \n\nPrimary beneficiaries include EdTech companies building intelligent products, publishers automating content operations, universities improving student services, assessment companies innovating evaluation methods, and educational organizations seeking operational efficiency and enhanced learning effectiveness. \n\nThis service addresses significant opportunities including manual processes limiting scale, inability to personalize at individual level, assessment feedback delays, accessibility barriers requiring extensive remediation, and decision-making lacking predictive insights that AI and automation can provide.",
+        "iconKey": "zap",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/ai.jpg",
+          "alt": "AI and automation solutions"
+        },
+        "bullets": [
+          "AI-based content processing",
+          "Auto-tagging & metadata generation",
+          "Chatbots & virtual assistants",
+          "Automated QA, validation & workflow automation"
+        ]
+      },
+      {
+        "id": "cms-dam",
+        "title": "CMS, DAM & Content Systems",
+        "desc": "Content Management System (CMS), Digital Asset Management (DAM), and content system services implement platforms organizing, managing, versioning, and delivering educational content, digital assets, learning objects, and media at scale supporting multi-format publishing, content reuse, workflow management, and distributed content operations. \n\n As educational content proliferates across formats, platforms, and delivery channels while requiring frequent updates and accessibility compliance, robust content infrastructure becomes essential for operational efficiency, content quality, and multi-channel publishing strategies. \n\n Core audiences include publishers managing content production workflows, educational institutions organizing learning object repositories, media organizations managing digital assets, EdTech companies delivering content at scale, and multi-author organizations requiring collaborative content management. \n\n This service resolves critical operational challenges including content silos preventing reuse, manual workflows limiting scale, version control problems, difficulty managing multi-format publishing, inability to efficiently update content across platforms, and lack of content governance and rights management.",
+        "iconKey": "database",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/cms.jpg",
+          "alt": "CMS and DAM systems"
+        },
+        "bullets": [
+          "CMS setup & customization",
+          "Digital Asset Management (DAM)",
+          "XML-based content systems",
+          "Headless CMS + content reuse/versioning"
+        ]
+      },
+      {
+        "id": "api-integrations",
+        "title": "API Integration & Third-Party Tools",
+        "desc": "API and integration services connect disparate educational systems, enable data exchange, automate workflows across platforms, and create unified technology ecosystems supporting seamless user experiences, operational efficiency, and data-driven decision making in complex educational technology environments. \n\n As educational institutions and organizations deploy multiple systems for learning, administration, communication, and operations, integration becomes essential for eliminating data silos, reducing manual data entry, ensuring data consistency, and creating cohesive digital experiences. \n\n Primary stakeholders include universities managing complex IT ecosystems, EdTech platforms requiring third-party integrations, publishers connecting content with learning systems, assessment companies integrating with educational platforms, and organizations seeking operational efficiency through connected systems. \n\n This service addresses fundamental technology challenges including data silos preventing comprehensive insights, manual data entry causing errors and inefficiency, disconnected user experiences frustrating users, inability to leverage data across systems, and workflow fragmentation reducing productivity.",
+        "iconKey": "link2",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/api.jpg",
+          "alt": "API integration services"
+        },
+        "bullets": [
+          "Payment gateway integration",
+          "LMS / ERP / CRM integrations",
+          "Marketing/email + analytics tools",
+          "Cloud service integrations & reporting"
+        ]
+      }
+    ]
+  },
+  "contact_cta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Want to build or modernize your digital platform?",
+    "subheading": "Share your goals, preferred stack, and timelines—we’ll propose a delivery plan with clear milestones, architecture guidance, and launch-ready execution.",
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "bullets": [
+      "Project type (website / app / platform / internal tool)",
+      "Key features and target users",
+      "Preferred tech stack (optional)",
+      "Integrations needed (payments, LMS, CRM, analytics)",
+      "Timeline and launch expectations"
+    ],
+    "note_text": "Usually respond within 24 hours (business days)"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Data Labeling & Annotation Services"
+  },
+  "hero": {
+    "eyebrow": "DATA LABELING",
+    "title": "Data Labeling & Annotation Services",
+    "subtitle": "High-quality, scalable training data for computer vision, autonomous systems, and AI models—delivered with strong QA, clear guidelines, and consistent outputs.",
+    "hero_image": {
+      "src": "https://nexografix.com/api/uploads/testimonials/Data Label.jpg",
+      "alt": "Data Labeling & Annotation Services"
+    },
+    "pills": [
+      "Image",
+      "Video",
+      "LiDAR/3D",
+      "Text",
+      "Audio",
+      "Dataset Ops",
+      "QA & Validation"
+    ],
+    "chips": [
+      {
+        "iconKey": "shield",
+        "text": "Secure workflows and access control"
+      },
+      {
+        "iconKey": "barchart2",
+        "text": "Quality-first, scalable delivery"
+      }
+    ],
+    "badges": [
+      {
+        "iconKey": "checkcircle",
+        "text": "Multi-stage QA"
+      },
+      {
+        "iconKey": "filetext",
+        "text": "Clear guidelines & schemas"
+      },
+      {
+        "iconKey": "zap",
+        "text": "Model-ready outputs"
+      }
+    ],
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "note_text": "Designed for production ML pipelines"
+  },
+  "trust_metrics": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Accessibility outcomes you can rely on",
+    "subheading": "Consistent remediation, rigorous validation, and real assistive-technology checks—so your content is compliant and usable.",
+    "columns": 3,
+    "centered": true,
+    "stats": [
+      {
+        "id": "projects",
+        "iconKey": "projects",
+        "value": 2,
+        "suffix": " Million+",
+        "label": "Pages remediated",
+        "hint": "Over a million pages across PDFs, EPUBs, reports, and learning materials—remediated to meet accessibility standards and ensure real-world usability.",
+        "highlight": false
+      },
+      {
+        "id": "qa",
+        "iconKey": "qa",
+        "value": 100,
+        "suffix": "%",
+        "label": "Compliance success rate",
+        "hint": "End-to-end validation with structured remediation and assistive technology checks ensures complete compliance before delivery.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "iconKey": "partners",
+        "value": 50,
+        "suffix": "+",
+        "label": "Projects handled",
+        "hint": "Supporting publishers, EdTech companies, healthcare, banking, and public-sector organizations with ongoing accessibility needs.",
+        "highlight": false
+      }
+    ]
+  },
+  "services_carousel": {
+    "eyebrow": "SERVICES",
+    "heading": "Annotation services & capabilities",
+    "subheading": "Explore our annotation capabilities through a guided carousel—each service outlines supported label types, common use cases, and delivery standards.",
+    "auto_rotate_ms": 6500,
+    "pause_on_hover": true,
+    "show_tabs": true,
+    "slides": [
+      {
+        "id": "image-annotation",
+        "title": "Image Annotation Services",
+        "desc": "Image annotation services provide precise labeling, classification, and markup of visual data enabling computer vision models, educational AI applications, accessibility automation, and machine learning systems to recognize objects, scenes, concepts, and visual patterns critical for intelligent educational technology. \n\n As artificial intelligence becomes integral to educational content creation, accessibility remediation, adaptive learning, and automated assessment, high-quality annotated image datasets serve as foundational training data determining model accuracy, reliability, and real-world performance. \n\n Primary stakeholders include EdTech companies training computer vision models, publishers automating accessibility workflows, educational AI researchers, assessment companies developing automated scoring, institutions building learning analytics, and organizations requiring custom vision AI for educational applications. \n\n This service resolves critical machine learning challenges including insufficient training data limiting model development, inconsistent annotations degrading model accuracy, lack of domain expertise in educational content annotation, inability to scale annotation in-house, and absence of quality assurance producing unreliable datasets.",
+        "iconKey": "image",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/image.jpg",
+          "alt": "Image annotation services"
+        },
+        "bullets": [
+          "Bounding boxes, polygons, keypoints, splines",
+          "Semantic & instance segmentation",
+          "Object detection and classification workflows",
+          "Retail, industrial, and document imagery support"
+        ]
+      },
+      {
+        "id": "video-annotation",
+        "title": "Video Annotation Services",
+        "desc": "Video annotation services provide temporal and spatial labeling of video content including object tracking, action recognition, event detection, and scene classification enabling AI applications in educational video analysis, accessibility, engagement tracking, and intelligent video platforms. \n\n With video dominating educational content delivery through online courses, instructional videos, and flipped classrooms, AI-powered video understanding supports accessibility automation, engagement analytics, content search, and personalized learning requiring high-quality annotated video training data. \n\n Core audiences include EdTech platforms developing video intelligence features, accessibility service providers automating captioning, educational researchers analyzing classroom videos, publishers enhancing video content, and institutions implementing video-based learning analytics. \n\n This service addresses critical challenges including manual video analysis not scaling, difficulty training AI without annotated video data, complexity of temporal annotation, need for frame-accurate labeling, and requirements for domain expertise in educational video content.",
+        "iconKey": "video",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/video.jpg",
+          "alt": "Video annotation services"
+        },
+        "bullets": [
+          "Object tracking and multi-object tracking (MOT)",
+          "Action/event annotation + temporal segmentation",
+          "Keyframe labeling and consistency checks",
+          "Surveillance, autonomy, sports, and behavior analytics"
+        ]
+      },
+      {
+        "id": "lidar-annotation",
+        "title": "LiDAR Annotation Services",
+        "desc": "LiDAR and 3D annotation services label point cloud data, 3D models, spatial environments, and depth information enabling applications in accessible 3D educational content, spatial learning, augmented reality education, campus navigation, and facility management supporting emerging educational technology applications. \n\n As augmented reality, virtual reality, and 3D visualization enter educational contexts from virtual labs to campus wayfinding, AI systems understanding 3D space require annotated 3D training data for object recognition, scene understanding, and spatial reasoning. \n\n Primary stakeholders include EdTech companies building AR/VR learning applications, universities implementing accessible campus navigation, educational game developers, museum and cultural education creating 3D experiences, facilities management requiring spatial AI, and educational robotics applications. \n\n This service addresses specialized challenges including scarcity of 3D annotation expertise, complexity of point cloud labeling, need for spatial accuracy, difficulty visualizing and annotating 3D data, and limited tooling compared to 2D image annotation.",
+        "iconKey": "box",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/lidar.jpg",
+          "alt": "LiDAR annotation services"
+        },
+        "bullets": [
+          "3D cuboids + point-cloud segmentation",
+          "Semantic/instance segmentation and lane markings",
+          "Supported: LAS/LAZ, PCD, BIN, PLY",
+          "Autonomous vehicles, ADAS, robotics, drones, mapping"
+        ]
+      },
+      {
+        "id": "text-annotation",
+        "title": "Text Data Annotation",
+        "desc": "Text data annotation services label textual educational content, student responses, academic documents, and natural language data supporting natural language processing applications including automated essay scoring, content classification, information extraction, question answering, and educational language AI.As NLP transforms educational technology enabling intelligent tutoring, automated feedback, content organization, and language learning applications, high-quality annotated text datasets become essential training data for language models serving educational purposes. \n\n Core stakeholders include assessment companies developing automated scoring, EdTech platforms implementing intelligent tutoring, publishers organizing content libraries, educational researchers studying language, language learning companies, and institutions implementing AI-powered educational services. \n\n This service resolves fundamental NLP challenges including lack of domain-specific training data, need for educational content expertise, complexity of linguistic annotation, difficulty achieving annotation consistency, and requirements for large-scale text labeling to train language models effectively.",
+        "iconKey": "type",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/text.jpg",
+          "alt": "Text data annotation"
+        },
+        "bullets": [
+          "NER, text classification, sentiment labeling",
+          "Intent & utterance tagging",
+          "Q/A pair creation for training and evaluation",
+          "Chatbots, search/recommendation, educational models"
+        ]
+      },
+      {
+        "id": "audio-annotation",
+        "title": "Audio & Speech Annotation",
+        "desc": "Audio and speech annotation services provide transcription, speaker identification, acoustic event labeling, and prosodic annotation of educational audio enabling applications in automated captioning, speech recognition, language learning, pronunciation assessment, and audio accessibility. \n\n With audio content proliferating in educational contexts through lecture recordings, language learning materials, podcasts, and audiobooks, AI-powered audio understanding requires annotated speech and audio datasets for transcription, speaker diarization, and acoustic event detection. \n\n Primary beneficiaries include accessibility service providers automating captioning, language learning platforms developing pronunciation feedback, EdTech companies building speech-enabled applications, educational researchers analyzing classroom discourse, and publishers creating accessible audio formats. \n\n This service addresses critical challenges including manual transcription not scaling, need for time-coded annotations, speaker identification complexity, acoustic event detection requirements, and domain-specific vocabulary and accent considerations in educational audio.",
+        "iconKey": "mic",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/audiio.jpg",
+          "alt": "Audio and speech annotation"
+        },
+        "bullets": [
+          "Speech-to-text transcription",
+          "Speaker diarization",
+          "Audio event labeling and emotion/intent tagging",
+          "Noise/accent classification for robust models"
+        ]
+      },
+      {
+        "id": "dataset-management",
+        "title": "Dataset Creation & Management",
+        "desc": "Dataset creation and management services design, curate, validate, and maintain high-quality machine learning datasets for educational AI applications ensuring data quality, representativeness, ethical considerations, documentation, and long-term dataset usability supporting research and production AI systems. \n\n As AI in education moves from research to production requiring robust, well-documented, ethically sourced datasets, professional dataset development addresses quality, bias, privacy, documentation, and versioning challenges that informal dataset collection cannot adequately resolve. \n\n Core audiences include EdTech companies developing production AI systems, educational AI researchers requiring rigorous datasets, institutions building learning analytics models, assessment companies training evaluation AI, and organizations ensuring ethical and compliant AI development. \n\n This service resolves fundamental dataset challenges including inadequate data quality undermining model performance, dataset bias producing unfair AI systems, insufficient documentation hindering reproducibility, privacy and ethical concerns, and lack of systematic dataset management causing version control and quality issues.",
+        "iconKey": "database",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/dataset.jpg",
+          "alt": "Dataset creation and management"
+        },
+        "bullets": [
+          "Dataset planning + schema design",
+          "Cleaning and preprocessing workflows",
+          "Annotation workflow setup and tooling support",
+          "Dataset versioning, management, and secure storage"
+        ]
+      },
+      {
+        "id": "qa-validation",
+        "title": "Quality Assurance & Validation",
+        "desc": "Quality assurance and validation services for annotated datasets provide systematic review, accuracy measurement, consistency checking, and error correction ensuring annotation quality, inter-annotator reliability, and dataset fitness for machine learning model training and educational AI research. \n\n As AI system performance fundamentally depends on training data quality, rigorous QA and validation processes become essential for identifying annotation errors, measuring reliability, ensuring consistency, and maintaining dataset quality standards that determine model accuracy and reliability. \n\n Primary stakeholders include AI teams requiring dataset quality verification, research organizations ensuring scientific rigor, EdTech companies validating training data for production systems, institutions implementing learning analytics, and organizations purchasing or using third-party annotated datasets. \n\n This service resolves critical quality challenges including unknown annotation accuracy undermining model reliability, inconsistency between annotators degrading dataset quality, inability to identify systematic errors, lack of objective quality metrics, and absent validation before costly model training.",
+        "iconKey": "checkcircle",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/qa.jpg",
+          "alt": "Quality assurance and validation"
+        },
+        "bullets": [
+          "Multi-level annotation review",
+          "Inter-annotator agreement checks",
+          "Gold-standard validation + error analysis",
+          "Bias detection and mitigation support"
+        ]
+      }
+    ]
+  },
+  "contact_cta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Need training data for your next model release?",
+    "subheading": "Share your data type, labeling requirements, formats, and timelines—we’ll propose a QA-driven plan with clear guidelines, review steps, and delivery milestones.",
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "bullets": [
+      "Data type (image / video / LiDAR / text / audio)",
+      "Label types and guidelines (or we can help define them)",
+      "Expected volume and delivery schedule",
+      "Preferred formats and tooling requirements",
+      "Security/compliance needs (if any)"
+    ],
+    "note_text": "Usually respond within 24 hours (business days)"
+  }
+}

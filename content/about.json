@@ -1,0 +1,273 @@
+{
+    "meta": {
+        "page": "about",
+        "version": "1.1",
+        "createdAt": "2025-01-05T10:30:00Z",
+        "updatedAt": "2025-01-30T18:45:00Z",
+        "updatedBy": "admin@nexografix.com",
+        "watermark": "Nexografix CMS",
+        "status": "published"
+    },
+    "hero": {
+        "order": 1,
+        "badge": {
+            "dot": true,
+            "text": "ABOUT NEXOGRAFIX"
+        },
+        "headline": {
+            "line1": "Enterprise delivery, accelerated with AI",
+            "line2": "and strong engineering."
+        },
+        "description": "Nexografix helps organizations design, build, and scale technology-enabled solutions across publishing workflows, content operations, assessments, and automation. We blend AI systems with disciplined delivery and QA execution.",
+        "tags": [
+            {
+                "order": 1,
+                "label": "Publishing Tech",
+                "variant": "neutral"
+            },
+            {
+                "order": 2,
+                "label": "AI Automation",
+                "variant": "accent"
+            },
+            {
+                "order": 3,
+                "label": "Web Development",
+                "variant": "neutral"
+            },
+            {
+                "order": 4,
+                "label": "Mobile Apps",
+                "variant": "neutral"
+            },
+            {
+                "order": 5,
+                "label": "Enterprise QA",
+                "variant": "neutral"
+            }
+        ],
+        "cta": {
+            "primary": {
+                "label": "Book a Demo",
+                "href": "/contact"
+            },
+            "secondary": {
+                "label": "Explore Solutions",
+                "href": "/publishing-digitization#digitization"
+            }
+        },
+        "stats": [
+            {
+                "order": 1,
+                "value": "12+",
+                "title": "Enterprise Workflows",
+                "subtitle": "Publishing, content, and assessments"
+            },
+            {
+                "order": 2,
+                "value": "24/7",
+                "title": "Delivery Visibility & Tracking",
+                "subtitle": "Tracking, reporting, and support"
+            },
+            {
+                "order": 3,
+                "value": "SLA",
+                "title": "Quality & Review Gates",
+                "subtitle": "QA checks, sign-offs, rollbacks"
+            }
+        ],
+        "trustNote": "Delivery built around quality, predictability, and outcomes",
+        "preview": {
+            "brandLine": "NEXOGRAFIX • ENTERPRISE DELIVERY",
+            "badgeRight": "Visual Preview",
+            "image": {
+                "src": "https://nexografix.com/api/uploads/testimonials/custom.jpg",
+                "alt": "Enterprise dashboard preview"
+            },
+            "floatingCard": {
+                "enabled": true,
+                "title": "Arohio.ai",
+                "chip": "AI-enabled workflow"
+            }
+        }
+    },
+    "whatProblemsWeSolve": {
+        "order": 2,
+        "pill": "WHAT PROBLEMS WE SOLVE",
+        "title": "Execution breaks when scale, quality, and speed collide.",
+        "subtitle": "Content-driven organizations struggle to deliver consistently as volume increases, timelines tighten, and quality expectations rise. AI adoption adds speed—yet can introduce operational risk without control.",
+        "items": [
+            {
+                "order": 1,
+                "no": "01",
+                "icon": "FiTrendingDown",
+                "title": "Scaling Without Breakdown",
+                "desc": "High-volume publishing and assessment workflows collapse without clear ownership, repeatable playbooks, and delivery discipline.",
+                "chip": "Scale-ready ops"
+            },
+            {
+                "order": 2,
+                "no": "02",
+                "icon": "FiAlertTriangle",
+                "title": "Quality Drift & Rework",
+                "desc": "Fragmented reviews and inconsistent checkpoints trigger recurring corrections, delays, and avoidable cost.",
+                "chip": "Fewer loops"
+            },
+            {
+                "order": 3,
+                "no": "03",
+                "icon": "FiShield",
+                "title": "AI Without Reliability",
+                "desc": "AI speeds up output—but without governance and oversight, accuracy, compliance, and trust degrade quickly.",
+                "chip": "Safe adoption"
+            },
+            {
+                "order": 4,
+                "no": "04",
+                "icon": "FiShield",
+                "title": "Compliance Without Expertise",
+                "desc": "Meeting WCAG, Section 508 and PDF/UA standards requires specialist knowledge most teams don't have in-house.",
+                "chip": "Accessible compliance"
+            }
+        ],
+        "footerNote": "Nexografix brings structure, clarity, and delivery discipline to complex content and assessment operations—combining AI systems with enterprise-grade execution standards."
+    },
+    "howWeSolveIt": {
+        "order": 3,
+        "left": {
+            "pill": "DELIVERY MODE",
+            "badgeRight": "Visual Preview",
+            "image": {
+                "src": "https://nexografix.com/api/uploads/testimonials/Mask group (14).png",
+                "alt": "Workflow preview"
+            },
+            "stats": [
+                {
+                    "order": 1,
+                    "label": "QA Gates",
+                    "value": "Multi-stage reviews"
+                },
+                {
+                    "order": 2,
+                    "label": "SLA Focus",
+                    "value": "Predictable delivery"
+                },
+                {
+                    "order": 3,
+                    "label": "Oversight",
+                    "value": "Human-in-the-loop"
+                },
+                {
+                    "order": 4,
+                    "label": "Visibility",
+                    "value": "Progress clarity"
+                }
+            ],
+            "floatingCard": {
+                "title": "Status Update",
+                "lines": 2,
+                "tag": "Clear checkpoints"
+            }
+        },
+        "right": {
+            "pill": "HOW WE SOLVE IT",
+            "title": "A delivery model built for scale and reliability.",
+            "subtitle": "AI + disciplined execution + QA, so outcomes stay predictable as volume grows.",
+            "cards": [
+                {
+                    "order": 1,
+                    "icon": "FiLayers",
+                    "title": "Process-First Execution",
+                    "desc": "Defined workflows, clear ownership, and checkpoints that prevent drift at scale."
+                },
+                {
+                    "order": 2,
+                    "icon": "FiCpu",
+                    "title": "AI with Human Oversight",
+                    "desc": "AI boosts speed while teams validate accuracy, compliance, and context."
+                },
+                {
+                    "order": 3,
+                    "icon": "FiCheckCircle",
+                    "title": "Built-in Quality Gates",
+                    "desc": "Multi-stage QA and review layers ensure consistent output before delivery."
+                },
+                {
+                    "order": 4,
+                    "icon": "FiActivity",
+                    "title": "Delivery Visibility & Control",
+                    "desc": "Clear progress signals, quality checkpoints, and readiness throughout execution."
+                }
+            ],
+            "footerNote": "Scale content, assessments, and automation without compromising accuracy, compliance, or timelines.",
+            "cardTag": "Enterprise-ready"
+        }
+    },
+    "whatMakesDifferent": {
+        "order": 4,
+        "left": {
+            "pill": "WHAT MAKES US DIFFERENT",
+            "title": "Delivery standards enterprises can rely on.",
+            "subtitle": "Many teams can build. Fewer teams can deliver repeatedly with quality, visibility, and control. We reduce delivery risk while scaling output.",
+            "points": [
+                {
+                    "order": 1,
+                    "icon": "FiShield",
+                    "title": "Enterprise-Ready Governance",
+                    "desc": "Clear ownership, documentation, and controlled workflows for audit-friendly delivery.",
+                    "pill": "Risk-controlled"
+                },
+                {
+                    "order": 2,
+                    "icon": "FiCheckCircle",
+                    "title": "QA & Review Gates",
+                    "desc": "Multi-stage validation with measurable checkpoints for consistency and accuracy.",
+                    "pill": "Quality-assured"
+                },
+                {
+                    "order": 3,
+                    "icon": "FiClock",
+                    "title": "SLA-Driven Execution",
+                    "desc": "Defined timelines with escalation paths and release readiness discipline.",
+                    "pill": "Predictable"
+                }
+            ],
+            "footerNote": "Outcome: fewer revisions, clearer timelines, safer AI adoption, and measurable delivery confidence."
+        },
+        "right": {
+            "pill": "DELIVERY PROOF",
+            "badgeRight": "Visual Preview",
+            "image": {
+                "src": "https://nexografix.com/api/uploads/testimonials/Mask group (10).png",
+                "alt": "Delivery dashboard preview"
+            },
+            "miniStats": [
+                {
+                    "order": 1,
+                    "label": "Governance",
+                    "value": "Owned workflows"
+                },
+                {
+                    "order": 2,
+                    "label": "Quality Gates",
+                    "value": "Measured checks"
+                },
+                {
+                    "order": 3,
+                    "label": "SLA Delivery",
+                    "value": "On-time discipline"
+                },
+                {
+                    "order": 4,
+                    "label": "Visibility",
+                    "value": "Clear status"
+                }
+            ],
+            "floatingCard": {
+                "enabled": true,
+                "title": "Weekly Snapshot",
+                "chip": "No surprises"
+            }
+        }
+    }
+}

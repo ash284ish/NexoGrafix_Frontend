@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "eyebrow": "AROHIO",
+    "title": "PDF Accessibility, Automation & Alt Text — All in One Place",
+    "subtitle": "From extraction to accessibility automation, Arohio helps you generate structured manifests, write alt text at scale, and export compliant outputs in a clean, repeatable workflow.",
+    "heroImage": {
+      "src": "https://nexografix.com/api/uploads/testimonials/aroho_video.mp4",
+      "alt": "Arohio PDF accessibility tools"
+    },
+    "chips": [
+      {
+        "icon": "fileText",
+        "text": "Structured exports for QA & delivery"
+      },
+      {
+        "icon": "image",
+        "text": "Image detection + metadata manifest"
+      },
+      {
+        "icon": "zap",
+        "text": "Alt text automation at scale"
+      },
+      {
+        "icon": "checkCircle",
+        "text": "Accessibility-first workflow"
+      }
+    ],
+    "badges": [
+      {
+        "icon": "checkCircle",
+        "text": "Batch-ready outputs"
+      },
+      {
+        "icon": "fileText",
+        "text": "Multiple export formats"
+      },
+      {
+        "icon": "zap",
+        "text": "Faster processing cycles"
+      }
+    ],
+    "pricing": {
+      "inr": {
+        "label": "1000",
+        "value": "1000"
+      },
+      "usd": {
+        "label": "100",
+        "value": "100"
+      }
+    },
+    "primaryCta": {
+      "href": "/contact",
+      "label": "Request a Demo"
+    },
+    "secondaryCta": {
+      "href": "https://arohio.com",
+      "label": "View Product"
+    }
+  },
+  "featureTools": {
+    "eyebrow": "MAIN FEATURE",
+    "heading": "Every tool you need to make PDFs accessible — in one place",
+    "subheading": "Upload, extract, generate, and export with a workflow designed for speed, quality, and consistent accessibility outputs.",
+    "cards": [
+      {
+        "id": "manifest",
+        "tier": "Core",
+        "title": "PDF → Image Manifest",
+        "desc": "Upload a PDF and instantly generate a structured image manifest with page references ready for review and accessibility workflows.",
+        "bullets": [
+          "Extract all images with metadata",
+          "Page index and bounding boxes included",
+          "Works for scanned and digital PDFs",
+          "Export to review-friendly formats"
+        ],
+        "cta": {
+          "href": "/google.com",
+          "label": "Use This Tool"
+        }
+      },
+      {
+        "id": "manifest-to-alt",
+        "tier": "Pro",
+        "title": "Image Manifest → Alt Text",
+        "desc": "Upload an Excel or CSV manifest and generate short or long alt text at scale with consistent tone and length controls.",
+        "bullets": [
+          "Short and long alt text generation",
+          "User-defined word or character limits",
+          "Tone presets for different content types",
+          "Batch-ready for large documents"
+        ],
+        "cta": {
+          "href": "/tools/manifest-to-alt-text",
+          "label": "Use This Tool"
+        }
+      },
+      {
+        "id": "pdf-direct-alt",
+        "tier": "Core",
+        "title": "PDF → Alt Text (Direct)",
+        "desc": "Generate alt text directly from a PDF without spreadsheets. Great for quick accessibility passes and rapid exports.",
+        "bullets": [
+          "Automatic figure and image detection",
+          "Supports scanned and digital PDFs",
+          "Export in multiple formats",
+          "Designed for fast review cycles"
+        ],
+        "cta": {
+          "href": "/tools/pdf-to-alt-text",
+          "label": "Use This Tool"
+        }
+      }
+    ]
+  },
+  "proofStats": {
+    "eyebrow": "RESULTS",
+    "heading": "Designed to save time, reduce manual effort, and improve quality",
+    "subheading": "Arohio is built for teams who need reliable accessibility outputs without slowing down production.",
+    "columns": 3,
+    "stats": [
+      {
+        "id": "teams",
+        "icon": "users",
+        "value": 300,
+        "suffix": "+",
+        "label": "Teams onboarded",
+        "hint": "Publishing, EdTech, and content teams using Arohio for accessibility workflows."
+      },
+      {
+        "id": "quality",
+        "icon": "star",
+        "value": 99,
+        "suffix": "%",
+        "label": "Consistency rate",
+        "hint": "Standardized outputs with review-friendly structure for faster QA cycles.",
+        "highlight": true
+      },
+      {
+        "id": "time",
+        "icon": "trendingUp",
+        "value": 60,
+        "suffix": "%",
+        "label": "Faster turnaround",
+        "hint": "Reduce manual effort with automation, batch export, and repeatable workflows."
+      }
+    ]
+  },
+  "contactCta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Want to see Arohio on your PDFs?",
+    "subheading": "Share a sample PDF and your target output format. We’ll recommend the best workflow and a clean delivery plan.",
+    "primaryCta": {
+      "href": "/contact",
+      "label": "Talk to Us"
+    },
+    "bullets": [
+      "PDF type (scanned or digital) and approximate page count",
+      "What you need (image manifest, alt text, or direct export)",
+      "Preferred output formats (XLSX, CSV, JSON, XML, HTML)",
+      "Any accessibility requirements (WCAG / PDF/UA / EPUB)",
+      "Sample files (optional but helpful)"
+    ],
+    "noteText": "We usually respond within 24 hours (business days)"
+  }
+}

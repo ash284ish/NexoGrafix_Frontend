@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "title": "Book Publishing • Nexografix"
+  },
+  "hero": {
+    "eyebrow": "BOOK PUBLISHING",
+    "title": "Book Publishing",
+    "subtitle": "End-to-end publishing production services, from digitization to interactive eBooks, delivered with speed, quality, and clean structured outputs.",
+    "hero_image": {
+      "src": "https://nexografix.com/api/uploads/testimonials/book pub.jpg",
+      "alt": "Book Publishing"
+    },
+    "chips": [
+      {
+        "iconKey": "layers",
+        "text": "Clear workflow . QA checkpoints"
+      },
+      {
+        "iconKey": "bar_chart",
+        "text": "Progress visibility & reporting"
+      }
+    ],
+    "pills": [
+      "Digitization",
+      "Editing",
+      "eBook",
+      "XML/HTML5",
+      "Typesetting",
+      "POD",
+      "Interactive"
+    ],
+    "badges": [
+      {
+        "iconKey": "check_circle",
+        "text": "Multi-stage QA"
+      },
+      {
+        "iconKey": "file_text",
+        "text": "Structured outputs"
+      },
+      {
+        "iconKey": "zap",
+        "text": "Automation-friendly"
+      }
+    ],
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "note_text": "Enterprise delivery standards"
+  },
+  "proof_stats": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Publishing teams choose us for speed + reliability",
+    "subheading": "Real publishing outcomes that help you deliver faster, maintain quality, and scale with confidence.",
+    "columns": 3,
+    "centered": true,
+    "stats": [
+      {
+        "id": "projects",
+        "iconKey": "projects",
+        "value": 120,
+        "suffix": "+",
+        "label": "Projects delivered",
+        "hint": "Digitization, conversion, layout and interactive builds — end-to-end delivery."
+      },
+      {
+        "id": "qa",
+        "iconKey": "qa",
+        "value": 98,
+        "suffix": "%",
+        "label": "QA pass rate",
+        "hint": "Multi-stage checks and validation so output is clean and platform-ready.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "iconKey": "partners",
+        "value": 250,
+        "suffix": "+",
+        "label": "Publishing partners",
+        "hint": "Publishers, institutes and content teams with recurring production needs."
+      }
+    ]
+  },
+  "services_carousel": {
+    "eyebrow": "SERVICES",
+    "heading": "Services & capabilities",
+    "subheading": "Explore our services through a guided carousel — each capability clearly highlights deliverables, quality standards, and turnaround timelines.",
+    "auto_rotate_ms": 6500,
+    "pause_on_hover": true,
+    "show_tabs": true,
+    "slides": [
+      {
+        "id": "digitization",
+        "title": "Document Digitization & Scanning",
+        "desc": "Document digitization transforms physical archives, printed materials, and analog content into searchable, accessible digital formats that support modern educational delivery, research access, and content preservation initiatives. \n\n In an era where hybrid learning and remote access define educational standards, digitized content enables institutions to scale knowledge distribution, protect historical materials, and meet evolving accessibility requirements. \n\n Primary stakeholders include university libraries, academic publishers, educational institutions with legacy archives, research organizations, and publishing houses transitioning print catalogs to digital platforms. \n\n The service addresses critical challenges including deteriorating physical collections, limited access to archived materials, compliance gaps in digital accessibility, and the need for efficient content repurposing across multiple formats.",
+        "iconKey": "archive",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/doc.jpg",
+          "alt": "Document digitization and scanning"
+        },
+        "bullets": [
+          "Readability improvements"
+        ]
+      },
+      {
+        "id": "copyediting",
+        "title": "Copyediting & Proofreading",
+        "desc": "Professional copyediting and proofreading ensure educational content, academic publications, and instructional materials meet rigorous standards for linguistic accuracy, stylistic consistency, and pedagogical clarity before reaching learners and scholars. \n\n As educational publishers face compressed production timelines and diverse authorship sources, expert editorial intervention becomes essential to maintaining credibility, readability, and alignment with subject-specific conventions. \n\n Primary beneficiaries include academic publishers, educational content developers, university presses, EdTech platforms, assessment companies, and institutions producing research publications or course materials. \n\n The service resolves critical issues including grammatical errors that undermine authority, inconsistent terminology that confuses learners, citation format violations that compromise academic integrity, and clarity gaps that obstruct knowledge transfer.",
+        "iconKey": "edit",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/copy.jpg",
+          "alt": "Copyediting and proofreading"
+        },
+        "bullets": [
+          "Grammar & style corrections",
+          "Consistency checks"
+        ]
+      },
+      {
+        "id": "ebook",
+        "title": "eBook Conversion",
+        "desc": "eBook conversion transforms educational content from print formats, manuscripts, or legacy digitalfiles into reflowable EPUB and Kindle formats that enable responsive reading experiences across devices while supporting accessibility and interactive functionality. \n\n With digital reading dominating student preferences and mobile access becoming standard for professional learning, eBook availability directly impacts content reach, adoption rates, and learner satisfaction across educational markets. \n\n Key stakeholders include academic publishers expanding digital offerings, educational institutions developing open textbooks, EdTech companies packaging curriculum as digital products, and training organizations deploying mobile-first learning resources. \n\n This service addresses market barriers including format incompatibility across reading platforms, accessibility compliance gaps in digital publications, loss of complex formatting in automated conversions, and inability to embed interactive elements in static PDFs",
+        "iconKey": "book_open",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/ebook.jpg",
+          "alt": "eBook conversion"
+        },
+        "bullets": [
+          "EPUB / Kindle formats",
+          "Fixed-layout support"
+        ]
+      },
+      {
+        "id": "xml-html",
+        "title": "XML/HTML Conversion",
+        "desc": "XML and HTML conversion establishes structured, semantic markup that separates content from presentation, enabling single-source publishing workflows, adaptive delivery across platforms, and automated processing for educational technology ecosystems. \n\n As educational content demands multi-format repurposing, API-driven delivery, and integration with learning platforms, structured markup becomes the foundation for operational efficiency and technological agility in content management. \n\n Primary users include publishers implementing component content management systems, EdTech platforms requiring standardized content ingestion, assessment developers building item banks, and institutions managing learning object repositories. \n\n The service solves fundamental challenges including format lock-in preventing content reuse, manual reformatting overhead for multi-channel publishing, accessibility barriers in presentation focused documents, and inability to automate content updates across derivative products.",
+        "iconKey": "code",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/xml.jpg",
+          "alt": "XML and HTML conversion"
+        },
+        "bullets": [
+          "Structured XML outputs",
+          "HTML5-ready builds"
+        ]
+      },
+      {
+        "id": "typesetting",
+        "title": "Typesetting & Layout Design",
+        "desc": "Professional typesetting and layout design transform manuscript content into polished, publication ready formats that enhance readability, support pedagogical goals, and meet technical specifications for print, digital, and hybrid educational products. \n\n In educational publishing where visual hierarchy guides learning, proper typographic treatment, consistent formatting, and thoughtful layout directly impact comprehension, engagement, and perceived value of instructional materials. \n\n Core stakeholders include academic publishers producing textbooks and scholarly works, educational institutions developing course materials, assessment companies creating test booklets, and organizations requiring branded educational publications. \n\n The service addresses critical needs including professional presentation that establishes credibility, accessibility compliance requiring proper structure and reading order, complex content handling for STEM subjects, and production-ready files that prevent printing or digital distribution issues.",
+        "iconKey": "grid",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/typr.jpg",
+          "alt": "Typesetting and layout design"
+        },
+        "bullets": [
+          "Consistent styling",
+          "Production-ready layout"
+        ]
+      },
+      {
+        "id": "metadata",
+        "title": "Metadata Creation & Tagging",
+        "desc": "Metadata creation and tagging provide the structured descriptive, administrative, and technical information that enables educational content discovery, interoperability, rights management, and integration with digital ecosystems serving learners, educators, and institutions. \n\n As content proliferates across platforms and learners expect Google-quality search experiences, comprehensive metadata becomes essential infrastructure for content visibility, appropriate recommendations, and seamless technology integration. \n\n Principal stakeholders include publishers managing digital catalogs, libraries building searchable repositories, EdTech platforms curating content collections, assessment companies organizing item banks, and institutions implementing learning object repositories. \n\n This service resolves discovery barriers where quality content remains invisible, interoperability failures preventing platform integration, rights management gaps creating legal risks, and personalization limitations when learning systems lack data to match content with learner needs.",
+        "iconKey": "tag",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/meta.jpg",
+          "alt": "Metadata tagging"
+        },
+        "bullets": [
+          "Better discoverability",
+          "Catalog-ready fields"
+        ]
+      },
+      {
+        "id": "multimedia",
+        "title": "Multimedia Integration",
+        "desc": "Multimedia integration embeds audio, video, animations, simulations, and interactive media within educational content, transforming static materials into engaging multi-sensory learning experiences that improve comprehension, retention, and learner engagement. \n\n As digital-native learners expect dynamic content and research confirms multimedia's effectiveness for complex concept explanation, integrated rich media becomes essential rather than supplementary in competitive educational products. \n\n Key audiences include EdTech companies developing interactive courseware, publishers enhancing digital textbooks, universities creating online course materials, training organizations building skill development programs, and K-12 curriculum developers supporting diverse learning styles. \n\n The service addresses adoption barriers including technical complexity of media encoding and embedding, accessibility challenges requiring captions and transcripts, platform compatibility issues, and production workflow gaps between content creation and media implementation.",
+        "iconKey": "play_circle",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/multi.jpg",
+          "alt": "Multimedia integration"
+        },
+        "bullets": [
+          "Audio/video embeds",
+          "Interactive elements"
+        ]
+      },
+      {
+        "id": "interactive-ebook",
+        "title": "Interactive eBook Development",
+        "desc": "Interactive eBook development creates enhanced digital publications incorporating multimedia, assessments, annotations, simulations, and adaptive elements that transform passive reading into active learning experiences optimized for educational outcomes. \n\n As education shifts toward competency-based models and personalized learning, interactive eBooks provide the engagement, immediate feedback, and data collection capabilities that static content cannot support. \n\n Primary beneficiaries include publishers seeking competitive advantage in digital markets, educators requiring dynamic instructional materials, EdTech platforms offering integrated learning experiences, and institutions implementing technology-enhanced pedagogy. \n\n This service overcomes limitations including learner disengagement with traditional eBooks, inability to assess comprehension within content, lack of personalization in linear texts, and missed opportunities to leverage digital capabilities for improved educational effectiveness.",
+        "iconKey": "zap",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/inter.jpg",
+          "alt": "Interactive ebook development"
+        },
+        "bullets": [
+          "Read-aloud support",
+          "Quizzes & interactions"
+        ]
+      },
+      {
+        "id": "pod",
+        "title": "Print-on-Demand (POD) Preparation",
+        "desc": "Print-on-Demand preparation optimizes content for digital printing technologies and POD fulfillment services, enabling economical short-run production, eliminating inventory risk, supporting rapid market response, and maintaining perpetual availability of educational titles. \n\n As publishers shift from speculative print runs to demand-driven models and institutions require customized course materials in small quantities, POD-ready file preparation becomes essential infrastructure for agile, sustainable publishing. \n\n Core stakeholders include academic publishers managing long-tail catalogs, university presses with scholarly titles having modest sales, custom textbook programs serving individual courses, self publishing educators, and organizations requiring on-demand production of training materials. \n\n The service resolves technical barriers including color management failures causing print-screen mismatch, file preparation errors that result in rejected jobs, quality inconsistencies across reprints, inefficient workflows delaying market availability, and accessibility gaps when digital source files lack proper structure.",
+        "iconKey": "printer",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/pod.jpg",
+          "alt": "Print on demand preparation"
+        },
+        "bullets": [
+          "Print-ready checks",
+          "Trim/bleed alignment"
+        ]
+      },
+      {
+        "id": "news-mag",
+        "title": "Magazine & Newspaper Digitization",
+        "desc": "Magazine and newspaper digitization transforms serialized publications from physical format to searchable digital archives, enabling historical research, content licensing, online access, and preservation of periodical collections documenting cultural, political, and educational history. \n\n As institutions recognize the research value of periodical archives and seek to democratize access to historical records, digitization becomes essential for preservation, discovery, and scholarly utility of time-based serial publications. \n\n Primary stakeholders include libraries maintaining periodical collections, publishers monetizing archival content, historical societies preserving local publications, educational institutions supporting digital humanities research, and media organizations building searchable archives. \n\n The service addresses critical challenges including physical deterioration of newsprint and pulp materials, access limitations of bound volumes and microfilm, inability to search undigitized archives, preservation of fragile or unique local publications, and research barriers when periodicals remain format-locked.",
+        "iconKey": "file_text",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/mag.jpg",
+          "alt": "Magazine and newspaper digitization"
+        },
+        "bullets": [
+          "Archive preservation",
+          "Searchable formats"
+        ]
+      }
+    ]
+  },
+  "contact_cta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Ready to discuss your publishing workflow?",
+    "subheading": "Share your volume, formats (EPUB/XML/HTML5/PDF), and timelines, and we’ll recommend a clear delivery plan with defined quality checkpoints.",
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "bullets": [
+      "Content type (books / journals / newspapers)",
+      "Target outputs (EPUB / XML / HTML5 / PDF)",
+      "Estimated volume and schedule",
+      "Special requirements (accessibility, tagging, validation)",
+      "Sample files (optional)"
+    ],
+    "note_text": "Usually respond within 24 hours (business days)"
+  },
+  "trust_metrics": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Publishing teams choose us for speed + reliability",
+    "subheading": "Real publishing outcomes that help you deliver faster, maintain quality, and scale with confidence.",
+    "stats": [
+      {
+        "id": "projects",
+        "iconKey": "projects",
+        "value": 270,
+        "suffix": "+",
+        "label": "Projects delivered",
+        "hint": "Digitization, conversion, layout and interactive builds — end-to-end delivery."
+      },
+      {
+        "id": "qa",
+        "iconKey": "qa",
+        "value": 98,
+        "suffix": "%",
+        "label": "QA pass rate",
+        "hint": "Multi-stage checks and validation so output is clean and platform-ready.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "iconKey": "partners",
+        "value": 250,
+        "suffix": "+",
+        "label": "Publishing partners",
+        "hint": "Publishers, institutes and content teams with recurring production needs."
+      }
+    ]
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "title": "Terms & Conditions",
+    "last_updated": "December 2025",
+    "lead": "These Terms govern your use of Nexografix websites, platforms, and services including Arohio.ai. Please read them carefully. By using our Services, you agree to these Terms."
+  },
+  "sections": [
+    {
+      "key": "acceptance",
+      "title": "Acceptance of Term",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "1. Acceptance of Terms"
+        },
+        {
+          "type": "p",
+          "text": "These Terms & Conditions (“Terms”) govern your access to and use of Nexografix websites, products, platforms, and services (collectively, the “Services”), including Arohio.ai. By accessing or using the Services, you agree to be bound by these Terms."
+        },
+        {
+          "type": "p",
+          "text": "If you are using the Services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms. If you do not agree, you must not use the Services."
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "title": "Scope of Services",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "2. Scope of Services"
+        },
+        {
+          "type": "p",
+          "text": "Nexografix provides AI-enabled services for Publishing, Content, Assessments & Automation, including enterprise delivery workflows, consulting, and product-led features via platforms such as Arohio.ai."
+        },
+        {
+          "type": "p",
+          "text": "Service scope may vary by engagement and may be governed by an additional statement of work (SOW), proposal, or enterprise agreement. In case of conflict, the signed agreement will prevail over these Terms for that engagement."
+        }
+      ]
+    },
+    {
+      "key": "accounts",
+      "title": "Accounts & Access",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "3. Accounts & Access"
+        },
+        {
+          "type": "p",
+          "text": "Some parts of the Services may require account creation or authenticated access. You agree to provide accurate information, maintain the confidentiality of your credentials, and notify us promptly of any unauthorized use."
+        },
+        {
+          "type": "p",
+          "text": "You are responsible for activities performed under your account. We may suspend access where we reasonably believe an account is compromised or being misused."
+        }
+      ]
+    },
+    {
+      "key": "use",
+      "title": "Acceptable Use",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "4. Acceptable Use"
+        },
+        {
+          "type": "p",
+          "text": "You agree not to misuse the Services. This includes (but is not limited to):"
+        },
+        {
+          "type": "ul",
+          "items": [
+            {
+              "text": "Attempting to gain unauthorized access to systems or data"
+            },
+            {
+              "text": "Uploading malicious code, malware, or harmful content"
+            },
+            {
+              "text": "Interfering with the integrity, performance, or availability of the Services"
+            },
+            {
+              "text": "Using the Services to violate laws, third-party rights, or contractual obligations"
+            },
+            {
+              "text": "Reverse engineering or extracting source code except where legally permitted"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "We may investigate violations and take action including suspension or termination of access, where appropriate."
+        }
+      ]
+    },
+    {
+      "key": "ip",
+      "title": "Intellectual Property",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "5. Intellectual Property"
+        },
+        {
+          "type": "p",
+          "text": "Nexografix and its licensors own all rights, title, and interest in the Services, including software, UI, branding, designs, text, and underlying technology, except for customer-provided content."
+        },
+        {
+          "type": "p",
+          "text": "You may not copy, modify, distribute, sell, or lease any part of the Services or included software unless you have our prior written permission or applicable law allows it."
+        }
+      ]
+    },
+    {
+      "key": "customerContent",
+      "title": "Customer Content",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "6. Customer Content"
+        },
+        {
+          "type": "p",
+          "text": "“Customer Content” means content, files, documents, datasets, or other materials you upload or provide through the Services. You retain ownership of your Customer Content."
+        },
+        {
+          "type": "p",
+          "text": "You grant Nexografix a limited, non-exclusive right to process Customer Content solely to provide and improve the Services, operate support workflows, and maintain security. You represent that you have the rights and permissions to upload and use the Customer Content."
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "title": "AI Outputs & Responsibility",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "7. AI Outputs & Responsibility"
+        },
+        {
+          "type": "p",
+          "text": "The Services may generate outputs using AI systems (e.g., extraction, summaries, classifications, recommendations, or workflow suggestions). Outputs are provided “as-is” and may be incomplete, inaccurate, or unsuitable depending on context."
+        },
+        {
+          "type": "p",
+          "text": "You are responsible for reviewing and validating outputs before using them in production, compliance-sensitive, contractual, medical, legal, or financial contexts. Nexografix does not guarantee that AI outputs are error-free."
+        }
+      ]
+    },
+    {
+      "key": "payments",
+      "title": "Payments & Billing",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "8. Payments & Billing"
+        },
+        {
+          "type": "p",
+          "text": "Certain Services may be provided under paid plans, subscriptions, retainers, or milestone-based engagements. Pricing, payment schedules, and invoices will be shared in the proposal, SOW, or enterprise agreement."
+        },
+        {
+          "type": "p",
+          "text": "Unless otherwise agreed, fees are non-refundable for completed work or delivered milestones. Late payments may result in paused delivery or suspension of access until dues are cleared."
+        }
+      ]
+    },
+    {
+      "key": "thirdParty",
+      "title": "Third-Party Services",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "9. Third-Party Services"
+        },
+        {
+          "type": "p",
+          "text": "The Services may integrate with or link to third-party tools (e.g., hosting, analytics, payment providers, communication platforms). Third-party services are governed by their own terms and policies."
+        },
+        {
+          "type": "p",
+          "text": "Nexografix is not responsible for third-party systems, their availability, or their practices. Your use of third-party services is at your own discretion and risk."
+        }
+      ]
+    },
+    {
+      "key": "disclaimers",
+      "title": "Disclaimers",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "10. Disclaimers"
+        },
+        {
+          "type": "p",
+          "text": "To the maximum extent permitted by law, the Services are provided on an “as is” and “as available” basis. We disclaim all warranties of any kind, whether express or implied, including merchantability, fitness for a particular purpose, and non-infringement."
+        },
+        {
+          "type": "p",
+          "text": "We do not warrant uninterrupted, error-free operation or that defects will be corrected immediately. Security risks cannot be eliminated entirely, despite best efforts."
+        }
+      ]
+    },
+    {
+      "key": "liability",
+      "title": "Limitation of Liability",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "11. Limitation of Liability"
+        },
+        {
+          "type": "p",
+          "text": "To the maximum extent permitted by law, Nexografix shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, revenue, data, or business opportunities arising from or related to your use of the Services."
+        },
+        {
+          "type": "p",
+          "text": "Where liability cannot be excluded, Nexografix’s aggregate liability shall be limited to the fees paid by you for the relevant Service during the period specified in the applicable agreement, or the most recent billing period (as applicable)."
+        }
+      ]
+    },
+    {
+      "key": "termination",
+      "title": "Suspension & Termination",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "12. Suspension & Termination"
+        },
+        {
+          "type": "p",
+          "text": "We may suspend or terminate access to the Services if you violate these Terms, misuse the Services, or create risk or legal exposure for Nexografix or others."
+        },
+        {
+          "type": "p",
+          "text": "Upon termination, your right to use the Services stops immediately. Contractual obligations such as payment for completed milestones remain applicable."
+        }
+      ]
+    },
+    {
+      "key": "governing",
+      "title": "Governing Law",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "13. Governing Law"
+        },
+        {
+          "type": "p",
+          "text": "These Terms are governed by the laws of India, without regard to conflict of law principles. Any disputes shall be subject to the jurisdiction of competent courts in the applicable region, unless otherwise specified in an enterprise agreement."
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "title": "Contact",
+      "blocks": [
+        {
+          "type": "h2",
+          "text": "14. Contact Information"
+        },
+        {
+          "type": "p",
+          "text": "For questions about these Terms, compliance matters, or enterprise contracts, contact us:"
+        },
+        {
+          "type": "contact",
+          "items": [
+            {
+              "label": "Email",
+              "type": "email",
+              "value": "contact@nexografix.com"
+            },
+            {
+              "label": "Phone",
+              "type": "phone",
+              "value": "+91 12345 67890"
+            },
+            {
+              "label": "LinkedIn",
+              "type": "link",
+              "value": "https://www.linkedin.com/company/nexografix",
+              "display": "linkedin.com/company/nexografix"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Enterprise customers may also coordinate via their assigned onboarding or account channel."
+        }
+      ]
+    }
+  ]
+}

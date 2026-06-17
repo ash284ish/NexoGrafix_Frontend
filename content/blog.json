@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "title": "Blog • Nexografix"
+  },
+  "hero": {
+    "badge": "BLOG",
+    "title": "Insights that improve delivery",
+    "subtitle": "Actionable reads on AI-enabled publishing, content workflows, automation, and product engineering."
+  },
+  "filters": {
+    "search_placeholder": "Search posts...",
+    "default_category": "All",
+    "default_sort": "newest",
+    "sort_options": [
+      {
+        "value": "newest",
+        "label": "Newest first"
+      },
+      {
+        "value": "oldest",
+        "label": "Oldest first"
+      },
+      {
+        "value": "title",
+        "label": "Title (A–Z)"
+      }
+    ],
+    "sidebar_title": "Filters",
+    "reset_label": "Reset",
+    "labels": {
+      "search": "SEARCH",
+      "category": "CATEGORY",
+      "sort": "SORT"
+    }
+  },
+  "pagination": {
+    "page_size": 9,
+    "empty_text": "No posts found for current filters.",
+    "page_label_prefix": "Page",
+    "page_label_middle": "of"
+  },
+  "cta": {
+    "read_article_label": "Read Article",
+    "read_article_suffix": "→",
+    "read_article_base_href": "/blog/"
+  },
+  "assets": {
+    "fallback_cover": "https://nexografix.com/api/uploads/testimonials/Mask group (13).png"
+  },
+  "posts": [
+    {
+      "id": "1",
+      "title": "How to choose the right partner for app develop",
+      "category": "CREATIVE",
+      "dateISO": "2024-04-20",
+      "readTime": "6 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (4).png",
+      "excerpt": "A practical checklist to evaluate delivery, timelines, scope clarity, documentation, and long-term support—before.",
+      "slug": "choosing-reliable-app-development-partner"
+    },
+    {
+      "id": "2",
+      "title": "AI content creation: 7 tools that actually help teams",
+      "category": "AI",
+      "dateISO": "2024-06-18",
+      "readTime": "7 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (6).png",
+      "excerpt": "A clean overview of tools that accelerate writing, QA, image generation, and workflow automation for teams.",
+      "slug": "ai-content-tools-supercharge"
+    },
+    {
+      "id": "3",
+      "title": "Modern chatbot stacks: RAG, tools, and guardrails",
+      "category": "AI",
+      "dateISO": "2024-04-18",
+      "readTime": "5 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/HERO SECTION (4).png",
+      "excerpt": "From RAG to agentic workflows—what’s real, what’s hype, and how businesses can adopt chatbots safely.",
+      "slug": "ai-chatbot-innovations"
+    },
+    {
+      "id": "4",
+      "title": "Quality gates that prevent rework in content pipelines",
+      "category": "AI",
+      "dateISO": "2024-07-01",
+      "readTime": "5 min read",
+      "cover": "https://source.unsplash.com/1600x900/?quality,checklist",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "quality-gates-prevent-rework"
+    },
+    {
+      "id": "5",
+      "title": "Publishing workflows: how to design a reliable handoff",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-02",
+      "readTime": "6 min read",
+      "cover": "https://source.unsplash.com/1600x900/?publishing,workflow",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "publishing-workflows-reliable-handoff"
+    },
+    {
+      "id": "6",
+      "title": "Automation playbook: reduce manual reviews without risk",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-03",
+      "readTime": "7 min read",
+      "cover": "https://source.unsplash.com/1600x900/?automation,process",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "automation-reduce-manual-reviews"
+    },
+    {
+      "id": "7",
+      "title": "Release readiness: the 10-point checklist teams skip",
+      "category": "AI",
+      "dateISO": "2024-07-04",
+      "readTime": "8 min read",
+      "cover": "https://source.unsplash.com/1600x900/?release,checklist",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "release-readiness-checklist"
+    },
+    {
+      "id": "8",
+      "title": "Content QA metrics: what to track weekly (and why)",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-05",
+      "readTime": "5 min read",
+      "cover": "https://source.unsplash.com/1600x900/?analytics,dashboard",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "content-qa-metrics-weekly"
+    },
+    {
+      "id": "9",
+      "title": "Designing feedback loops that don’t slow delivery",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-06",
+      "readTime": "6 min read",
+      "cover": "https://source.unsplash.com/1600x900/?feedback,collaboration",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "feedback-loops-fast-delivery"
+    },
+    {
+      "id": "10",
+      "title": "From backlog to done: keep scope clean with templates",
+      "category": "AI",
+      "dateISO": "2024-07-07",
+      "readTime": "7 min read",
+      "cover": "https://source.unsplash.com/1600x900/?project,management",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "scope-control-with-templates"
+    },
+    {
+      "id": "11",
+      "title": "Avoiding content drift: versioning rules that work",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-08",
+      "readTime": "8 min read",
+      "cover": "https://source.unsplash.com/1600x900/?documents,version",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "avoid-content-drift-versioning"
+    },
+    {
+      "id": "12",
+      "title": "Production incidents: how to build a simple runbook",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-09",
+      "readTime": "5 min read",
+      "cover": "https://source.unsplash.com/1600x900/?runbook,operations",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "build-simple-runbook"
+    },
+    {
+      "id": "13",
+      "title": "Better estimations: turning requirements into milestones",
+      "category": "AI",
+      "dateISO": "2024-07-10",
+      "readTime": "6 min read",
+      "cover": "https://source.unsplash.com/1600x900/?planning,milestones",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "requirements-to-milestones"
+    },
+    {
+      "id": "14",
+      "title": "Operational dashboards: the 6 signals you need daily",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-11",
+      "readTime": "7 min read",
+      "cover": "https://source.unsplash.com/1600x900/?monitoring,metrics",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "dashboards-six-daily-signals"
+    },
+    {
+      "id": "15",
+      "title": "Automation ROI: where it pays back fastest",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-12",
+      "readTime": "8 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (14).png",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "automation-roi-fastest"
+    },
+    {
+      "id": "16",
+      "title": "Building QA checklists that teams actually follow",
+      "category": "AI",
+      "dateISO": "2024-07-13",
+      "readTime": "5 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (15).png",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "qa-checklists-teams-follow"
+    },
+    {
+      "id": "17",
+      "title": "Publishing SLAs: set expectations without overpromising",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-14",
+      "readTime": "6 min read",
+      "cover": "https://source.unsplash.com/1600x900/?deadline,calendar",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "publishing-slas-expectations"
+    },
+    {
+      "id": "18",
+      "title": "Content audits: how to clean libraries at scale",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-15",
+      "readTime": "7 min read",
+      "cover": "https://source.unsplash.com/1600x900/?content,library",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "content-audits-at-scale"
+    },
+    {
+      "id": "19",
+      "title": "Speed vs quality: a balanced delivery framework",
+      "category": "AI",
+      "dateISO": "2024-07-16",
+      "readTime": "8 min read",
+      "cover": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1600&auto=format&fit=crop",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "speed-vs-quality-framework"
+    },
+    {
+      "id": "20",
+      "title": "Stakeholder updates: the weekly format that reduces calls",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-17",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1600&auto=format&fit=crop",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "weekly-updates-reduce-calls"
+    },
+    {
+      "id": "21",
+      "title": "Documentation: write less, but make it usable",
+      "category": "PRODUCT",
+      "dateISO": "2025-07-18",
+      "readTime": "7 min read",
+      "cover": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1600&auto=format&fit=crop",
+      "excerpt": "Short, practical notes on improving delivery SLAs with automation, QA checkpoints, and structured workflows.",
+      "slug": "practical-documentation-usable"
+    },
+    {
+      "id": "22",
+      "title": "How to choose the right partner",
+      "category": "CREATIVE",
+      "dateISO": "2024-04-20",
+      "readTime": "6 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (15).png",
+      "excerpt": "A practical checklist to evaluate delivery, timelines, scope clarity, documentation, and long-term",
+      "slug": "choosing-reliable-app-development"
+    },
+    {
+      "id": "23",
+      "title": "How to choose ",
+      "category": "CREATIVE",
+      "dateISO": "2024-04-20",
+      "readTime": "6 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (15).png",
+      "excerpt": "A practical checklist to evaluate delivery, timelines, scope clarity, documentation, and long-term",
+      "slug": "choosing-reliable-app-development"
+    },
+    {
+      "id": "24",
+      "title": "How to choose tell me wisely ",
+      "category": "CREATIVE",
+      "dateISO": "2024-04-20",
+      "readTime": "6 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (15).png",
+      "excerpt": "A practical checklist to evaluate delivery, timelines, scope clarity, documentation, and long",
+      "slug": "choosing-reliable-app"
+    },
+    {
+      "id": "25",
+      "title": "wisely ",
+      "category": "CREATIVE",
+      "dateISO": "2024-04-20",
+      "readTime": "6 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/NG Logo.png",
+      "excerpt": "A practical checklist to evaluate delivery, timelines, scope clarity, documentation, and long",
+      "slug": "choosing-reliable-app"
+    }
+  ]
+}

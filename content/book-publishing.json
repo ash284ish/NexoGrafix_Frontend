@@ -1,0 +1,195 @@
+{
+  "page": {
+    "key": "book-publishing",
+    "eyebrow": "BOOK PUBLISHING",
+    "title": "Book Publishing",
+    "subtitle": "End-to-end publishing production services, from digitization to interactive eBooks, delivered with speed, quality, and clean structured outputs.",
+    "heroImage": {
+      "src": "https://nexografix.com/api/uploads/publishing/image 21.png",
+      "alt": "Book Publishing"
+    },
+    "pills": ["Digitization", "Editing", "eBook", "XML/HTML5", "Typesetting", "POD", "Interactive"],
+    "chips": [
+      { "iconKey": "FiLayers", "text": "Clear workflow . QA checkpoints" },
+      { "iconKey": "FiBarChart2", "text": "Progress visibility & reporting" }
+    ],
+    "badges": [
+      { "iconKey": "FiCheckCircle", "text": "Multi-stage QA" },
+      { "iconKey": "FiFileText", "text": "Structured outputs" },
+      { "iconKey": "FiZap", "text": "Automation-friendly" }
+    ],
+    "primaryCta": { "href": "/contact", "label": "Request a Quote" },
+    "noteText": "Enterprise delivery standards"
+  },
+
+  "trustMetrics": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Publishing teams choose us for speed + reliability",
+    "subheading": "Real publishing outcomes that help you deliver faster, maintain quality, and scale with confidence.",
+    "columns": 3,
+    "centered": true,
+    "stats": [
+      {
+        "id": "projects",
+        "iconKey": "projects",
+        "value": 1200,
+        "suffix": "+",
+        "label": "Projects delivered",
+        "hint": "Digitization, conversion, layout and interactive builds — end-to-end delivery."
+      },
+      {
+        "id": "qa",
+        "iconKey": "qa",
+        "value": 98,
+        "suffix": "%",
+        "label": "QA pass rate",
+        "hint": "Multi-stage checks and validation so output is clean and platform-ready.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "iconKey": "partners",
+        "value": 250,
+        "suffix": "+",
+        "label": "Publishing partners",
+        "hint": "Publishers, institutes and content teams with recurring production needs."
+      }
+    ]
+  },
+
+  "servicesCarousel": {
+    "eyebrow": "SERVICES",
+    "heading": "Services & capabilities",
+    "subheading": "Explore our services through a guided carousel — each capability clearly highlights deliverables, quality standards, and turnaround timelines.",
+    "autoRotateMs": 6500,
+    "pauseOnHover": true,
+    "showTabs": true,
+    "slides": [
+      {
+        "id": "digitization",
+        "title": "Document Digitization & Scanning",
+        "desc": "We convert printed books, journals, and archives into high-quality digital formats that are searchable, clean, and production-ready.",
+        "iconKey": "FiArchive",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80",
+          "alt": "Document digitization and scanning"
+        },
+        "bullets": ["High-quality capture", "OCR-ready outputs", "Cleanup & consistency", "Batch processing"]
+      },
+      {
+        "id": "copyediting",
+        "title": "Copyediting & Proofreading",
+        "desc": "We refine language, clarity, and consistency to ensure your content is accurate, polished, and ready for publication.",
+        "iconKey": "FiEdit3",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80",
+          "alt": "Copyediting and proofreading"
+        },
+        "bullets": ["Grammar & style corrections", "Consistency checks", "Error reduction", "Readability improvements"]
+      },
+      {
+        "id": "ebook",
+        "title": "eBook Conversion",
+        "desc": "We convert print content into EPUB, Kindle, and fixed-layout formats with full device compatibility and validation.",
+        "iconKey": "FiBookOpen",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1600&q=80",
+          "alt": "eBook conversion"
+        },
+        "bullets": ["EPUB / Kindle formats", "Fixed-layout support", "Device validation", "Clean structure"]
+      },
+      {
+        "id": "xml-html",
+        "title": "XML/HTML Conversion",
+        "desc": "We transform content into structured XML and HTML5 formats for web publishing and multi-platform distribution.",
+        "iconKey": "FiCode",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
+          "alt": "XML and HTML conversion"
+        },
+        "bullets": ["Structured XML outputs", "HTML5-ready builds", "Future-proof formatting", "Platform compatibility"]
+      },
+      {
+        "id": "typesetting",
+        "title": "Typesetting & Layout Design",
+        "desc": "We design professional interiors with clear hierarchy, precise layouts, and production-ready formatting for both print and digital.",
+        "iconKey": "FiGrid",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80",
+          "alt": "Typesetting and layout design"
+        },
+        "bullets": ["Clean visual hierarchy", "Equation/diagram handling", "Consistent styling", "Production-ready layout"]
+      },
+      {
+        "id": "metadata",
+        "title": "Metadata Creation & Tagging",
+        "desc": "We create accurate metadata to improve discoverability, search visibility, and platform-ready cataloging.",
+        "iconKey": "FiTag",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1600&q=80",
+          "alt": "Metadata tagging"
+        },
+        "bullets": ["Taxonomy & tags", "Better discoverability", "Catalog-ready fields", "Consistent labeling"]
+      },
+      {
+        "id": "multimedia",
+        "title": "Multimedia Integration",
+        "desc": "We integrate audio, video, and animations to make learning content more engaging and platform-ready.",
+        "iconKey": "FiPlayCircle",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=1600&q=80",
+          "alt": "Multimedia integration"
+        },
+        "bullets": ["Audio/video embeds", "Animations & simulations", "Interactive elements", "Platform-ready packaging"]
+      },
+      {
+        "id": "interactive-ebook",
+        "title": "Interactive eBook Development",
+        "desc": "We build fixed-layout interactive eBooks with read-aloud features, quizzes, and engaging user interactions.",
+        "iconKey": "FiZap",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=1600&q=80",
+          "alt": "Interactive ebook development"
+        },
+        "bullets": ["Read-aloud support", "Quizzes & interactions", "Animation-ready layout", "User-friendly flow"]
+      },
+      {
+        "id": "pod",
+        "title": "Print-on-Demand (POD) Preparation",
+        "desc": "We validate layouts for print compliance, ensuring correct margins, trim, bleed, and print-ready output.",
+        "iconKey": "FiPrinter",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&w=1600&q=80",
+          "alt": "Print on demand preparation"
+        },
+        "bullets": ["Print-ready checks", "Trim/bleed alignment", "Layout validation", "Production compliance"]
+      },
+      {
+        "id": "news-mag",
+        "title": "Magazine & Newspaper Digitization",
+        "desc": "We convert legacy magazine and newspaper archives into searchable digital collections for long-term preservation and access.",
+        "iconKey": "FiFileText",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1600&q=80",
+          "alt": "Magazine and newspaper digitization"
+        },
+        "bullets": ["Archive preservation", "Searchable formats", "Indexing support", "Long-term accessibility"]
+      }
+    ]
+  },
+
+  "contactCta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Ready to discuss your publishing workflow?",
+    "subheading": "Share your volume, formats (EPUB/XML/HTML5/PDF), and timelines, and we’ll recommend a clear delivery plan with defined quality checkpoints.",
+    "primaryCta": { "href": "/contact", "label": "Request a Quote" },
+    "bullets": [
+      "Content type (books / journals / newspapers)",
+      "Target outputs (EPUB / XML / HTML5 / PDF)",
+      "Estimated volume and schedule",
+      "Special requirements (accessibility, tagging, validation)",
+      "Sample files (optional)"
+    ],
+    "noteText": "Usually respond within 24 hours (business days)"
+  }
+}

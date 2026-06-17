@@ -1,0 +1,198 @@
+{
+    "meta": {
+        "title": "FAQs • Nexografix"
+    },
+    "categories": [
+        "All",
+        "Company",
+        "Services",
+        "Process",
+        "Security",
+        "Pricing",
+        "Arohio.ai"
+    ],
+    "hero": {
+        "badge": "Help Center",
+        "title": "Clear answers. Faster decisions.",
+        "subtitle": "Understand delivery standards, security posture, enterprise readiness, and pricing—without unnecessary back-and-forth.",
+        "primary_cta_label": "Book an Appointment →",
+        "primary_cta_href": "/contact",
+        "secondary_cta_label": "Explore Solutions →",
+        "secondary_cta_href": "/solutions",
+        "bullets": [
+            {
+                "title": "Enterprise-ready delivery",
+                "desc": "Secure builds, clean architecture, and release discipline—built for long-term scale."
+            },
+            {
+                "title": "Less back-and-forth",
+                "desc": "Filter by category, search instantly, and get clarity in minutes."
+            }
+        ],
+        "search_placeholder": "Search security, pricing, integrations, mobile, SSO...",
+        "tip_label": "Helpful tip",
+        "tip_items": [
+            "SSO",
+            "audit logs",
+            "retainer",
+            "LMS"
+        ]
+    },
+    "empty_state": {
+        "text": "No results found. Try a different keyword or switch the category."
+    },
+    "bottom_cta": {
+        "title": "Still need clarity?",
+        "subtitle": "If your question involves integrations, internal approvals, or enterprise requirements, book an appointment. We’ll share a clear plan with milestones, timelines, and ownership.",
+        "primary_label": "Book an Appointment →",
+        "primary_href": "/contact",
+        "secondary_label": "Learn about Nexografix →",
+        "secondary_href": "/about"
+    },
+    "faqs": [
+        {
+            "id": "1",
+            "category": "Company",
+            "q": "What is Nexografix?",
+            "a": "Nexografix is an enterprise-focused technology and AI services company. We build scalable platforms for publishing workflows, content operations, assessments, automation, and modern web/mobile products."
+        },
+        {
+            "id": "2",
+            "category": "Company",
+            "q": "Who do you work with?",
+            "a": "We work with enterprises, agencies, and fast-growing teams who need reliable delivery, clean architecture, and measurable outcomes—especially in content-heavy and workflow-driven domains."
+        },
+        {
+            "id": "3",
+            "category": "Services",
+            "q": "What services do you provide?",
+            "a": "AI-enabled workflow automation, publishing/content systems, assessment platforms, custom web apps, and mobile app development—built for performance, security, and long-term scalability."
+        },
+        {
+            "id": "4",
+            "category": "Services",
+            "q": "Do you build both web and mobile apps?",
+            "a": "Yes. We deliver modern web applications and mobile apps (Android/iOS-ready) using scalable architectures and production-grade engineering practices."
+        },
+        {
+            "id": "5",
+            "category": "Services",
+            "q": "Can you handle enterprise integrations (SSO, APIs, CRMs, LMS)?",
+            "a": "Yes. We can integrate with internal systems and third-party tools via APIs, SSO, and standard enterprise patterns—depending on your stack and compliance needs."
+        },
+        {
+            "id": "6",
+            "category": "Process",
+            "q": "What is your typical delivery process?",
+            "a": "We start with discovery → solution blueprint → milestones → iterative delivery. You get weekly progress visibility, clear scope boundaries, and structured QA before handover."
+        },
+        {
+            "id": "7",
+            "category": "Process",
+            "q": "How do you define project scope clearly?",
+            "a": "We document modules, user flows, deliverables, timelines, and acceptance criteria. This avoids scope creep and ensures both sides are aligned before development starts."
+        },
+        {
+            "id": "8",
+            "category": "Process",
+            "q": "Do you provide UI/UX design as well?",
+            "a": "Yes. We can deliver UI/UX design aligned with your brand system and modern usability standards. If you already have designs, we can develop directly from them."
+        },
+        {
+            "id": "9",
+            "category": "Process",
+            "q": "How fast can you deliver an MVP?",
+            "a": "It depends on complexity, but for a focused MVP we typically deliver through clear milestones. When scope is clean, early versions move fast without sacrificing quality."
+        },
+        {
+            "id": "10",
+            "category": "Process",
+            "q": "Do you offer post-launch support?",
+            "a": "Yes. We support bug fixes, performance tuning, monitoring, and feature enhancements. Support can be milestone-based or monthly, depending on your needs."
+        },
+        {
+            "id": "11",
+            "category": "Security",
+            "q": "How do you handle security and data privacy?",
+            "a": "We follow secure coding practices, role-based access control, least-privilege design, and safe API handling. If needed, we align with your internal compliance requirements."
+        },
+        {
+            "id": "12",
+            "category": "Security",
+            "q": "Do you sign NDA and contracts?",
+            "a": "Yes. We can sign an NDA and provide a service agreement covering IP ownership, delivery terms, milestones, and confidentiality."
+        },
+        {
+            "id": "13",
+            "category": "Security",
+            "q": "Do you support audit logs and access controls?",
+            "a": "Yes. For enterprise platforms, we implement audit trails, activity logs, RBAC/permissions, and admin governance based on your requirements."
+        },
+        {
+            "id": "14",
+            "category": "Pricing",
+            "q": "How do you price projects?",
+            "a": "Projects range from $299/month for subscriptions to $2,500+ for VPAT engagements. Enterprise pricing on request."
+        },
+        {
+            "id": "15",
+            "category": "Pricing",
+            "q": "Do you offer fixed-price or hourly?",
+            "a": "Both. Fixed-price works best with clear scope. Hourly/retainer works best when your roadmap evolves and you want rapid iterations."
+        },
+        {
+            "id": "16",
+            "category": "Pricing",
+            "q": "Can you propose a cost range before starting?",
+            "a": "Yes. After a quick discovery call and scope clarity, we share a structured estimate with options (basic, standard, premium) aligned to outcomes."
+        },
+        {
+            "id": "17",
+            "category": "Arohio.ai",
+            "q": "What is Arohio.ai?",
+            "a": "Arohio.ai is one of our AI platforms focused on enabling AI-driven workflows. Modules are tailored based on your organization’s needs."
+        },
+        {
+            "id": "18",
+            "category": "Arohio.ai",
+            "q": "Can Arohio.ai be customized for our workflows?",
+            "a": "Yes. We tailor AI-powered workflows, automation steps, and integrations depending on your content, publishing, or assessment operations."
+        },
+        {
+            "id": "19",
+            "category": "Services",
+            "q": "Do you work with publishing and assessment platforms specifically?",
+            "a": "Yes. We specialize in workflow-heavy systems—publishing pipelines, content operations, academic content, assessments, and automation-heavy enterprise use cases."
+        },
+        {
+            "id": "20",
+            "category": "Company",
+            "q": "How do we start working with Nexografix?",
+            "a": "Use the appointment form or contact page. Share your scope, timeline, and goals. We’ll propose a structured plan with milestones and next steps."
+        },
+        {
+            "id": "21",
+            "category": "Services",
+            "q": "What is WCAG 2.1 AA?",
+            "a": "WCAG 2.1 AA is an internationally recognized accessibility standard published by the W3C. It defines requirements to make digital content accessible for people with disabilities, including support for screen readers, keyboard navigation, color contrast, readable structure, and assistive technologies."
+        },
+        {
+            "id": "22",
+            "category": "Services",
+            "q": "How long does PDF remediation take?",
+            "a": "Delivery timelines depend on document complexity, page count, accessibility issues, and review cycles. Simple PDFs may take a few hours, while large enterprise documents or highly designed publications can require multiple days with structured QA and validation."
+        },
+        {
+            "id": "23",
+            "category": "Services",
+            "q": "What standards does Nexografix certify to?",
+            "a": "We align remediation and accessibility workflows with WCAG 2.1 AA, PDF/UA, Section 508, and enterprise accessibility best practices depending on client and regulatory requirements."
+        },
+        {
+            "id": "24",
+            "category": "Services",
+            "q": "Do you guarantee compliance?",
+            "a": "We follow structured remediation, accessibility testing, and validation workflows designed to achieve compliance targets. Final compliance outcomes can depend on source content quality, third-party systems, ongoing updates, and client-side changes after delivery."
+        }
+    ]
+}

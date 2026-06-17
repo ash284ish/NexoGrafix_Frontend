@@ -1,0 +1,139 @@
+{
+  "hero": {
+    "eyebrow": "Sample Work Portfolio",
+    "title": "Explore Nexografix Sample Work",
+    "subtitle": "Review selected samples from our accessibility, publishing, AI, and content production projects.",
+    "cta": {
+      "primary": {
+        "label": "Browse Samples",
+        "href": "#samples"
+      },
+      "secondary": {
+        "label": "Get Free Project Assessment",
+        "href": "#lead-form"
+      }
+    }
+  },
+  "capabilities": {
+    "eyebrow": "Capabilities",
+    "title": "What prospects can review",
+    "items": [
+      { "title": "PDF Accessibility", "desc": "Tagged PDFs, WCAG/PDF-UA remediation" },
+      { "title": "EPUB Accessibility", "desc": "Accessible EPUB 3 samples" },
+      { "title": "Alt Text Authoring", "desc": "Figure descriptions and image accessibility" },
+      { "title": "XML Conversion", "desc": "PDF to XML workflows" },
+      { "title": "Copy Editing", "desc": "Before vs After editing samples" },
+      { "title": "Translation", "desc": "Source vs translated content" },
+      { "title": "AI Annotation", "desc": "Text, image, and data annotation examples" },
+      { "title": "Dubbing & Localization", "desc": "Voice-over and multilingual projects" },
+      { "title": "Assessment Development", "desc": "Questions, solutions, and learning content" }
+    ]
+  },
+  "samples": {
+    "eyebrow": "Sample Layout",
+    "title": "Show the proof, not just the promise",
+    "items": [
+      {
+        "id": "pdf-accessibility",
+        "eyebrow": "Accessibility Showcase",
+        "title": "PDF Accessibility Sample",
+        "meta": "Client Industry: Higher Education",
+        "tags": ["Tagged PDF", "Reading Order", "Alt Text", "Table Accessibility", "Screen Reader Testing"],
+        "primaryCta": { "label": "Open PDF Sample Page", "href": "/samples/pdf-accessibility" },
+        "secondaryCta": { "label": "Request Similar Service", "href": "/samples/pdf-accessibility#lead-form" },
+        "reportCta": { "label": "View Accessibility Report", "href": "/samples/pdf-accessibility-report" },
+        "inlineCta": {
+          "text": "Need the same remediation workflow for your documents?",
+          "linkText": "View Full Sample Page",
+          "href": "/samples/pdf-accessibility"
+        }
+      },
+      {
+        "id": "epub-accessibility",
+        "eyebrow": "Digital Publishing",
+        "title": "EPUB Accessibility Sample",
+        "meta": "Publishing-ready EPUB 3 workflow",
+        "tags": [],
+        "showGrid": [
+          { "title": "EPUB File", "desc": "Demonstrates navigation landmarks, semantic heading structure, and reflow support." },
+          { "title": "Accessibility Checklist", "desc": "Summarizes keyboard, reading order, navigation, and metadata validation points." },
+          { "title": "Ace by DAISY Report", "desc": "Highlights automated checks alongside manual verification and remediation notes." },
+          { "title": "Screenshot Gallery", "desc": "Captures reading views, landmarks, and responsive behavior across devices." }
+        ],
+        "primaryCta": { "label": "Open EPUB Sample Page", "href": "/samples/epub-accessibility" },
+        "secondaryCta": { "label": "Request Similar Service", "href": "/samples/epub-accessibility#lead-form" },
+        "inlineCta": {
+          "text": "Want an EPUB sample package aligned to your titles and platform requirements?",
+          "linkText": "View Full Sample Page",
+          "href": "/samples/epub-accessibility"
+        }
+      }
+    ]
+  },
+  "altText": {
+    "eyebrow": "Alt Text Expertise",
+    "title": "Show the thinking behind your accessibility work",
+    "table": [
+      {
+        "type": "Bar Chart",
+        "shortAlt": "Quarterly sales bar chart comparing four regions.",
+        "longDesc": "North grows steadily, West leads overall, and South rebounds sharply in Q4 after a flat first half."
+      },
+      {
+        "type": "Flowchart",
+        "shortAlt": "Admissions workflow from application to final enrollment.",
+        "longDesc": "The process moves through submission, eligibility review, interview, approval, and student onboarding, with rejection branches after review and interview."
+      },
+      {
+        "type": "Diagram",
+        "shortAlt": "Three-layer cloud security architecture diagram.",
+        "longDesc": "The diagram shows user access controls feeding an application layer, which connects to encrypted storage and audit logging systems."
+      }
+    ]
+  },
+  "beforeAfter": {
+    "eyebrow": "Before & After",
+    "title": "Visual proof that remediation and enrichment change outcomes",
+    "items": [
+      {
+        "beforeTitle": "Untagged PDF",
+        "beforeDesc": "Manual reading order fixes, missing headings, and inaccessible tables.",
+        "afterTitle": "PDF-UA Compliant PDF",
+        "afterDesc": "Semantic tagging, validated structure, and assistive-technology-ready output."
+      },
+      {
+        "beforeTitle": "Poor Alt Text",
+        "beforeDesc": "Generic descriptions that skip the meaning of the visual.",
+        "afterTitle": "Human-reviewed Alt Text",
+        "afterDesc": "Context-aware descriptions aligned with learning, compliance, and publishing goals."
+      },
+      {
+        "beforeTitle": "Scanned PDF",
+        "beforeDesc": "Image-only pages with no structure, OCR cleanup, or navigation.",
+        "afterTitle": "Accessible PDF",
+        "afterDesc": "Corrected OCR, navigable headings, searchable text, and screen reader support."
+      }
+    ]
+  },
+  "privateSamples": {
+    "eyebrow": "NDA-Protected Samples",
+    "title": "Keep confidential work available only for serious prospects",
+    "card": {
+      "path": "sample.nexografix.com/private",
+      "desc": "Password-protected area containing Microsoft-related samples, publisher samples, and client-specific demonstrations.",
+      "btnLabel": "Open Private Area",
+      "note": "Only share the password with serious prospects.",
+      "password": "NexoPrivate2026",
+      "items": [
+        { "title": "Microsoft-related samples", "desc": "Accessibility remediation, publishing workflows, and enterprise-ready content operations." },
+        { "title": "Publisher samples", "desc": "EPUB accessibility, copy editing comparisons, multilingual deliverables, and production QA." },
+        { "title": "Client-specific demonstrations", "desc": "Custom showcases prepared for individual prospects, industries, or procurement reviews." }
+      ]
+    }
+  },
+  "leadGen": {
+    "eyebrow": "Lead Generation",
+    "title": "Request Similar Service",
+    "desc": "Every sample page should make it easy for prospects to turn interest into a scoped conversation."
+  }
+}

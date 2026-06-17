@@ -1,0 +1,1559 @@
+{
+  "meta": {
+    "title": "Blog Details • Nexografix"
+  },
+  "assets": {
+    "fallback_cover": "https://nexografix.com/api/uploads/testimonials/Mask group (13).png"
+  },
+  "posts": [
+    {
+      "id": "1",
+      "title": "Choosing a Reliable App Development Partner: A Practical Checklists",
+      "category": "CREATIVE",
+      "dateISO": "2024-04-18",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Vendor laselection ka real game: scope clarity, delivery discipline, documentation, QA gates, and long-term support—so you don’t get stuck mid-projects.",
+      "slug": "choosing-reliable-app-development-partner",
+      "images": [
+        "https://nexografix.com/api/uploads/testimonials/Mask group (10).png",
+        "https://nexografix.com/api/uploads/testimonials/Mask group (6).png",
+        "https://nexografix.com/api/uploads/testimonials/Mask group (11).png",
+        "https://nexografix.com/api/uploads/testimonials/Mask group (5).png",
+        "https://nexografix.com/api/uploads/testimonials/Mask group (9).png"
+      ],
+      "tags": [
+        "Vendor Selection",
+        "Delivery",
+        "Scope",
+        "Documentation",
+        "QA"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 5,
+        "likes": 60,
+        "shares": 12
+      },
+      "content": {
+        "intro": [
+          "Partner choose karna sirf price compare nahi hota—yeh decide karta hai tumhara product stable launch hoga ya endless delays me fas \njayega.",
+          "Is checklist ka goal simple hai: \ntumhe clarity mile ki team actual delivery kar sakti hai ya sirf promises kar rahi hai."
+        ],
+        "quote": {
+          "text": "If you set your goals ridiculously high and it’s a failure, you will fail above everyone else’s success.",
+          "author": "Nelson Mandela"
+        },
+        "sections": [
+          {
+            "heading": "1) Scope clarity pe first day lock",
+            "bullets": [
+              "Milestones + acceptance criteria (what is ‘done’?)",
+              "Edge cases list (login, payments, file uploads, role permissions)",
+              "Change request process (cost + timeline impact)"
+            ]
+          },
+          {
+            "heading": "2) Delivery discipline aur shsgsffsfsfsfsfsfsgsgsgsgQA gates",
+            "bullets": [
+              "Weekly demos + release notes",
+              "Checklist-driven QA (smoke, regression, performance)",
+              "Rollback plan (release me issue aaya to revert kaise hoga)"
+            ]
+          },
+          {
+            "heading": "3) Doumentation + handover",
+            "bullets": [
+              "API docs + env setup steps",
+              "Deployment guide + secrets management",
+              "Ownership clear: repo, domain, server access"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "title": "AI Content Workflows: Tools + Process to Ship Faster Without Losing Quality",
+      "category": "AI",
+      "dateISO": "2024-06-18",
+      "readTime": "7 min read",
+      "cover": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "AI tools tabhi kaam aate hain jab workflow structured ho—brief → draft → QA → approval → publish. Yeh post wahi blueprint deta hai.",
+      "slug": "ai-content-workflows-tools-process",
+      "images": [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "AI",
+        "Content Ops",
+        "Workflow",
+        "QA",
+        "Publishing"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 7,
+        "likes": 34,
+        "shares": 18
+      },
+      "content": {
+        "intro": [
+          "AI se output fast hota hai, but quality tabhi consistent rehti hai jab process clean ho.",
+          "Agar tum ‘prompt’ ko strategy bana doge, to chaos aayega. Agar tum workflow bana doge, to scale aayega."
+        ],
+        "quote": {
+          "text": "Speed is useful only when it doesn’t break the system.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Content pipeline (minimum viable)",
+            "bullets": [
+              "Brief: target audience + intent + outline",
+              "Draft: AI assisted but human structure",
+              "QA: facts, tone, plagiarism, formatting",
+              "Publish: SEO + internal links + preview checks"
+            ]
+          },
+          {
+            "heading": "2) Quality gates jo teams miss karti hain",
+            "bullets": [
+              "Single source of truth (doc/template)",
+              "Approval states (draft → review → approved → scheduled)",
+              "Versioning (changes track karo, guessing mat karo)"
+            ]
+          },
+          {
+            "heading": "3) Automation ideas (safe)",
+            "bullets": [
+              "Auto-checklist per article (SEO, links, images, headings)",
+              "Auto-flag: missing sections (FAQ, conclusion, CTA)",
+              "Auto-generate summaries + social captions"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "title": "RAG vs Agents: Real-World AI Chatbot Architecture (Without the Hype)",
+      "category": "AI",
+      "dateISO": "2024-04-28",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Chatbot banane ke 2 tracks: RAG for grounded answers, agents for actions. Kab kya use karna hai—clear decision guide with risks.",
+      "slug": "rag-vs-agents-ai-chatbot-architecture",
+      "images": [
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "RAG",
+        "Agents",
+        "Chatbots",
+        "Architecture",
+        "Security"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 4,
+        "likes": 29,
+        "shares": 9
+      },
+      "content": {
+        "intro": [
+          "Aajkal sab ‘agents’ bol rahe hain, but har use-case me agent add karna risk + cost badhata hai.",
+          "Agar tumhara main goal accurate answers hai, RAG often best. Agar tumhara goal actions (tickets, emails, workflows) hai, tab agents matter."
+        ],
+        "quote": {
+          "text": "Automation without guardrails is just faster failure.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) RAG kab use karo",
+            "bullets": [
+              "Knowledge-base Q&A (policies, docs, FAQs)",
+              "Grounded answers with citations",
+              "Lower risk, easier monitoring"
+            ]
+          },
+          {
+            "heading": "2) Agents kab use karo",
+            "bullets": [
+              "Multi-step tasks (create ticket, fetch order, schedule call)",
+              "Tool calling + permissions model needed",
+              "Strict logging + approval checkpoints"
+            ]
+          },
+          {
+            "heading": "3) Safety baseline",
+            "bullets": [
+              "Allow-list tools only",
+              "Role-based access + audit logs",
+              "Human-in-the-loop for irreversible actions"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "title": "Quality Gates That Prevent Rework in Content Pipelines",
+      "category": "AI",
+      "dateISO": "2024-07-01",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Rework ka main reason slow team nahi hoti—missing gates hote hain. Yeh post batata hai kaise automation + checklists se delivery stable banti hai.",
+      "slug": "quality-gates-prevent-rework",
+      "images": [
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Quality Gates",
+        "Content Ops",
+        "QA",
+        "Automation",
+        "Rework"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 6,
+        "likes": 28,
+        "shares": 11
+      },
+      "content": {
+        "intro": [
+          "Agar pipeline me gates nahi hote, to same mistakes bar-bar repeat hoti hain—aur rework delivery kha jata hai.",
+          "Goal: minimum friction ke saath maximum consistency—so teams faster ship kar sakein without quality drop."
+        ],
+        "quote": {
+          "text": "Consistency is speed in disguise.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Gate #1: Pre-flight validation",
+            "bullets": [
+              "Required fields: title, slug, category, meta",
+              "Broken links + missing assets scan",
+              "Schema checks (headings, lists, tables)"
+            ]
+          },
+          {
+            "heading": "2) Gate #2: Review checklist",
+            "bullets": [
+              "Tone + clarity (reader-first language)",
+              "Facts + references (no guessing)",
+              "Formatting + accessibility basics"
+            ]
+          },
+          {
+            "heading": "3) Gate #3: Release readiness",
+            "bullets": [
+              "Changelog + version tag",
+              "Rollback plan (safe revert)",
+              "Post-release monitoring (errors, feedback)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "title": "Publishing Workflows: How to Design a Reliable Handoff",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-02",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Handoff fail hota hai jab ownership unclear ho. Yeh post batata hai roles, artifacts, aur approval states ka simple system—jo delays cut karta hai.",
+      "slug": "publishing-workflows-reliable-handoff",
+      "images": [
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Publishing",
+        "Workflow",
+        "Handoff",
+        "Approvals",
+        "Roles"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 5,
+        "likes": 26,
+        "shares": 10
+      },
+      "content": {
+        "intro": [
+          "Publishing me ‘handoff’ ka matlab sirf file share karna nahi—ownership, states, aur acceptance ka clear definition hona chahiye.",
+          "Agar handoff reliable ho, to QA aur release dono predictable ho jaate hain."
+        ],
+        "quote": {
+          "text": "Handoffs fail when responsibility is shared but ownership isn’t.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Roles define karo (simple)",
+            "bullets": [
+              "Author: draft + structure owner",
+              "Editor: clarity + accuracy owner",
+              "Publisher: final checks + release owner"
+            ]
+          },
+          {
+            "heading": "2) States use karo (no chaos)",
+            "bullets": [
+              "Draft → In Review → Approved → Scheduled → Published",
+              "One approver per stage",
+              "Time-boxed feedback (24h / 48h)"
+            ]
+          },
+          {
+            "heading": "3) Handoff artifacts",
+            "bullets": [
+              "Final doc + metadata sheet",
+              "Image pack + alt text",
+              "Checklist completion (SEO + QA)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "title": "Automation Playbook: Reduce Manual Reviews Without Risk",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-03",
+      "readTime": "7 min read",
+      "cover": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Automation ka target manual reviews ko delete karna nahi—unko smarter banana hai. Yeh playbook batata hai safe checks aur approvals ka balance.",
+      "slug": "automation-reduce-manual-reviews",
+      "images": [
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Automation",
+        "Review",
+        "Risk",
+        "Approvals",
+        "Product Ops"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 8,
+        "likes": 33,
+        "shares": 14
+      },
+      "content": {
+        "intro": [
+          "Manual review overload teams ko slow kar deta hai, but blind automation aur bhi dangerous hoti hai.",
+          "Best approach: repeatable checks automate karo, decisions ke liye clear approvals rakho."
+        ],
+        "quote": {
+          "text": "Automate checks, not judgment.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Start with low-risk automation",
+            "bullets": [
+              "Broken links + missing fields detection",
+              "Image size/compression rules",
+              "Formatting rules (headings, lists, code blocks)"
+            ]
+          },
+          {
+            "heading": "2) Add guardrails",
+            "bullets": [
+              "Allow-list rules (what can be auto-fixed)",
+              "Escalation for sensitive topics",
+              "Audit logs for every change"
+            ]
+          },
+          {
+            "heading": "3) Human-in-the-loop points",
+            "bullets": [
+              "Final approval for publish",
+              "Brand tone validation",
+              "High-impact edits (legal, pricing, policies)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "title": "Release Readiness: The 10-Point Checklist Teams Skip",
+      "category": "AI",
+      "dateISO": "2024-07-04",
+      "readTime": "8 min read",
+      "cover": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Release ke time pe ‘small’ cheezein hi incident ban jaati hain. Yeh checklist batata hai kya-kya lock karna hai before you ship.",
+      "slug": "release-readiness-checklist",
+      "images": [
+        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Release",
+        "Checklist",
+        "QA",
+        "Ops",
+        "Risk"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 9,
+        "likes": 38,
+        "shares": 17
+      },
+      "content": {
+        "intro": [
+          "Teams often ship with ‘it should work’ mindset—aur wahi production me costly hota hai.",
+          "Release readiness ka goal speed slow karna nahi, rework aur incidents ko prevent karna hai."
+        ],
+        "quote": {
+          "text": "If you can’t roll back safely, you’re not ready to roll out.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Pre-release essentials",
+            "bullets": [
+              "Smoke test + critical paths verified",
+              "Env configs + secrets rechecked",
+              "Analytics + error tracking enabled"
+            ]
+          },
+          {
+            "heading": "2) Rollback + recovery",
+            "bullets": [
+              "Rollback steps documented",
+              "Database migration plan (safe + reversible)",
+              "On-call owner assigned"
+            ]
+          },
+          {
+            "heading": "3) Post-release monitoring",
+            "bullets": [
+              "Error spikes + latency watch",
+              "User feedback channel open",
+              "Hotfix process defined"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "title": "Content QA Metrics: What to Track Weekly (and Why)",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-05",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Metrics ka goal vanity nahi—visibility + control hai. Yeh post batata hai weekly QA dashboard me kaunse signals actually matter karte hain.",
+      "slug": "content-qa-metrics-weekly",
+      "images": [
+        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "QA Metrics",
+        "Publishing",
+        "Dashboard",
+        "Quality",
+        "Ops"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 4,
+        "likes": 22,
+        "shares": 8
+      },
+      "content": {
+        "intro": [
+          "Agar tum quality measure nahi kar rahe, to tum bas hope pe ship kar rahe ho.",
+          "Weekly QA metrics simple honi chahiye—so teams unko follow karein, ignore na karein."
+        ],
+        "quote": {
+          "text": "What gets tracked gets fixed.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Health metrics (must-have)",
+            "bullets": [
+              "Broken links count",
+              "Missing metadata rate",
+              "Validation failures per week"
+            ]
+          },
+          {
+            "heading": "2) Process metrics",
+            "bullets": [
+              "Review turnaround time",
+              "Rework iterations per post",
+              "Approval bottleneck stage"
+            ]
+          },
+          {
+            "heading": "3) Outcome metrics",
+            "bullets": [
+              "Publish SLA adherence",
+              "User feedback issues",
+              "Search performance trends"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "title": "Designing Feedback Loops That Don’t Slow Delivery",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-06",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Feedback loops zaroori hain, but unko time-box aur structured nahi kiya to delivery dead ho jaati hai. Yeh post practical system deta hai.",
+      "slug": "feedback-loops-fast-delivery",
+      "images": [
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Feedback",
+        "Delivery",
+        "Process",
+        "Collaboration",
+        "Product"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 6,
+        "likes": 27,
+        "shares": 9
+      },
+      "content": {
+        "intro": [
+          "Feedback ka problem feedback nahi—unstructured feedback hota hai.",
+          "Agar comments scattered hain, ownership unclear hai, aur timelines open-ended hain—delivery slow ho hi जाएगी."
+        ],
+        "quote": {
+          "text": "Fast teams don’t avoid feedback. They structure it.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) One source of feedback",
+            "bullets": [
+              "Single doc/thread per deliverable",
+              "No duplicate channels for same review",
+              "Clear checklist attached"
+            ]
+          },
+          {
+            "heading": "2) Time-box rules",
+            "bullets": [
+              "24–48h review window",
+              "Max 2 revision rounds",
+              "Escalation if blocked"
+            ]
+          },
+          {
+            "heading": "3) Decision ownership",
+            "bullets": [
+              "One final approver",
+              "Conflicts resolved in one call",
+              "Change request log maintained"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "title": "From Backlog to Done: Keep Scope Clean With Templates",
+      "category": "AI",
+      "dateISO": "2024-07-07",
+      "readTime": "7 min read",
+      "cover": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Scope creep ka antidote templates hain. Yeh post batata hai backlog grooming, acceptance criteria, aur change logs ka simple structure.",
+      "slug": "scope-control-with-templates",
+      "images": [
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Scope",
+        "Templates",
+        "Backlog",
+        "Planning",
+        "Delivery"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 7,
+        "likes": 31,
+        "shares": 12
+      },
+      "content": {
+        "intro": [
+          "Backlog me random tasks dalne se ‘done’ kabhi clean nahi hota—kyunki expectations kabhi clear hi nahi hote.",
+          "Templates same language create karte hain: what, why, done definition, and risk."
+        ],
+        "quote": {
+          "text": "Scope doesn’t creep. It’s allowed to creep.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Story template (minimum)",
+            "bullets": [
+              "User goal + context",
+              "Acceptance criteria (testable)",
+              "Edge cases + non-goals"
+            ]
+          },
+          {
+            "heading": "2) Grooming discipline",
+            "bullets": [
+              "Priorities weekly lock",
+              "Dependencies visible",
+              "Estimates attached to criteria"
+            ]
+          },
+          {
+            "heading": "3) Change control",
+            "bullets": [
+              "Change log per sprint",
+              "Impact on cost/time noted",
+              "Approval before starting change"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "title": "Avoiding Content Drift: Versioning Rules That Work",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-08",
+      "readTime": "8 min read",
+      "cover": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Content drift tab hota hai jab ‘latest’ ka koi owner nahi hota. Yeh post batata hai simple versioning + approvals system jo teams follow kar sakti hain.",
+      "slug": "avoid-content-drift-versioning",
+      "images": [
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Versioning",
+        "Publishing",
+        "Governance",
+        "Content Drift",
+        "Ops"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 5,
+        "likes": 24,
+        "shares": 9
+      },
+      "content": {
+        "intro": [
+          "Same page ke multiple ‘final’ versions exist karte hain—aur fir decisions guesswork ban jaate hain.",
+          "Simple rules + clear ownership se drift control ho jata hai."
+        ],
+        "quote": {
+          "text": "If everything is final, nothing is final.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Naming + version rules",
+            "bullets": [
+              "v1, v2, v3 with date stamps",
+              "Draft vs Approved clearly marked",
+              "One canonical link (single source)"
+            ]
+          },
+          {
+            "heading": "2) Change visibility",
+            "bullets": [
+              "Changelog per update",
+              "Who changed what + why",
+              "Rollback to previous approved"
+            ]
+          },
+          {
+            "heading": "3) Approval boundaries",
+            "bullets": [
+              "Minor edits auto-approve",
+              "Major edits need owner sign-off",
+              "Scheduled review cycle (monthly/quarterly)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "title": "Production Incidents: How to Build a Simple Runbook",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-09",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Incident ke time pe panic nahi—playbook chahiye. Yeh post batata hai ek simple runbook structure jo real life me kaam karta hai.",
+      "slug": "build-simple-runbook",
+      "images": [
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Runbook",
+        "Incidents",
+        "Ops",
+        "Monitoring",
+        "Reliability"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 6,
+        "likes": 30,
+        "shares": 13
+      },
+      "content": {
+        "intro": [
+          "Most teams incident ke time pe same mistakes repeat karti hain—kyunki steps documented nahi hote.",
+          "Runbook ka goal heroic debugging nahi, predictable recovery hai."
+        ],
+        "quote": {
+          "text": "In an incident, clarity beats cleverness.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Runbook structure",
+            "bullets": [
+              "Symptoms (what users see)",
+              "Quick checks (dashboards, logs, alerts)",
+              "First actions (safe steps)"
+            ]
+          },
+          {
+            "heading": "2) Ownership + comms",
+            "bullets": [
+              "Incident commander role",
+              "Status update template",
+              "Escalation contacts list"
+            ]
+          },
+          {
+            "heading": "3) Postmortem basics",
+            "bullets": [
+              "Root cause summary",
+              "Preventive actions list",
+              "Follow-up owner + deadline"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "title": "Better Estimations: Turning Requirements Into Milestones",
+      "category": "AI",
+      "dateISO": "2024-07-10",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Estimation fights tab hoti hain jab requirements vague hoti hain. Yeh post batata hai milestone-based planning ka practical format.",
+      "slug": "requirements-to-milestones",
+      "images": [
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Estimation",
+        "Milestones",
+        "Requirements",
+        "Planning",
+        "Delivery"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 7,
+        "likes": 29,
+        "shares": 10
+      },
+      "content": {
+        "intro": [
+          "‘How long will it take?’ ka best answer tab aata hai jab ‘done’ well-defined ho.",
+          "Milestones requirements ko testable chunks me convert kar dete hain—aur negotiation easier ho jati hai."
+        ],
+        "quote": {
+          "text": "You can’t estimate what you can’t define.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Requirement breakdown",
+            "bullets": [
+              "User flows map",
+              "Edge cases capture",
+              "Non-functional needs (perf, security)"
+            ]
+          },
+          {
+            "heading": "2) Milestone design",
+            "bullets": [
+              "Milestone = demoable outcome",
+              "Acceptance criteria attached",
+              "Dependencies explicitly listed"
+            ]
+          },
+          {
+            "heading": "3) Estimation hygiene",
+            "bullets": [
+              "Assumptions documented",
+              "Buffer for unknowns",
+              "Change requests tracked"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "title": "Operational Dashboards: The 6 Signals You Need Daily",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-11",
+      "readTime": "7 min read",
+      "cover": "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Dashboard ka purpose pretty charts nahi—fast decisions hai. Yeh post batata hai daily signals jo content/product teams ko dekhne chahiye.",
+      "slug": "dashboards-six-daily-signals",
+      "images": [
+        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Dashboards",
+        "Ops",
+        "Metrics",
+        "Monitoring",
+        "Publishing"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 4,
+        "likes": 23,
+        "shares": 7
+      },
+      "content": {
+        "intro": [
+          "Daily dashboard ka rule: jo decision drive kare, wahi show karo.",
+          "Too many metrics = noise. Six signals = focus."
+        ],
+        "quote": {
+          "text": "Dashboards are for action, not admiration.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Delivery signals",
+            "bullets": [
+              "Items in review",
+              "SLA breaches",
+              "Blocked tasks count"
+            ]
+          },
+          {
+            "heading": "2) Quality signals",
+            "bullets": [
+              "Validation failures",
+              "Broken links trend",
+              "Rework iterations"
+            ]
+          },
+          {
+            "heading": "3) Reliability signals",
+            "bullets": [
+              "Error rate (app/site)",
+              "Latency / uptime",
+              "User-reported issues"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "title": "Automation ROI: Where It Pays Back Fastest",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-12",
+      "readTime": "8 min read",
+      "cover": "https://nexografix.com/api/uploads/testimonials/Mask group (14).png",
+      "excerpt": "ROI tab aata hai jab tum right tasks automate karte ho. Yeh post batata hai high-payback areas: validation, routing, summaries, and reporting.",
+      "slug": "automation-roi-fastest",
+      "images": [
+        "https://nexografix.com/api/uploads/testimonials/Mask group (9).png",
+        "https://nexografix.com/api/uploads/testimonials/Mask group (14).png",
+        "https://nexografix.com/api/uploads/testimonials/Mask group (15).png",
+        "https://nexografix.com/api/uploads/testimonials/logo-removebg-preview.png",
+        "https://nexografix.com/api/uploads/testimonials/Mask group (8).png"
+      ],
+      "tags": [
+        "ROI",
+        "Automation",
+        "Efficiency",
+        "Ops",
+        "Product"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 8,
+        "likes": 35,
+        "shares": 15
+      },
+      "content": {
+        "intro": [
+          "Automation ka ROI ‘cool AI’ se nahi—boring repetitive work se aata hai.",
+          "Fastest payback: checks, routing, and reporting—jahan manual time waste hota hai."
+        ],
+        "quote": {
+          "text": "Automate what repeats. Improve what matters.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) High ROI bucket: validations",
+            "bullets": [
+              "Missing fields + schema checks",
+              "Link + asset integrity checks",
+              "SEO basics validation"
+            ]
+          },
+          {
+            "heading": "2) High ROI bucket: routing",
+            "bullets": [
+              "Auto-assign reviewer by category",
+              "Escalate when SLA near breach",
+              "Auto-create tasks from drafts"
+            ]
+          },
+          {
+            "heading": "3) High ROI bucket: reporting",
+            "bullets": [
+              "Weekly summary auto-gen",
+              "Bottleneck insights",
+              "Quality trend alerts"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "title": "Building QA Checklists That Teams Actually Follo",
+      "category": "AI",
+      "dateISO": "2024-07-13",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Checklist tabhi kaam karta hai jab woh short, clear, aur enforceable ho. Yeh post batata hai checklist design ka practical rule-set.",
+      "slug": "qa-checklists-teams-follow",
+      "images": [
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "QA",
+        "Checklist",
+        "Process",
+        "Consistency",
+        "Automation"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 5,
+        "likes": 25,
+        "shares": 9
+      },
+      "content": {
+        "intro": [
+          "Long checklist = ignored checklist. Simple truth.",
+          "Achi checklist woh hai jo team pressure me bhi follow kar le—because it’s minimal and clear."
+        ],
+        "quote": {
+          "text": "A checklist is a contract with your future self.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Checklist rules",
+            "bullets": [
+              "Max 10–15 items",
+              "Binary checks (pass/fail)",
+              "Owner defined per item"
+            ]
+          },
+          {
+            "heading": "2) Enforceability",
+            "bullets": [
+              "Block publish if critical fails",
+              "Auto-run checks where possible",
+              "Track failures weekly"
+            ]
+          },
+          {
+            "heading": "3) Adoption tricks",
+            "bullets": [
+              "Embed in workflow UI",
+              "Make it reusable templates",
+              "Review + prune monthly"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "17",
+      "title": "Publishing SLAs: Set Expectations Without Overpromising",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-14",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "SLA ka goal pressure banana nahi—predictability banana hai. Yeh post batata hai realistic SLAs, buffers, aur escalation rules.",
+      "slug": "publishing-slas-expectations",
+      "images": [
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "SLA",
+        "Publishing",
+        "Expectations",
+        "Delivery",
+        "Ops"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 6,
+        "likes": 28,
+        "shares": 11
+      },
+      "content": {
+        "intro": [
+          "SLA set nahi karoge to stakeholders daily chase karenge. Overpromise karoge to team burn out hogi.",
+          "Balanced SLA = clear stages + buffers + communication."
+        ],
+        "quote": {
+          "text": "SLA is a promise you must be able to keep repeatedly.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) SLA stages",
+            "bullets": [
+              "Draft time",
+              "Review time",
+              "Publish window"
+            ]
+          },
+          {
+            "heading": "2) Buffers and exceptions",
+            "bullets": [
+              "Add buffer for rework",
+              "Define urgent lane separately",
+              "Blockers escalation rule"
+            ]
+          },
+          {
+            "heading": "3) Reporting",
+            "bullets": [
+              "Weekly SLA adherence report",
+              "Bottleneck stage highlight",
+              "Action items for next week"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "title": "Content Audits: How to Clean Libraries at Scale",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-15",
+      "readTime": "7 min read",
+      "cover": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Large content libraries me rot silent hota hai: outdated pages, broken links, duplicated topics. Yeh post batata hai audit workflow at scale.",
+      "slug": "content-audits-at-scale",
+      "images": [
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Content Audit",
+        "Library",
+        "Cleanup",
+        "Governance",
+        "Ops"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 5,
+        "likes": 24,
+        "shares": 9
+      },
+      "content": {
+        "intro": [
+          "Content audit boring lagta hai, but ye trust aur SEO dono save karta hai.",
+          "Scale pe audit ka secret: rules + batching + ownership."
+        ],
+        "quote": {
+          "text": "Old content is product debt.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Audit categories",
+            "bullets": [
+              "Keep (fresh + useful)",
+              "Update (needs edits)",
+              "Merge/Delete (duplicate/outdated)"
+            ]
+          },
+          {
+            "heading": "2) Workflow at scale",
+            "bullets": [
+              "Batch by topic/category",
+              "Owner per batch",
+              "Clear due dates + review"
+            ]
+          },
+          {
+            "heading": "3) Automation helpers",
+            "bullets": [
+              "Broken links scan",
+              "Staleness detection (age + traffic)",
+              "Duplicate similarity checks"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "title": "Speed vs Quality: A Balanced Delivery Framework",
+      "category": "AI",
+      "dateISO": "2024-07-16",
+      "readTime": "8 min read",
+      "cover": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Speed aur quality ka war fake hai. Framework chahiye: quality gates + staged release + measurable metrics—so you can move fast safely.",
+      "slug": "speed-vs-quality-framework",
+      "images": [
+        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Speed",
+        "Quality",
+        "Framework",
+        "Gates",
+        "Delivery"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 10,
+        "likes": 40,
+        "shares": 18
+      },
+      "content": {
+        "intro": [
+          "Fast teams shortcut nahi leti—unke paas systems hote hain.",
+          "Balanced framework ka goal: predictable delivery without quality debt."
+        ],
+        "quote": {
+          "text": "Quality is how you go fast for a long time.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Define quality tiers",
+            "bullets": [
+              "Tier-1: must-pass checks",
+              "Tier-2: recommended improvements",
+              "Tier-3: polish (nice-to-have)"
+            ]
+          },
+          {
+            "heading": "2) Stage releases",
+            "bullets": [
+              "Pilot → limited rollout → full release",
+              "Feature flags where needed",
+              "Rollback readiness always"
+            ]
+          },
+          {
+            "heading": "3) Measure and iterate",
+            "bullets": [
+              "Rework rate tracking",
+              "Incident trend tracking",
+              "SLA adherence + feedback"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "title": "Stakeholder Updates: The Weekly Format That Reduces Calls",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-17",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Calls tab badhte hain jab updates unclear hote hain. Yeh post batata hai ek weekly update template jo trust build karta hai aur noise cut karta hai.",
+      "slug": "weekly-updates-reduce-calls",
+      "images": [
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Stakeholders",
+        "Updates",
+        "Communication",
+        "Delivery",
+        "Reporting"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 4,
+        "likes": 21,
+        "shares": 8
+      },
+      "content": {
+        "intro": [
+          "Stakeholders ko daily ping tab karna padta hai jab unko progress visibility nahi milti.",
+          "Weekly update ka structure consistent ho to calls reduce ho jaate hain."
+        ],
+        "quote": {
+          "text": "Silence creates meetings.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) The weekly format",
+            "bullets": [
+              "Done this week",
+              "In progress + ETA",
+              "Risks + blockers"
+            ]
+          },
+          {
+            "heading": "2) Proof and clarity",
+            "bullets": [
+              "Links to demos/screens",
+              "Acceptance criteria status",
+              "Owner for next actions"
+            ]
+          },
+          {
+            "heading": "3) Keep it short",
+            "bullets": [
+              "One page max",
+              "No long narratives",
+              "Call only if decision needed"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "title": "Practical Documentation: Write Less, but Make It Usable",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-18",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Docs ka goal essays likhna nahi—future me confusion prevent karna hai. Yeh post batata hai lean documentation that actually gets used.",
+      "slug": "practical-documentation-usable",
+      "images": [
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Documentation",
+        "Handover",
+        "Usability",
+        "Ops",
+        "Product"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 6,
+        "likes": 27,
+        "shares": 10
+      },
+      "content": {
+        "intro": [
+          "Docs tab useless banti hain jab woh too long aur too generic hoti hain.",
+          "Practical docs: exact steps, clear ownership, and quick references."
+        ],
+        "quote": {
+          "text": "Documentation is a support system for your team.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) What to document (must)",
+            "bullets": [
+              "Setup steps + env vars",
+              "Deploy + rollback steps",
+              "Key decisions + why"
+            ]
+          },
+          {
+            "heading": "2) Keep it usable",
+            "bullets": [
+              "Short sections + links",
+              "Examples over theory",
+              "Update owner assigned"
+            ]
+          },
+          {
+            "heading": "3) Maintain without pain",
+            "bullets": [
+              "Docs updated in PRs",
+              "Quarterly review",
+              "Archive outdated pages"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "title": "How to choose the right partner",
+      "slug": "choosing-reliable-app-development",
+      "category": "CREATIVE",
+      "dateISO": "2026-01-30",
+      "readTime": "",
+      "excerpt": "",
+      "cover": "",
+      "content": {
+        "intro": [],
+        "sections": []
+      },
+      "images": []
+    },
+    {
+      "id": "23",
+      "title": "Practical Documentation: Write Less, but Make It Usable",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-18",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Docs ka goal essays likhna nahi—future me confusion prevent karna hai. Yeh post batata hai lean documentation that actually gets used.",
+      "slug": "practical-documentation-usable",
+      "images": [
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Documentation",
+        "Handover",
+        "Usability",
+        "Ops",
+        "Product"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 6,
+        "likes": 27,
+        "shares": 10
+      },
+      "content": {
+        "intro": [
+          "Docs tab useless banti hain jab woh too long aur too generic hoti hain.",
+          "Practical docs: exact steps, clear ownership, and quick references."
+        ],
+        "quote": {
+          "text": "Documentation is a support system for your team.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) What to document (must)",
+            "bullets": [
+              "Setup steps + env vars",
+              "Deploy + rollback steps",
+              "Key decisions + why"
+            ]
+          },
+          {
+            "heading": "2) Keep it usable",
+            "bullets": [
+              "Short sections + links",
+              "Examples over theory",
+              "Update owner assigned"
+            ]
+          },
+          {
+            "heading": "3) Maintain without pain",
+            "bullets": [
+              "Docs updated in PRs",
+              "Quarterly review",
+              "Archive outdated pages"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "24",
+      "title": "How to choose tell me wisely ",
+      "slug": "choosing-reliable-app",
+      "category": "CREATIVE",
+      "dateISO": "2026-01-31",
+      "readTime": "",
+      "excerpt": "",
+      "cover": "",
+      "content": {
+        "intro": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "25",
+      "title": "Practical Documentation: Write Less, but Make It Usable",
+      "category": "PRODUCT",
+      "dateISO": "2024-07-18",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Docs ka goal essays likhna nahi—future me confusion prevent karna hai. Yeh post batata hai lean documentation that actually gets used.",
+      "slug": "practical-documentation-usable",
+      "images": [
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": [
+        "Documentation",
+        "Handover",
+        "Usability",
+        "Ops",
+        "Product"
+      ],
+      "author": "admin",
+      "stats": {
+        "comments": 6,
+        "likes": 27,
+        "shares": 10
+      },
+      "content": {
+        "intro": [
+          "Docs tab useless banti hain jab woh too long aur \ntoo generic hoti hain.",
+          "Docs tab useless banti hain jab woh too long aur \ntoo generic hoti hain.",
+          "Practical docs: exact steps, clear ownership, and quick references."
+        ],
+        "quote": {
+          "text": "Documentation is a support system for your team.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) What to document (must)",
+            "bullets": [
+              "Setup steps + env vars",
+              "Deploy + rollback steps",
+              "Key decisions + why"
+            ]
+          },
+          {
+            "heading": "2) Keep it usable",
+            "bullets": [
+              "Short sections + links",
+              "Examples over theory",
+              "Update owner assigned"
+            ]
+          },
+          {
+            "heading": "3) Maintain without pain",
+            "bullets": [
+              "Docs updated in PRs",
+              "Quarterly review",
+              "Archive outdated pages"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

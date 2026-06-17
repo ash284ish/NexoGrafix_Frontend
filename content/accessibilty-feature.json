@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "title": "Accessibility Services • Nexografix",
+    "route": "/accessibility"
+  },
+  "hero": {
+    "eyebrow": "ACCESSIBILITY",
+    "title": "Accessibility Services",
+    "subtitle": "Make your PDFs, eBooks, websites, and learning content accessible and compliant—built for real users, assistive technology support, and global standards.",
+    "hero_image": {
+      "src": "https://nexografix.com/api/uploads/testimonials/acessibility.jpg",
+      "alt": "Accessibility Services"
+    },
+    "chips": [
+      {
+        "iconKey": "shield",
+        "text": "Standards-led compliance delivery"
+      },
+      {
+        "iconKey": "barchart2",
+        "text": "Clear reporting & validation"
+      }
+    ],
+    "pills": [
+      "WCAG 2.1/2.2",
+      "PDF/UA",
+      "EPUB 3",
+      "VPAT/ACR",
+      "Screen Readers",
+      "Education & LMS"
+    ],
+    "badges": [
+      {
+        "iconKey": "checkcircle",
+        "text": "WCAG-aligned outputs"
+      },
+      {
+        "iconKey": "filetext",
+        "text": "PDF/UA + EPUB support"
+      },
+      {
+        "iconKey": "zap",
+        "text": "Assistive-tech tested"
+      }
+    ],
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "note_text": "Inclusive content, built for real users"
+  },
+  "trust_metrics": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Accessibility outcomes you can rely on",
+    "subheading": "Consistent remediation, rigorous validation, and real assistive-technology checks—so your content is compliant and usable.",
+    "columns": 3,
+    "centered": true,
+    "stats": [
+      {
+        "id": "projects",
+        "iconKey": "projects",
+        "value": 2,
+        "suffix": " Million+",
+        "label": "Pages remediated",
+        "hint": "Over a million pages across PDFs, EPUBs, reports, and learning materials—remediated to meet accessibility standards and ensure real-world usability.",
+        "highlight": false
+      },
+      {
+        "id": "qa",
+        "iconKey": "qa",
+        "value": 100,
+        "suffix": "%",
+        "label": "Compliance success rate",
+        "hint": "End-to-end validation with structured remediation and assistive technology checks ensures complete compliance before delivery.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "iconKey": "partners",
+        "value": 50,
+        "suffix": "+",
+        "label": "Projects handled",
+        "hint": "Supporting publishers, EdTech companies, healthcare, banking, and public-sector organizations with ongoing accessibility needs.",
+        "highlight": false
+      }
+    ]
+  },
+  "services_carousel": {
+    "eyebrow": "SERVICES",
+    "heading": "Accessibility services & capabilities",
+    "subheading": "Explore our accessibility services through a guided carousel—each service highlights what we deliver, how we validate, and which standards we support.",
+    "auto_rotate_ms": 6500,
+    "pause_on_hover": true,
+    "show_tabs": true,
+    "slides": [
+      {
+        "id": "pdf-accessibility",
+        "title": "PDF Accessibility & Remediation",
+        "desc": "PDF accessibility remediation transforms inaccessible PDF documents into fully compliant digital files that work seamlessly with screen readers, keyboard navigation, and other assistive technologies, ensuring equitable access for learners and professionals with disabilities. \n\n With legal mandates including ADA, Section 508, and institutional accessibility policies requiring digital content compliance, inaccessible PDFs create legal liability, exclude disabled users, and limit institutional participation in federally funded programs. \n\n Primary stakeholders include educational publishers distributing digital content, higher education institutions providing course materials, government agencies serving diverse populations, corporations ensuring workplace equity, and K-12 districts meeting Section 504 requirements. \n\n The service addresses critical barriers including documents that screen readers cannot navigate, missing alternative text preventing image comprehension, improper reading order creating confusion, form fields inaccessible via keyboard, and structural deficiencies that violate WCAG 2.1 Level AA standards.",
+        "iconKey": "filetext",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/pdf.png",
+          "alt": "PDF accessibility remediation"
+        },
+        "bullets": [
+          "Tagged PDF remediation",
+          "Reading order + headings",
+          "Alt text + table tagging",
+          "WCAG + PDF/UA aligned"
+        ]
+      },
+      {
+        "id": "ebook-accessibility",
+        "title": "eBook Accessibility (EPUB & Digital)",
+        "desc": "EPUB accessibility services create and validate EPUB3 publications conforming to EPUB Accessibility 1.0 standards and WCAG 2.1 requirements, ensuring digital books function seamlessly with screen readers, text-to-speech, adjustable fonts, and other accessibility features essential for inclusive reading experiences. \n\n As accessibility laws extend to digital publications and institutions adopt universal design mandates, accessible EPUB files become legal requirements, market differentiators, and ethical imperatives for publishers serving diverse reading populations. \n\n Core audiences include academic publishers distributing course materials, trade publishers reaching inclusive markets, library platforms serving patrons with print disabilities, EdTech companies developing courseware, and educational institutions providing accessible alternatives to print textbooks. \n\n This service resolves fundamental barriers including EPUB files that screen readers cannot navigate, missing semantic structure preventing logical reading, images without descriptions, inaccessible navigation, and undocumented accessibility features limiting discoverability by users who need them.",
+        "iconKey": "bookopen",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/epub.jpg",
+          "alt": "Accessible EPUB development"
+        },
+        "bullets": [
+          "Accessible EPUB 3 conversion",
+          "Landmarks + TOC navigation",
+          "Semantic HTML + ARIA roles",
+          "EPUB Accessibility 1.1 aligned"
+        ]
+      },
+      {
+        "id": "education-accessibility",
+        "title": "Educational Content Accessibility",
+        "desc": "Educational content accessibility services ensure learning materials across formats, platforms, and delivery methods meet universal design principles and legal requirements, creating equitable educational experiences for students with diverse abilities and learning needs. \n\n With legal mandates from ADA, Section 504, IDEA, and state accessibility laws converging with pedagogical recognition of universal design benefits, accessible educational content shifts from accommodation to expectation in K-12, higher education, and professional learning contexts. \n\n Primary beneficiaries include school districts supporting diverse learners, colleges ensuring compliance and inclusion, curriculum publishers meeting adoption requirements, EdTech platforms serving institutional clients, and corporate training programs maintaining workplace equity. \n\n This comprehensive service addresses systemic barriers including inaccessible digital textbooks excluding students with disabilities, assessment materials preventing fair evaluation, multimedia lacking captions and transcripts, interactive elements unusable with assistive technologies, and learning platforms with navigation barriers",
+        "iconKey": "layers",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/edu con.jpg",
+          "alt": "Accessible educational content"
+        },
+        "bullets": [
+          "Accessible textbooks + workbooks",
+          "Question banks + assessments",
+          "MathML + accessible equations",
+          "LMS-ready packaging"
+        ]
+      },
+      {
+        "id": "web-accessibility",
+        "title": "Website & HTML Accessibility",
+        "desc": "Website and HTML accessibility services audit, remediate, and optimize web properties ensuring compliance with WCAG standards, ADA requirements, and usability best practices, creating inclusive digital experiences for visitors with disabilities across devices and assistive technologies. \n\n With websites serving as primary information, commerce, and service delivery channels, inaccessible web properties exclude significant populations, create legal liability, and contradict organizational commitments to inclusion and equal access. \n\n Key stakeholders include educational institutions managing public-facing websites and student portals, EdTech companies delivering web-based learning platforms, publishers operating content delivery websites, government agencies serving diverse populations, and businesses ensuring digital accessibility compliance. \n\n This service resolves pervasive barriers including navigation systems unusable with keyboards, content incompatible with screen readers, forms lacking proper labels, insufficient color contrast, missing alternative text, time-based content inaccessible to users needing more time, and interactive elements breaking assistive technology functionality.",
+        "iconKey": "code",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/web ases.jpg",
+          "alt": "Website accessibility services"
+        },
+        "bullets": [
+          "WCAG audits (manual + automated)",
+          "ARIA labels + landmarks",
+          "Keyboard navigation fixes",
+          "Contrast + form accessibility"
+        ]
+      },
+      {
+        "id": "non-pdf-accessibility",
+        "title": "Document Accessibility (Non-PDF)",
+        "desc": "Microsoft Office document accessibility services remediate Word documents, PowerPoint presentations, and Excel spreadsheets ensuring these ubiquitous business and educational formats function with screen readers, keyboard navigation, and other assistive technologies while meeting WCAG and institutional accessibility standards. \n\n As organizations increasingly distribute content in Office formats for remote work, digital learning, and document collaboration, inaccessible DOCX, PPTX, and XLSX files create barriers in education, workplace communication, training, and information access. \n\n Primary users include educational institutions distributing course materials, corporate training departments delivering learning content, government agencies providing public documents, publishers creating accessible source files, and organizations supporting employees and clients with disabilities. \n\n The service addresses critical gaps including documents without proper heading structure preventing navigation, presentations with images lacking alternative text, spreadsheets with inaccessible data tables, complex layouts confusing screen readers, and inaccessible forms preventing completion by keyboard-only users.",
+        "iconKey": "grid",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/npdf.jpg",
+          "alt": "Accessible office documents"
+        },
+        "bullets": [
+          "Accessible DOCX",
+          "Accessible PPTX",
+          "Accessible Excel files",
+          "InDesign to accessible output"
+        ]
+      },
+      {
+        "id": "multimedia-accessibility",
+        "title": "Audio, Video & Multimedia Accessibility",
+        "desc": "Audio and video accessibility services provide captions, transcripts, audio descriptions, and sign language interpretation ensuring multimedia content serves learners and audiences with hearing disabilities, vision impairments, and diverse access needs across educational, corporate, and public media contexts. \n\n With video dominating educational delivery through online courses, flipped classrooms, and digital learning platforms, inaccessible multimedia creates fundamental barriers to educational participation, violates legal requirements, and contradicts universal design principles. \n\n Core stakeholders include universities delivering online education, EdTech platforms offering video-based learning, K-12 districts using digital curriculum, corporate training programs, publishers producing multimedia educational content, and media organizations serving diverse audiences. \n\n This service resolves critical access gaps including videos without captions preventing deaf or hard of hearing access, missing audio descriptions excluding blind users from visual information, lack of transcripts limiting searchability and alternative access, and poor caption quality undermining comprehension and learning.",
+        "iconKey": "playcircle",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/audio acesss.jpg",
+          "alt": "Multimedia accessibility"
+        },
+        "bullets": [
+          "Closed captions + subtitles",
+          "Transcripts (multilingual)",
+          "Audio descriptions",
+          "Accessible player guidance"
+        ]
+      },
+      {
+        "id": "auditing-reporting",
+        "title": "Accessibility Auditing & Compliance Reporting",
+        "desc": "Accessibility audits and compliance reporting provide comprehensive evaluations of digital content, websites, applications, and learning platforms against WCAG standards, Section 508 requirements, and institutional policies, delivering actionable remediation roadmaps and documentation supporting legal compliance and inclusive design. \n\n With accessibility lawsuits increasing, OCR investigations targeting institutions, and procurement requiring accessibility documentation, objective third-party audits establish baseline compliance, identify risk areas, and provide evidence of good-faith accessibility efforts. \n\n Principal audiences include higher education institutions demonstrating compliance, government agencies meeting Section 508 obligations, EdTech companies certifying product accessibility, publishers documenting accessible formats, and organizations responding to complaints or preparing for accessibility initiatives. \n\n This service addresses critical organizational needs including unknown compliance status creating legal uncertainty, absence of objective accessibility documentation, lack of prioritized remediation roadmaps, and inability to demonstrate due diligence in accessibility efforts.",
+        "iconKey": "shield",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/asses audit.jpg",
+          "alt": "Accessibility compliance reporting"
+        },
+        "bullets": [
+          "WCAG audit reports",
+          "ACR / VPAT documentation",
+          "PDF/UA validation",
+          "Platform + content testing"
+        ]
+      },
+      {
+        "id": "assistive-tech-testing",
+        "title": "Assistive Technology Testing",
+        "desc": "Assistive technology testing validates that digital content, applications, and platforms function correctly with screen readers, magnification software, speech recognition, alternative keyboards, and other tools people with disabilities rely upon for digital access, ensuring technical compliance translates to genuine usability. \n\n While automated checkers and manual code review identify many accessibility issues, only testing with actual assistive technologies reveals whether implementations work correctly in practice, as users with disabilities experience them. \n\n Key users include EdTech companies developing accessible products, publishers validating accessible formats, institutions procuring technology, developers implementing accessibility, and organizations ensuring remediated content provides functional accessibility beyond checkbox compliance. \n\n This service addresses critical gaps between theoretical compliance and practical accessibility including code that passes validators but breaks screen readers, keyboard navigation that technically works but proves unusable, alternative text present but unhelpful, and ARIA implementation creating confusion rather than clarity.",
+        "iconKey": "checksquare",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/ATT.jpg",
+          "alt": "Assistive technology testing"
+        },
+        "bullets": [
+          "NVDA / JAWS / VoiceOver",
+          "TalkBack checks",
+          "Keyboard-only navigation",
+          "Usability-focused verification"
+        ]
+      },
+      {
+        "id": "gov-institutional",
+        "title": "Government & Institutional Accessibility",
+        "desc": "Government and institutional accessibility compliance services ensure organizations meet federal Section 508 requirements, state accessibility laws, ADA Title II obligations, settlement agreement terms, and institutional accessibility policies through comprehensive assessment, remediation, documentation, and ongoing compliance management. \n\n With government agencies facing legal mandates, educational institutions under OCR investigation, and organizations bound by settlement agreements, compliance requires systematic approaches addressing technology accessibility, content remediation, policy implementation, and continuous monitoring. \n\n Primary stakeholders include federal, state, and local government agencies, public universities and school districts, state higher education systems, organizations with settlement agreements, and institutions receiving federal funding triggering accessibility obligations. \n\n This service resolves complex compliance challenges including evolving regulatory requirements, large-scale content remediation, organizational readiness gaps, documentation requirements for oversight reviews, and sustained compliance across distributed operations and ongoing technology changes.",
+        "iconKey": "archive",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/gov.jpg",
+          "alt": "Government accessibility services"
+        },
+        "bullets": [
+          "Public sector remediation",
+          "University compliance support",
+          "Tender + legal submissions",
+          "Standards-aligned delivery"
+        ]
+      },
+      {
+        "id": "consulting-training",
+        "title": "Accessibility Consulting & Training",
+        "desc": "Accessibility consulting and training services build organizational capability, establish strategic roadmaps, develop policies and standards, and transfer knowledge enabling institutions and organizations to embed accessibility throughout operations, culture, and technology lifecycles rather than relying solely on external remediation. \n\n As accessibility becomes business-critical requiring sustained commitment rather than one time fixes, organizations need internal expertise, systematic processes, and cultural awareness supporting proactive accessibility rather than reactive compliance. \n\n Key audiences include institutions establishing accessibility programs, organizations responding to complaints or lawsuits, companies developing accessible products, publishers implementing accessible workflows, and leadership seeking strategic accessibility guidance. \n\n This service addresses fundamental organizational challenges including lack of internal accessibility expertise, absence of systematic approaches, limited staff knowledge, unclear accountability, inadequate policies, and dependency on external vendors for ongoing accessibility needs.",
+        "iconKey": "zap",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/act.jpg",
+          "alt": "Accessibility consulting and training"
+        },
+        "bullets": [
+          "Author + designer guidelines",
+          "Training for content teams",
+          "Workflow setup assistance",
+          "Checklists + templates"
+        ]
+      }
+    ]
+  },
+  "contact_cta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Want to make your content accessible and compliant?",
+    "subheading": "Share your file types, platforms, and deadlines—we’ll recommend the best remediation plan with clear validation steps and delivery timelines.",
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "bullets": [
+      "Content type (PDF / EPUB / Web / Office files)",
+      "Target standards (WCAG, PDF/UA, EPUB Accessibility, Section 508)",
+      "Estimated volume and schedule",
+      "Platform requirements (LMS, Apple Books, Kindle, web portals)",
+      "Sample files (optional)"
+    ],
+    "note_text": "Usually respond within 24 hours (business days)"
+  }
+}

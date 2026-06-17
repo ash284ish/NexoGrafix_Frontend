@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "Contact • Nexografix"
+  },
+  "company": {
+    "name": "Nexografix",
+    "emails": [
+      "ashish@nexografix.com"
+    ],
+    "phones": [
+      "https://calendly.com/ashish-nexografix/30min"
+    ],
+    "whatsapp": "https://wa.me/919661284439"
+  },
+  "hero": {
+    "badge": "LET'S TALK",
+    "title_lines": [
+      "Engage in conversation",
+      "with skilled engineer now."
+    ],
+    "subtitle_prefix": "Reach",
+    "subtitle_suffix": "for demos, partnerships, delivery discussions, or support."
+  },
+  "cards": {
+    "text_us": {
+      "title": "WhatsApp Us",
+      "desc": "Chat with us on WhatsApp to share your requirements, timelines, or files. We’ll get back to you quickly.",
+      "button": "Chat on WhatsApp",
+      "whatsapp_text": "Hi Nexografix Team, I’d like to discuss a project or request a demo. Please connect."
+    },
+    "call_us": {
+      "title": "Book a Meeting",
+      "desc": "Schedule a meeting directly via Google Calendar to discuss requirements, timelines, or delivery details."
+    },
+    "email_us": {
+      "title": "Email ",
+      "desc": "Best for proposals, SOW, documents, and partnership conversations."
+    }
+  },
+  "location": {
+    "badge": "LOCATION",
+    "title": "Krishna Nagar, Saharsa, BIhar",
+    "subtitle": "Visit us for delivery discussions & onboarding meets.",
+    "map_query": "Bhartiya Nagar, Krishna Nagar, Saharsa, Bihar 852201",
+    "map_embed_url": "",
+    "maps_url": "",
+    "maps_button": "Open in Maps"
+  },
+  "form": {
+    "badge": "GET IN TOUCH",
+    "title": "Fill up the form",
+    "subtitle": "Share a few details — we’ll respond with next steps.",
+    "placeholders": {
+      "first_name": "First names",
+      "last_name": "Last name",
+      "email": "Your email",
+      "phone": "Phone number",
+      "message": "Type your message",
+      "service_default": "Select service"
+    },
+    "services": [
+      "AI-enabled Publishing Services",
+      "Content Production / Conversion",
+      "Assessment / Question Bank Solutions",
+      "AI Automation / Workflow Setup",
+      "Website / Product Engineering",
+      "Support / Maintenance"
+    ],
+    "button": {
+      "idle": "Get In Touch",
+      "loading": "Submitting..."
+    },
+    "hint_prefix": "Prefer quick response? Use",
+    "hint_text": "Text us",
+    "hint_middle": "or",
+    "hint_call": "Give us a call",
+    "hint_suffix": "above."
+  },
+  "toast": {
+    "required_error": "Please fill First name, Last name, Email and Message.",
+    "success": "Thanks! We received your message. our team will be in touch with you shortly.",
+    "network_error": "Network error. Submission failed.",
+    "submit_failed": "Submission failed."
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "title": "Testimonials • Nexografix"
+  },
+  "filters": [
+    "All",
+    "Publishing",
+    "Content",
+    "Assessments",
+    "Automation",
+    "Accessibility",
+    "Engineering",
+    "Ebook"
+  ],
+  "hero": {
+    "badge": "TESTIMONIALS",
+    "title": "Trusted by delivery teams worldwide",
+    "subtitle": "Real feedback from publishing, content, assessments, automation, and accessibility workflows."
+  },
+  "stats": {
+    "items": [
+      {
+        "key": "workflows_delivered",
+        "label": "WORKFLOWS DELIVERED",
+        "value": 120,
+        "suffix": "+"
+      },
+      {
+        "key": "teams_supported",
+        "label": "TEAMS SUPPORTED",
+        "value": 48,
+        "suffix": "+"
+      },
+      {
+        "key": "on_time_delivery",
+        "label": "ON-TIME DELIVERY",
+        "value": 98,
+        "suffix": "%"
+      }
+    ]
+  },
+  "empty_state": {
+    "title": "No testimonials found",
+    "subtitle": "Try selecting another category or switch back to All."
+  },
+  "bottom_section": {
+    "left": {
+      "badge": "SHARE FEEDBACK",
+      "title": "Help others make confident decision",
+      "subtitle": "If you’ve worked with Nexografix, we’d appreciate your honest feedback. Your input helps teams evaluate quality, reliability, and delivery standards.",
+      "highlights": [
+        "Short, clean form — no unnecessary fields",
+        "Optional publish permission — you stay in control",
+        "Helps future teams evaluate faster and more confidently",
+        "We may reach out if we need clarification (optional)"
+      ]
+    },
+    "right": {
+      "badge": "FEEDBACK FORM",
+      "subtitle": "Quick to fill. Professional format.",
+      "fields": [
+        {
+          "key": "first_name",
+          "label": "First name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "last_name",
+          "label": "Last name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "role",
+          "label": "Role (optional)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "company",
+          "label": "Company (optional)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "service",
+          "label": "Select service",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Publishing",
+            "Publing",
+            "Content",
+            "Assessments",
+            "Automation",
+            "Accessibility",
+            "Engineering",
+            "Ebook"
+          ]
+        },
+        {
+          "key": "rating",
+          "label": "Rating",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "label": "★★★★★ (5)",
+              "value": 5
+            },
+            {
+              "label": "★★★★☆ (4)",
+              "value": 4
+            },
+            {
+              "label": "★★★☆☆ (3)",
+              "value": 3
+            },
+            {
+              "label": "★★☆☆☆ (2)",
+              "value": 2
+            },
+            {
+              "label": "★☆☆☆☆ (1)",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "key": "message",
+          "label": "Write your feedback...",
+          "type": "textarea",
+          "rows": 5,
+          "required": true
+        },
+        {
+          "key": "publish_permission",
+          "label": "You may allow us to publish this feedback on Nexografix's website (optional).",
+          "type": "checkbox",
+          "required": false
+        }
+      ],
+      "submit_label": "Submit Feedback",
+      "thanks_note": "Thank you — we appreciate your time."
+    }
+  },
+  "testimonials": [
+    {
+      "id": "t1",
+      "first_name": "",
+      "last_name": "",
+      "role": "Enterprise Delivery",
+      "service": "Publishing",
+      "rating": 5,
+      "message": "Our association with Nexografix has significantly streamlined the execution of projects with tight deadlines. Their prompt and consistent responsiveness has been outstanding from the beginning. Aashish has ensured that all deliverables meet our requirements while proactively adapting to new processes to achieve timely and efficient outcomes.\n\nNexografix’s commitment to quality and attention to detail have consistently exceeded our expectations. Their collaborative approach and willingness to go the extra mile make them a reliable and trusted partner.",
+      "avatar_url": "https://img.freepik.com/free-psd/3d-illustration-person-with-rainbow-sunglasses_23-2149436196.jpg?semt=ais_user_personalization&w=740&q=80"
+    }
+  ]
+}

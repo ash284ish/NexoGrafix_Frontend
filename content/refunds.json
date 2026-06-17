@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "title": "Refund Policy",
+    "last_updated": "December 2025",
+    "lead": "This policy explains refunds, cancellations, and billing dispute handling for Nexografix services and platforms (including Arohio.ai)."
+  },
+  "sections": [
+    {
+      "key": "overview",
+      "toc_title": "Overview",
+      "heading": "1. Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This Refund Policy describes how refunds, cancellations, and billing disputes are handled for Nexografix (“we”, “our”, “us”) services and platforms, including Arohio.ai."
+        },
+        {
+          "type": "p",
+          "text": "Refund eligibility depends on the type of service purchased (subscription, one-time service, milestone-based work, or enterprise agreement). Where a signed contract/SOW exists, that agreement governs."
+        }
+      ]
+    },
+    {
+      "key": "eligibility",
+      "toc_title": "Refund Eligibility",
+      "heading": "2. Refund Eligibility",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A refund may be considered only if it meets the conditions below, subject to internal review:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            {
+              "label": "Duplicate payment:",
+              "text": "you were charged more than once for the same invoice/order."
+            },
+            {
+              "label": "Billing error:",
+              "text": "incorrect plan/amount charged due to a verified system issue."
+            },
+            {
+              "label": "Non-delivery of paid access:",
+              "text": "access was not provisioned despite successful payment and support was unable to resolve within a reasonable time."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Refund requests must be submitted with relevant proof (invoice/transaction ID) via the contact details mentioned below."
+        }
+      ]
+    },
+    {
+      "key": "nonRefundable",
+      "toc_title": "Non-Refundable Items",
+      "heading": "3. Non-Refundable Items",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The following are generally non-refundable, unless required by applicable law or explicitly stated in a written agreement:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            {
+              "text": "Completed consulting sessions, audits, or delivered reports"
+            },
+            {
+              "text": "Milestones that have been delivered and approved (or deemed delivered as per SOW terms)"
+            },
+            {
+              "text": "Work that has already started based on your approval/confirmation"
+            },
+            {
+              "text": "Customization, integration, or enterprise onboarding efforts already executed"
+            },
+            {
+              "text": "Usage-based fees consumed (API calls, processing, compute, storage, etc.)"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "For clarity: if a service has been delivered (in full or per milestone), refunds are not issued just because preferences changed or business priorities shifted."
+        }
+      ]
+    },
+    {
+      "key": "subscriptions",
+      "toc_title": "Subscriptions",
+      "heading": "4. Subscriptions",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If you are on a subscription plan, you may cancel at any time. Unless explicitly mentioned otherwise, cancellations stop future renewals but do not automatically trigger refunds for the current billing period."
+        },
+        {
+          "type": "p",
+          "text": "If you believe you were charged incorrectly for a subscription renewal, contact us within 7 days of the charge for review."
+        }
+      ]
+    },
+    {
+      "key": "milestones",
+      "toc_title": "Milestone-Based Projects",
+      "heading": "5. Milestone-Based Projects",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "For milestone-based or enterprise projects, payment terms and refund conditions are governed by the signed proposal/SOW/contract. Typically:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            {
+              "text": "Advance/booking amounts are used to reserve delivery capacity and may be non-refundable"
+            },
+            {
+              "text": "Delivered milestones are non-refundable once accepted or delivered per SOW definition"
+            },
+            {
+              "text": "Change requests may affect scope, timelines, and costs and do not qualify as refund triggers"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If a project is paused due to non-responsiveness or delayed approvals from the client side, it may not be eligible for refunds."
+        }
+      ]
+    },
+    {
+      "key": "cancellations",
+      "toc_title": "Cancellations",
+      "heading": "6. Cancellations",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "You may request cancellation of a service or engagement by contacting our support team. If cancellation occurs before work starts (and before capacity/resources are allocated), a refund may be considered after deducting processing charges (if any)."
+        },
+        {
+          "type": "p",
+          "text": "If work has already started, refunds are generally not available. In some cases, we may offer a partial credit (not cash refund) at our discretion."
+        }
+      ]
+    },
+    {
+      "key": "refundProcess",
+      "toc_title": "How to Request a Refund",
+      "heading": "7. How to Request a Refund",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "To request a refund, email us with the subject line “Refund Request” and include:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            {
+              "text": "Invoice / Order ID or transaction reference"
+            },
+            {
+              "text": "Registered email / account details"
+            },
+            {
+              "text": "Reason for request with relevant evidence (screenshots/logs)"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "We may request additional information to verify the request and prevent fraudulent claims."
+        }
+      ]
+    },
+    {
+      "key": "timelines",
+      "toc_title": "Refund Timelines",
+      "heading": "8. Refund Timelines",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If approved, refunds are typically processed within 5–10 business days. Actual credit time depends on your bank/payment provider."
+        },
+        {
+          "type": "p",
+          "text": "We will confirm the refund decision by email. If a refund is rejected, we will provide a brief reason and (where appropriate) alternate resolution options."
+        }
+      ]
+    },
+    {
+      "key": "exceptions",
+      "toc_title": "Exceptions & Special Cases",
+      "heading": "9. Exceptions & Special Cases",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "In rare situations, we may offer credits or partial refunds as a goodwill resolution. This is not guaranteed and is evaluated case-by-case, considering service type, time invested, and the issue reported."
+        },
+        {
+          "type": "p",
+          "text": "Refunds will not be issued for issues caused by third-party services, customer configuration errors, unsupported usage, or failure to follow documented instructions."
+        }
+      ]
+    },
+    {
+      "key": "chargebacks",
+      "toc_title": "Chargebacks & Disputes",
+      "heading": "10. Chargebacks & Disputes",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If you initiate a chargeback without contacting us first, it may result in account suspension and interruption of service access while the dispute is investigated."
+        },
+        {
+          "type": "p",
+          "text": "We recommend contacting us before filing a chargeback so we can resolve billing issues quickly and fairly."
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "toc_title": "Contact",
+      "heading": "11. Contact Information",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "For refund-related queries, billing corrections, or disputes, contact Nexografix:"
+        },
+        {
+          "type": "contact",
+          "items": [
+            {
+              "label": "Email",
+              "value": "ashish@nexografix.com",
+              "href": "mailto:ashish@nexografix.com"
+            },
+            {
+              "label": "Phone",
+              "value": "India Office:- +91 9661284439",
+              "href": "tel:+919661284439"
+            },
+            {
+              "label": "LinkedIn",
+              "value": "linkedin.com/company/nexografix",
+              "href": "https://www.linkedin.com/company/nexografix"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Please include your transaction reference for faster resolution."
+        }
+      ]
+    }
+  ]
+}

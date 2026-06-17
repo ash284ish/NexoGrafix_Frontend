@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "Localization & Media Accessibility Services"
+  },
+  "hero": {
+    "eyebrow": "LOCALIZATION & ACCESSIBILITY",
+    "title": "Localization & Media Accessibility Services",
+    "subtitle": "Make audio-visual and digital content accessible, inclusive, and globally usable through captions, descriptions, transcripts, and multilingual localization.",
+    "hero_image": {
+      "src": "https://nexografix.com/api/uploads/testimonials/local.jpg",
+      "alt": "Localization & Media Accessibility Services"
+    },
+    "pills": [
+      "Audio Description",
+      "Subtitles & Captions",
+      "Transcription",
+      "Video Accessibility",
+      "Image Descriptions",
+      "Localization",
+      "Translation",
+      "QA & Review",
+      "Multilingual Delivery"
+    ],
+    "chips": [
+      {
+        "iconKey": "shield",
+        "text": "Accessibility-first workflows and review"
+      },
+      {
+        "iconKey": "barchart2",
+        "text": "Platform-ready multilingual delivery"
+      }
+    ],
+    "badges": [
+      {
+        "iconKey": "checkcircle",
+        "text": "WCAG-aligned outputs"
+      },
+      {
+        "iconKey": "filetext",
+        "text": "Clean transcripts and captions"
+      },
+      {
+        "iconKey": "zap",
+        "text": "Fast turnaround for releases"
+      }
+    ],
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "note_text": "Built for education, training, and media platforms"
+  },
+  "trust_metrics": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Accessible media that works across audiences and platforms",
+    "subheading": "From captions and transcripts to audio descriptions and multilingual localization, we help teams publish inclusive content with confidence.",
+    "stats": [
+      {
+        "id": "projects",
+        "icon": "projects",
+        "value": 1800,
+        "suffix": "+",
+        "label": "Media assets processed",
+        "hint": "Videos, eLearning modules, and learning resources delivered with captions, transcripts, and descriptions."
+      },
+      {
+        "id": "qa",
+        "icon": "qa",
+        "value": 99,
+        "suffix": "%",
+        "label": "Accessibility-ready delivery",
+        "hint": "Quality checks for timing, readability, terminology, and compliance alignment.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "icon": "partners",
+        "value": 60,
+        "suffix": "+",
+        "label": "Teams supported",
+        "hint": "EdTech, training, public sector, and media teams distributing content across platforms and regions."
+      }
+    ]
+  },
+  "services_carousel": {
+    "eyebrow": "SERVICES",
+    "heading": "Localization & media accessibility services",
+    "subheading": "Browse our services in a guided carousel—each capability highlights deliverables, compliance alignment, and platform-ready formats.",
+    "auto_rotate_ms": 6500,
+    "pause_on_hover": true,
+    "show_tabs": true,
+    "slides": [
+      {
+        "id": "audio-description",
+        "title": "Audio Description Services",
+        "desc": "Audio description services create narrated descriptions of visual information in educational videos, films, and multimedia content enabling blind and low vision learners to access visual elements essential to comprehension through synchronized verbal descriptions integrated into existing audio tracks. \n\n With video dominating educational delivery and legal requirements mandating equal access to digital content, audio description transforms visual-dependent educational materials into accessible, inclusive learning experiences serving learners with visual disabilities. \n\n Primary stakeholders include universities providing accessible course materials, K-12 districts meeting IEP requirements, EdTech platforms ensuring product accessibility, publishers creating inclusive digital content, museums and cultural institutions, and media organizations serving diverse audiences. \n\n This service addresses critical accessibility barriers including visual information inaccessible to screen reader users, educational videos excluding blind students, compliance gaps violating ADA and Section 508, and pedagogical content relying on visual demonstration that verbal lecture alone cannot convey.",
+        "iconKey": "film",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/audio dis.jpg",
+          "alt": "Audio description services"
+        },
+        "bullets": [
+          "Scene-by-scene visual narration",
+          "Extended audio descriptions (when required)",
+          "Script writing + voice-over integration",
+          "Best fit for eLearning, training, OTT, public media"
+        ]
+      },
+      {
+        "id": "subtitles-captions",
+        "title": "Subtitle & Captioning Services",
+        "desc": "Subtitle and caption services create accurate, synchronized text versions of spoken dialogue and relevant audio information in educational videos enabling access for deaf and hard of hearing learners, supporting comprehension for English language learners, and providing searchable text enhancing content discovery and flexible learning. \n\n As video becomes primary educational content delivery method and accessibility laws require captioned media, professional captioning ensures equal access, legal compliance, and enhanced learning experiences across diverse student populations and learning contexts. \n\n Core audiences include educational institutions providing accessible course materials, EdTech platforms captioning video content, publishers creating multimedia textbooks, corporate training departments, content creators, and organizations serving multilingual or diverse audiences. \n\n This service resolves critical access barriers including deaf students excluded from video content, hard of hearing learners missing critical audio information, legal compliance gaps, poor quality auto-captions undermining comprehension, and lack of searchability in video libraries.",
+        "iconKey": "messagesquare",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/subtitle.jpg",
+          "alt": "Subtitle and captioning services"
+        },
+        "bullets": [
+          "Closed captions (CC) and open captions",
+          "SDH (Subtitles for Deaf & Hard of Hearing)",
+          "Time-coded subtitles + platform-ready delivery",
+          "Aligned to WCAG and platform/FCC guidelines"
+        ]
+      },
+      {
+        "id": "transcription",
+        "title": "Video Transcription Services",
+        "desc": "Transcription services create accurate, formatted text versions of audio and video educational content including lectures, interviews, discussions, and presentations providing searchable documents, study resources, accessibility alternatives, and content repurposing foundations supporting diverse educational needs and content workflows. \n\n With increasing demand for accessible alternatives, searchable content, and multi-format educational resources, professional transcription enables content discovery, supports varied learning preferences, facilitates content reuse, and provides foundational text for derivative accessible formats. \n\n Primary beneficiaries include educational institutions creating course materials, researchers analyzing qualitative data, publishers repurposing audio content, podcasters creating accessible content, content creators enabling SEO, and organizations requiring documented records of educational events. \n\n This service addresses critical operational needs including inaccessible audio-only content, difficulty searching within audio libraries, time-consuming manual transcription, need for verbatim records, and absence of text alternatives required for accessibility compliance.",
+        "iconKey": "filetext",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/videotrans.jpg",
+          "alt": "Video transcription services"
+        },
+        "bullets": [
+          "Verbatim or clean-read transcription",
+          "Time-coded transcripts + speaker identification",
+          "Ideal for technical and educational content",
+          "Delivered in DOCX, TXT, SRT, VTT, PDF"
+        ]
+      },
+      {
+        "id": "video-accessibility",
+        "title": "Video Accessibility (Audio-Visual Accessibility)",
+        "desc": "Video accessibility services provide comprehensive accessibility solutions for educational video content including captions, audio descriptions, transcripts, accessible video players, and platform accessibility ensuring complete video accessibility meeting WCAG 2.1 Level AA standards and supporting all learners regardless of disability. \n\n As video becomes predominant educational content format and accessibility requirements demand comprehensive accommodation, integrated video accessibility solutions address multiple access needs simultaneously ensuring legal compliance and inclusive learning experiences. \n\n Core stakeholders include educational institutions implementing accessible online programs, EdTech platforms developing compliant video features, publishers creating multimedia textbooks, corporate training programs, content creators, and organizations with comprehensive accessibility obligations. \n\n This service resolves complex accessibility challenges including piecemeal solutions creating gaps, difficulty coordinating multiple accessibility features, player accessibility barriers, format compatibility issues, and need for systematic approach to video accessibility across institutional content.",
+        "iconKey": "playcircle",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/video asses.jpg",
+          "alt": "Video accessibility services"
+        },
+        "bullets": [
+          "Audio descriptions + captions/subtitles",
+          "Transcript integration for learning and compliance",
+          "Accessible video players + keyboard-navigable controls",
+          "WCAG-aligned delivery for platforms and LMS"
+        ]
+      },
+      {
+        "id": "image-accessibility",
+        "title": "Image Accessibility & Image Description",
+        "desc": "Image description services create concise, accurate alternative text and extended descriptions for images in educational content enabling blind and low vision learners to access visual information through screen readers while meeting WCAG accessibility requirements and supporting inclusive learning experiences. \n\n With educational materials increasingly digital and images essential to learning across disciplines, professional image description ensures visual content accessibility, legal compliance, and pedagogical equivalence for learners who cannot perceive images visually. \n\n Primary users include publishers creating accessible digital content, educational institutions ensuring course material accessibility, EdTech platforms building compliant products, content creators supporting inclusive content, and organizations meeting accessibility requirements for visual materials. \n\n This service addresses critical accessibility gaps including images without alternative text preventing content access, generic alt text lacking educational value, complex images requiring extended descriptions, and absence of subject matter expertise in automated description generation.",
+        "iconKey": "image",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/image.jpg",
+          "alt": "Image accessibility and descriptions"
+        },
+        "bullets": [
+          "Alt text writing + long descriptions",
+          "Diagram, chart, and STEM image descriptions",
+          "Context-based explanations for learning content",
+          "Aligned to WCAG, PDF/UA, and EPUB accessibility"
+        ]
+      },
+      {
+        "id": "video-description",
+        "title": "Video Description (Visual Narration)",
+        "desc": "Video visual narration services provide live or recorded verbal descriptions of visual content during virtual events, webinars, live streams, and presentations enabling blind and low vision participants to follow visual elements in real-time supporting accessibility in synchronous online education and institutional events. \n\n As virtual events, live-streamed lectures, and synchronous online learning become standard educational delivery methods, visual narration ensures blind participants receive real-time access to visual information presented during live educational experiences. \n\n Core audiences include universities hosting virtual conferences, institutions offering live online courses, professional development providers, educational associations hosting webinars, and organizations conducting accessible virtual events and live-streamed education. \n\n This service resolves time-sensitive accessibility challenges including live events inaccessible to blind participants, presentation slides unreadable by screen readers, real-time visual content without description, and inability to post-produce audio description for ephemeral live content.",
+        "iconKey": "bookopen",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/video dis.jpg",
+          "alt": "Video description and visual narration"
+        },
+        "bullets": [
+          "Visual description scripting for learning content",
+          "Scene descriptions for tutorials and assessments",
+          "Integrated narration scripts for production teams",
+          "Multi-language video descriptions (optional)"
+        ]
+      },
+      {
+        "id": "audio-translation",
+        "title": "Audio Translation Services",
+        "desc": "Translation services for educational content convert textbooks, course materials, multimedia, and digital learning resources into multiple languages supporting international education, multilingual institutions, English language learner support, and global content distribution while maintaining pedagogical integrity and accessibility features. \n\n As education becomes increasingly global and institutions serve diverse linguistic populations, professional translation enables content accessibility across languages, supports multilingual learners, and expands educational content reach to international markets. \n\n Primary stakeholders include publishers pursuing international markets, universities serving multilingual student populations, EdTech platforms supporting global distribution, K-12 districts with English learner populations, and organizations requiring multilingual educational content and accessibility. \n\n This service addresses critical language access barriers including content available only in English excluding non-English speakers, poor quality machine translation undermining comprehension, translated content losing pedagogical effectiveness, and accessibility features not transferred across language versions.",
+        "iconKey": "globe",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/audio translation.jpg",
+          "alt": "Audio translation services"
+        },
+        "bullets": [
+          "Audio-to-audio translation",
+          "Audio-to-text translation",
+          "Voice-over translation and dubbing",
+          "Multilingual delivery for learning programs"
+        ]
+      },
+      {
+        "id": "audio-review-qa",
+        "title": "Audio Review & Quality Check",
+        "desc": "Quality reviews to ensure clarity, timing, terminology accuracy, and accessibility alignment across audio and video deliverables.",
+        "iconKey": "checkcircle",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/audioqc.jpg",
+          "alt": "Audio review and quality checks"
+        },
+        "bullets": [
+          "Audio quality review + pronunciation checks",
+          "Timing and sync verification",
+          "Terminology and language validation",
+          "Accessibility compliance review for deliverables"
+        ]
+      },
+      {
+        "id": "translation-services",
+        "title": "Translation Services (Text & Media)",
+        "desc": "Accurate translation with cultural relevance for learning content, publishing, UI, and media distribution across regions.",
+        "iconKey": "shield",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/translation.jpg",
+          "alt": "Translation services for text and media"
+        },
+        "bullets": [
+          "Educational content and textbook translation",
+          "Subtitles/captions translation + UI localization",
+          "Multilingual document translation",
+          "Indian and international languages (customizable)"
+        ]
+      }
+    ]
+  },
+  "contact_cta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Want to make your content accessible and multilingual?",
+    "subheading": "Share your content type, target platforms, languages, and release timeline—we’ll recommend a delivery plan with clear accessibility and quality checkpoints.",
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "bullets": [
+      "Content type (video / eLearning / training / media)",
+      "Need captions, subtitles, transcripts, or audio description",
+      "Target languages and regional requirements",
+      "Preferred formats (SRT / VTT / DOCX / PDF) and platform specs",
+      "Timeline, volume, and QA expectations"
+    ],
+    "note_text": "Usually respond within 24 hours (business days)"
+  }
+}

@@ -1,0 +1,608 @@
+{
+    "meta": {
+        "page": "home",
+        "version": "1.0",
+        "createdAt": "2025-01-05T10:30:00Z",
+        "updatedAt": "2025-01-10T18:45:00Z",
+        "updatedBy": "admin@nexografix.com",
+        "watermark": "Nexografix CMS",
+        "status": "published"
+    },
+    "hero": {
+        "order": 1,
+        "badge": {
+            "dot": true,
+            "text": "Document Accessibility · Publishing Compliance · AI Automation"
+        },
+        "headline": {
+            "line1": "Your PDFs, EPUBs and documents — WCAG & Section 508 compliant",
+            "line2": "in 72 hours. Guaranteed or we fix them free."
+        },
+        "description": "Nexografix delivers technology-enabled solutions across AI automation tools, publishing workflows, academic content production, assessment design, and enterprise operations — with structured execution and quality standards.",
+        "cta": {
+            "primary": {
+                "label": "Book Demo",
+                "href": "/contact"
+            },
+            "secondary": {
+                "label": "Explore Solutions",
+                "href": "/publishing-digitization"
+            }
+        },
+        "trustNote": "Enterprise delivery standards",
+        "heroImage": {
+            "src": "https://nexografix.com/api/uploads/testimonials/fg-removebg-preview.png",
+            "alt": "Nexografix preview"
+        }
+    },
+    "whychoose": {
+        "order": 2,
+        "pill": "WHY CHOOSE US",
+        "title": "Why Choose Nexografix",
+        "subtitle": "We remediate documents, build accessible publications, and automate compliance workflows — for publishers, law firms, EdTech companies, and government contractors. Every delivery includes a compliance validation report.",
+        "items": [
+            {
+                "order": 1,
+                "no": "01",
+                "title": "Enterprise Delivery Standards",
+                "desc": "Structured execution with clear milestones, SLA-first mindset, and predictable outcomes designed for enterprise-grade delivery.",
+                "icon": "ShieldCheck",
+                "href": "/about"
+            },
+            {
+                "order": 2,
+                "no": "02",
+                "title": "Domain-Led Publishing & Accessibility Expertise",
+                "desc": "Deep expertise in publishing, eBook conversion, XML/EPUB workflows, and accessibility compliance—where accuracy and standards matter more than speed alone.",
+                "icon": "Layers",
+                "href": "/about"
+            },
+            {
+                "order": 3,
+                "no": "03",
+                "title": "Technology as an Enabler",
+                "desc": "Purpose-built websites, dashboards, and platforms that support content workflows, compliance, and scale—not generic app development.",
+                "icon": "Sparkles",
+                "href": "/about"
+            },
+            {
+                "order": 4,
+                "no": "04",
+                "title": "Reliable & Accountable Turnaround",
+                "desc": "Deadline-driven execution backed by QA checks, transparent communication, and ownership from kickoff to delivery.",
+                "icon": "Timer",
+                "href": "/about"
+            }
+        ]
+    },
+    "clients": {
+        "order": 3,
+        "pill": "TRUSTED ECOSYSTEM",
+        "title": "Platforms trusted by global enterprises",
+        "subtitle": "Our solutions align with platforms used by leading enterprises across publishing, accessibility, automation, digital learning, and content operations.",
+        "footerNote": "Nexografix workflows integrate seamlessly with industry-standard enterprise platforms used across global publishing and digital content ecosystems.",
+        "marqueeSpeed": 28,
+        "items": [
+            {
+                "order": 1,
+                "name": "Hurix Digital",
+                "domain": "hurix.com",
+                "imageUrl": "https://nexografix.com/api/uploads/testimonials/Hurix-@25-Final-Art-work-color-02-scaled.png.webp"
+            },
+            {
+                "order": 2,
+                "name": "Google Cloud",
+                "domain": "cloud.google.com",
+                "imageUrl": "https://cdn.simpleicons.org/googlecloud/4285F4"
+            },
+            {
+                "order": 3,
+                "name": "HubSpot",
+                "domain": "hubspot.com",
+                "imageUrl": "https://cdn.simpleicons.org/hubspot/FF7A59"
+            }
+        ]
+    },
+    "servicesOverview": {
+        "order": 4,
+        "heading": "Service Overview",
+        "subheading": "Enterprise-grade solutions across content, accessibility, AI data, and digital platforms.",
+        "badgeRight": "Visual Preview",
+        "autoRotateMs": 6000,
+        "startIndex": 0,
+        "pauseOnHover": true,
+        "slides": [
+            {
+                "order": 1,
+                "id": "publishing",
+                "title": "Publishing & Digitization",
+                "subtitle": "Digitization workflows that stay accurate at scale — scanning, conversion, and structured outputs.",
+                "image": {
+                    "src": "https://nexografix.com/api/uploads/testimonials/digital.jpg",
+                    "alt": "Publishing & Digitization"
+                },
+                "miniStats": [
+                    {
+                        "order": 1,
+                        "label": "Output",
+                        "value": "EPUB / XML / PDF"
+                    },
+                    {
+                        "order": 2,
+                        "label": "QA",
+                        "value": "Multi-stage checks"
+                    },
+                    {
+                        "order": 3,
+                        "label": "Speed",
+                        "value": "Batch throughput"
+                    },
+                    {
+                        "order": 4,
+                        "label": "Tracking",
+                        "value": "Clear status"
+                    }
+                ],
+                "cards": [
+                    {
+                        "order": 1,
+                        "icon": "FiLayers",
+                        "title": "Structured Workflows",
+                        "desc": "Clear stages for intake → processing → delivery."
+                    },
+                    {
+                        "order": 2,
+                        "icon": "FiCpu",
+                        "title": "Automation + Oversight",
+                        "desc": "AI accelerates, humans validate context and rules."
+                    },
+                    {
+                        "order": 3,
+                        "icon": "FiCheckCircle",
+                        "title": "Quality Gates",
+                        "desc": "Review layers ensure consistent formatting and accuracy."
+                    },
+                    {
+                        "order": 4,
+                        "icon": "FiActivity",
+                        "title": "Delivery Control",
+                        "desc": "Progress visibility and predictable timelines."
+                    }
+                ],
+                "cta": {
+                    "label": "Explore Publishing",
+                    "href": "/publishing-digitization"
+                }
+            },
+            {
+                "order": 2,
+                "id": "accessibility",
+                "title": "Accessibility & Compliance",
+                "subtitle": "WCAG, PDF/UA, EPUB accessibility remediation with audits and assistive-tech testing.",
+                "image": {
+                    "src": "https://nexografix.com/api/uploads/testimonials/Mask group (13).png",
+                    "alt": "Accessibility & Compliance"
+                },
+                "miniStats": [
+                    {
+                        "order": 1,
+                        "label": "Standards",
+                        "value": "WCAG / PDF/UA"
+                    },
+                    {
+                        "order": 2,
+                        "label": "Audit",
+                        "value": "Compliance reports"
+                    },
+                    {
+                        "order": 3,
+                        "label": "Testing",
+                        "value": "Assistive tech"
+                    },
+                    {
+                        "order": 4,
+                        "label": "Fixes",
+                        "value": "Remediation"
+                    }
+                ],
+                "cards": [
+                    {
+                        "order": 1,
+                        "icon": "FiFileText",
+                        "title": "PDF Accessibility",
+                        "desc": "Tagging, reading order, contrast, form fixes."
+                    },
+                    {
+                        "order": 2,
+                        "icon": "FiBookOpen",
+                        "title": "EPUB Accessibility",
+                        "desc": "Semantic structure, navigation, metadata."
+                    },
+                    {
+                        "order": 3,
+                        "icon": "FiHeadphones",
+                        "title": "Media Accessibility",
+                        "desc": "Captions, transcripts, audio descriptions."
+                    },
+                    {
+                        "order": 4,
+                        "icon": "FiCheckCircle",
+                        "title": "Compliance Proof",
+                        "desc": "Audit-ready documentation and validation."
+                    }
+                ],
+                "cta": {
+                    "label": "Explore Accessibility",
+                    "href": "/accessibility-compliance"
+                }
+            },
+            {
+                "order": 3,
+                "id": "it",
+                "title": "IT & Digital Platforms",
+                "subtitle": "Web, mobile, integrations, and automation built for reliability and scale.",
+                "image": {
+                    "src": "https://nexografix.com/api/uploads/testimonials/IT.jpg",
+                    "alt": "IT & Digital Platforms"
+                },
+                "miniStats": [
+                    {
+                        "order": 1,
+                        "label": "Stack",
+                        "value": "Modern web"
+                    },
+                    {
+                        "order": 2,
+                        "label": "APIs",
+                        "value": "Integrations"
+                    },
+                    {
+                        "order": 3,
+                        "label": "UX",
+                        "value": "Clean UI"
+                    },
+                    {
+                        "order": 4,
+                        "label": "Ops",
+                        "value": "Stable delivery"
+                    }
+                ],
+                "cards": [
+                    {
+                        "order": 1,
+                        "icon": "FiCpu",
+                        "title": "Engineering Quality",
+                        "desc": "Maintainable, scalable architecture."
+                    },
+                    {
+                        "order": 2,
+                        "icon": "FiZap",
+                        "title": "Automation",
+                        "desc": "Reduce manual ops via workflows."
+                    },
+                    {
+                        "order": 3,
+                        "icon": "FiLayers",
+                        "title": "Systems",
+                        "desc": "CMS, DAM, content platforms."
+                    },
+                    {
+                        "order": 4,
+                        "icon": "FiCheckCircle",
+                        "title": "Delivery",
+                        "desc": "Milestone-driven execution."
+                    }
+                ],
+                "cta": {
+                    "label": "Explore Platforms",
+                    "href": "/digital-platforms"
+                }
+            },
+            {
+                "order": 4,
+                "id": "data-labeling",
+                "title": "Data Labeling & Annotation",
+                "subtitle": "High-quality labeled datasets for AI and machine learning models.",
+                "image": {
+                    "src": "https://nexografix.com/api/uploads/testimonials/Label.jpg",
+                    "alt": "Data Labeling & Annotation"
+                },
+                "miniStats": [
+                    {
+                        "order": 1,
+                        "label": "Data",
+                        "value": "Image / Text / Audio"
+                    },
+                    {
+                        "order": 2,
+                        "label": "Accuracy",
+                        "value": "Human-reviewed"
+                    },
+                    {
+                        "order": 3,
+                        "label": "Scale",
+                        "value": "High volume"
+                    },
+                    {
+                        "order": 4,
+                        "label": "QA",
+                        "value": "Validation layers"
+                    }
+                ],
+                "cards": [
+                    {
+                        "order": 1,
+                        "icon": "FiFileText",
+                        "title": "Text Annotation",
+                        "desc": "NLP tagging, classification, sentiment."
+                    },
+                    {
+                        "order": 2,
+                        "icon": "FiLayers",
+                        "title": "Image & Video",
+                        "desc": "Bounding boxes, polygons, keypoints."
+                    },
+                    {
+                        "order": 3,
+                        "icon": "FiHeadphones",
+                        "title": "Audio Data",
+                        "desc": "Speech labeling and transcription."
+                    },
+                    {
+                        "order": 4,
+                        "icon": "FiCheckCircle",
+                        "title": "Quality Assurance",
+                        "desc": "Multi-pass validation checks."
+                    }
+                ],
+                "cta": {
+                    "label": "Explore Data Services",
+                    "href": "/data-labeling"
+                }
+            },
+            {
+                "order": 5,
+                "id": "localization",
+                "title": "Localization & Media Accessibility",
+                "subtitle": "Make content accessible across languages, regions, and formats.",
+                "image": {
+                    "src": "https://nexografix.com/api/uploads/testimonials/acess.jpg",
+                    "alt": "Localization & Media Accessibility"
+                },
+                "miniStats": [
+                    {
+                        "order": 1,
+                        "label": "Languages",
+                        "value": "Global"
+                    },
+                    {
+                        "order": 2,
+                        "label": "Media",
+                        "value": "Audio / Video"
+                    },
+                    {
+                        "order": 3,
+                        "label": "Standards",
+                        "value": "Accessibility-ready"
+                    },
+                    {
+                        "order": 4,
+                        "label": "Reach",
+                        "value": "Inclusive"
+                    }
+                ],
+                "cards": [
+                    {
+                        "order": 1,
+                        "icon": "FiPenTool",
+                        "title": "Translation",
+                        "desc": "Text and media localization."
+                    },
+                    {
+                        "order": 2,
+                        "icon": "FiHeadphones",
+                        "title": "Audio Description",
+                        "desc": "Narration for visual content."
+                    },
+                    {
+                        "order": 3,
+                        "icon": "FiFileText",
+                        "title": "Captions",
+                        "desc": "Subtitles and transcripts."
+                    },
+                    {
+                        "order": 4,
+                        "icon": "FiCheckCircle",
+                        "title": "Compliance",
+                        "desc": "Accessibility-aligned delivery."
+                    }
+                ],
+                "cta": {
+                    "label": "Explore Localization",
+                    "href": "/localization-media"
+                }
+            },
+            {
+                "order": 6,
+                "id": "elearning",
+                "title": "Content, eLearning & EdTech",
+                "subtitle": "Learning content, assessments, and instructional design for scale.",
+                "image": {
+                    "src": "https://nexografix.com/api/uploads/testimonials/content.jpg",
+                    "alt": "Content, eLearning & EdTech"
+                },
+                "miniStats": [
+                    {
+                        "order": 1,
+                        "label": "Audience",
+                        "value": "K–12 to Enterprise"
+                    },
+                    {
+                        "order": 2,
+                        "label": "Formats",
+                        "value": "Video / LMS"
+                    },
+                    {
+                        "order": 3,
+                        "label": "Design",
+                        "value": "Instructional"
+                    },
+                    {
+                        "order": 4,
+                        "label": "Scale",
+                        "value": "High volume"
+                    }
+                ],
+                "cards": [
+                    {
+                        "order": 1,
+                        "icon": "FiBookOpen",
+                        "title": "Learning Content",
+                        "desc": "Structured educational materials."
+                    },
+                    {
+                        "order": 2,
+                        "icon": "FiBox",
+                        "title": "Assessments",
+                        "desc": "Question banks and evaluations."
+                    },
+                    {
+                        "order": 3,
+                        "icon": "FiPenTool",
+                        "title": "Instructional Design",
+                        "desc": "Outcome-driven course design."
+                    },
+                    {
+                        "order": 4,
+                        "icon": "FiCheckCircle",
+                        "title": "Delivery",
+                        "desc": "Consistent quality at scale."
+                    }
+                ],
+                "cta": {
+                    "label": "Explore eLearning",
+                    "href": "/elearning-edtech"
+                }
+            }
+        ]
+    },
+    "coreFeatures": {
+        "order": 5,
+        "pill": "OUR FEATURES",
+        "title": "What’s Included in Nexografix Delivery",
+        "subtitle": "Operationally structured delivery backed by measurable SLAs, global accessibility standards, AI-assisted workflows, and compliance-focused validation.",
+        "features": [
+            {
+                "order": 1,
+                "title": "Guaranteed Turnaround SLA",
+                "desc": "Defined delivery timelines with milestone-based execution, priority handling, and scalable production capacity to support enterprise publishing and accessibility workflows.",
+                "icon": "Timer"
+            },
+            {
+                "order": 2,
+                "title": "Standards & Format Support",
+                "desc": "Support for WCAG, EPUB, PDF/UA, Section 508, XML workflows, DAISY, and structured digital publishing standards across educational and enterprise content.",
+                "icon": "BadgeCheck"
+            },
+            {
+                "order": 3,
+                "title": "AI + Human Review Workflow",
+                "desc": "AI-assisted automation combined with expert human validation to ensure accuracy, consistency, accessibility compliance, and scalable delivery quality.",
+                "icon": "Bot"
+            },
+            {
+                "order": 4,
+                "title": "Compliance Certificate Included",
+                "desc": "Accessibility validation reports and compliance certification included with delivery to support audit readiness, procurement requirements, and institutional standards.",
+                "icon": "FileCheck"
+            },
+            {
+                "order": 5,
+                "title": "Multi-Layer Quality Assurance",
+                "desc": "Structured QA checkpoints, review cycles, regression validation, and final verification processes to maintain reliable and error-free delivery.",
+                "icon": "ShieldCheck"
+            },
+            {
+                "order": 6,
+                "title": "Secure Enterprise Delivery",
+                "desc": "Version-controlled workflows, secure file handling, audit tracking, and enterprise-grade operational practices for confidential publishing and assessment projects.",
+                "icon": "Lock"
+            }
+        ]
+    },
+    "testimonials": {
+        "order": 7,
+        "pill": "TESTIMONIALS",
+        "title": "Trusted by delivery teams worldwide",
+        "subtitle": "Real feedback from publishing, content, assessments, automation, and accessibility workflows.",
+        "rows": [
+            {
+                "order": 1,
+                "direction": "left",
+                "speedSeconds": 34
+            },
+            {
+                "order": 2,
+                "direction": "right",
+                "speedSeconds": 38
+            }
+        ],
+        "items": [
+            {
+                "order": 1,
+                "role": "Publishing Ops Lead",
+                "rating": 5,
+                "text": "Nexografix handled our publishing pipeline with exceptional discipline. Timelines were met, QA was solid, and communication stayed clear.",
+                "avatar": "https://i.pravatar.cc/120?img=5"
+            },
+            {
+                "order": 2,
+                "name": "Rahul Mehta",
+                "role": "Content Program Manager",
+                "rating": 5,
+                "text": "Their execution felt enterprise-grade. We got structured milestones, clean reporting, and dependable outcomes across teams.",
+                "avatar": "https://i.pravatar.cc/120?img=12"
+            },
+            {
+                "order": 3,
+                "name": "Sofia Carter",
+                "role": "Assessment Specialist",
+                "rating": 4,
+                "text": "Assessment workflows were smooth — review cycles, validations, and release support were handled with minimal back-and-forth.",
+                "avatar": "https://i.pravatar.cc/120?img=32"
+            },
+            {
+                "order": 4,
+                "name": "Daniel Kim",
+                "role": "Automation Lead",
+                "rating": 5,
+                "text": "AI-enabled automation improved our turnaround without sacrificing quality. Their process is repeatable and scalable.",
+                "avatar": "https://i.pravatar.cc/120?img=21"
+            },
+            {
+                "order": 5,
+                "name": "Neha Verma",
+                "role": "Accessibility Consultant",
+                "rating": 5,
+                "text": "Accessibility + compliance work was done properly. The team understood WCAG expectations and delivered clean remediation.",
+                "avatar": "https://i.pravatar.cc/120?img=47"
+            },
+            {
+                "order": 6,
+                "name": "James Wilson",
+                "role": "Enterprise Delivery Manager",
+                "rating": 5,
+                "text": "Strong QA and delivery governance. We always knew what’s next, what’s blocked, and what’s done.",
+                "avatar": "https://i.pravatar.cc/120?img=8"
+            },
+            {
+                "order": 7,
+                "name": "James Wilson",
+                "role": "Enterprise Delivery Manager",
+                "rating": 5,
+                "text": "Our association with Nexografix has significantly streamlined the execution of projects with tight deadlines. Their prompt and consistent responsiveness has been outstanding from the beginning. ",
+                "avatar": "https://i.pravatar.cc/120?img=8"
+            }
+        ]
+    }
+}

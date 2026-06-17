@@ -53,17 +53,10 @@ const nextConfig: NextConfig = {
   },
 
   async rewrites() {
-    const isDev = process.env.NODE_ENV === "development";
-    // In development, proxy requests to the local backend on port 8000
-    const backendUrl = isDev ? "http://127.0.0.1:8000" : (process.env.NEXT_PUBLIC_API_BASE_URL || "https://nexografix.com");
     return [
       {
-        source: "/uploads/:path*",
-        destination: `${backendUrl}/api/uploads/:path*`,
-      },
-      {
-        source: "/api/:path*",
-        destination: `${backendUrl}/api/:path*`,
+        source: "/api/uploads/:path*",
+        destination: "/uploads/:path*",
       },
     ];
   },

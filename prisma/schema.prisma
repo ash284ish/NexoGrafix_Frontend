@@ -1,0 +1,315 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model audit_logs {
+  id           Int      @id @default(autoincrement())
+  user_id      Int?
+  action       String   @db.VarChar(50)
+  entity_table String   @db.VarChar(100)
+  entity_id    Int?
+  old_data     String?
+  new_data     String?
+  ip_address   String?  @db.VarChar(45)
+  user_agent   String?
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+  users        users?   @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+
+  @@index([id], map: "ix_audit_logs_id")
+  @@index([user_id], map: "ix_audit_logs_user_id")
+}
+
+model contact_requests {
+  id         Int      @id @default(autoincrement())
+  first_name String   @db.VarChar(100)
+  last_name  String   @db.VarChar(100)
+  email      String   @db.VarChar(255)
+  phone      String?  @db.VarChar(30)
+  service    String?  @db.VarChar(120)
+  message    String
+  status     String   @db.VarChar(30)
+  note       String?
+  created_at DateTime @db.Timestamptz(6)
+  updated_at DateTime @db.Timestamptz(6)
+
+  @@index([email], map: "ix_contact_requests_email")
+  @@index([id], map: "ix_contact_requests_id")
+  @@index([status], map: "ix_contact_requests_status")
+}
+
+model feedbacks {
+  id             Int      @id @default(autoincrement())
+  first_name     String   @db.VarChar(100)
+  last_name      String   @db.VarChar(100)
+  role           String?  @db.VarChar(120)
+  company        String?  @db.VarChar(150)
+  service        String   @db.VarChar(120)
+  rating         Int
+  rating_label   String   @db.VarChar(20)
+  message        String
+  avatar_url     String?  @db.VarChar(500)
+  can_publish    Boolean
+  publish_status String   @db.VarChar(30)
+  status         String   @db.VarChar(30)
+  is_featured    Boolean
+  source         String   @db.VarChar(50)
+  note           String?
+  created_at     DateTime @db.Timestamptz(6)
+  updated_at     DateTime @db.Timestamptz(6)
+
+  @@index([id], map: "ix_feedbacks_id")
+  @@index([publish_status], map: "ix_feedbacks_publish_status")
+  @@index([rating_label], map: "ix_feedbacks_rating_label")
+  @@index([service], map: "ix_feedbacks_service")
+  @@index([status], map: "ix_feedbacks_status")
+}
+
+model media_assets {
+  id                 Int                  @id @default(autoincrement())
+  kind               media_asset_kind
+  url                String
+  alt_text           String?              @db.VarChar(255)
+  caption            String?              @db.VarChar(255)
+  width              Int?
+  height             Int?
+  created_at         DateTime             @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime             @default(now()) @db.Timestamptz(6)
+  page_section_media page_section_media[]
+
+  @@index([id], map: "ix_media_assets_id")
+}
+
+model nav_menu_items {
+  id                   Int              @id @default(autoincrement())
+  menu_id              Int
+  parent_id            Int?
+  label                String           @db.VarChar(255)
+  href                 String?          @db.VarChar(255)
+  page_id              Int?
+  order_index          Int
+  is_enabled           Boolean
+  created_at           DateTime         @default(now()) @db.Timestamptz(6)
+  updated_at           DateTime         @default(now()) @db.Timestamptz(6)
+  nav_menus            nav_menus        @relation(fields: [menu_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  pages                pages?           @relation(fields: [page_id], references: [id], onUpdate: NoAction)
+  nav_menu_items       nav_menu_items?  @relation("nav_menu_itemsTonav_menu_items", fields: [parent_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  other_nav_menu_items nav_menu_items[] @relation("nav_menu_itemsTonav_menu_items")
+
+  @@index([id], map: "ix_nav_menu_items_id")
+  @@index([menu_id], map: "ix_nav_menu_items_menu_id")
+}
+
+model nav_menus {
+  id             Int              @id @default(autoincrement())
+  key            String           @unique @db.VarChar(100)
+  title          String?          @db.VarChar(255)
+  created_at     DateTime         @default(now()) @db.Timestamptz(6)
+  updated_at     DateTime         @default(now()) @db.Timestamptz(6)
+  nav_menu_items nav_menu_items[]
+
+  @@index([id], map: "ix_nav_menus_id")
+}
+
+model newsletter_subscribers {
+  id         Int                          @id @default(autoincrement())
+  first_name String                       @db.VarChar(120)
+  last_name  String                       @db.VarChar(120)
+  email      String                       @unique(map: "ix_newsletter_subscribers_email") @db.VarChar(255)
+  status     newsletter_subscriber_status
+  created_at DateTime                     @default(now()) @db.Timestamptz(6)
+  updated_at DateTime                     @default(now()) @db.Timestamptz(6)
+
+  @@index([id], map: "ix_newsletter_subscribers_id")
+}
+
+model page_section_media {
+  id              Int           @id @default(autoincrement())
+  page_section_id Int
+  media_id        Int
+  role            String?       @db.VarChar(50)
+  order_index     Int
+  created_at      DateTime      @default(now()) @db.Timestamptz(6)
+  media_assets    media_assets  @relation(fields: [media_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  page_sections   page_sections @relation(fields: [page_section_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([id], map: "ix_page_section_media_id")
+  @@index([media_id], map: "ix_page_section_media_media_id")
+  @@index([page_section_id], map: "ix_page_section_media_page_section_id")
+}
+
+model page_sections {
+  id                 Int                  @id @default(autoincrement())
+  page_id            Int
+  section_key        String               @db.VarChar(120)
+  section_type       String               @db.VarChar(50)
+  title              String?              @db.VarChar(255)
+  subtitle           String?              @db.VarChar(255)
+  order_index        Int
+  is_enabled         Boolean
+  data_json          String?
+  created_at         DateTime             @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime             @default(now()) @db.Timestamptz(6)
+  page_section_media page_section_media[]
+  pages              pages                @relation(fields: [page_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([id], map: "ix_page_sections_id")
+  @@index([page_id], map: "ix_page_sections_page_id")
+}
+
+model pages {
+  id               Int              @id @default(autoincrement())
+  slug             String           @unique(map: "ix_pages_slug") @db.VarChar(120)
+  title            String           @db.VarChar(255)
+  content          String
+  meta_title       String?          @db.VarChar(255)
+  meta_description String?          @db.VarChar(500)
+  status           page_status
+  updated_at       DateTime         @default(now()) @db.Timestamptz(6)
+  nav_menu_items   nav_menu_items[]
+  page_sections    page_sections[]
+
+  @@index([id], map: "ix_pages_id")
+}
+
+model roles {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique @db.VarChar(100)
+  description String?  @db.VarChar(255)
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+  updated_at  DateTime @default(now()) @db.Timestamptz(6)
+  users       users[]
+
+  @@index([id], map: "ix_roles_id")
+}
+
+model sample_categories {
+  id                          Int                           @id @default(autoincrement())
+  name                        String                        @db.VarChar(255)
+  slug                        String                        @unique(map: "ix_sample_categories_slug") @db.VarChar(255)
+  created_at                  DateTime                      @default(now()) @db.Timestamptz(6)
+  updated_at                  DateTime                      @default(now()) @db.Timestamptz(6)
+  sample_category_association sample_category_association[]
+
+  @@index([id], map: "ix_sample_categories_id")
+}
+
+model sample_category_association {
+  sample_id         Int
+  category_id       Int
+  sample_categories sample_categories @relation(fields: [category_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  samples           samples           @relation(fields: [sample_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@id([sample_id, category_id])
+}
+
+model sample_industries {
+  id                          Int                           @id @default(autoincrement())
+  name                        String                        @db.VarChar(255)
+  slug                        String                        @unique(map: "ix_sample_industries_slug") @db.VarChar(255)
+  created_at                  DateTime                      @default(now()) @db.Timestamptz(6)
+  updated_at                  DateTime                      @default(now()) @db.Timestamptz(6)
+  sample_industry_association sample_industry_association[]
+
+  @@index([id], map: "ix_sample_industries_id")
+}
+
+model sample_industry_association {
+  sample_id         Int
+  industry_id       Int
+  sample_industries sample_industries @relation(fields: [industry_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  samples           samples           @relation(fields: [sample_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@id([sample_id, industry_id])
+}
+
+model sample_leads {
+  id               Int      @id @default(autoincrement())
+  sample_id        Int?
+  name             String   @db.VarChar(255)
+  company          String?  @db.VarChar(255)
+  email            String   @db.VarChar(255)
+  phone            String?  @db.VarChar(30)
+  service_required String?  @db.VarChar(255)
+  message          String
+  created_at       DateTime @default(now()) @db.Timestamptz(6)
+  samples          samples? @relation(fields: [sample_id], references: [id], onUpdate: NoAction)
+
+  @@index([id], map: "ix_sample_leads_id")
+}
+
+model samples {
+  id                          Int                           @id @default(autoincrement())
+  title                       String                        @db.VarChar(255)
+  slug                        String                        @unique(map: "ix_samples_slug") @db.VarChar(255)
+  short_description           String                        @db.VarChar(500)
+  detailed_description        String
+  featured_image              String?                       @db.VarChar(500)
+  video_url                   String?                       @db.VarChar(500)
+  status                      String                        @db.VarChar(30)
+  visibility                  String                        @db.VarChar(30)
+  password                    String?                       @db.VarChar(255)
+  technologies                Json?                         @db.Json
+  project_highlights          Json?                         @db.Json
+  client_outcome              String?
+  tags                        Json?                         @db.Json
+  gallery_images              Json?                         @db.Json
+  before_after_images         Json?                         @db.Json
+  screenshots                 Json?                         @db.Json
+  download_files              Json?                         @db.Json
+  seo_title                   String?                       @db.VarChar(255)
+  seo_meta_description        String?                       @db.VarChar(500)
+  seo_meta_keywords           String?                       @db.VarChar(500)
+  seo_og_image                String?                       @db.VarChar(500)
+  seo_canonical_url           String?                       @db.VarChar(500)
+  views                       Int
+  downloads                   Int
+  created_at                  DateTime                      @default(now()) @db.Timestamptz(6)
+  updated_at                  DateTime                      @default(now()) @db.Timestamptz(6)
+  deleted_at                  DateTime?                     @db.Timestamptz(6)
+  sample_category_association sample_category_association[]
+  sample_industry_association sample_industry_association[]
+  sample_leads                sample_leads[]
+
+  @@index([id], map: "ix_samples_id")
+}
+
+model users {
+  id            Int          @id @default(autoincrement())
+  role_id       Int
+  first_name    String?      @db.VarChar(120)
+  last_name     String?      @db.VarChar(120)
+  email         String       @unique(map: "ix_users_email") @db.VarChar(255)
+  phone         String?      @db.VarChar(30)
+  password_hash String       @db.VarChar(255)
+  is_active     Boolean
+  last_login_at DateTime?    @db.Timestamptz(6)
+  created_at    DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime     @default(now()) @db.Timestamptz(6)
+  audit_logs    audit_logs[]
+  roles         roles        @relation(fields: [role_id], references: [id], onUpdate: NoAction)
+
+  @@index([id], map: "ix_users_id")
+  @@index([role_id], map: "ix_users_role_id")
+}
+
+enum media_asset_kind {
+  image
+  video
+  icon
+  doc
+}
+
+enum newsletter_subscriber_status {
+  active
+  unsubscribed
+}
+
+enum page_status {
+  draft
+  published
+}

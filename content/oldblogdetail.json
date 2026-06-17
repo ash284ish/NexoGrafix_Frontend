@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "title": "Blog Details • Nexografix"
+  },
+  "assets": {
+    "fallback_cover": "https://nexografix.com/api/uploads/testimonials/Mask group (13).png"
+  },
+  "posts": [
+    {
+      "id": "1",
+      "title": "Choosing a Reliable App Development Partner: A Practical Checklist",
+      "category": "CREATIVE",
+      "dateISO": "2024-04-18",
+      "readTime": "6 min read",
+      "cover": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Vendor selection ka real game: scope clarity, delivery discipline, documentation, QA gates, and long-term support—so you don’t get stuck mid-project.",
+      "slug": "choosing-reliable-app-development-partner",
+      "images": [
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": ["Vendor Selection", "Delivery", "Scope", "Documentation", "QA"],
+      "author": "admin",
+      "stats": { "comments": 5, "likes": 20, "shares": 12 },
+      "content": {
+        "intro": [
+          "Partner choose karna sirf price compare nahi hota—yeh decide karta hai tumhara product stable launch hoga ya endless delays me fas jayega.",
+          "Is checklist ka goal simple hai: tumhe clarity mile ki team actual delivery kar sakti hai ya sirf promises kar rahi hai."
+        ],
+        "quote": {
+          "text": "If you set your goals ridiculously high and it’s a failure, you will fail above everyone else’s success.",
+          "author": "Nelson Mandela"
+        },
+        "sections": [
+          {
+            "heading": "1) Scope clarity pe first day lock",
+            "bullets": [
+              "Milestones + acceptance criteria (what is ‘done’?)",
+              "Edge cases list (login, payments, file uploads, role permissions)",
+              "Change request process (cost + timeline impact)"
+            ]
+          },
+          {
+            "heading": "2) Delivery discipline aur QA gates",
+            "bullets": [
+              "Weekly demos + release notes",
+              "Checklist-driven QA (smoke, regression, performance)",
+              "Rollback plan (release me issue aaya to revert kaise hoga)"
+            ]
+          },
+          {
+            "heading": "3) Documentation + handover",
+            "bullets": [
+              "API docs + env setup steps",
+              "Deployment guide + secrets management",
+              "Ownership clear: repo, domain, server access"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "title": "AI Content Workflows: Tools + Process to Ship Faster Without Losing Quality",
+      "category": "AI",
+      "dateISO": "2024-06-18",
+      "readTime": "7 min read",
+      "cover": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "AI tools tabhi kaam aate hain jab workflow structured ho—brief → draft → QA → approval → publish. Yeh post wahi blueprint deta hai.",
+      "slug": "ai-content-workflows-tools-process",
+      "images": [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": ["AI", "Content Ops", "Workflow", "QA", "Publishing"],
+      "author": "admin",
+      "stats": { "comments": 7, "likes": 34, "shares": 18 },
+      "content": {
+        "intro": [
+          "AI se output fast hota hai, but quality tabhi consistent rehti hai jab process clean ho.",
+          "Agar tum ‘prompt’ ko strategy bana doge, to chaos aayega. Agar tum workflow bana doge, to scale aayega."
+        ],
+        "quote": {
+          "text": "Speed is useful only when it doesn’t break the system.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Content pipeline (minimum viable)",
+            "bullets": [
+              "Brief: target audience + intent + outline",
+              "Draft: AI assisted but human structure",
+              "QA: facts, tone, plagiarism, formatting",
+              "Publish: SEO + internal links + preview checks"
+            ]
+          },
+          {
+            "heading": "2) Quality gates jo teams miss karti hain",
+            "bullets": [
+              "Single source of truth (doc/template)",
+              "Approval states (draft → review → approved → scheduled)",
+              "Versioning (changes track karo, guessing mat karo)"
+            ]
+          },
+          {
+            "heading": "3) Automation ideas (safe)",
+            "bullets": [
+              "Auto-checklist per article (SEO, links, images, headings)",
+              "Auto-flag: missing sections (FAQ, conclusion, CTA)",
+              "Auto-generate summaries + social captions"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "title": "RAG vs Agents: Real-World AI Chatbot Architecture (Without the Hype)",
+      "category": "AI",
+      "dateISO": "2024-04-28",
+      "readTime": "5 min read",
+      "cover": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Chatbot banane ke 2 tracks: RAG for grounded answers, agents for actions. Kab kya use karna hai—clear decision guide with risks.",
+      "slug": "rag-vs-agents-ai-chatbot-architecture",
+      "images": [
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": ["RAG", "Agents", "Chatbots", "Architecture", "Security"],
+      "author": "admin",
+      "stats": { "comments": 4, "likes": 29, "shares": 9 },
+      "content": {
+        "intro": [
+          "Aajkal sab ‘agents’ bol rahe hain, but har use-case me agent add karna risk + cost badhata hai.",
+          "Agar tumhara main goal accurate answers hai, RAG often best. Agar tumhara goal actions (tickets, emails, workflows) hai, tab agents matter."
+        ],
+        "quote": {
+          "text": "Automation without guardrails is just faster failure.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) RAG kab use karo",
+            "bullets": [
+              "Knowledge-base Q&A (policies, docs, FAQs)",
+              "Grounded answers with citations",
+              "Lower risk, easier monitoring"
+            ]
+          },
+          {
+            "heading": "2) Agents kab use karo",
+            "bullets": [
+              "Multi-step tasks (create ticket, fetch order, schedule call)",
+              "Tool calling + permissions model needed",
+              "Strict logging + approval checkpoints"
+            ]
+          },
+          {
+            "heading": "3) Safety baseline",
+            "bullets": [
+              "Allow-list tools only",
+              "Role-based access + audit logs",
+              "Human-in-the-loop for irreversible actions"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "title": "Publishing QA That Actually Works: Checklists, Validations, and Release Discipline",
+      "category": "PUBLISHING",
+      "dateISO": "2024-07-09",
+      "readTime": "8 min read",
+      "cover": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80",
+      "excerpt": "Publishing me small mistakes costly hoti hain. Yeh post batata hai kaise build karo aisa QA system jo repeatable ho: validations, review loops, and release readiness.",
+      "slug": "publishing-qa-checklists-validations-release",
+      "images": [
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "tags": ["Publishing", "QA", "Validation", "Process", "Release"],
+      "author": "admin",
+      "stats": { "comments": 6, "likes": 41, "shares": 16 },
+      "content": {
+        "intro": [
+          "Publishing pipelines me issue ye nahi hota ki team slow hai—issue hota hai rework loop, missing validations, and unclear approvals.",
+          "Agar tum checklist ko culture bana do, to delivery stable ho jaati hai."
+        ],
+        "quote": {
+          "text": "Quality is not a phase. It’s a system.",
+          "author": "Nexografix Notes"
+        },
+        "sections": [
+          {
+            "heading": "1) Pre-QA validations",
+            "bullets": [
+              "Missing fields detection (title, meta, slug, category)",
+              "Broken links scan",
+              "Image dimensions + compression checks"
+            ]
+          },
+          {
+            "heading": "2) Review loop (simple + strict)",
+            "bullets": [
+              "Reviewer checklist (facts, tone, formatting, SEO)",
+              "Single owner per decision (avoid ping-pong)",
+              "Time-boxed feedback (24h rule)"
+            ]
+          },
+          {
+            "heading": "3) Release readiness",
+            "bullets": [
+              "Rollback plan + version tags",
+              "Changelog per release",
+              "Post-release monitoring (traffic, errors, feedback)"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

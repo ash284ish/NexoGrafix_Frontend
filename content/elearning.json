@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "Content, eLearning & EdTech Services"
+  },
+  "hero": {
+    "eyebrow": "CONTENT & EDTECH",
+    "title": "Content, eLearning & EdTech Services",
+    "subtitle": "High-quality educational content for schools, publishers, and EdTech platforms—built for clarity, engagement, and measurable learning outcomes.",
+    "hero_image": {
+      "src": "https://nexografix.com/api/uploads/testimonials/Content ed.jpg",
+      "alt": "Content, eLearning & EdTech Services"
+    },
+    "pills": [
+      "SME Content",
+      "K-12",
+      "Question Banks",
+      "Instructional Design",
+      "SCORM / xAPI",
+      "Microlearning",
+      "Video Scripts"
+    ],
+    "chips": [
+      {
+        "iconKey": "shield",
+        "text": "SME-led accuracy and pedagogy checks"
+      },
+      {
+        "iconKey": "barchart2",
+        "text": "Built for platforms, LMS, and classrooms"
+      }
+    ],
+    "badges": [
+      {
+        "iconKey": "checkcircle",
+        "text": "Curriculum-aligned content"
+      },
+      {
+        "iconKey": "filetext",
+        "text": "Structured lessons and assessments"
+      },
+      {
+        "iconKey": "zap",
+        "text": "Fast delivery at scale"
+      }
+    ],
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "note_text": "Designed for publishers, schools, and EdTech platforms"
+  },
+  "trust_metrics": {
+    "eyebrow": "TRUST METRICS",
+    "heading": "Educational content built for clarity, scale, and outcomes",
+    "subheading": "We help schools and EdTech teams launch reliable learning content faster—without compromising accuracy, pedagogy, or consistency.",
+    "stats": [
+      {
+        "id": "projects",
+        "icon": "projects",
+        "value": 1700,
+        "suffix": "+",
+        "label": "Learning assets delivered",
+        "hint": "Lessons, explanations, worksheets, assessments, scripts, and interactive modules—ready for schools and platforms."
+      },
+      {
+        "id": "qa",
+        "icon": "qa",
+        "value": 99,
+        "suffix": "%",
+        "label": "Quality and review coverage",
+        "hint": "SME-led content with structured checks for accuracy, pedagogy, and consistency across grades and formats.",
+        "highlight": true
+      },
+      {
+        "id": "partners",
+        "icon": "partners",
+        "value": 80,
+        "suffix": "+",
+        "label": "Teams supported",
+        "hint": "Publishers, EdTech companies, and learning organizations building curriculum-aligned and platform-ready content."
+      }
+    ]
+  },
+  "services_carousel": {
+    "eyebrow": "SERVICES",
+    "heading": "Content, eLearning, and EdTech capabilities",
+    "subheading": "Explore our services through a guided carousel—each capability highlights deliverables, formats, and how it fits into your learning workflow.",
+    "auto_rotate_ms": 6500,
+    "pause_on_hover": true,
+    "show_tabs": true,
+    "slides": [
+      {
+        "id": "educational-content-dev",
+        "title": "Educational Content Development",
+        "desc": "Educational content development services create accurate, engaging, pedagogically sound learning materials across formats and disciplines combining subject matter expertise, instructional design principles, and understanding of learner needs to produce content that effectively supports knowledge acquisition and skill development. \n\n As educational institutions and organizations seek to differentiate offerings, update curriculum, and address evolving learner needs, professional content development ensures materials reflect current knowledge, align with learning science, and engage diverse student populations. \n\n Primary stakeholders include educational publishers developing new titles, universities creating custom course materials, professional training organizations, assessment companies building item banks, EdTech platforms requiring content libraries, and institutions implementing specialized programs. \n\n This service addresses critical challenges including faculty lacking time for comprehensive content development, need for pedagogical expertise in content design, difficulty maintaining content currency and accuracy, requirement for accessibility compliance from inception, and challenges creating engaging materials that support learning outcomes.",
+        "iconKey": "bookopen",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/educational.jpg",
+          "alt": "Educational content development"
+        },
+        "bullets": [
+          "SME content creation and review",
+          "Textbook and workbook content",
+          "Concept explanations with examples",
+          "Practice questions with solutions"
+        ]
+      },
+      {
+        "id": "elearning-content-dev",
+        "title": "eLearning Content Development",
+        "desc": "eLearning content development services create interactive, media-rich digital learning experiences including online courses, learning modules, microlearning, and blended learning materials designed for self-paced or facilitated online instruction leveraging technology to enhance engagement and learning effectiveness. \n\n As online and blended learning expand across educational sectors, professionally developed eLearning content ensures pedagogical quality, technical functionality, learner engagement, and outcomes achievement in digital learning environments. \n\n Core audiences include universities developing online programs, corporate training departments, EdTech platforms building course libraries, professional associations offering continuing education, K-12 districts implementing digital curriculum, and organizations transitioning to online delivery. \n\n This service resolves critical development challenges including faculty lacking eLearning design expertise, need for instructional design guidance, technical complexity of interactive elements, time constraints preventing quality development, and difficulty creating engaging online experiences that maintain learning rigor.",
+        "iconKey": "playcircle",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/elearning.jpg",
+          "alt": "eLearning content development"
+        },
+        "bullets": [
+          "Course design and lesson planning",
+          "Scriptwriting for learning videos",
+          "Interactive learning modules",
+          "SCORM / xAPI-ready content"
+        ]
+      },
+      {
+        "id": "edtech-content-services",
+        "title": "EdTech Content Services",
+        "desc": "EdTech content services provide specialized content development, curation, and management for educational technology platforms including adaptive learning systems, learning management systems, content marketplaces, and digital learning products requiring scalable, technology-optimized, structured educational content. \n\n As EdTech platforms compete on content quality and coverage while managing complex content operations, professional content services ensure pedagogical quality, technical compatibility, metadata richness, and operational scalability supporting platform success and learner outcomes. \n\n Primary beneficiaries include EdTech startups building content libraries, learning platform operators, adaptive learning companies, content marketplace providers, assessment platforms, and educational technology companies requiring content at scale. \n\n This service addresses critical platform challenges including content acquisition costs, difficulty maintaining quality at scale, technical content formatting requirements, metadata and tagging needs, content update overhead, and pedagogical consistency across distributed content creation.",
+        "iconKey": "layers",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/edtaech.jpg",
+          "alt": "EdTech content services"
+        },
+        "bullets": [
+          "Platform-ready content packages",
+          "Adaptive and personalized learning content",
+          "AI-assisted drafts reviewed by SMEs",
+          "Microlearning and LMS-compatible modules"
+        ]
+      },
+      {
+        "id": "k12-content-dev",
+        "title": "K-12 Content Development",
+        "desc": "K-12 content development services create age-appropriate, standards-aligned educational materials for elementary, middle, and high school learners combining pedagogical expertise in child and adolescent development, deep understanding of state and national standards, and sensitivity to diverse learning needs characterizing K-12 education. \n\n As K-12 publishers, districts, and EdTech companies develop curriculum, digital resources, and learning platforms, specialized K-12 content development ensures materials support developmental stages, engage young learners, meet rigorous standards alignment, and address diverse classroom realities. \n\n Core stakeholders include K-12 publishers, school districts developing local curriculum, charter school networks, EdTech companies targeting K-12 markets, state education agencies, and educational nonprofits developing instructional resources for pre-K through grade 12. \n\n This service resolves critical development challenges including age-appropriate content design requiring developmental expertise, complex standards alignment, need for differentiation supporting diverse learners, cultural and linguistic diversity considerations, and balancing rigor with accessibility and engagement for young learners.",
+        "iconKey": "users",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/k12.jpg",
+          "alt": "K-12 content development"
+        },
+        "bullets": [
+          "K-12 subject content (major boards)",
+          "Grade-wise and level-wise progression",
+          "Activity-based learning materials",
+          "Smart classroom and digital content"
+        ]
+      },
+      {
+        "id": "assessment-question-banks",
+        "title": "Assessment & Question Bank Creation",
+        "desc": "Assessment and question bank development services create high-quality test items, performance tasks, rubrics, and evaluation instruments measuring learning outcomes, supporting formative assessment, enabling adaptive testing, and providing psychometrically sound evaluation tools aligned with content, standards, and learning objectives. \n\n As assessment drives instruction and accountability while transitioning to technology-enhanced formats, professional assessment development ensures valid measurement, appropriate difficulty, bias mitigation, accessibility, and technical quality supporting fair, reliable evaluation of student learning. \n\n Primary users include assessment companies developing standardized tests, publishers creating assessment programs, EdTech platforms building practice and formative assessment, educational institutions developing local assessments, and professional certification organizations. \n\n This service addresses critical assessment challenges including item quality variation affecting validity, difficulty creating technology-enhanced items, need for bias review and accessibility, insufficient coverage of learning objectives, lack of psychometric expertise, and challenges maintaining secure, validated item banks.",
+        "iconKey": "clipboard",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/assesment.jpg",
+          "alt": "Assessment and question bank creation"
+        },
+        "bullets": [
+          "MCQs, MSQs, and subjective questions",
+          "Numericals and problem-solving sets",
+          "Difficulty tagging + Bloom’s alignment",
+          "Step-by-step solutions and explanations"
+        ]
+      },
+      {
+        "id": "curriculum-instructional-design",
+        "title": "Curriculum Development & Instructional Design",
+        "desc": "Curriculum and instructional design services create comprehensive learning programs, course structures, instructional sequences, and pedagogical frameworks transforming learning goals into coherent, effective educational experiences through systematic application of learning science, instructional models, and assessment design. \n\n As educational institutions innovate programs, organizations develop training curricula, and publishers create instructional systems, professional instructional design ensures learning experiences are goal-driven, evidence-based, learner-centered, and systematically designed for effectiveness rather than assembled ad hoc. \n\n Core stakeholders include universities designing new programs, K-12 districts developing curriculum, corporate training departments, educational publishers creating instructional systems, professional associations developing certification curricula, and organizations requiring systematic learning program design. \n\n This service resolves critical design challenges including lack of instructional design expertise, difficulty aligning content with outcomes, absence of systematic design processes, need for evidence-based pedagogical approaches, and challenges creating coherent learning progressions across complex curricula.",
+        "iconKey": "target",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/cirrculum.jpg",
+          "alt": "Curriculum development and instructional design"
+        },
+        "bullets": [
+          "Curriculum mapping and planning",
+          "Learning objectives and outcomes definition",
+          "Syllabus design and structuring",
+          "Instructional design (ADDIE / Bloom’s)"
+        ]
+      },
+      {
+        "id": "video-learning-content",
+        "title": "Video-Based Learning Content",
+        "desc": "Video learning content services create educational videos, lecture recordings, explainer videos, demonstration content, and multimedia instruction designed specifically for learning contexts combining instructional design principles, multimedia learning theory, and professional production creating engaging, pedagogically effective video-based education. \n\n As video becomes primary content delivery method across online learning, flipped classrooms, and digital education, professionally produced educational video ensures pedagogical quality, learner engagement, accessibility, and production value supporting effective video-based instruction. \n\n Primary beneficiaries include universities developing online courses, EdTech platforms building video libraries, publishers creating multimedia textbooks, K-12 districts implementing digital curriculum, corporate training departments, and content creators producing educational content at scale. \n\n This service addresses critical production challenges including faculty lacking video production skills, need for instructional design in video, quality variation affecting credibility, accessibility requirements, technical production complexity, and balancing production value with pedagogical effectiveness and development efficiency.",
+        "iconKey": "video",
+        "image": {
+          "src": "https://nexografix.com/api/uploads/testimonials/video learn.jpg",
+          "alt": "Video-based learning content"
+        },
+        "bullets": [
+          "Educational video scriptwriting",
+          "Explainer and walkthrough formats",
+          "Whiteboard and animated content scripts",
+          "Assessment-linked video modules"
+        ]
+      }
+    ]
+  },
+  "contact_cta": {
+    "eyebrow": "NEXT STEP",
+    "heading": "Want content that’s ready for classrooms and platforms?",
+    "subheading": "Share your grade level, subjects, format needs, and release timeline—we’ll propose a delivery plan with clear quality and review checkpoints.",
+    "primary_cta": {
+      "href": "/contact",
+      "label": "Request a Quote"
+    },
+    "bullets": [
+      "Target audience (K-12 / higher ed / test prep / professional learning)",
+      "Subjects, syllabus, and curriculum standards",
+      "Formats (textbook, workbook, eLearning, SCORM/xAPI, question bank)",
+      "Volume, timeline, and review process",
+      "Any platform or LMS requirements"
+    ],
+    "note_text": "Usually respond within 24 hours (business days)"
+  }
+}

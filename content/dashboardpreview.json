@@ -1,0 +1,790 @@
+{
+  "component": "DashboardRemoteStyle",
+  "state": {
+    "defaultPage": "dashboard",
+    "settingsOpenDefault": true,
+    "altFlowOpenDefault": true,
+    "onboardingStepDefault": 0,
+    "onboardingFlow": [
+      "dashboard",
+      "projects",
+      "upload",
+      "review-images",
+      "generate-alt",
+      "review-approve",
+      "export"
+    ]
+  },
+  "layout": {
+    "app": {
+      "containerClass": "relative flex h-screen w-full overflow-hidden bg-slate-100"
+    },
+    "sidebar": {
+      "width": 200,
+      "className": "flex w-[200px] shrink-0 flex-col bg-gradient-to-b from-[#0B1A2E] to-[#081425] px-4 py-5 text-white",
+      "brand": {
+        "logo": {
+          "src": "https://nexografix.com/api/uploads/testimonials/NG Logo.png",
+          "alt": "Arohio",
+          "className": "h-10 w-auto"
+        }
+      }
+    },
+    "topbar": {
+      "className": "relative flex h-14 items-center justify-end border-b border-slate-200 bg-white px-6"
+    },
+    "main": {
+      "className": "min-w-0 flex-1 overflow-y-auto px-6 py-6"
+    }
+  },
+  "navigation": {
+    "topNav": {
+      "items": [
+        {
+          "label": "Homess"
+        },
+        {
+          "label": "Features"
+        },
+        {
+          "label": "Blog"
+        },
+        {
+          "label": "About Us"
+        }
+      ]
+    },
+    "sidebarNav": {
+      "items": [
+        {
+          "key": "dashboard",
+          "type": "item",
+          "label": "Dashboard",
+          "icon": "LayoutDashboard",
+          "page": "dashboard"
+        },
+        {
+          "key": "altTextFlow",
+          "type": "group",
+          "label": "Alt Text Flow",
+          "icon": "MessageCircle",
+          "defaultOpen": true,
+          "activeWhenPages": [
+            "upload",
+            "review-images",
+            "generate-alt",
+            "review-approve",
+            "export"
+          ],
+          "subItems": [
+            {
+              "key": "upload",
+              "label": "Upload PDF",
+              "icon": "Upload",
+              "page": "upload"
+            },
+            {
+              "key": "review-images",
+              "label": "Review Images",
+              "icon": "FolderOpen",
+              "page": "review-images"
+            },
+            {
+              "key": "generate-alt",
+              "label": "Generate Alt Text",
+              "icon": "MessageSquare",
+              "page": "generate-alt"
+            },
+            {
+              "key": "review-approve",
+              "label": "Review & Approve",
+              "icon": "CheckCircle",
+              "page": "review-approve"
+            },
+            {
+              "key": "export",
+              "label": "Export Results",
+              "icon": "Download",
+              "page": "export"
+            }
+          ]
+        },
+        {
+          "key": "projects",
+          "type": "item",
+          "label": "Projects",
+          "icon": "Folder",
+          "page": "projects"
+        },
+        {
+          "key": "billing",
+          "type": "item",
+          "label": "Billing & Subscription",
+          "icon": "CreditCard",
+          "page": "billing",
+          "available": false
+        },
+        {
+          "key": "profile",
+          "type": "item",
+          "label": "My Profile",
+          "icon": "User",
+          "page": "profile",
+          "available": false
+        },
+        {
+          "key": "support",
+          "type": "item",
+          "label": "Help / Support",
+          "icon": "HelpCircle",
+          "page": "support",
+          "available": false
+        }
+      ],
+      "footer": {
+        "logout": {
+          "label": "Logout",
+          "icon": "LogOut",
+          "danger": true
+        }
+      }
+    }
+  },
+  "topbar": {
+    "actions": [
+      {
+        "key": "search",
+        "icon": "Search"
+      },
+      {
+        "key": "notifications",
+        "icon": "Bell"
+      },
+      {
+        "key": "messages",
+        "icon": "MessageCircle"
+      },
+      {
+        "key": "avatar",
+        "type": "avatar",
+        "image": {
+          "src": "https://www.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png",
+          "alt": "User avatar",
+          "width": 36,
+          "height": 36
+        }
+      },
+      {
+        "key": "logout",
+        "icon": "LogOut"
+      }
+    ]
+  },
+  "pages": {
+    "dashboard": {
+      "id": "dashboard",
+      "name": "PayrollPage",
+      "hero": {
+        "title": "Welcome back, ",
+        "highlight": {
+          "text": "Sarah K",
+          "className": "text-teal-600"
+        },
+        "subtitle": "Here’s your accessibility progress today.",
+        "primaryCta": {
+          "label": "Upload PDF",
+          "icon": "Upload",
+          "action": {
+            "type": "navigate",
+            "page": "upload"
+          },
+          "className": "inline-flex items-center gap-2 rounded-md bg-teal-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-600"
+        }
+      },
+      "notices": [
+        {
+          "title": "Your PDF extraction is complete.",
+          "time": "2 min ago"
+        },
+        {
+          "title": "New SEO alt text feature released.",
+          "time": "1 day ago"
+        },
+        {
+          "title": "Subscription renewal due in 5 days.",
+          "time": "3 days ago"
+        }
+      ],
+      "creditsOverview": {
+        "title": "Credits Overview",
+        "subtitle": "Remaining Credits",
+        "buyMore": {
+          "label": "Buy More"
+        },
+        "remaining": 120,
+        "total": 200,
+        "progressPercent": 60
+      },
+      "analyticsSnapshot": {
+        "title": "Analytics Snapshot",
+        "subtitle": "Last 5 days",
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "chart": {
+          "type": "polyline",
+          "viewBox": "0 0 500 160",
+          "gridLines": 4,
+          "polylinePoints": "0,110 100,90 200,40 300,70 400,50",
+          "pointsY": [
+            110,
+            90,
+            40,
+            70,
+            50
+          ]
+        }
+      },
+      "notificationsCard": {
+        "title": "Notifications",
+        "icon": "Bell"
+      },
+      "quickActions": {
+        "title": "Quick Actions",
+        "actions": [
+          {
+            "icon": "FolderOpen",
+            "label": "View All Projects"
+          },
+          {
+            "icon": "CheckCircle",
+            "label": "Check SEO Alt Text"
+          },
+          {
+            "icon": "Upload",
+            "label": "Upload New PDF"
+          },
+          {
+            "icon": "MessageSquare",
+            "label": "Open Chatbot"
+          }
+        ]
+      },
+      "productivity": {
+        "title": "Productivity gain",
+        "value": "10 hours saved",
+        "subtitle": "this month through automated accessibility workflows",
+        "icon": "Timer"
+      }
+    },
+    "upload": {
+      "id": "upload",
+      "name": "UploadPdfPage",
+      "header": {
+        "title": "Upload PDFs for Image Extractio",
+        "subtitle": "Upload your PDFs. Arohio will extract images and prepare them for alt-text generation."
+      },
+      "stepper": {
+        "currentStep": 1,
+        "steps": [
+          "Upload",
+          "Review Images",
+          "Generate",
+          "Approve",
+          "Export"
+        ],
+        "display": "Upload › Review Images › Generate › Approve › Export"
+      },
+      "controls": {
+        "addPdfsButton": {
+          "label": "Add PDFs",
+          "icon": "Upload"
+        },
+        "uploadAllButton": {
+          "label": "Upload All",
+          "icon": null,
+          "disabledWhenNoFiles": true
+        }
+      },
+      "dropzone": {
+        "title": "Drag & drop PDFs here",
+        "subtitlePrefix": "or",
+        "browseLabel": "click to browse",
+        "meta": "PDF only • Max 25MB each • Multiple files supported",
+        "maxFileSizeMB": 25,
+        "accept": [
+          "application/pdf",
+          ".pdf"
+        ]
+      },
+      "selectedFiles": {
+        "title": "Selected files",
+        "emptyTip": "Tip: Upload one PDF first to validate extraction quality, then batch upload.",
+        "clearAllLabel": "Clear All",
+        "row": {
+          "labels": {
+            "pdf": "PDF",
+            "exceeds": "Exceeds 25MB",
+            "remove": "Remove"
+          }
+        },
+        "footer": {
+          "addMoreLabel": "Add more",
+          "uploadAllLabel": "Upload All",
+          "hint": "After upload: you’ll review extracted images per page."
+        }
+      },
+      "aside": {
+        "tips": {
+          "title": "Tips for better extraction",
+          "items": [
+            "Keep PDFs under 25MB (compress if needed).",
+            "Prefer vector or high-res images for best results.",
+            "Avoid scanned PDFs if possible (quality varies)."
+          ]
+        },
+        "next": {
+          "title": "What happens next?",
+          "desc": "You’ll see extracted images grouped by PDF pages. Select only meaningful images for alt-text generation.",
+          "note": "Recommended: skip decorative icons and repeated logos."
+        }
+      }
+    },
+    "review-images": {
+      "id": "review-images",
+      "name": "ExtractedImagesPage",
+      "header": {
+        "title": "Review extracted images",
+        "subtitle": "Select only meaningful images. Decorative icons and repeated logos usually don’t need alt text."
+      },
+      "stepBadge": {
+        "text": "Step 2",
+        "selectedSuffix": "selected"
+      },
+      "pageList": [
+        {
+          "id": "p1",
+          "label": "Page 1",
+          "count": 4
+        },
+        {
+          "id": "p2",
+          "label": "Page 2",
+          "count": 3
+        },
+        {
+          "id": "p3",
+          "label": "Page 3",
+          "count": 2
+        },
+        {
+          "id": "p4",
+          "label": "Page 4",
+          "count": 2
+        },
+        {
+          "id": "p5",
+          "label": "Page 5",
+          "count": 1
+        }
+      ],
+      "images": {
+        "source": "picsum",
+        "seedPrefix": "altflow_",
+        "count": 8,
+        "shape": {
+          "idPattern": "img_{n}",
+          "titlePattern": "Image {n}",
+          "srcPattern": "https://picsum.photos/seed/altflow_{seed}/900/600",
+          "sizes": [
+            "180 KB",
+            "240 KB",
+            "320 KB",
+            "410 KB"
+          ],
+          "types": [
+            "PNG",
+            "JPG",
+            "SVG"
+          ]
+        },
+        "defaultSelectedFirstN": 4
+      },
+      "actions": {
+        "selectAll": "Select all",
+        "clear": "Clear",
+        "generateAltText": "Generate Alt Text",
+        "discardUnselected": "Discard unselected",
+        "nextHint": "Next: Alt text editor (tone, length, language)"
+      },
+      "rightRail": {
+        "bestPractices": {
+          "title": "Best practices",
+          "items": [
+            "Skip purely decorative elements.",
+            "For charts, mention the key takeaway, not every detail.",
+            "If text is already near the image, keep alt text shorter."
+          ]
+        },
+        "qualityChecks": {
+          "title": "Quality checks",
+          "rows": [
+            {
+              "label": "Selected images",
+              "value": "{selectedCount}"
+            },
+            {
+              "label": "Current page",
+              "value": "{activePageLabel}"
+            }
+          ]
+        },
+        "pagesTip": "Tip: Focus on charts, product images, UI screenshots, diagrams, and photos with meaning."
+      }
+    },
+    "generate-alt": {
+      "id": "generate-alt",
+      "name": "AltTextEditorPage",
+      "header": {
+        "title": "Alt text editor",
+        "subtitle": "Review AI suggestions, keep it concise, and focus on the meaning of the image."
+      },
+      "stepBadge": {
+        "text": "Step 3",
+        "status": "Editing"
+      },
+      "defaults": {
+        "tone": "Friendly",
+        "limit": "125",
+        "language": "English",
+        "text": "A close-up of a laptop screen showing analytics dashboards."
+      },
+      "preview": {
+        "image": {
+          "src": "https://picsum.photos/seed/alt_editor/900/600",
+          "alt": "Preview",
+          "meta": "PNG • 240 KB"
+        },
+        "tip": "Tip: If the image is decorative, leave alt text empty or mark it as decorative in your export."
+      },
+      "controls": {
+        "toneOptions": [
+          "Friendly",
+          "Professional",
+          "Neutral",
+          "Technical"
+        ],
+        "limitOptions": [
+          {
+            "value": "80",
+            "label": "80 chars"
+          },
+          {
+            "value": "125",
+            "label": "125 chars"
+          },
+          {
+            "value": "160",
+            "label": "160 chars"
+          }
+        ],
+        "languageOptions": [
+          "English",
+          "Hindi",
+          "Punjabi"
+        ],
+        "charBadge": {
+          "overLimitText": "Length is over the selected limit. Try removing extra detail and keep the main takeaway."
+        },
+        "altTextHelper": "Keep it meaningful. Avoid “image of”, “picture of”.",
+        "trimSpaces": "Trim spaces"
+      },
+      "buttons": {
+        "regenerate": "Regenerate",
+        "copy": "Copy",
+        "discard": "Discard",
+        "previous": "Previous",
+        "saveContinue": "Save & Continue",
+        "saveDraft": "Save draft",
+        "saveAllContinue": "Save All & Continue"
+      },
+      "regenerateSamples": [
+        "Laptop screen displaying an analytics dashboard with charts and metrics.",
+        "Analytics dashboard visible on a laptop, showing trends and performance indicators.",
+        "A laptop showing a dashboard interface with graphs and key KPIs."
+      ],
+      "guidance": {
+        "title": "Good alt text usually includes:",
+        "items": [
+          "What it is (object/scene)",
+          "Why it matters (key info / takeaway)",
+          "Keep it short and avoid repetition"
+        ]
+      }
+    },
+    "review-approve": {
+      "id": "review-approve",
+      "name": "ReviewApprovalPage",
+      "header": {
+        "title": "Review & approval",
+        "subtitle": "Collaborate with your team to finalize accessibility-ready alt text.",
+        "badge": "Step 4 · Workflow"
+      },
+      "workflowSummary": {
+        "title": "Workflow summary",
+        "subtitle": "Progress based on approved alt text items",
+        "completionPercent": 88,
+        "stats": {
+          "itemsReady": 24,
+          "needsChanges": 3,
+          "approved": 21
+        }
+      },
+      "roles": [
+        {
+          "key": "creator",
+          "title": "Creator",
+          "subtitle": "Prepare and submit the final alt text set.",
+          "status": "In progress",
+          "statusClass": "bg-slate-50 text-slate-700 ring-slate-200",
+          "primaryAction": "Submit for review",
+          "secondaryAction": "View",
+          "commentLabel": "Comment",
+          "commentPlaceholder": "Add a note for your team…"
+        },
+        {
+          "key": "reviewer",
+          "title": "Reviewer",
+          "subtitle": "Review items and request changes or approve.",
+          "status": "Changes requested",
+          "statusClass": "bg-amber-50 text-amber-800 ring-amber-200",
+          "primaryAction": "Send feedback",
+          "secondaryAction": "View",
+          "commentLabel": "Comment",
+          "commentPlaceholder": "Add a note for your team…"
+        },
+        {
+          "key": "approver",
+          "title": "Approver",
+          "subtitle": "Final sign-off before export.",
+          "status": "Approved",
+          "statusClass": "bg-emerald-50 text-emerald-800 ring-emerald-200",
+          "primaryAction": "Finalize approval",
+          "secondaryAction": "View",
+          "commentLabel": "Comment",
+          "commentPlaceholder": "Add a note for your team…"
+        }
+      ]
+    },
+    "export": {
+      "id": "export",
+      "name": "ExportResultsPage",
+      "header": {
+        "title": "Export results",
+        "subtitle": "Download your accessibility-ready content in the format you need."
+      },
+      "formats": [
+        {
+          "type": "PDF",
+          "desc": "Accessible PDF with embedded alt text",
+          "actionLabel": "Download"
+        },
+        {
+          "type": "Word",
+          "desc": "Editable document for further review",
+          "actionLabel": "Download"
+        },
+        {
+          "type": "CSV",
+          "desc": "Structured data for audits and reports",
+          "actionLabel": "Download"
+        },
+        {
+          "type": "JSON",
+          "desc": "Developer-ready export for integrations",
+          "actionLabel": "Download"
+        }
+      ],
+      "readyNote": "Your export files are ready and available for download.",
+      "finalCta": {
+        "title": "All done",
+        "subtitle": "Your content is now fully accessible and export-ready.",
+        "button": "Go to dashboard →"
+      }
+    },
+    "projects": {
+      "id": "projects",
+      "name": "ProjectsPage",
+      "header": {
+        "title": "Projects & Folders",
+        "subtitle": "Keep your PDFs organized with folders, tags, and quick filters.",
+        "primaryCta": {
+          "label": "New Project",
+          "icon": "Plus"
+        }
+      },
+      "toolbar": {
+        "searchPlaceholder": "Search projects or files...",
+        "filterLabel": "Filter",
+        "sortLabel": "Sort: Name"
+      },
+      "projects": [
+        {
+          "title": "Marketing Campaign 2024",
+          "files": 12,
+          "updated": "Sep 13, 2025",
+          "active": true
+        },
+        {
+          "title": "Product Launch Q3",
+          "files": 8,
+          "updated": "Aug 22, 2025",
+          "badge": "Planning"
+        },
+        {
+          "title": "Client Onboarding",
+          "files": 5,
+          "updated": "Jul 15, 2025",
+          "badges": [
+            "Active",
+            "New"
+          ]
+        },
+        {
+          "title": "Internal Training Materials",
+          "files": 15,
+          "updated": "Jun 30, 2025"
+        }
+      ],
+      "breadcrumb": {
+        "prefix": "Projects",
+        "separator": "›",
+        "current": "Marketing Campaign 2024"
+      },
+      "files": [
+        {
+          "name": "Campaign_Brief_v3.pdf",
+          "size": "1.2 MB",
+          "by": "Jane Doe",
+          "status": "Approved",
+          "statusClass": "bg-emerald-50 text-emerald-700 border-emerald-200"
+        },
+        {
+          "name": "Social_Media_Assets.pdf",
+          "size": "5.8 MB",
+          "by": "John Smith",
+          "status": "Reviewed",
+          "statusClass": "bg-amber-50 text-amber-700 border-amber-200"
+        },
+        {
+          "name": "Ad_Copy_Final.pdf",
+          "size": "450 KB",
+          "by": "Jane Doe",
+          "status": "Processing",
+          "statusClass": "bg-sky-50 text-sky-700 border-sky-200"
+        }
+      ],
+      "folderInfo": {
+        "title": "Folder Info",
+        "description": "All assets for the 2024 marketing campaign.",
+        "createdDate": "January 15, 2024",
+        "tags": [
+          "campaign",
+          "2024",
+          "social"
+        ]
+      },
+      "fileActions": {
+        "export": "Export",
+        "delete": "Delete",
+        "downloadIcon": "Download",
+        "trashIcon": "Trash2"
+      }
+    }
+  },
+  "onboarding": {
+    "enabledByDefault": true,
+    "popup": {
+      "overlayClass": "absolute inset-0 z-40 flex items-start justify-center pt-40",
+      "backdropClass": "absolute inset-0 bg-black/10",
+      "cardClass": "relative w-full max-w-lg rounded-md bg-white p-6 shadow-xl",
+      "nextButtonLabel": "Next"
+    },
+    "steps": [
+      {
+        "title": "This is your dashboard",
+        "desc": "Track progress, credits, analytics, and quick actions from one place."
+      },
+      {
+        "title": "Manage your projects",
+        "desc": "Organize PDFs into projects so accessibility workflows stay clean and structured."
+      },
+      {
+        "title": "Upload your PDFs",
+        "desc": "Upload PDFs to extract images and start generating alt text automatically."
+      },
+      {
+        "title": "Review extracted images",
+        "desc": "Select only meaningful images that require alt text. Skip decorative elements."
+      },
+      {
+        "title": "Generate alt text",
+        "desc": "Edit AI-generated alt text for tone, length, and clarity."
+      },
+      {
+        "title": "Review & approve",
+        "desc": "Collaborate with reviewers and approvers before final export."
+      },
+      {
+        "title": "Export results",
+        "desc": "Download accessibility-ready files in your preferred format."
+      }
+    ]
+  },
+  "misc": {
+    "fallback": {
+      "message": "This section is not available yet."
+    },
+    "unusedImportsInProvidedCode": [
+      "Settings",
+      "Shield",
+      "Lock",
+      "SlidersHorizontal",
+      "Upload (used)",
+      "Trash2 (used)",
+      "MoreHorizontal (used)",
+      "ArrowUpDown (used)",
+      "Filter (used)",
+      "Plus (used)",
+      "MessageCircle (used)",
+      "FolderOpen (used)",
+      "CheckCircle (used)",
+      "MessageSquare (used)",
+      "Timer (used)",
+      "LayoutDashboard (used)",
+      "Folder (used)",
+      "CreditCard (declared but page not implemented)",
+      "HelpCircle (declared but page not implemented)",
+      "LogOut (used)"
+    ],
+    "timelineComponentsPresent": true,
+    "timelineComponents": {
+      "Timeline": {
+        "props": [
+          "label",
+          "value",
+          "active"
+        ]
+      },
+      "Line": {
+        "props": [
+          "active"
+        ]
+      }
+    }
+  }
+}

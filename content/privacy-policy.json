@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Privacy Policy",
+    "lastUpdated": "December 2025",
+    "lead": "Nexografix (“we”, “our”, “us”) is committed to protecting the privacy and security of personal and business information shared with us through our website, platforms, and services. This policy explains how we collect, use, store, and protect information when you interact with Nexografix and its products, including Arohio.ai."
+  },
+  "sections": [
+    {
+      "key": "info",
+      "title": "Information We Collect",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "1. Information We Collect"
+        },
+        {
+          "type": "paragraph",
+          "value": "We collect information only where it is necessary to provide our services, respond to requests, and maintain secure and reliable operations. The information we collect depends on how you interact with Nexografix and products such as Arohio.ai."
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Contact Information",
+              "description": "Name, email address, phone number, organization name, and role when you submit forms, request a demo, or contact us for services."
+            },
+            {
+              "title": "Business Information",
+              "description": "Service requirements, project scope, communication details, and operational inputs you share for proposals, delivery planning, or enterprise onboarding."
+            },
+            {
+              "title": "Technical Information",
+              "description": "IP address, device/browser details, approximate location (city/region), logs, and usage analytics for security monitoring, rate-limiting, diagnostics, and platform performance."
+            },
+            {
+              "title": "Uploaded Content",
+              "description": "Documents, datasets, or files submitted through products such as Arohio.ai strictly for processing, extraction, transformation, automation, or analysis aligned with the service purpose."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "value": "We do not intentionally collect sensitive personal information (such as passwords, financial details, or government IDs) unless explicitly required for a particular contract or compliance workflow."
+        }
+      ]
+    },
+    {
+      "key": "use",
+      "title": "How We Use Information",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "2. How We Use Information"
+        },
+        {
+          "type": "paragraph",
+          "value": "Information is used strictly for legitimate, purpose-bound business operations. We do not use customer data for unsolicited marketing, resale, or unrelated profiling."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Service delivery including demos, onboarding, execution, and support",
+            "Product operations for platforms such as Arohio.ai",
+            "Operational improvement and diagnostics",
+            "Security, fraud prevention, and compliance obligations"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "title": "AI Systems",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "3. Data Processing & AI Systems"
+        },
+        {
+          "type": "paragraph",
+          "value": "Nexografix uses AI-enabled systems to enhance efficiency, accuracy, and scale across publishing, content, assessment, and automation workflows."
+        },
+        {
+          "type": "paragraph",
+          "value": "We do not use customer-uploaded data to train public or third-party AI models. Uploaded data is processed strictly for the intended service purpose."
+        }
+      ]
+    },
+    {
+      "key": "security",
+      "title": "Security",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "4. Data Storage & Security"
+        },
+        {
+          "type": "paragraph",
+          "value": "We implement layered security controls including encryption, access management, logging, and monitoring."
+        }
+      ]
+    },
+    {
+      "key": "sharing",
+      "title": "Data Sharing",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "5. Data Sharing"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Infrastructure and hosting providers",
+            "Legal or regulatory authorities when required",
+            "Authorized partners under confidentiality obligations"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cookies",
+      "title": "Cookies",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "6. Cookies & Tracking"
+        },
+        {
+          "type": "paragraph",
+          "value": "Our website may use cookies for session management, analytics, and performance optimization."
+        }
+      ]
+    },
+    {
+      "key": "rights",
+      "title": "User Rights",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "7. User Rights"
+        },
+        {
+          "type": "paragraph",
+          "value": "You may request access, correction, or deletion of your personal information, subject to applicable laws."
+        }
+      ]
+    },
+    {
+      "key": "retention",
+      "title": "Data Retention",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "8. Data Retention"
+        },
+        {
+          "type": "paragraph",
+          "value": "We retain information only as long as necessary to fulfill contractual and legal obligations."
+        }
+      ]
+    },
+    {
+      "key": "transfers",
+      "title": "International Transfers",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "9. International Data Transfers"
+        },
+        {
+          "type": "paragraph",
+          "value": "Data may be processed outside your country with appropriate safeguards in place."
+        }
+      ]
+    },
+    {
+      "key": "updates",
+      "title": "Policy Updates",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "10. Policy Updates"
+        },
+        {
+          "type": "paragraph",
+          "value": "We may update this policy from time to time. Continued use indicates acceptance where permitted by law."
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "title": "Contact",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "11. Contact Information"
+        },
+        {
+          "type": "contact",
+          "email": "ashish@nexografix.com",
+          "phone": " India office:- +91 9661284439",
+          "linkedin": "https://www.linkedin.com/company/nexografix"
+        }
+      ]
+    }
+  ]
+}
