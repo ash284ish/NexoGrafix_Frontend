@@ -31,7 +31,7 @@ type CmsData = {
   capabilities: {
     eyebrow: string;
     title: string;
-    items: { title: string; desc: string }[];
+    items: { title: string; desc: string; href?: string }[];
   };
   samples: {
     eyebrow: string;
@@ -92,15 +92,15 @@ const FALLBACK_DATA: CmsData = {
     eyebrow: "Capabilities",
     title: "What prospects can review",
     items: [
-      { title: "PDF Accessibility", desc: "Tagged PDFs, WCAG/PDF-UA remediation" },
-      { title: "EPUB Accessibility", desc: "Accessible EPUB 3 samples" },
-      { title: "Alt Text Authoring", desc: "Figure descriptions and image accessibility" },
-      { title: "XML Conversion", desc: "PDF to XML workflows" },
-      { title: "Copy Editing", "desc": "Before vs After editing samples" },
-      { title: "Translation", desc: "Source vs translated content" },
-      { title: "AI Annotation", desc: "Text, image, and data annotation examples" },
-      { title: "Dubbing & Localization", desc: "Voice-over and multilingual projects" },
-      { title: "Assessment Development", desc: "Questions, solutions, and learning content" }
+      { title: "PDF Accessibility", desc: "Tagged PDFs, WCAG/PDF-UA remediation", href: "https://drive.google.com" },
+      { title: "EPUB Accessibility", desc: "Accessible EPUB 3 samples", href: "https://drive.google.com" },
+      { title: "Alt Text Authoring", desc: "Figure descriptions and image accessibility", href: "https://drive.google.com" },
+      { title: "XML Conversion", desc: "PDF to XML workflows", href: "https://drive.google.com" },
+      { title: "Copy Editing", desc: "Before vs After editing samples", href: "https://drive.google.com" },
+      { title: "Translation", desc: "Source vs translated content", href: "https://drive.google.com" },
+      { title: "AI Annotation", desc: "Text, image, and data annotation examples", href: "https://drive.google.com" },
+      { title: "Dubbing & Localization", desc: "Voice-over and multilingual projects", href: "https://drive.google.com" },
+      { title: "Assessment Development", desc: "Questions, solutions, and learning content", href: "https://drive.google.com" }
     ]
   },
   samples: {
@@ -212,7 +212,7 @@ const FALLBACK_DATA: CmsData = {
 };
 
 export default function SamplesPage() {
-  const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
   const [data, setData] = useState<CmsData>(FALLBACK_DATA);
   const [loading, setLoading] = useState(true);
@@ -336,10 +336,22 @@ export default function SamplesPage() {
             {data.capabilities.items.map((item, idx) => (
               <article
                 key={idx}
-                className="p-6 border border-orange-200/40 rounded-2xl bg-[#FFFDF9] flex flex-col justify-between min-h-[160px] hover:border-[var(--color-brand)]/40 transition duration-200"
+                className="p-6 border border-orange-200/40 rounded-2xl bg-[#FFFDF9] flex flex-col justify-between min-h-[180px] hover:border-[var(--color-brand)]/40 transition duration-200"
               >
-                <h3 className="font-bold text-lg text-[var(--color-text-main)]">{item.title}</h3>
-                <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-2">{item.desc}</p>
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg text-[var(--color-text-main)]">{item.title}</h3>
+                  <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-2">{item.desc}</p>
+                </div>
+                {item.href && (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center text-xs font-bold text-[var(--color-brand)] hover:underline"
+                  >
+                    View Sample &rarr;
+                  </a>
+                )}
               </article>
             ))}
           </div>

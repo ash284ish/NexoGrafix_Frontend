@@ -177,7 +177,7 @@ export default function ContentELearningEdTechServicesPage() {
 
   useEffect(() => {
     let alive = true;
-    const base = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+    const base = process.env.NEXT_PUBLIC_API_BASE_URL || "";
     fetch(`${base.replace(/\/$/, "")}/api/v1/content/elearning`)
       .then((res) => {
         if (!res.ok) throw new Error("API fail");

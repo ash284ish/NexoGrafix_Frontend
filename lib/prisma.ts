@@ -7,11 +7,7 @@ const globalForPrisma = globalThis as unknown as {
   pool: Pool | undefined;
 };
 
-const connectionString = process.env.DATABASE_URL;
-
-if (!connectionString) {
-  throw new Error("DATABASE_URL environment variable is missing.");
-}
+const connectionString = process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/nexografix";
 
 const pool = globalForPrisma.pool ?? new Pool({ connectionString });
 if (process.env.NODE_ENV !== "production") globalForPrisma.pool = pool;

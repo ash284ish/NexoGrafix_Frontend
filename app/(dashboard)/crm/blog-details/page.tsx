@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { FiArrowLeft } from "react-icons/fi";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 const BLOG_PATH = "/api/v1/content/blog";
 const BLOG_DETAILS_PATH = "/api/v1/content/blog-details";
 const BLOG_MAP_PATH = "/api/v1/content/blog-post-map";

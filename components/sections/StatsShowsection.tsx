@@ -100,7 +100,7 @@ function getApiBase() {
       process.env.NEXT_PUBLIC_API_URL ||
       "") as string;
 
-  return (envBase || "http://localhost:8000").replace(/\/+$/, "");
+  return (envBase || "").replace(/\/+$/, "");
 }
 
 export default function StatsShowSectionPage() {

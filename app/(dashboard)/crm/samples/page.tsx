@@ -18,7 +18,7 @@ type CmsData = {
   capabilities: {
     eyebrow: string;
     title: string;
-    items: { title: string; desc: string }[];
+    items: { title: string; desc: string; href?: string }[];
   };
   samples: {
     eyebrow: string;
@@ -66,7 +66,7 @@ type CmsData = {
 };
 
 export default function SamplesCmsPage() {
-  const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+  const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
   const [data, setData] = useState<CmsData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -155,6 +155,42 @@ export default function SamplesCmsPage() {
     if (!data) return;
     const cloned = { ...data };
     cloned.privateSamples.card.password = val;
+    setData(cloned);
+    setRawJson(JSON.stringify(cloned, null, 2));
+  };
+
+  const handleCapabilitiesHeaderChange = (field: "eyebrow" | "title", val: string) => {
+    if (!data) return;
+    const cloned = { ...data };
+    cloned.capabilities[field] = val;
+    setData(cloned);
+    setRawJson(JSON.stringify(cloned, null, 2));
+  };
+
+  const handleCapabilityItemChange = (idx: number, field: "title" | "desc" | "href", val: string) => {
+    if (!data) return;
+    const cloned = { ...data };
+    cloned.capabilities.items[idx][field] = val;
+    setData(cloned);
+    setRawJson(JSON.stringify(cloned, null, 2));
+  };
+
+  const handleCapabilityItemDelete = (idx: number) => {
+    if (!data) return;
+    const cloned = { ...data };
+    cloned.capabilities.items.splice(idx, 1);
+    setData(cloned);
+    setRawJson(JSON.stringify(cloned, null, 2));
+  };
+
+  const handleCapabilityItemAdd = () => {
+    if (!data) return;
+    const cloned = { ...data };
+    cloned.capabilities.items.push({
+      title: "New Capability",
+      desc: "Describe this capability here",
+      href: "https://drive.google.com",
+    });
     setData(cloned);
     setRawJson(JSON.stringify(cloned, null, 2));
   };
@@ -284,6 +320,100 @@ export default function SamplesCmsPage() {
               <strong className="block mb-1">How it works:</strong>
               When users visit the <code>/samples/private</code> subroute, they will be prompted to enter this password. 
               Upon success, the browser unlocks the Microsoft and publisher confidential portfolio views.
+            </div>
+          </div>
+
+          {/* Capabilities Section */}
+          <div className="lg:col-span-2 p-6 border border-slate-200 rounded-2xl bg-white space-y-6">
+            <div className="flex items-center justify-between border-b pb-3">
+              <h3 className="flex items-center gap-2 font-bold text-slate-900">
+                <FiList className="text-orange-600" /> Capabilities Section ("What prospects can review")
+              </h3>
+              <button
+                type="button"
+                onClick={handleCapabilityItemAdd}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-orange-600 px-3.5 py-2 text-xs font-bold text-white shadow-md hover:bg-orange-700 transition"
+              >
+                Add Card
+              </button>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="flex flex-col gap-1.5 text-sm font-semibold text-slate-700">
+                Section Eyebrow
+                <input
+                  type="text"
+                  value={data?.capabilities?.eyebrow || ""}
+                  onChange={(e) => handleCapabilitiesHeaderChange("eyebrow", e.target.value)}
+                  className="w-full px-3 py-2 border rounded-lg outline-none focus:border-orange-500 font-normal text-slate-900"
+                />
+              </label>
+              <label className="flex flex-col gap-1.5 text-sm font-semibold text-slate-700">
+                Section Title
+                <input
+                  type="text"
+                  value={data?.capabilities?.title || ""}
+                  onChange={(e) => handleCapabilitiesHeaderChange("title", e.target.value)}
+                  className="w-full px-3 py-2 border rounded-lg outline-none focus:border-orange-500 font-normal text-slate-900"
+                />
+              </label>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">Capability Cards List</h4>
+              {data?.capabilities?.items && data.capabilities.items.length > 0 ? (
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {data.capabilities.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 border rounded-xl bg-slate-50/50 hover:bg-slate-50 border-slate-200 space-y-3 relative group"
+                    >
+                      <button
+                        type="button"
+                        onClick={() => handleCapabilityItemDelete(idx)}
+                        className="absolute top-2 right-2 text-slate-400 hover:text-red-600 transition p-1 rounded-md hover:bg-red-50 text-xs font-semibold"
+                      >
+                        Delete
+                      </button>
+
+                      <div className="pt-2">
+                        <label className="block text-[11px] font-bold text-slate-500 uppercase">Card Title</label>
+                        <input
+                          type="text"
+                          value={item.title || ""}
+                          onChange={(e) => handleCapabilityItemChange(idx, "title", e.target.value)}
+                          className="mt-1 w-full px-2.5 py-1.5 border rounded-lg bg-white outline-none focus:border-orange-500 text-sm font-normal text-slate-900"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-[11px] font-bold text-slate-500 uppercase">Description</label>
+                        <textarea
+                          value={item.desc || ""}
+                          onChange={(e) => handleCapabilityItemChange(idx, "desc", e.target.value)}
+                          rows={2}
+                          className="mt-1 w-full px-2.5 py-1.5 border rounded-lg bg-white outline-none focus:border-orange-500 text-sm font-normal text-slate-900 resize-none"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-[11px] font-bold text-slate-500 uppercase">Google Drive Link</label>
+                        <input
+                          type="text"
+                          value={item.href || ""}
+                          onChange={(e) => handleCapabilityItemChange(idx, "href", e.target.value)}
+                          placeholder="https://drive.google.com"
+                          className="mt-1 w-full px-2.5 py-1.5 border rounded-lg bg-white outline-none focus:border-orange-500 text-sm font-normal text-slate-900"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-6 text-sm text-slate-500 bg-slate-50 rounded-xl border border-dashed">
+                  No capability cards added. Click "Add Card" to create one.
+                </div>
+              )}
             </div>
           </div>
 

@@ -12,8 +12,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ detail: "Invalid credentials" }, { status: 401 });
     }
 
+    const cleanedPhone = phone.replace(/[\s\-\(\)]/g, "");
     const user = await prisma.users.findFirst({
-      where: { phone },
+      where: {
+        OR: [
+          { phone: phone },
+          { phone: cleanedPhone },
+          { email: phone.toLowerCase() },
+        ],
+      },
     });
 
     if (!user) {

@@ -18,15 +18,15 @@
     "eyebrow": "Capabilities",
     "title": "What prospects can review",
     "items": [
-      { "title": "PDF Accessibility", "desc": "Tagged PDFs, WCAG/PDF-UA remediation" },
-      { "title": "EPUB Accessibility", "desc": "Accessible EPUB 3 samples" },
-      { "title": "Alt Text Authoring", "desc": "Figure descriptions and image accessibility" },
-      { "title": "XML Conversion", "desc": "PDF to XML workflows" },
-      { "title": "Copy Editing", "desc": "Before vs After editing samples" },
-      { "title": "Translation", "desc": "Source vs translated content" },
-      { "title": "AI Annotation", "desc": "Text, image, and data annotation examples" },
-      { "title": "Dubbing & Localization", "desc": "Voice-over and multilingual projects" },
-      { "title": "Assessment Development", "desc": "Questions, solutions, and learning content" }
+      { "title": "PDF Accessibility", "desc": "Tagged PDFs, WCAG/PDF-UA remediation", "href": "https://drive.google.com" },
+      { "title": "EPUB Accessibility", "desc": "Accessible EPUB 3 samples", "href": "https://drive.google.com" },
+      { "title": "Alt Text Authoring", "desc": "Figure descriptions and image accessibility", "href": "https://drive.google.com" },
+      { "title": "XML Conversion", "desc": "PDF to XML workflows", "href": "https://drive.google.com" },
+      { "title": "Copy Editing", "desc": "Before vs After editing samples", "href": "https://drive.google.com" },
+      { "title": "Translation", "desc": "Source vs translated content", "href": "https://drive.google.com" },
+      { "title": "AI Annotation", "desc": "Text, image, and data annotation examples", "href": "https://drive.google.com" },
+      { "title": "Dubbing & Localization", "desc": "Voice-over and multilingual projects", "href": "https://drive.google.com" },
+      { "title": "Assessment Development", "desc": "Questions, solutions, and learning content", "href": "https://drive.google.com" }
     ]
   },
   "samples": {

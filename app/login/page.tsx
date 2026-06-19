@@ -5,7 +5,7 @@ import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -109,7 +109,7 @@ export default function LoginPage() {
               Login to your account
             </h1>
             <p className="mt-2 text-sm text-slate-600">
-              Enter your phone number and password to continue.
+              Enter your email or phone number and password to continue.
             </p>
           </motion.div>
 
@@ -122,12 +122,12 @@ export default function LoginPage() {
             <form onSubmit={onSubmit} className="mt-3 space-y-4">
               <div>
                 <label className="mb-1.5 block text-sm font-semibold text-slate-800">
-                  Phone Number
+                  Email or Phone Number
                 </label>
                 <input
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+91XXXXXXXXXX"
+                  placeholder="Enter email or phone number"
                   inputMode="tel"
                   className="w-full rounded-md border border-black/10 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#ff7a1a]/60 focus:ring-4 focus:ring-[#ff7a1a]/15"
                 />

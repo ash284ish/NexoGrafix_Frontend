@@ -5,7 +5,7 @@ import { AnimatePresence, motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { FiChevronDown, FiSearch, FiShield, FiZap, FiClock, FiCheckCircle, FiMessageSquare, FiLayers } from "react-icons/fi";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
 type Cat = string;
 

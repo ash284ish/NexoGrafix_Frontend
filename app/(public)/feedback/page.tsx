@@ -9,7 +9,7 @@ import { companyInfo } from "@/data/companyInfo";
 import toast, { Toaster } from "react-hot-toast";
 import { resolveImageUrl } from "@/lib/apiUrl";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 

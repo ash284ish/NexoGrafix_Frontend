@@ -5,7 +5,7 @@ import DataTable, { Pill, TableActions, type DataTableColumn } from "@/component
 import ToastTopRight, { type ToastState } from "@/components/ui/Toast";
 import SectionHeader from "@/components/dashboard/assets/SectionHeader";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
 /* ================= TYPES ================= */
 

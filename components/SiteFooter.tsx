@@ -7,7 +7,7 @@ import { FiArrowUpRight, FiMail, FiPhone, FiMapPin, FiLinkedin, FiInstagram, FiF
 import ToastTopRight from "@/components/ui/Toast";
 import { resolveImageUrl } from "@/lib/apiUrl";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
 type FooterJson = {
   brand: { badgeText: string; headline: string; subheadline: string };

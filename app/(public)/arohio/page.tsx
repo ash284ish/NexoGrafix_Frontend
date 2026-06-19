@@ -18,7 +18,7 @@ import {
 import DashboardPreviewCode from "@/components/sections/Dashboardpreviewcode";
 import { resolveImageUrl } from "@/lib/apiUrl";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
 function cx(...classes: Array<string | false | undefined | null>) {
   return classes.filter(Boolean).join(" ");
