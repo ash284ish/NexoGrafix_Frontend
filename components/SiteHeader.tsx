@@ -252,7 +252,7 @@ export default function SiteHeader() {
     let alive = true;
     (async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/v1/content/header`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/header`, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load header");
         const json = (await res.json()) as HeaderResponse;
         if (alive) setData(json?.header ?? null);

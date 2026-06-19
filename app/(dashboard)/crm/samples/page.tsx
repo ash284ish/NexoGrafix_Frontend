@@ -81,7 +81,7 @@ export default function SamplesCmsPage() {
   };
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/v1/content/samples`)
+    fetch(`/api/v1/content/samples`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load CMS content");
         return res.json();
@@ -120,7 +120,7 @@ export default function SamplesCmsPage() {
     setSubmitting(true);
     try {
       const token = localStorage.getItem("access_token");
-      const res = await fetch(`${API_BASE}/api/v1/content/samples`, {
+      const res = await fetch(`/api/v1/content/samples`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

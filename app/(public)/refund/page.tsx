@@ -134,7 +134,7 @@ export default function RefundPolicyPage() {
         setLoading(true);
         setErr(null);
 
-        const res = await fetch(`${API_BASE}/api/v1/content/refund-policy`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/refund-policy`, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load refund policy");
 
         const json = (await res.json()) as RefundPolicyJson;

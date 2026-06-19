@@ -68,7 +68,7 @@ export default function BlogDetailsPage() {
       try {
         if (!blogId) throw new Error();
 
-        const mapRes = await fetch(`${API_BASE}/api/v1/content/blog-post-map`, { cache: "no-store" });
+        const mapRes = await fetch(`/api/v1/content/blog-post-map`, { cache: "no-store" });
         const mapJson = await mapRes.json();
 
         const mapping = mapJson.mappings?.find(
@@ -76,7 +76,7 @@ export default function BlogDetailsPage() {
         );
         if (!mapping) throw new Error();
 
-        const res = await fetch(`${API_BASE}/api/v1/content/blog-details`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/blog-details`, { cache: "no-store" });
         const json = (await res.json()) as BlogDetailsPayload;
 
         const matched = json.posts.find(

@@ -171,7 +171,7 @@ export default function BlogDetailsPage() {
         if (!blogId) throw new Error("blog_id missing");
 
         const mapRes = await fetch(
-          `${API_BASE}/api/v1/content/blog-post-map`,
+          `/api/v1/content/blog-post-map`,
           { cache: "no-store" }
         );
         if (!mapRes.ok) throw new Error("map fetch failed");
@@ -183,7 +183,7 @@ export default function BlogDetailsPage() {
         if (!mapping) throw new Error("mapping not found");
 
         const detailsRes = await fetch(
-          `${API_BASE}/api/v1/content/blog-details`,
+          `/api/v1/content/blog-details`,
           { cache: "no-store" }
         );
         if (!detailsRes.ok) throw new Error("details fetch failed");

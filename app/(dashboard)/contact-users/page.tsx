@@ -242,7 +242,7 @@ export default function ContactRequestsPage() {
   const fetchData = React.useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/api/v1/contact-requests`, { cache: "no-store" });
+      const res = await fetch(`/api/v1/contact-requests`, { cache: "no-store" });
       const data = await readJsonSafe(res);
       if (!res.ok) throw new Error();
       setRows((data || []).map(mapApiToRow));
@@ -329,7 +329,7 @@ export default function ContactRequestsPage() {
     if (!form) return;
     const f = form as AddContactForm;
     try {
-      const res = await fetch(`${API_BASE}/api/v1/contact-requests`, {
+      const res = await fetch(`/api/v1/contact-requests`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...f, status: "new" }),
@@ -347,7 +347,7 @@ export default function ContactRequestsPage() {
     if (!form) return;
     const f = form as EditContactForm;
     try {
-      const res = await fetch(`${API_BASE}/api/v1/contact-requests/${f.id}`, {
+      const res = await fetch(`/api/v1/contact-requests/${f.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -374,7 +374,7 @@ export default function ContactRequestsPage() {
     if (!pendingDelete) return;
     setDeleting(true);
     try {
-      const res = await fetch(`${API_BASE}/api/v1/contact-requests/${pendingDelete.id}`, { method: "DELETE" });
+      const res = await fetch(`/api/v1/contact-requests/${pendingDelete.id}`, { method: "DELETE" });
       if (!res.ok) throw new Error();
       setConfirmOpen(false);
       setPendingDelete(null);

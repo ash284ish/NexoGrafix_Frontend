@@ -79,7 +79,7 @@ export default function DashboardPage() {
       try {
         setLoadingStats(true);
 
-        const res = await fetch(`${API_BASE}/api/v1/stats`, {
+        const res = await fetch(`/api/v1/stats`, {
           method: "GET",
           cache: "no-store",
           signal: controller.signal,
@@ -114,7 +114,7 @@ export default function DashboardPage() {
       try {
         setLoadingFeedback(true);
 
-        const res = await fetch(`${API_BASE}/api/v1/feedback/service-summary`, {
+        const res = await fetch(`/api/v1/feedback/service-summary`, {
           method: "GET",
           cache: "no-store",
           signal: controller.signal,
@@ -165,7 +165,7 @@ export default function DashboardPage() {
       try {
         setLoadingActivities(true);
 
-        const res = await fetch(`${API_BASE}/api/v1/dashboard/activities`, {
+        const res = await fetch(`/api/v1/dashboard/activities`, {
           method: "GET",
           cache: "no-store",
           signal: controller.signal,

@@ -236,7 +236,7 @@ export default function BookPublishingServicePage() {
             process.env.NEXT_PUBLIC_HOST ||
             "";
 
-        const url = `${base}/api/v1/content/publishing-digital`;
+        const url = `/api/v1/content/publishing-digital`;
 
         (async () => {
             try {

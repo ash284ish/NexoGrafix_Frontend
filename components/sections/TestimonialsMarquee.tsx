@@ -130,7 +130,7 @@ export default function TestimonialsMarquee() {
 
         (async () => {
             try {
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || ""}/api/v1/content/feedback`, {
+                const res = await fetch(`/api/v1/content/feedback`, {
                     cache: "no-store",
                 });
 

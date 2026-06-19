@@ -12,12 +12,7 @@ import LatestBlogSection from "@/components/sections/LatestBlogSection";
 import ProofStatsSection, { defaultIcons, type StatItem } from "@/components/sections/ProofStatsSection";
 
 function getApiBase() {
-    const base =
-        process.env.NEXT_PUBLIC_API_BASE_URL ||
-        process.env.NEXT_PUBLIC_API_HOST ||
-        process.env.NEXT_PUBLIC_HOST ||
-        "";
-    return (base || "").replace(/\/+$/, "");
+    return "";
 }
 
 function mapTrustStats(raw: any[]): StatItem[] {
@@ -44,7 +39,7 @@ export default function Home() {
 
     useEffect(() => {
         const base = getApiBase();
-        const url = `${base}/api/v1/content/data-labelling`;
+        const url = `/api/v1/content/data-labelling`;
 
         fetch(url, { cache: "no-store" })
             .then((r) => r.json())

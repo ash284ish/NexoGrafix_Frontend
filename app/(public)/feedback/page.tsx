@@ -190,7 +190,7 @@ export default function FeedbackPage() {
   const [submitting, setSubmitting] = useState(false);
 
   const loadContent = async () => {
-    const res = await fetch(`${API_BASE}/api/v1/content/feedback`, { cache: "no-store" });
+    const res = await fetch(`/api/v1/content/feedback`, { cache: "no-store" });
     if (!res.ok) throw new Error("Failed to load feedback content");
     return (await res.json()) as FeedbackContent;
   };
@@ -311,7 +311,7 @@ export default function FeedbackPage() {
         sentiment: deriveSentiment(ratingNum),
       };
 
-      const res = await fetch(`${API_BASE}/api/v1/feedback`, {
+      const res = await fetch(`/api/v1/feedback`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

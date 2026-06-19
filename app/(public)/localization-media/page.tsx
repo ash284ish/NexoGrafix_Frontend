@@ -170,7 +170,7 @@ export default function LocalizationMediaAccessibilityPage() {
   useEffect(() => {
     let alive = true;
     const baseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || "").replace(/\/$/, "");
-    fetch(`${baseUrl}/api/v1/content/localization`)
+    fetch(`/api/v1/content/localization`)
       .then((res) => {
         if (!res.ok) throw new Error("API fail");
         return res.json();

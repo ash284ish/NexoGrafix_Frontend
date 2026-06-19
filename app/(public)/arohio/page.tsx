@@ -540,7 +540,7 @@ export default function ArohioMainFeaturePage() {
     let alive = true;
     (async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/v1/content/arohio/main-feature`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/arohio/main-feature`, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load Arohio main feature content");
         const json = (await res.json()) as ArohioPageContent;
         if (alive) setData(json);

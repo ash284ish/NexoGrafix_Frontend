@@ -145,7 +145,7 @@ export default function BlogDetailsPage() {
     (async () => {
       try {
         setLoadErr(false);
-        const res = await fetch(`${API_BASE}/api/v1/content/blog-details`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/blog-details`, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load blog details");
         const json = (await res.json()) as BlogDetailsPayload;
         if (alive) setPayload(json);

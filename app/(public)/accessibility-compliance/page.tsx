@@ -132,19 +132,13 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 function getApiBase() {
-    // aap apne env ke hisaab se yahan value rakh rahe ho
-    const base =
-        process.env.NEXT_PUBLIC_API_BASE_URL ||
-        process.env.NEXT_PUBLIC_API_HOST ||
-        process.env.NEXT_PUBLIC_HOST ||
-        "";
-    return (base || "").replace(/\/+$/, "");
+    return "";
 }
 
 function resolveUrl(path: string) {
     const base = getApiBase();
     if (!base) return path; // relative (same origin)
-    return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+    return `${path.startsWith("/") ? path : `/${path}`}`;
 }
 
 function toStatItems(raw?: ContentJSON["trust_metrics"]): StatItem[] {

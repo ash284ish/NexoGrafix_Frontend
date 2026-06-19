@@ -139,7 +139,7 @@ export default function FAQPagePremium() {
     let alive = true;
     (async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/v1/content/faqs`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/faqs`, { cache: "no-store" });
         if (!res.ok) return;
         const data = (await res.json()) as FAQContent;
         if (alive) setContent(data || null);

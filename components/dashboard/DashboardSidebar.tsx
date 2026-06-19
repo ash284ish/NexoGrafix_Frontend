@@ -90,7 +90,7 @@ export default function DashboardSidebar() {
       try {
         setLoadingStats(true);
 
-        const res = await fetch(`${API_BASE}/api/v1/stats`, {
+        const res = await fetch(`/api/v1/stats`, {
           method: "GET",
           cache: "no-store",
           signal: controller.signal,

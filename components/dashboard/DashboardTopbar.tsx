@@ -318,7 +318,7 @@ export default function DashboardTopbar() {
         setLoggingOut(true);
 
         try {
-            await fetch(`${API_BASE}/api/v1/users/logout`, {
+            await fetch(`/api/v1/users/logout`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("access_token") || ""}`,
@@ -368,7 +368,7 @@ export default function DashboardTopbar() {
         setSavingPwd(true);
 
         try {
-            const res = await fetch(`${API_BASE}/api/v1/users/change-password`, {
+            const res = await fetch(`/api/v1/users/change-password`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

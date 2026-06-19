@@ -145,7 +145,7 @@ export default function ContactPage() {
     let alive = true;
     (async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/v1/content/contact`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/contact`, { cache: "no-store" });
         if (!res.ok) return;
         const data = (await res.json()) as ContactContent;
         if (alive) setContent(data || null);
@@ -299,7 +299,7 @@ export default function ContactPage() {
     setToast(null);
 
     try {
-      const res = await fetch(`${API_BASE}/api/v1/contact-requests`, {
+      const res = await fetch(`/api/v1/contact-requests`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

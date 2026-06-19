@@ -85,7 +85,7 @@ export default function FeedbackAdminPage() {
   const fetchFeedbacks = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/api/v1/feedback`, { cache: "no-store" });
+      const res = await fetch(`/api/v1/feedback`, { cache: "no-store" });
       if (!res.ok) throw new Error();
       const data: ApiFeedback[] = await res.json();
       setRows(data.map(mapApiToRow));
@@ -156,7 +156,7 @@ export default function FeedbackAdminPage() {
     if (!activeRow) return;
 
     try {
-      const res = await fetch(`${API_BASE}/api/v1/feedback/${activeRow.id}`, {
+      const res = await fetch(`/api/v1/feedback/${activeRow.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

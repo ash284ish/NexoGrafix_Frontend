@@ -101,11 +101,7 @@ const pageWrap: Variants = {
 };
 
 function getApiBaseUrl() {
-  const base =
-    process.env.NEXT_PUBLIC_API_BASE_URL ||
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "";
-  return base.replace(/\/+$/, "");
+    return "";
 }
 
 /** Fallback Content */
@@ -178,7 +174,7 @@ export default function ITDevelopmentPage() {
   useEffect(() => {
     const controller = new AbortController();
     const baseUrl = getApiBaseUrl();
-    const url = `${baseUrl}/api/v1/content/it-developement`;
+    const url = `/api/v1/content/it-developement`;
 
     fetch(url, { signal: controller.signal })
       .then(async (res) => {

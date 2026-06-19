@@ -170,7 +170,7 @@ export default function BlogDetailsPage() {
     (async () => {
       try {
         const detailsRes = await fetch(
-          `${API_BASE}/api/v1/content/blog-details`,
+          `/api/v1/content/blog-details`,
           { cache: "no-store" }
         );
         if (!detailsRes.ok) throw new Error("details fetch failed");
@@ -180,7 +180,7 @@ export default function BlogDetailsPage() {
 
         if (blogId) {
           const mapRes = await fetch(
-            `${API_BASE}/api/v1/content/blog-post-map`,
+            `/api/v1/content/blog-post-map`,
             { cache: "no-store" }
           );
           if (mapRes.ok) {

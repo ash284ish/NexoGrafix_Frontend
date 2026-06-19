@@ -206,7 +206,7 @@ export default function NewsletterUsersPage() {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/api/v1/newsletter-subscribers`, { cache: "no-store" });
+      const res = await fetch(`/api/v1/newsletter-subscribers`, { cache: "no-store" });
       if (!res.ok) {
         const data = await readJsonSafe(res);
         pushToast({ type: "error", msg: data?.detail || data?.message || "Failed to load users." }, 4500);
@@ -284,7 +284,7 @@ export default function NewsletterUsersPage() {
                 const prev = rows;
                 setRows((p) => p.filter((x) => x.id !== u.id));
                 try {
-                  const res = await fetch(`${API_BASE}/api/v1/newsletter-subscribers/${u.id}`, { method: "DELETE" });
+                  const res = await fetch(`/api/v1/newsletter-subscribers/${u.id}`, { method: "DELETE" });
                   if (!res.ok) {
                     const data = await readJsonSafe(res);
                     setRows(prev);
@@ -316,7 +316,7 @@ export default function NewsletterUsersPage() {
     if (!fn || !ln || !em) return;
 
     try {
-      const res = await fetch(`${API_BASE}/api/v1/newsletter-subscribers`, {
+      const res = await fetch(`/api/v1/newsletter-subscribers`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(mapRowToApiPayload({ firstName: fn, lastName: ln, email: em, status: form.status })),
@@ -354,7 +354,7 @@ export default function NewsletterUsersPage() {
     setRows((p) => p.map((r) => (r.id === activeRow.id ? { ...r, firstName: fn, lastName: ln, email: em, status: form.status } : r)));
 
     try {
-      const res = await fetch(`${API_BASE}/api/v1/newsletter-subscribers/${activeRow.id}`, {
+      const res = await fetch(`/api/v1/newsletter-subscribers/${activeRow.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(mapRowToApiPayload({ firstName: fn, lastName: ln, email: em, status: form.status })),

@@ -115,7 +115,7 @@ export default function PrivacyPolicyPage() {
     (async () => {
       try {
         setError(null);
-        const res = await fetch(`${API_BASE}/api/v1/content/privacy-policy`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/privacy-policy`, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load privacy policy content");
         const json = (await res.json()) as PrivacyJson;
         if (alive) setData(json);

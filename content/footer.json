@@ -164,9 +164,9 @@
       "label": "CERTIFICATIONS",
       "items": [
         {
-          "key": "iso-9001",
-          "src": "https://nexografix.com/api/uploads/testimonials/1000021551.png",
-          "alt": "ISO 9001 Certified"
+          "key": "iso-27001",
+          "src": "",
+          "alt": "ISO 27001 Certified"
         }
       ]
     },

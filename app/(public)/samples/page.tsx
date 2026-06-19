@@ -228,7 +228,7 @@ export default function SamplesPage() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/v1/content/samples`)
+    fetch(`/api/v1/content/samples`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load CMS content");
         return res.json();
@@ -252,7 +252,7 @@ export default function SamplesPage() {
         message: `Volume: ${volume} | Timeline: ${timeline}`,
       };
 
-      const res = await fetch(`${API_BASE}/api/v1/contact-requests`, {
+      const res = await fetch(`/api/v1/contact-requests`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

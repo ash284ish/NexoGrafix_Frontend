@@ -149,7 +149,7 @@ export default function BlogPage() {
 
     (async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || ""}/api/v1/content/blog`, {
+        const res = await fetch(`/api/v1/content/blog`, {
           cache: "no-store",
         });
         if (!res.ok) throw new Error("Failed to load blog content");

@@ -96,13 +96,7 @@ const pageWrap: Variants = {
 };
 
 function getApiBase() {
-    const envBase =
-        (process.env.NEXT_PUBLIC_API_BASE_URL ||
-            process.env.NEXT_PUBLIC_BASE_URL ||
-            process.env.NEXT_PUBLIC_API_URL ||
-            "") as string;
-
-    return (envBase || "").replace(/\/+$/, "");
+    return "";
 }
 
 function mapTrustStats(raw: Array<{
@@ -216,7 +210,7 @@ export default function DataLabelingAnnotationPage() {
     useEffect(() => {
         let alive = true;
         const base = getApiBase();
-        const url = `${base}/api/v1/content/data-labelling`;
+        const url = `/api/v1/content/data-labelling`;
 
         fetch(url)
             .then((res) => {

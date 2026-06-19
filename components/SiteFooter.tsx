@@ -48,6 +48,18 @@ const CERT_BADGES: Record<string, React.ReactNode> = {
       <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">QUALITY MANAGEMENT</text>
     </svg>
   ),
+  "iso-27001": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-12 w-auto md:h-12 lg:h-14">
+      <rect width="120" height="56" rx="7" fill="#1a1a2e" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#ea580c" strokeOpacity="0.55" strokeWidth="1.2" />
+      {/* lock icon */}
+      <rect x="15" y="21" width="10" height="8" rx="1.5" fill="none" stroke="#ea580c" strokeWidth="1.2" />
+      <path d="M17 21 V18 A3 3 0 0 1 23 18 V21" fill="none" stroke="#ea580c" strokeWidth="1.2" strokeLinecap="round" />
+      <text x="60" y="20" textAnchor="middle" fill="#ea580c" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
+      <text x="60" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">27001:2022</text>
+      <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6" fontFamily="system-ui,sans-serif" letterSpacing="1.5">INFORMATION SECURITY</text>
+    </svg>
+  ),
 };
 
 // Mobile-size version (smaller SVGs)
@@ -61,6 +73,18 @@ const CERT_BADGES_SM: Record<string, React.ReactNode> = {
       <text x="60" y="20" textAnchor="middle" fill="#ea580c" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
       <text x="60" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">9001:2015</text>
       <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6.5" fontFamily="system-ui,sans-serif" letterSpacing="2">QUALITY MANAGEMENT</text>
+    </svg>
+  ),
+  "iso-27001": (
+    <svg viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-auto">
+      <rect width="120" height="56" rx="7" fill="#1a1a2e" />
+      <rect x="1" y="1" width="118" height="54" rx="6.5" stroke="#ea580c" strokeOpacity="0.55" strokeWidth="1.2" />
+      {/* lock icon */}
+      <rect x="15" y="21" width="10" height="8" rx="1.5" fill="none" stroke="#ea580c" strokeWidth="1.2" />
+      <path d="M17 21 V18 A3 3 0 0 1 23 18 V21" fill="none" stroke="#ea580c" strokeWidth="1.2" strokeLinecap="round" />
+      <text x="60" y="20" textAnchor="middle" fill="#ea580c" fontSize="8" fontWeight="800" fontFamily="system-ui,sans-serif" letterSpacing="2.5">ISO CERTIFIED</text>
+      <text x="60" y="37" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="system-ui,sans-serif" letterSpacing="0.5">27001:2022</text>
+      <text x="60" y="49" textAnchor="middle" fill="#94a3b8" fontSize="6" fontFamily="system-ui,sans-serif" letterSpacing="1.5">INFORMATION SECURITY</text>
     </svg>
   ),
 };
@@ -133,7 +157,7 @@ const FALLBACK: FooterJson = {
   ],
   // src is intentionally empty — rendering uses CERT_BADGES inline SVGs keyed by `key`
   certifications: [
-    { key: "iso-9001",  src: "", alt: "ISO 9001 Certified",  href: "https://www.iso.org/iso-9001-quality-management.html" },
+    { key: "iso-27001",  src: "", alt: "ISO 27001 Certified",  href: "https://www.iso.org/iso-iec-27001-information-security.html" },
   ],
   legal: {
     copyrightText: "© {{year}} Nexografix. All rights reserved.",
@@ -351,7 +375,7 @@ export default function SiteFooter() {
     let alive = true;
     (async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/v1/content/footer`, { cache: "no-store" });
+        const res = await fetch(`/api/v1/content/footer`, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load footer");
         const json = await res.json();
         const normalized = normalizeFooter(json);
@@ -404,7 +428,7 @@ export default function SiteFooter() {
     window.setTimeout(() => setToast(null), ttl);
   };
 
-  const newsletterUrl = `${API_BASE}/api/v1/newsletter-subscribers`;
+  const newsletterUrl = `/api/v1/newsletter-subscribers`;
 
   const year = new Date().getFullYear();
   const copyright = (f.legal?.copyrightText || FALLBACK.legal.copyrightText).replace("{{year}}", String(year));
