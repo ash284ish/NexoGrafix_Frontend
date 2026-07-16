@@ -11,6 +11,12 @@ const complianceBadges = [
     src: "/images/iso_9001.png",
     href: "https://www.iso.org/iso-9001-quality-management.html",
   },
+  {
+    name: "ISO 27001:2022",
+    label: "Information Security",
+    src: "/images/iso_27001:2022.jpeg",
+    href: "https://www.iso.org/iso-iec-27001-information-security.html",
+  },
 ];
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];

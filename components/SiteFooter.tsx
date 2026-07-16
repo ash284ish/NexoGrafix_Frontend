@@ -155,9 +155,9 @@ const FALLBACK: FooterJson = {
       icon: "WaIcon",
     },
   ],
-  // src is intentionally empty — rendering uses CERT_BADGES inline SVGs keyed by `key`
   certifications: [
-    { key: "iso-27001",  src: "", alt: "ISO 27001 Certified",  href: "https://www.iso.org/iso-iec-27001-information-security.html" },
+    { key: "iso-9001",  src: "/images/iso_9001.png", alt: "ISO 9001 Certified",  href: "https://www.iso.org/iso-9001-quality-management.html" },
+    { key: "iso-27001",  src: "/images/iso_27001:2022.jpeg", alt: "ISO 27001 Certified",  href: "https://www.iso.org/iso-iec-27001-information-security.html" },
   ],
   legal: {
     copyrightText: "© {{year}} Nexografix. All rights reserved.",
@@ -321,18 +321,7 @@ function normalizeFooter(input: any): FooterJson {
 // CertImage — renders inline SVG badge if available, falls back to <img>
 // ---------------------------------------------------------------------------
 function CertImage({ c, size }: { c: FooterJson["certifications"][number]; size: "sm" | "lg" }) {
-  const badges = size === "sm" ? CERT_BADGES_SM : CERT_BADGES;
-  const badge = badges[c.key];
-
-  if (badge) {
-    return (
-      <div className="opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]">
-        {badge}
-      </div>
-    );
-  }
-
-  // Fallback to <img> when a custom src is provided from the API
+  // Prioritize <img> when a custom src is provided
   if (c.src) {
     return (
       <img
@@ -346,6 +335,17 @@ function CertImage({ c, size }: { c: FooterJson["certifications"][number]; size:
             : "h-8 w-auto opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]"
         }
       />
+    );
+  }
+
+  const badges = size === "sm" ? CERT_BADGES_SM : CERT_BADGES;
+  const badge = badges[c.key];
+
+  if (badge) {
+    return (
+      <div className="opacity-95 transition-transform duration-300 ease-out hover:scale-[1.04]">
+        {badge}
+      </div>
     );
   }
 
