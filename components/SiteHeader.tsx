@@ -28,6 +28,7 @@ import {
   FiSmartphone,
   FiCode,
   FiArrowRight,
+  FiUsers,
 } from "react-icons/fi";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
@@ -80,6 +81,7 @@ const FALLBACK: HeaderData = {
       icon: "FiHome",
       items: [
         { title: "Homepage", href: "/", icon: "FiHome" },
+        { title: "Who We Are", href: "/about#who-we-are", icon: "FiUsers" },
         { title: "Case Studies", href: "/case-studies", icon: "FiBox" },
         { title: "About Us", href: "/about", icon: "FiUser" },
         { title: "Contact Us", href: "/contact", icon: "FiMail" },
@@ -313,6 +315,7 @@ export default function SiteHeader() {
     FiSmartphone: <FiSmartphone />,
     FiCode: <FiCode />,
     FiArrowRight: <FiArrowRight />,
+    FiUsers: <FiUsers />,
     FiGlobeIcon: <FiGlobeIcon />,
   }), []);
 

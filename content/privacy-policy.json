@@ -1,205 +1,503 @@
 {
   "meta": {
-    "title": "Privacy Policy",
-    "lastUpdated": "December 2025",
-    "lead": "Nexografix (“we”, “our”, “us”) is committed to protecting the privacy and security of personal and business information shared with us through our website, platforms, and services. This policy explains how we collect, use, store, and protect information when you interact with Nexografix and its products, including Arohio.ai."
+    "title": "Privacy Policy & Data Protection Notice",
+    "lastUpdated": "August 2026",
+    "lead": "Nexografix Private Limited (\"Nexografix\", \"we\", \"our\", or \"us\") is committed to protecting the privacy, security, and integrity of personal data collected through our website, platforms, products (including Arohio.ai), and client engagements. This Privacy Notice provides clear and transparent information on how we collect, use, process, store, transfer, and protect your personal information in strict compliance with applicable data protection laws, including the Digital Personal Data Protection Act, 2023 (DPDP Act, India), Information Technology Act, 2000 (IT Act, India), UK General Data Protection Regulation (UK GDPR), and EU GDPR."
   },
   "sections": [
     {
-      "key": "info",
-      "title": "Information We Collect",
+      "key": "who_we_are",
+      "title": "1. Who We Are",
       "blocks": [
         {
           "type": "heading",
-          "value": "1. Information We Collect"
+          "value": "1. Who We Are & Corporate Details"
         },
         {
           "type": "paragraph",
-          "value": "We collect information only where it is necessary to provide our services, respond to requests, and maintain secure and reliable operations. The information we collect depends on how you interact with Nexografix and products such as Arohio.ai."
+          "value": "Nexografix Private Limited is a technology-driven global service and AI software provider registered and headquartered in India. We specialize in AI-enabled digital publishing, document accessibility remediation (WCAG 2.1/2.2, Section 508, EPUB), computer vision & NLP data labeling, eLearning content engineering, and AI automation platforms including Arohio.ai."
+        },
+        {
+          "type": "paragraph",
+          "value": "Under the Digital Personal Data Protection Act, 2023 (DPDP Act, India), Nexografix Private Limited functions as a Data Fiduciary (for website visitors, clients, sales inquiries, and applicants) and as a Data Processor (when processing datasets, manuscripts, and project assets under a Data Processing Agreement on behalf of enterprise clients)."
         },
         {
           "type": "card_list",
           "items": [
             {
-              "title": "Contact Information",
-              "description": "Name, email address, phone number, organization name, and role when you submit forms, request a demo, or contact us for services."
+              "title": "Legal Entity Name",
+              "description": "Nexografix Private Limited"
             },
             {
-              "title": "Business Information",
-              "description": "Service requirements, project scope, communication details, and operational inputs you share for proposals, delivery planning, or enterprise onboarding."
+              "title": "Primary Website",
+              "description": "https://nexografix.com"
             },
             {
-              "title": "Technical Information",
-              "description": "IP address, device/browser details, approximate location (city/region), logs, and usage analytics for security monitoring, rate-limiting, diagnostics, and platform performance."
+              "title": "Registered & Corporate Address",
+              "description": "Ward no 22/37, Mosomath Pokhar, Ward Number 27, Krishna Nagar, Saharsa, Bihar 852201"
             },
             {
-              "title": "Uploaded Content",
-              "description": "Documents, datasets, or files submitted through products such as Arohio.ai strictly for processing, extraction, transformation, automation, or analysis aligned with the service purpose."
+              "title": "Data Protection Officer (DPO) & Grievance Contacts",
+              "description": "Our dedicated DPO and Privacy Team handle all inquiries regarding data protection, cross-border transfers, and individual rights. Contact: ashish@nexografix.com | info@nexografix.com"
+            }
+          ]
+        },
+        {
+          "type": "contact",
+          "address": "Ward no 22/37, Mosomath Pokhar, Ward Number 27, Krishna Nagar, Saharsa, Bihar 852201",
+          "email": "ashish@nexografix.com",
+          "phone": "+91 9661284439",
+          "linkedin": "https://www.linkedin.com/company/nexografix"
+        }
+      ]
+    },
+    {
+      "key": "info_collected",
+      "title": "2. Information We Collect",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "2. Personal Information We Collect"
+        },
+        {
+          "type": "paragraph",
+          "value": "We collect personal data only when necessary to perform our services, fulfill contractual obligations, communicate with stakeholders, or operate our platform securely."
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Contact & Identification Data",
+              "description": "Full name, professional email address, phone number, company/organization name, and job title."
+            },
+            {
+              "title": "Account & Credentials",
+              "description": "Username, password (hashed), profile settings, authentication credentials, and user role identifiers for platform users."
+            },
+            {
+              "title": "Technical & Device Data",
+              "description": "Browser type, version, access timestamps, general route telemetry, and IP address audit tokens for security monitoring and CERT-In compliance."
+            },
+            {
+              "title": "Client Files & Supplied Content",
+              "description": "Documents, manuscripts, datasets, audio/video files, images, or assets uploaded or provided by clients for publishing, digitizing, labeling, assessment, or AI processing."
+            },
+            {
+              "title": "Employee & Vendor Information",
+              "description": "Professional background, employment history, tax and payment details, identity verification, and contractual records for staff, contractors, and vendors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "how_collected",
+      "title": "3. How We Collect Information",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "3. How We Collect Your Personal Data"
+        },
+        {
+          "type": "paragraph",
+          "value": "We obtain personal information through various transparent channels:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Website Forms: Contact forms, quote request forms, newsletter sign-ups, feedback forms, and demo requests on our website.",
+            "Direct Communication: Email exchanges (ashish@nexografix.com, info@nexografix.com), phone calls, virtual meetings, and business correspondence.",
+            "Client-Provided Files & Portal Uploads: Files, assets, and project requirements submitted directly by clients via our secure portals or integrated platforms (such as Arohio.ai).",
+            "Recruitment & HR: Job applications, CV submissions, recruiter referrals, and background check records.",
+            "Session Telemetry & Cookies: Automated collection of general visitor traffic metrics and cookie choices recorded under DPDP Act consent standards."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "why_we_use",
+      "title": "4. Why We Use Personal Data",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "4. Purposes of Processing Personal Data"
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Service Delivery & Platform Operations",
+              "description": "To execute digital publishing, content transformation, data labeling, localization, and platform services (including Arohio.ai)."
+            },
+            {
+              "title": "Client Communications & Account Management",
+              "description": "To respond to inquiries, provide project updates, deliver customer support, manage contracts, and handle invoicing."
+            },
+            {
+              "title": "Employee & Vendor Administration",
+              "description": "To manage payroll, onboarding, performance evaluations, compliance checks, and contractor agreements."
+            },
+            {
+              "title": "Security & Fraud Prevention",
+              "description": "To monitor network security, prevent unauthorized platform access, detect cyber threats, and maintain audit logs under CERT-In directives."
+            },
+            {
+              "title": "Legal & Regulatory Compliance",
+              "description": "To fulfill statutory laws under the IT Act 2000, Companies Act 2013, DPDP Act 2023, tax filings, and legal audit requirements."
+            },
+            {
+              "title": "Marketing & Promotional Outreach",
+              "description": "To share product updates, whitepapers, and service announcements where explicitly permitted by consent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "lawful_basis",
+      "title": "5. Lawful Basis for Processing",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "5. Lawful Basis for Processing (DPDP Act 2023 / IT Act 2000 & GDPR)"
+        },
+        {
+          "type": "paragraph",
+          "value": "Under the Digital Personal Data Protection Act, 2023 (DPDP Act, India) and global laws (UK GDPR / EU GDPR), we process personal data based on valid legal grounds:"
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Affirmative Consent (Section 6, DPDP Act 2023)",
+              "description": "Free, specific, informed, unconditional, and unambiguous consent given by the Data Principal for specified processing purposes (e.g., submitting contact forms or consenting to optional cookies)."
+            },
+            {
+              "title": "Certain Legitimate Uses (Section 7, DPDP Act 2023)",
+              "description": "Processing where personal data is provided voluntarily for a specified purpose, or processing necessary for employment, legal obligations, or corporate compliance."
+            },
+            {
+              "title": "Performance of a Contract",
+              "description": "Processing necessary to perform our contractual duties to enterprise clients, contractors, or employees."
+            },
+            {
+              "title": "Legal Obligation & IT Security (Sec. 43A, IT Act 2000)",
+              "description": "Processing required to satisfy statutory compliance mandates, CERT-In cybersecurity directives, and tax obligations under Indian law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "who_we_share",
+      "title": "6. Who We Share Data With",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "6. Disclosure & Sharing of Personal Data"
+        },
+        {
+          "type": "paragraph",
+          "value": "We do not sell, rent, or trade personal data to third parties. We share personal information only with vetted entities under strict contractual obligations:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Authorized Employees & Internal Staff: Staff who require access strictly on a need-to-know basis to perform project duties.",
+            "Cloud & IT Infrastructure Providers: Trusted hosting, database, and cloud service providers bound by data processing agreements.",
+            "Subcontractors & Vetted Partners: Specialist vendors assisting with project execution, under strict non-disclosure and security binding.",
+            "Professional Advisers: External legal counsel, auditors, tax consultants, and financial accountants.",
+            "Government & Regulatory Authorities: Statutory enforcement agencies, Indian Data Protection Board, or courts when legally compelled by subpoena or court order."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "international_transfers",
+      "title": "7. International Data Transfers",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "7. International Data Transfers & Safeguards"
+        },
+        {
+          "type": "paragraph",
+          "value": "Nexografix Private Limited is registered and operates from India. Because we serve international clients—including customers in the United Kingdom (UK), European Union (EU), United States, and APAC region—your personal data is transferred across borders and processed in India and other secure cloud server locations worldwide."
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Transfers Outside the UK & EEA",
+              "description": "When personal data governed by UK GDPR or EU GDPR is transferred to India or third countries outside the UK/EEA, Nexografix ensures adequate protection standards are enforced."
+            },
+            {
+              "title": "Transfer Safeguards & Mechanics",
+              "description": "We utilize Standard Contractual Clauses (SCCs) approved by the European Commission, the UK International Data Transfer Agreement (IDTA) / UK Addendum, and robust Data Processing Agreements (DPAs) with enterprise clients."
+            },
+            {
+              "title": "Technical Safeguards",
+              "description": "All cross-border data flows are protected by end-to-end encryption (TLS 1.3 in transit and AES-256 at rest), strict role-based access control (RBAC), and ISO 27001 certified security protocols."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "data_retention",
+      "title": "8. Data Retention Criteria",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "8. Retention Period & Criteria"
+        },
+        {
+          "type": "paragraph",
+          "value": "We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, including legal, accounting, and reporting obligations under Indian law."
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Client Contractual Data",
+              "description": "Retained for the duration of the active contract plus up to 7 years following contract termination to satisfy Indian Income Tax and statutory mandates."
+            },
+            {
+              "title": "Client-Uploaded Project Files",
+              "description": "Retained for the duration specified in the client agreement (typically deleted or archived 30-90 days after project completion)."
+            },
+            {
+              "title": "Account & Inquiry Data",
+              "description": "Retained while the account is active or up to 3 years after the last active interaction."
+            },
+            {
+              "title": "Job Applicant Data",
+              "description": "Retained for up to 12 months following application completion, unless the candidate consents to longer retention for future openings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "data_security",
+      "title": "9. Data Security",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "9. Technical & Organizational Security Safeguards (Sec. 43A, IT Act)"
+        },
+        {
+          "type": "paragraph",
+          "value": "In compliance with Section 43A of the Information Technology Act 2000 and ISO 27001 standards, we implement comprehensive technical and organizational measures (TOMs) to guard against unauthorized access, loss, alteration, or disclosure:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Access Control & Principle of Least Privilege: Strict Role-Based Access Control (RBAC) ensuring employees access only data required for their role.",
+            "Authentication & MFA: Multi-Factor Authentication mandatory across all internal infrastructure, production platforms, and administrative systems.",
+            "Encryption Standards: Encryption of sensitive data in transit using TLS 1.3 and at rest using AES-256 cryptographic standards.",
+            "Automated Backups & Monitoring: Daily automated encrypted backups with continuous threat monitoring, intrusion detection, and logging.",
+            "Confidentiality & Staff Training: All personnel sign binding non-disclosure agreements (NDAs) and complete regular security awareness training.",
+            "Incident Management Framework: Established security incident response policies to detect, contain, investigate, and mitigate potential threats."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "individual_rights",
+      "title": "10. Individual Rights (DPDP Act & Global Laws)",
+      "blocks": [
+        {
+          "type": "heading",
+          "value": "10. Your Statutory Rights (DPDP Act 2023 & GDPR)"
+        },
+        {
+          "type": "paragraph",
+          "value": "Under the Digital Personal Data Protection Act, 2023 (India) and global privacy laws (UK GDPR / EU GDPR), Data Principals possess specific statutory rights:"
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Right to Access Summary of Personal Data (Sec. 11, DPDP)",
+              "description": "Right to obtain a summary of personal data being processed, processing activities, and identities of Data Fiduciaries with whom data has been shared."
+            },
+            {
+              "title": "Right to Correction & Erasure (Sec. 12, DPDP)",
+              "description": "Right to request correction of inaccurate or misleading data, completion of incomplete data, and erasure of personal data no longer necessary for processing."
+            },
+            {
+              "title": "Right of Grievance Redressal (Sec. 13, DPDP)",
+              "description": "Right to readily available grievance redressal provided by Nexografix regarding any act or omission respecting your personal data."
+            },
+            {
+              "title": "Right to Nominate (Sec. 14, DPDP)",
+              "description": "Right to nominate another individual who shall, in the event of death or incapacity, exercise statutory rights on your behalf."
+            },
+            {
+              "title": "Right to Withdraw Consent",
+              "description": "Where processing is based on consent, you may withdraw consent at any time easily without affecting prior lawful processing."
             }
           ]
         },
         {
           "type": "paragraph",
-          "value": "We do not intentionally collect sensitive personal information (such as passwords, financial details, or government IDs) unless explicitly required for a particular contract or compliance workflow."
+          "value": "To exercise any of these rights, please contact our DPO & Grievance Lead at ashish@nexografix.com or info@nexografix.com. We respond to all valid requests within 30 days."
         }
       ]
     },
     {
-      "key": "use",
-      "title": "How We Use Information",
+      "key": "data_breach",
+      "title": "11. Data Breach Protocol",
       "blocks": [
         {
           "type": "heading",
-          "value": "2. How We Use Information"
+          "value": "11. Data Breach Reporting & Management (CERT-In Compliance)"
         },
         {
           "type": "paragraph",
-          "value": "Information is used strictly for legitimate, purpose-bound business operations. We do not use customer data for unsolicited marketing, resale, or unrelated profiling."
+          "value": "Nexografix maintains a rigorous Incident Response Plan to address suspected data breaches or security incidents promptly:"
         },
         {
           "type": "list",
           "items": [
-            "Service delivery including demos, onboarding, execution, and support",
-            "Product operations for platforms such as Arohio.ai",
-            "Operational improvement and diagnostics",
-            "Security, fraud prevention, and compliance obligations"
-          ]
-        }
-      ]
-    },
-    {
-      "key": "ai",
-      "title": "AI Systems",
-      "blocks": [
-        {
-          "type": "heading",
-          "value": "3. Data Processing & AI Systems"
-        },
-        {
-          "type": "paragraph",
-          "value": "Nexografix uses AI-enabled systems to enhance efficiency, accuracy, and scale across publishing, content, assessment, and automation workflows."
-        },
-        {
-          "type": "paragraph",
-          "value": "We do not use customer-uploaded data to train public or third-party AI models. Uploaded data is processed strictly for the intended service purpose."
-        }
-      ]
-    },
-    {
-      "key": "security",
-      "title": "Security",
-      "blocks": [
-        {
-          "type": "heading",
-          "value": "4. Data Storage & Security"
-        },
-        {
-          "type": "paragraph",
-          "value": "We implement layered security controls including encryption, access management, logging, and monitoring."
-        }
-      ]
-    },
-    {
-      "key": "sharing",
-      "title": "Data Sharing",
-      "blocks": [
-        {
-          "type": "heading",
-          "value": "5. Data Sharing"
-        },
-        {
-          "type": "list",
-          "items": [
-            "Infrastructure and hosting providers",
-            "Legal or regulatory authorities when required",
-            "Authorized partners under confidentiality obligations"
+            "Reporting Incidents: Anyone suspecting a security incident or breach should immediately contact ashish@nexografix.com or info@nexografix.com.",
+            "Investigation & Containment: Our incident team immediately isolates affected systems, determines breach scope, and mitigates vulnerabilities.",
+            "Regulatory & Individual Notification: As required under CERT-In directives (India), we notify affected individuals and statutory authorities (such as the Data Protection Board of India) within mandated timelines."
           ]
         }
       ]
     },
     {
       "key": "cookies",
-      "title": "Cookies",
+      "title": "12. Cookies & Traffic Telemetry",
       "blocks": [
         {
           "type": "heading",
-          "value": "6. Cookies & Tracking"
+          "value": "12. Cookies, Traffic Telemetry & DPDP Consent Logging"
         },
         {
           "type": "paragraph",
-          "value": "Our website may use cookies for session management, analytics, and performance optimization."
+          "value": "Our website and platforms use cookies and session telemetry to ensure session security, deliver essential functionality, and understand visitor usage:"
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "General Visitor Telemetry",
+              "description": "When visitors access our website, general non-personal pageview telemetry (page path, visit timestamp) is recorded for basic platform operations."
+            },
+            {
+              "title": "Lawful Proof of Consent (Sec. 6, DPDP Act)",
+              "description": "When a visitor accepts optional cookies, an official Proof of Consent Record (DPDP_PROOF_...) is generated and archived in our database to demonstrate affirmative consent as required by Indian Data Protection laws."
+            },
+            {
+              "title": "Strictly Necessary Cookies",
+              "description": "Essential for core website operation, security authentication, and session persistence."
+            },
+            {
+              "title": "Performance & Analytics Cookies",
+              "description": "Aggregated stats measuring visitor flow and site speed, enabled only upon explicit consent."
+            },
+            {
+              "title": "Managing & Revoking Preferences",
+              "description": "You can manage, change, or withdraw your cookie consent at any time via the Customize Cookie controls on our website."
+            }
+          ]
         }
       ]
     },
     {
-      "key": "rights",
-      "title": "User Rights",
+      "key": "ai_automated",
+      "title": "13. AI Systems & Automated Processing",
       "blocks": [
         {
           "type": "heading",
-          "value": "7. User Rights"
+          "value": "13. Automated Decision-Making & AI Systems (Arohio.ai)"
         },
         {
           "type": "paragraph",
-          "value": "You may request access, correction, or deletion of your personal information, subject to applicable laws."
+          "value": "Nexografix utilizes Artificial Intelligence (AI) and Machine Learning (ML) technologies in its product portfolio, including Arohio.ai, to assist in document extraction, content transformation, accessibility remediation, and data processing workflows."
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "AI Workflow Purpose",
+              "description": "AI systems process uploaded content strictly to perform designated automation tasks (e.g., optical character recognition, semantic markup, and formatting)."
+            },
+            {
+              "title": "No Solely Automated Legal Decisions",
+              "description": "We do NOT engage in solely automated decision-making or profiling that produces legal effects or similarly significant impacts on individuals without human review."
+            },
+            {
+              "title": "No Model Training on Customer Data",
+              "description": "Client-uploaded documents, assets, or personal data are NEVER utilized to train public, open, or third-party AI models."
+            }
+          ]
         }
       ]
     },
     {
-      "key": "retention",
-      "title": "Data Retention",
+      "key": "childrens_data",
+      "title": "14. Children's Data",
       "blocks": [
         {
           "type": "heading",
-          "value": "8. Data Retention"
+          "value": "14. Processing Data of Children (DPDP Act Sec. 9)"
         },
         {
           "type": "paragraph",
-          "value": "We retain information only as long as necessary to fulfill contractual and legal obligations."
+          "value": "Nexografix services, platforms, and products are designed exclusively for business clients, professionals, and adults."
+        },
+        {
+          "type": "paragraph",
+          "value": "In compliance with Section 9 of the DPDP Act 2023, we do not knowingly process personal data of children under 18 years of age or undertake tracking/behavioral monitoring of minors. If we learn that personal data of a minor has been collected inadvertently, we immediately take steps to purge such data from our systems."
         }
       ]
     },
     {
-      "key": "transfers",
-      "title": "International Transfers",
+      "key": "complaints",
+      "title": "15. Grievances & Regulatory Authorities",
       "blocks": [
         {
           "type": "heading",
-          "value": "9. International Data Transfers"
+          "value": "15. Grievance Redressal & Supervisory Authorities"
         },
         {
           "type": "paragraph",
-          "value": "Data may be processed outside your country with appropriate safeguards in place."
+          "value": "In compliance with the DPDP Act 2023 and IT Rules, Nexografix has appointed a Data Protection Grievance Officer to address any privacy concerns."
+        },
+        {
+          "type": "card_list",
+          "items": [
+            {
+              "title": "Grievance Officer (India)",
+              "description": "Nexografix Private Limited, Ward no 22/37, Mosomath Pokhar, Ward Number 27, Krishna Nagar, Saharsa, Bihar 852201 | Email: ashish@nexografix.com | info@nexografix.com"
+            },
+            {
+              "title": "Data Protection Board of India",
+              "description": "If a grievance is not resolved satisfactorily, Data Principals in India have the statutory right to lodge a complaint with the Data Protection Board of India under Section 18 of the DPDP Act 2023."
+            }
+          ]
         }
       ]
     },
     {
       "key": "updates",
-      "title": "Policy Updates",
+      "title": "16. Notice Updates",
       "blocks": [
         {
           "type": "heading",
-          "value": "10. Policy Updates"
+          "value": "16. Changes to This Privacy Notice"
         },
         {
           "type": "paragraph",
-          "value": "We may update this policy from time to time. Continued use indicates acceptance where permitted by law."
-        }
-      ]
-    },
-    {
-      "key": "contact",
-      "title": "Contact",
-      "blocks": [
-        {
-          "type": "heading",
-          "value": "11. Contact Information"
+          "value": "We update this Privacy Notice periodically to reflect changes in regulatory requirements under Indian and international laws, technological advancements, or our business practices."
         },
         {
-          "type": "contact",
-          "email": "ashish@nexografix.com",
-          "phone": " India office:- +91 9661284439",
-          "linkedin": "https://www.linkedin.com/company/nexografix"
+          "type": "paragraph",
+          "value": "When material changes occur, we update the revision date at the top of this document and notify active clients via email or platform announcements."
         }
       ]
     }

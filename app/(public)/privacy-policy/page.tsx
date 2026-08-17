@@ -23,10 +23,10 @@ type Block =
   | { type: "paragraph"; value: string; mt?: number }
   | { type: "list"; items: string[]; mt?: number }
   | { type: "card_list"; items: Array<{ title: string; description: string }>; mt?: number }
-  | { type: "contact"; email?: string; phone?: string; linkedin?: string; mt?: number };
+  | { type: "contact"; email?: string; phone?: string; linkedin?: string; address?: string; mt?: number };
 
 type PrivacySection = {
-  key: SectionKey;
+  key: string;
   title: string;
   blocks: Block[];
 };
@@ -88,6 +88,12 @@ function BlockRenderer({ block }: { block: Block }) {
 
   return (
     <div style={style} className="nx-legal-contact">
+      {block.address ? (
+        <div style={{ marginBottom: "12px" }}>
+          <span className="nx-legal-label">Registered Address</span>
+          <p style={{ margin: "4px 0 0 0", color: "#334155" }}>{block.address}</p>
+        </div>
+      ) : null}
       {items.map((it) => (
         <div key={`${it.label}-${it.href}`}>
           <span className="nx-legal-label">{it.label}</span>
@@ -106,7 +112,7 @@ function BlockRenderer({ block }: { block: Block }) {
 
 export default function PrivacyPolicyPage() {
   const [data, setData] = useState<PrivacyJson | null>(null);
-  const [active, setActive] = useState<SectionKey>("info");
+  const [active, setActive] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -118,7 +124,12 @@ export default function PrivacyPolicyPage() {
         const res = await fetch(`/api/v1/content/privacy-policy`, { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load privacy policy content");
         const json = (await res.json()) as PrivacyJson;
-        if (alive) setData(json);
+        if (alive) {
+          setData(json);
+          if (json.sections && json.sections.length > 0) {
+            setActive(json.sections[0].key);
+          }
+        }
       } catch (e) {
         if (alive) setError(e instanceof Error ? e.message : "Failed to load privacy policy content");
       }

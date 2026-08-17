@@ -104,7 +104,7 @@ const FALLBACK: FooterJson = {
     title: "Newsletter",
     subtitle: "Get product updates, delivery insights, and publishing workflow notes.",
     endpoint: "/api/v1/newsletter-subscribers",
-    privacyHref: "/privacy",
+    privacyHref: "/privacy-policy",
     consentText: "I agree to the Privacy Policy",
   },
   ctaButtons: [
@@ -162,7 +162,7 @@ const FALLBACK: FooterJson = {
   legal: {
     copyrightText: "© {{year}} Nexografix. All rights reserved.",
     links: [
-      { title: "Privacy Policy", href: "/privacy" },
+      { title: "Privacy Policy", href: "/privacy-policy" },
       { title: "Terms of Service", href: "/terms" },
       { title: "Refund Policy", href: "/refund" },
     ],

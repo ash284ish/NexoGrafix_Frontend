@@ -48,6 +48,11 @@
             "icon": "FiHome"
           },
           {
+            "title": "Who We Are",
+            "href": "/about#who-we-are",
+            "icon": "FiUsers"
+          },
+          {
             "title": "About Us",
             "href": "/about",
             "icon": "FiUser"

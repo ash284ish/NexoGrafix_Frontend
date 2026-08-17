@@ -144,6 +144,12 @@ export default function DashboardSidebar() {
         icon: <FiMessageCircle className="h-4.5 w-4.5" />,
       },
       {
+        type: "link",
+        label: "Cookie Consents & Governance",
+        href: "/crm/cookie-consent",
+        icon: <FiShield className="h-4.5 w-4.5 text-orange-600" />,
+      },
+      {
         type: "group",
         label: "Pages (CMS)",
         icon: <FiFolder className="h-4.5 w-4.5" />,
@@ -202,6 +208,7 @@ export default function DashboardSidebar() {
             icon: <FiFileText className="h-4.5 w-4.5" />,
           },
           { type: "link", label: "Refund Policy", href: "/crm/refund-policy", icon: <FiFileText className="h-4.5 w-4.5" /> },
+          { type: "link", label: "Cookie Consents (Audit)", href: "/crm/cookie-consent", icon: <FiShield className="h-4.5 w-4.5" /> },
         ],
       },
 

@@ -9,6 +9,7 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/audit_logs'
+export type * from './models/cookie_consents'
 export type * from './models/contact_requests'
 export type * from './models/feedbacks'
 export type * from './models/media_assets'

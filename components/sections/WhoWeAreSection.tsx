@@ -80,7 +80,7 @@ export default function WhoWeAreSectionHeroStyle() {
   const stats = (c?.stats ?? []).slice().sort((a, b) => a.order - b.order);
 
   return (
-    <section className="relative overflow-hidden bg-[#FFF7ED] py-16 sm:py-20">
+    <section id="who-we-are" className="relative overflow-hidden bg-[#FFF7ED] py-16 sm:py-20">
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[44%] bg-white/55 sm:block" />
 
       <div className="pointer-events-none absolute inset-0">

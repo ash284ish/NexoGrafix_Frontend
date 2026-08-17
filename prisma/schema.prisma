@@ -24,6 +24,23 @@ model audit_logs {
   @@index([user_id], map: "ix_audit_logs_user_id")
 }
 
+model cookie_consents {
+  id               Int      @id @default(autoincrement())
+  record_id        String   @unique(map: "ix_cookie_consents_record_id") @db.VarChar(100)
+  status           String   @db.VarChar(50)
+  page_path        String?  @db.VarChar(255)
+  categories       Json?    @db.Json
+  ip_address       String?  @db.VarChar(45)
+  anonymized_ip    String?  @db.VarChar(45)
+  proof_of_consent String?  @db.VarChar(100)
+  legal_framework  String   @db.VarChar(255)
+  policy_version   String   @db.VarChar(50)
+  created_at       DateTime @default(now()) @db.Timestamptz(6)
+
+  @@index([id], map: "ix_cookie_consents_id")
+  @@index([status], map: "ix_cookie_consents_status")
+}
+
 model contact_requests {
   id         Int      @id @default(autoincrement())
   first_name String   @db.VarChar(100)

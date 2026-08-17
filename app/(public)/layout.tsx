@@ -6,6 +6,7 @@ import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 const SiteHeader = dynamic(() => import("@/components/SiteHeader"), { ssr: false });
 const SiteFooter = dynamic(() => import("@/components/SiteFooter"), { ssr: false });
 const ComplianceStrip = dynamic(() => import("@/components/ComplianceStrip"), { ssr: false });
+const CookieConsentBanner = dynamic(() => import("@/components/ui/CookieConsentBanner"), { ssr: false });
 
 type PublicLayoutProps = {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
       </main>
       <WhatsAppFloatingButton />
       <ComplianceStrip />
+      <CookieConsentBanner />
       <SiteFooter />
     </div>
   );

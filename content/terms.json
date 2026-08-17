@@ -273,12 +273,17 @@
             {
               "label": "Email",
               "type": "email",
-              "value": "contact@nexografix.com"
+              "value": "info@nexografix.com"
+            },
+            {
+              "label": "Secondary Email",
+              "type": "email",
+              "value": "ashish@nexografix.com"
             },
             {
               "label": "Phone",
               "type": "phone",
-              "value": "+91 12345 67890"
+              "value": "+91 9661284439"
             },
             {
               "label": "LinkedIn",

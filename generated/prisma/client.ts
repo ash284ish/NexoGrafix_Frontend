@@ -47,6 +47,11 @@ export { Prisma }
  */
 export type audit_logs = Prisma.audit_logsModel
 /**
+ * Model cookie_consents
+ * 
+ */
+export type cookie_consents = Prisma.cookie_consentsModel
+/**
  * Model contact_requests
  * 
  */

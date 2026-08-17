@@ -52,6 +52,7 @@ export const AnyNull = runtime.AnyNull
 
 export const ModelName = {
   audit_logs: 'audit_logs',
+  cookie_consents: 'cookie_consents',
   contact_requests: 'contact_requests',
   feedbacks: 'feedbacks',
   media_assets: 'media_assets',
@@ -101,6 +102,23 @@ export const Audit_logsScalarFieldEnum = {
 } as const
 
 export type Audit_logsScalarFieldEnum = (typeof Audit_logsScalarFieldEnum)[keyof typeof Audit_logsScalarFieldEnum]
+
+
+export const Cookie_consentsScalarFieldEnum = {
+  id: 'id',
+  record_id: 'record_id',
+  status: 'status',
+  page_path: 'page_path',
+  categories: 'categories',
+  ip_address: 'ip_address',
+  anonymized_ip: 'anonymized_ip',
+  proof_of_consent: 'proof_of_consent',
+  legal_framework: 'legal_framework',
+  policy_version: 'policy_version',
+  created_at: 'created_at'
+} as const
+
+export type Cookie_consentsScalarFieldEnum = (typeof Cookie_consentsScalarFieldEnum)[keyof typeof Cookie_consentsScalarFieldEnum]
 
 
 export const Contact_requestsScalarFieldEnum = {
