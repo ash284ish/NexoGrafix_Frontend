@@ -157,7 +157,7 @@ const FALLBACK: FooterJson = {
   ],
   certifications: [
     { key: "iso-9001",  src: "/images/iso_9001.png", alt: "ISO 9001 Certified",  href: "https://www.iso.org/iso-9001-quality-management.html" },
-    { key: "iso-27001",  src: "/images/iso_27001:2022.jpeg", alt: "ISO 27001 Certified",  href: "https://www.iso.org/iso-iec-27001-information-security.html" },
+    { key: "iso-27001",  src: "/images/iso_27001-2022.jpeg", alt: "ISO 27001 Certified",  href: "https://www.iso.org/iso-iec-27001-information-security.html" },
   ],
   legal: {
     copyrightText: "© {{year}} Nexografix. All rights reserved.",

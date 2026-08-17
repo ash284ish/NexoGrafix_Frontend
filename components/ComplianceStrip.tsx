@@ -14,7 +14,7 @@ const complianceBadges = [
   {
     name: "ISO 27001:2022",
     label: "Information Security",
-    src: "/images/iso_27001:2022.jpeg",
+    src: "/images/iso_27001-2022.jpeg",
     href: "https://www.iso.org/iso-iec-27001-information-security.html",
   },
 ];
