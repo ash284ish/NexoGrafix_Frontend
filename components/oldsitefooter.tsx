@@ -289,6 +289,12 @@ export default function SiteFooter() {
                     Arohio.ai <span className={navUnderline} />
                   </span>
                 </Link>
+                <a href="https://15.207.247.55.sslip.io/" target="_blank" rel="noopener noreferrer" className={navLink}>
+                  <span className={navDot} />
+                  <span className="relative">
+                    PDF Accessibility <span className={navUnderline} />
+                  </span>
+                </a>
               </div>
 
               <div className="mt-6 text-xs font-extrabold tracking-[0.18em] text-slate-900">RESOURCES</div>

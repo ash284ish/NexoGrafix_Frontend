@@ -340,6 +340,9 @@ export default function SiteHeader() {
                 <Link href="/arohio" className={`nx-dd-item ${isActive("/arohio") ? "nx-active" : ""}`}>
                   <FiZap /> Arohio.ai
                 </Link>
+                <a href="https://15.207.247.55.sslip.io/" target="_blank" rel="noopener noreferrer" className="nx-dd-item">
+                  <FiFileText /> PDF Accessibility
+                </a>
               </div>
             </div>
 
@@ -482,6 +485,15 @@ export default function SiteHeader() {
                   >
                     <FiZap /> Arohio.ai
                   </Link>
+                  <a
+                    href="https://15.207.247.55.sslip.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nx-m-item"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <FiFileText /> PDF Accessibility
+                  </a>
                 </div>
               )}
 

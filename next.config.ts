@@ -52,6 +52,16 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/pdf-accessibility",
+        destination: "https://15.207.247.55.sslip.io/",
+        permanent: false,
+      },
+    ];
+  },
+
   async rewrites() {
     return [
       {

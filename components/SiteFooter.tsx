@@ -120,7 +120,13 @@ const FALLBACK: FooterJson = {
         { title: "Contact Us", href: "/contact" },
       ],
     },
-    product: { label: "PRODUCT", items: [{ title: "Arohio.ai", href: "/arohio" }] },
+    product: {
+      label: "PRODUCT",
+      items: [
+        { title: "Arohio.ai", href: "/arohio" },
+        { title: "PDF Accessibility", href: "https://15.207.247.55.sslip.io/" },
+      ],
+    },
     resources: {
       label: "RESOURCES",
       items: [
@@ -399,11 +405,16 @@ export default function SiteFooter() {
     if (!resItems.some((it) => it.href === "/case-studies")) {
       resItems.unshift({ title: "Case Studies", href: "/case-studies" });
     }
+    const prodItems = [...base.nav.product.items];
+    if (!prodItems.some((it) => it.href.includes("15.207.247.55.sslip.io") || it.title.toLowerCase().includes("pdf accessibility"))) {
+      prodItems.push({ title: "PDF Accessibility", href: "https://15.207.247.55.sslip.io/" });
+    }
     return {
       ...base,
       nav: {
         ...base.nav,
         home: { ...base.nav.home, items: homeItems },
+        product: { ...base.nav.product, items: prodItems },
         resources: { ...base.nav.resources, items: resItems },
       },
     };
@@ -594,12 +605,21 @@ export default function SiteFooter() {
               <div className="text-xs font-extrabold tracking-[0.18em] text-slate-900">{f.nav.home.label}</div>
               <div className="mt-4 space-y-3">
                 {f.nav.home.items.map((it, idx) => (
-                  <Link key={k(it.href, it.title, idx)} href={it.href} className={navLink}>
-                    <span className={navDot} />
-                    <span className="relative">
-                      {it.title} <span className={navUnderline} />
-                    </span>
-                  </Link>
+                  it.href.startsWith("http") ? (
+                    <a key={k(it.href, it.title, idx)} href={it.href} target="_blank" rel="noopener noreferrer" className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {it.title} <span className={navUnderline} />
+                      </span>
+                    </a>
+                  ) : (
+                    <Link key={k(it.href, it.title, idx)} href={it.href} className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {it.title} <span className={navUnderline} />
+                      </span>
+                    </Link>
+                  )
                 ))}
               </div>
             </motion.div>
@@ -608,24 +628,42 @@ export default function SiteFooter() {
               <div className="text-xs font-extrabold tracking-[0.18em] text-slate-900">{f.nav.product.label}</div>
               <div className="mt-4 space-y-3">
                 {f.nav.product.items.map((it, idx) => (
-                  <Link key={k(it.href, it.title, idx)} href={it.href} className={navLink}>
-                    <span className={navDot} />
-                    <span className="relative">
-                      {it.title} <span className={navUnderline} />
-                    </span>
-                  </Link>
+                  it.href.startsWith("http") ? (
+                    <a key={k(it.href, it.title, idx)} href={it.href} target="_blank" rel="noopener noreferrer" className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {it.title} <span className={navUnderline} />
+                      </span>
+                    </a>
+                  ) : (
+                    <Link key={k(it.href, it.title, idx)} href={it.href} className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {it.title} <span className={navUnderline} />
+                      </span>
+                    </Link>
+                  )
                 ))}
               </div>
 
               <div className="mt-6 text-xs font-extrabold tracking-[0.18em] text-slate-900">{f.nav.resources.label}</div>
               <div className="mt-4 space-y-3">
                 {f.nav.resources.items.map((it, idx) => (
-                  <Link key={k(it.href, it.title, idx)} href={it.href} className={navLink}>
-                    <span className={navDot} />
-                    <span className="relative">
-                      {it.title} <span className={navUnderline} />
-                    </span>
-                  </Link>
+                  it.href.startsWith("http") ? (
+                    <a key={k(it.href, it.title, idx)} href={it.href} target="_blank" rel="noopener noreferrer" className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {it.title} <span className={navUnderline} />
+                      </span>
+                    </a>
+                  ) : (
+                    <Link key={k(it.href, it.title, idx)} href={it.href} className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {it.title} <span className={navUnderline} />
+                      </span>
+                    </Link>
+                  )
                 ))}
               </div>
             </motion.div>
@@ -634,13 +672,23 @@ export default function SiteFooter() {
               <div className="text-xs font-extrabold tracking-[0.18em] text-slate-900">{f.nav.solutions.label}</div>
               <div className="mt-4 space-y-3">
                 {f.nav.solutions.items.map((c, idx) => (
-                  <Link key={k(c.href, c.title, idx)} href={c.href} className={navLink}>
-                    <span className={navDot} />
-                    <span className="relative">
-                      {c.title}
-                      <span className={navUnderline} />
-                    </span>
-                  </Link>
+                  c.href.startsWith("http") ? (
+                    <a key={k(c.href, c.title, idx)} href={c.href} target="_blank" rel="noopener noreferrer" className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {c.title}
+                        <span className={navUnderline} />
+                      </span>
+                    </a>
+                  ) : (
+                    <Link key={k(c.href, c.title, idx)} href={c.href} className={navLink}>
+                      <span className={navDot} />
+                      <span className="relative">
+                        {c.title}
+                        <span className={navUnderline} />
+                      </span>
+                    </Link>
+                  )
                 ))}
               </div>
             </motion.div>

@@ -377,6 +377,11 @@
             "title": "Arohio.ai",
             "href": "/arohio",
             "icon": "FiZap"
+          },
+          {
+            "title": "PDF Accessibility",
+            "href": "https://15.207.247.55.sslip.io/",
+            "icon": "FiFileText"
           }
         ]
       },

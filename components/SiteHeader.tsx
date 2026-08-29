@@ -192,7 +192,14 @@ const FALLBACK: HeaderData = {
         },
       ],
     },
-    products: { label: "Products", icon: "FiBox", items: [{ title: "Arohio.ai", href: "/arohio", icon: "FiZap" }] },
+    products: {
+      label: "Products",
+      icon: "FiBox",
+      items: [
+        { title: "Arohio.ai", href: "/arohio", icon: "FiZap" },
+        { title: "PDF Accessibility", href: "https://15.207.247.55.sslip.io/", icon: "FiFileText" },
+      ],
+    },
     resources: {
       label: "Resources",
       icon: "FiBookOpen",
@@ -280,11 +287,16 @@ export default function SiteHeader() {
     if (!resItems.some((it) => it.href === "/samples")) {
       resItems.splice(1, 0, { title: "Work Samples", href: "/samples", icon: "FiLayers" });
     }
+    const prodItems = [...(base.nav.products?.items || [])];
+    if (!prodItems.some((it) => it.href.includes("15.207.247.55.sslip.io") || it.title.toLowerCase().includes("pdf accessibility"))) {
+      prodItems.push({ title: "PDF Accessibility", href: "https://15.207.247.55.sslip.io/", icon: "FiFileText" });
+    }
     return {
       ...base,
       nav: {
         ...base.nav,
         home: { ...base.nav.home, items: homeItems },
+        products: { ...base.nav.products, items: prodItems },
         resources: { ...base.nav.resources, items: resItems },
       },
     };
@@ -474,10 +486,17 @@ export default function SiteHeader() {
               </span>
               <div className="nx-dropdown">
                 {h.nav.home.items.map((it) => (
-                  <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                    {renderIcon(it.icon)}
-                    {it.title}
-                  </Link>
+                  it.href.startsWith("http") ? (
+                    <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-dd-item">
+                      {renderIcon(it.icon)}
+                      {it.title}
+                    </a>
+                  ) : (
+                    <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
+                      {renderIcon(it.icon)}
+                      {it.title}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>
@@ -517,10 +536,17 @@ export default function SiteHeader() {
                   <div className="nx-mega-right">
                     <div className="nx-mega-grid">
                       {activeSolution?.items?.map((it) => (
-                        <Link key={it.href} href={it.href} className={`nx-dd-item nx-mega-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                          {renderIcon(it.icon)}
-                          <span>{it.title}</span>
-                        </Link>
+                        it.href.startsWith("http") ? (
+                          <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-dd-item nx-mega-item">
+                            {renderIcon(it.icon)}
+                            <span>{it.title}</span>
+                          </a>
+                        ) : (
+                          <Link key={it.href} href={it.href} className={`nx-dd-item nx-mega-item ${isActive(it.href) ? "nx-active" : ""}`}>
+                            {renderIcon(it.icon)}
+                            <span>{it.title}</span>
+                          </Link>
+                        )
                       ))}
                     </div>
                   </div>
@@ -536,10 +562,17 @@ export default function SiteHeader() {
               </span>
               <div className="nx-dropdown">
                 {h.nav.products.items.map((it) => (
-                  <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                    {renderIcon(it.icon)}
-                    {it.title}
-                  </Link>
+                  it.href.startsWith("http") ? (
+                    <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-dd-item">
+                      {renderIcon(it.icon)}
+                      {it.title}
+                    </a>
+                  ) : (
+                    <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
+                      {renderIcon(it.icon)}
+                      {it.title}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>
@@ -552,10 +585,17 @@ export default function SiteHeader() {
               </span>
               <div className="nx-dropdown">
                 {h.nav.resources.items.map((it) => (
-                  <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
-                    {renderIcon(it.icon)}
-                    {it.title}
-                  </Link>
+                  it.href.startsWith("http") ? (
+                    <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-dd-item">
+                      {renderIcon(it.icon)}
+                      {it.title}
+                    </a>
+                  ) : (
+                    <Link key={it.href} href={it.href} className={`nx-dd-item ${isActive(it.href) ? "nx-active" : ""}`}>
+                      {renderIcon(it.icon)}
+                      {it.title}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>
@@ -630,9 +670,15 @@ export default function SiteHeader() {
               {openGroup === "home" && (
                 <div className="nx-acc-panel">
                   {h.nav.home.items.map((it) => (
-                    <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                      {renderIcon(it.icon)} {it.title}
-                    </Link>
+                    it.href.startsWith("http") ? (
+                      <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-m-item" onClick={() => setMobileOpen(false)}>
+                        {renderIcon(it.icon)} {it.title}
+                      </a>
+                    ) : (
+                      <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
+                        {renderIcon(it.icon)} {it.title}
+                      </Link>
+                    )
                   ))}
                 </div>
               )}
@@ -660,9 +706,15 @@ export default function SiteHeader() {
                         {isOpen && (
                           <div className="nx-m-subpanel">
                             {cat.items.map((it) => (
-                              <Link key={it.href} href={it.href} className={`nx-m-subitem ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                                {renderIcon(it.icon)} {it.title}
-                              </Link>
+                              it.href.startsWith("http") ? (
+                                <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-m-subitem" onClick={() => setMobileOpen(false)}>
+                                  {renderIcon(it.icon)} {it.title}
+                                </a>
+                              ) : (
+                                <Link key={it.href} href={it.href} className={`nx-m-subitem ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
+                                  {renderIcon(it.icon)} {it.title}
+                                </Link>
+                              )
                             ))}
                           </div>
                         )}
@@ -681,9 +733,15 @@ export default function SiteHeader() {
               {openGroup === "products" && (
                 <div className="nx-acc-panel">
                   {h.nav.products.items.map((it) => (
-                    <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                      {renderIcon(it.icon)} {it.title}
-                    </Link>
+                    it.href.startsWith("http") ? (
+                      <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-m-item" onClick={() => setMobileOpen(false)}>
+                        {renderIcon(it.icon)} {it.title}
+                      </a>
+                    ) : (
+                      <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
+                        {renderIcon(it.icon)} {it.title}
+                      </Link>
+                    )
                   ))}
                 </div>
               )}
@@ -697,9 +755,15 @@ export default function SiteHeader() {
               {openGroup === "resources" && (
                 <div className="nx-acc-panel">
                   {h.nav.resources.items.map((it) => (
-                    <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
-                      {renderIcon(it.icon)} {it.title}
-                    </Link>
+                    it.href.startsWith("http") ? (
+                      <a key={it.href} href={it.href} target="_blank" rel="noopener noreferrer" className="nx-m-item" onClick={() => setMobileOpen(false)}>
+                        {renderIcon(it.icon)} {it.title}
+                      </a>
+                    ) : (
+                      <Link key={it.href} href={it.href} className={`nx-m-item ${isActive(it.href) ? "nx-active" : ""}`} onClick={() => setMobileOpen(false)}>
+                        {renderIcon(it.icon)} {it.title}
+                      </Link>
+                    )
                   ))}
                 </div>
               )}
