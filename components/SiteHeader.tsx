@@ -197,7 +197,6 @@ const FALLBACK: HeaderData = {
             icon: "FiBox",
             items: [
                 { title: "Arohio.ai", href: "/arohio", icon: "FiZap" },
-                { title: "PDF Accessibility", href: "https://15-207-110-161.sslip.io/", icon: "FiFileText" },
             ],
         },
         resources: {
@@ -287,15 +286,9 @@ export default function SiteHeader() {
         if (!resItems.some((it) => it.href === "/samples")) {
             resItems.splice(1, 0, { title: "Work Samples", href: "/samples", icon: "FiLayers" });
         }
-        const prodItems = (base.nav.products?.items || []).map((it) => {
-            if (it.href.includes("15.207.247.55.sslip.io") || it.title.toLowerCase().includes("pdf accessibility")) {
-                return { ...it, href: "https://15-207-110-161.sslip.io/" };
-            }
-            return it;
-        });
-        if (!prodItems.some((it) => it.href.includes("15-207-110-161.sslip.io") || it.title.toLowerCase().includes("pdf accessibility"))) {
-            prodItems.push({ title: "PDF Accessibility", href: "https://15-207-110-161.sslip.io/", icon: "FiFileText" });
-        }
+        const prodItems = (base.nav.products?.items || []).filter(
+            (it) => !it.href.includes("sslip.io") && !it.title.toLowerCase().includes("pdf accessibility")
+        );
         return {
             ...base,
             nav: {

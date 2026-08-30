@@ -124,7 +124,6 @@ const FALLBACK: FooterJson = {
             label: "PRODUCT",
             items: [
                 { title: "Arohio.ai", href: "/arohio" },
-                { title: "PDF Accessibility", href: "https://15-207-110-161.sslip.io/" },
             ],
         },
         resources: {
@@ -404,15 +403,9 @@ export default function SiteFooter() {
         if (!resItems.some((it) => it.href === "/case-studies")) {
             resItems.unshift({ title: "Case Studies", href: "/case-studies" });
         }
-        const prodItems = base.nav.product.items.map((it) => {
-            if (it.href.includes("15.207.247.55.sslip.io") || it.title.toLowerCase().includes("pdf accessibility")) {
-                return { ...it, href: "https://15-207-110-161.sslip.io/" };
-            }
-            return it;
-        });
-        if (!prodItems.some((it) => it.href.includes("15-207-110-161.sslip.io") || it.title.toLowerCase().includes("pdf accessibility"))) {
-            prodItems.push({ title: "PDF Accessibility", href: "https://15-207-110-161.sslip.io/" });
-        }
+        const prodItems = (base.nav.product?.items || []).filter(
+            (it) => !it.href.includes("sslip.io") && !it.title.toLowerCase().includes("pdf accessibility")
+        );
         return {
             ...base,
             nav: {

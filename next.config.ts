@@ -53,13 +53,7 @@ const nextConfig: NextConfig = {
     },
 
     async redirects() {
-        return [
-            {
-                source: "/pdf-accessibility",
-                destination: "https://15-207-110-161.sslip.io/",
-                permanent: false,
-            },
-        ];
+        return [];
     },
 
     async rewrites() {

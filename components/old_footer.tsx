@@ -71,7 +71,6 @@ export default function SiteFooter() {
                             <div className="nx-footer-col">
                                 <div className="nx-footer-h">Our Product</div>
                                 <Link className="nx-footer-item" href="/arohio">Arohio.ai</Link>
-                                <a className="nx-footer-item" href="https://15-207-110-161.sslip.io/" target="_blank" rel="noopener noreferrer">PDF Accessibility</a>
 
                                 <div className="nx-footer-h nx-footer-h2 mt-2">Resources</div>
                                 <Link className="nx-footer-item" href="/feedback">Feedback</Link>
