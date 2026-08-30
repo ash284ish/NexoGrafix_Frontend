@@ -1,202 +1,202 @@
 {
-  "footer": {
-    "brand": {
-      "name": "Nexografix",
-      "tagline": "AI-enabled services for publishing, content, assessments & automation .",
-      "description": "Enterprise delivery standards with clean architecture, clear milestones, and disciplined QA — built to scale.",
-      "badgeText": "NEXOGRAFIX"
-    },
-    "highlights": [
-      {
-        "key": "Publishing",
-        "value": "Workflow platforms"
-      },
-      {
-        "key": "Assessments",
-        "value": "Delivery + governance"
-      },
-      {
-        "key": "Automation",
-        "value": "AI-led operations"
-      }
-    ],
-    "cta": [
-      {
-        "label": "Book an appointment",
-        "href": "/contact"
-      },
-      {
-        "label": "Explore solutions",
-        "href": "/publishing-digitization"
-      }
-    ],
-    "newsletter": {
-      "title": "Newsletter",
-      "description": "Get product update delivery insights, and publishing workflow notes.",
-      "endpoint": "/api/v1/newsletter-subscribers",
-      "method": "POST",
-      "payload": {
-        "first_name": "{{first_name}}",
-        "last_name": "{{last_name}}",
-        "email": "{{email}}",
-        "status": "active"
-      },
-      "privacy": {
-        "label": "Privacy Policy",
-        "href": "/privacy-policy"
-      }
-    },
-    "nav": {
-      "home": {
-        "label": "HOME",
-        "items": [
-          {
-            "title": "Home",
-            "href": "/"
-          },
-          {
-            "title": "About Us",
-            "href": "/about"
-          },
-          {
-            "title": "Contact Us",
-            "href": "/contact"
-          }
-        ]
-      },
-      "product": {
-        "label": "PRODUCT",
-        "items": [
-          {
-            "title": "Arohio.ai",
-            "href": "/arohio"
-          },
-          {
-            "title": "PDF Accessibility",
-            "href": "https://15.207.247.55.sslip.io/"
-          }
-        ]
-      },
-      "resources": {
-        "label": "RESOURCES",
-        "items": [
-          {
-            "title": "Feedback",
-            "href": "/feedback"
-          },
-          {
-            "title": "Blog",
-            "href": "/blog"
-          },
-          {
-            "title": "FAQs",
-            "href": "/faqs"
-          }
-        ]
-      },
-      "solutions": {
-        "label": "SOLUTIONS",
-        "items": [
-          {
-            "title": "Publishing & Digitization",
-            "href": "/publishing-digitization#overview"
-          },
-          {
-            "title": "Accessibility & Compliance",
-            "href": "/accessibility-compliance#overview"
-          },
-          {
-            "title": "IT & Digital Platforms",
-            "href": "/digital-platforms#overview"
-          },
-          {
-            "title": "Data Labeling & Annotation",
-            "href": "/data-labeling#overview"
-          },
-          {
-            "title": "Localization & Media Accessibility",
-            "href": "/localization-media#overview"
-          },
-          {
-            "title": "Content, eLearning & EdTech",
-            "href": "/elearning-edtech#overview"
-          }
-        ]
-      }
-    },
-    "contact": {
-      "label": "CONTACT",
-      "email": {
-        "label": "ashish@nexografix.com",
-        "href": "mailto:ashish@nexografix.com"
-      },
-      "phone": {
-        "label": "India Office:- +91 9661284439",
-        "href": "tel:+919661284439"
-      },
-      "location": {
-        "label": "India"
-      }
-    },
-    "socials": [
-      {
-        "key": "linkedin",
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com/company/nexografix",
-        "icon": "FiLinkedin"
-      },
-      {
-        "key": "instagram",
-        "label": "Instagram",
-        "href": "https://www.instagram.com/nexografix/",
-        "icon": "FiInstagram"
-      },
-      {
-        "key": "facebook",
-        "label": "Facebook",
-        "href": "https://www.facebook.com/nexografix/",
-        "icon": "FiFacebook"
-      },
-      {
-        "key": "whatsapp",
-        "label": "WhatsApp",
-        "href": "https://wa.me/9661284439?text=Hello%20Nexografix%20team%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20AI-enabled%20publishing%20and%20automation%20services.",
-        "icon": "WhatsAppSvg"
-      }
-    ],
-    "certificates": {
-      "label": "CERTIFICATIONS",
-      "items": [
-        {
-          "key": "iso-9001",
-          "src": "/images/iso_9001.png",
-          "alt": "ISO 9001 Certified",
-          "href": "https://www.iso.org/iso-9001-quality-management.html"
+    "footer": {
+        "brand": {
+            "name": "Nexografix",
+            "tagline": "AI-enabled services for publishing, content, assessments & automation .",
+            "description": "Enterprise delivery standards with clean architecture, clear milestones, and disciplined QA — built to scale.",
+            "badgeText": "NEXOGRAFIX"
         },
-        {
-          "key": "iso-27001",
-          "src": "/images/iso_27001-2022.jpeg",
-          "alt": "ISO 27001 Certified",
-          "href": "https://www.iso.org/iso-iec-27001-information-security.html"
+        "highlights": [
+            {
+                "key": "Publishing",
+                "value": "Workflow platforms"
+            },
+            {
+                "key": "Assessments",
+                "value": "Delivery + governance"
+            },
+            {
+                "key": "Automation",
+                "value": "AI-led operations"
+            }
+        ],
+        "cta": [
+            {
+                "label": "Book an appointment",
+                "href": "/contact"
+            },
+            {
+                "label": "Explore solutions",
+                "href": "/publishing-digitization"
+            }
+        ],
+        "newsletter": {
+            "title": "Newsletter",
+            "description": "Get product update delivery insights, and publishing workflow notes.",
+            "endpoint": "/api/v1/newsletter-subscribers",
+            "method": "POST",
+            "payload": {
+                "first_name": "{{first_name}}",
+                "last_name": "{{last_name}}",
+                "email": "{{email}}",
+                "status": "active"
+            },
+            "privacy": {
+                "label": "Privacy Policy",
+                "href": "/privacy-policy"
+            }
+        },
+        "nav": {
+            "home": {
+                "label": "HOME",
+                "items": [
+                    {
+                        "title": "Home",
+                        "href": "/"
+                    },
+                    {
+                        "title": "About Us",
+                        "href": "/about"
+                    },
+                    {
+                        "title": "Contact Us",
+                        "href": "/contact"
+                    }
+                ]
+            },
+            "product": {
+                "label": "PRODUCT",
+                "items": [
+                    {
+                        "title": "Arohio.ai",
+                        "href": "/arohio"
+                    },
+                    {
+                        "title": "PDF Accessibility",
+                        "href": "https://15-207-110-161.sslip.io/"
+                    }
+                ]
+            },
+            "resources": {
+                "label": "RESOURCES",
+                "items": [
+                    {
+                        "title": "Feedback",
+                        "href": "/feedback"
+                    },
+                    {
+                        "title": "Blog",
+                        "href": "/blog"
+                    },
+                    {
+                        "title": "FAQs",
+                        "href": "/faqs"
+                    }
+                ]
+            },
+            "solutions": {
+                "label": "SOLUTIONS",
+                "items": [
+                    {
+                        "title": "Publishing & Digitization",
+                        "href": "/publishing-digitization#overview"
+                    },
+                    {
+                        "title": "Accessibility & Compliance",
+                        "href": "/accessibility-compliance#overview"
+                    },
+                    {
+                        "title": "IT & Digital Platforms",
+                        "href": "/digital-platforms#overview"
+                    },
+                    {
+                        "title": "Data Labeling & Annotation",
+                        "href": "/data-labeling#overview"
+                    },
+                    {
+                        "title": "Localization & Media Accessibility",
+                        "href": "/localization-media#overview"
+                    },
+                    {
+                        "title": "Content, eLearning & EdTech",
+                        "href": "/elearning-edtech#overview"
+                    }
+                ]
+            }
+        },
+        "contact": {
+            "label": "CONTACT",
+            "email": {
+                "label": "ashish@nexografix.com",
+                "href": "mailto:ashish@nexografix.com"
+            },
+            "phone": {
+                "label": "India Office:- +91 9661284439",
+                "href": "tel:+919661284439"
+            },
+            "location": {
+                "label": "India"
+            }
+        },
+        "socials": [
+            {
+                "key": "linkedin",
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/company/nexografix",
+                "icon": "FiLinkedin"
+            },
+            {
+                "key": "instagram",
+                "label": "Instagram",
+                "href": "https://www.instagram.com/nexografix/",
+                "icon": "FiInstagram"
+            },
+            {
+                "key": "facebook",
+                "label": "Facebook",
+                "href": "https://www.facebook.com/nexografix/",
+                "icon": "FiFacebook"
+            },
+            {
+                "key": "whatsapp",
+                "label": "WhatsApp",
+                "href": "https://wa.me/9661284439?text=Hello%20Nexografix%20team%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20AI-enabled%20publishing%20and%20automation%20services.",
+                "icon": "WhatsAppSvg"
+            }
+        ],
+        "certificates": {
+            "label": "CERTIFICATIONS",
+            "items": [
+                {
+                    "key": "iso-9001",
+                    "src": "/images/iso_9001.png",
+                    "alt": "ISO 9001 Certified",
+                    "href": "https://www.iso.org/iso-9001-quality-management.html"
+                },
+                {
+                    "key": "iso-27001",
+                    "src": "/images/iso_27001-2022.jpeg",
+                    "alt": "ISO 27001 Certified",
+                    "href": "https://www.iso.org/iso-iec-27001-information-security.html"
+                }
+            ]
+        },
+        "legal": [
+            {
+                "label": "Privacy Policy",
+                "href": "/privacy-policy"
+            },
+            {
+                "label": "Terms of Service",
+                "href": "/terms"
+            },
+            {
+                "label": "Refund Policy",
+                "href": "/refund"
+            }
+        ],
+        "copyright": {
+            "textTemplate": "© {{year}} Nexografix. All rights reserved."
         }
-      ]
-    },
-    "legal": [
-      {
-        "label": "Privacy Policy",
-        "href": "/privacy-policy"
-      },
-      {
-        "label": "Terms of Service",
-        "href": "/terms"
-      },
-      {
-        "label": "Refund Policy",
-        "href": "/refund"
-      }
-    ],
-    "copyright": {
-      "textTemplate": "© {{year}} Nexografix. All rights reserved."
     }
-  }
 }
